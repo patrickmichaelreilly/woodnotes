@@ -1,0 +1,8 @@
+x=   44 y= 166 step= -3 B3  s=0.80
+x=  138 y= 133 step=  2 G4  s=0.79
+x=  238 y= 133 step=  2 G4  s=0.83
+x=  414 y= 133 step=  2 G4  s=0.79
+x=  514 y= 133 step=  2 G4  s=0.79
+x=  687 y= 133 step=  2 G4  s=0.81
+x=  788 y= 133 step=  2 G4  s=0.77
+overlay: analysis/p109_s00_heads.png spacing=12.8 lines=[95, 108, 120, 134, 146]

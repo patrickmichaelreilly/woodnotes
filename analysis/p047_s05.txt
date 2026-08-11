@@ -1,0 +1,9 @@
+x=  178 y=  53 step=  9 G5  s=0.85
+x=  315 y=  53 step=  9 G5  s=0.86
+x=  453 y=  52 step=  9 G5  s=0.88
+x=  589 y=  67 step=  7 E5  s=0.85
+x=  665 y=  59 step=  8 F5  s=0.90
+x=  738 y=  63 step=  7 E5  s=0.80
+x=  814 y=  59 step=  8 F5  s=0.88
+x=  890 y=  67 step=  7 E5  s=0.83
+overlay: analysis/p047_s05_heads.png spacing=12.8 lines=[58, 71, 83, 96, 109]

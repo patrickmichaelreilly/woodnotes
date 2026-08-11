@@ -1,0 +1,10 @@
+x=  201 y=  46 step=  9 G5  s=0.82
+x=  400 y=  47 step=  9 G5  s=0.84
+x=  536 y=  61 step=  7 E5  s=0.86
+x=  611 y=  53 step=  8 F5  s=0.86
+x=  685 y=  62 step=  6 D5  s=0.82
+x=  759 y=  53 step=  8 F5  s=0.81
+x=  833 y=  61 step=  7 E5  s=0.81
+x=  909 y=  54 step=  8 F5  s=0.81
+x=  983 y=  57 step=  7 E5  s=0.82
+overlay: analysis/p046_s05_heads.png spacing=12.8 lines=[52, 65, 78, 90, 103]

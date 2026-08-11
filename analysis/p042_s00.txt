@@ -1,0 +1,14 @@
+x=   47 y= 168 step= -4 A3  s=0.77
+x=  167 y= 121 step=  4 B4  s=0.79
+x=  241 y= 121 step=  4 B4  s=0.85
+x=  316 y= 122 step=  4 B4  s=0.80
+x=  390 y= 116 step=  5 C5  s=0.77
+x=  400 y= 146 step=  0 E4  s=0.80
+x=  428 y= 109 step=  6 D5  s=0.83
+x=  466 y= 104 step=  7 E5  s=0.81
+x=  576 y= 121 step=  4 B4  s=0.77
+x=  651 y= 121 step=  4 B4  s=0.79
+x=  727 y= 121 step=  4 B4  s=0.77
+x=  912 y= 109 step=  6 D5  s=0.82
+x=  987 y= 103 step=  7 E5  s=0.81
+overlay: analysis/p042_s00_heads.png spacing=12.5 lines=[96, 108, 121, 134, 146]

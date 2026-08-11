@@ -1,0 +1,14 @@
+x=  276 y=  35 step=  9 G5  s=0.86
+x=  286 y=  69 step=  4 B4  s=0.78
+x=  326 y=  45 step=  8 F5  s=0.79
+x=  376 y=  48 step=  7 E5  s=0.80
+x=  425 y=  55 step=  6 D5  s=0.85
+x=  476 y=  50 step=  7 E5  s=0.78
+x=  513 y=  42 step=  8 F5  s=0.83
+x=  551 y=  37 step=  9 G5  s=0.80
+x=  651 y=  37 step=  9 G5  s=0.79
+x=  801 y=  38 step=  9 G5  s=0.81
+x=  808 y=  72 step=  3 A4  s=0.77
+x=  951 y=  50 step=  7 E5  s=0.80
+x=  989 y=  42 step=  8 F5  s=0.81
+overlay: analysis/p035_s01_heads.png spacing=12.5 lines=[42, 55, 67, 79, 92]

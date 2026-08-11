@@ -1,0 +1,11 @@
+x=  152 y= 145 step=  0 E4  s=0.88
+x=  226 y= 124 step=  3 A4  s=0.80
+x=  315 y= 144 step=  0 E4  s=0.90
+x=  389 y= 125 step=  3 A4  s=0.76
+x=  475 y= 145 step=  0 E4  s=0.90
+x=  550 y= 124 step=  3 A4  s=0.84
+x=  638 y= 145 step=  0 E4  s=0.90
+x=  712 y= 126 step=  3 A4  s=0.80
+x=  799 y= 145 step=  0 E4  s=0.83
+x=  873 y= 124 step=  3 A4  s=0.80
+overlay: analysis/p110_s00_heads.png spacing=12.5 lines=[95, 107, 120, 132, 145]

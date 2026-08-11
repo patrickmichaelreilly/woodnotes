@@ -1,0 +1,10 @@
+x=  139 y=  68 step=  4 B4  s=0.84
+x=  276 y=  68 step=  4 B4  s=0.77
+x=  414 y=  68 step=  4 B4  s=0.81
+x=  538 y=  43 step=  8 F5  s=0.83
+x=  612 y=  48 step=  7 E5  s=0.84
+x=  687 y=  44 step=  8 F5  s=0.83
+x=  813 y=  49 step=  7 E5  s=0.84
+x=  889 y=  44 step=  8 F5  s=0.83
+x=  963 y=  49 step=  7 E5  s=0.87
+overlay: analysis/p103_s02_heads.png spacing=12.8 lines=[43, 56, 68, 81, 94]

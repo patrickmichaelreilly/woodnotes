@@ -1,0 +1,17 @@
+x=   43 y= 167 step= -3 B3  s=0.77
+x=  164 y= 104 step=  7 E5  s=0.79
+x=  215 y=  97 step=  8 F5  s=0.82
+x=  263 y= 103 step=  7 E5  s=0.77
+x=  313 y=  91 step=  9 G5  s=0.83
+x=  364 y=  83 step= 10 A5  s=0.89
+x=  413 y=  91 step=  9 G5  s=0.82
+x=  513 y=  96 step=  8 F5  s=0.90
+x=  563 y=  91 step=  9 G5  s=0.86
+x=  613 y= 103 step=  7 E5  s=0.77
+x=  712 y=  97 step=  8 F5  s=0.91
+x=  762 y=  91 step=  9 G5  s=0.82
+x=  812 y=  97 step=  8 F5  s=0.88
+x=  911 y=  92 step=  9 G5  s=0.83
+x=  962 y=  85 step= 10 A5  s=0.85
+x= 1011 y=  94 step=  8 F5  s=0.80
+overlay: analysis/p040_s00_heads.png spacing=12.5 lines=[96, 109, 121, 134, 146]

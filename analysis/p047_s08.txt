@@ -1,0 +1,9 @@
+x=  190 y=  31 step= 12 C6  s=0.91
+x=  315 y=  31 step= 12 C6  s=0.94
+x=  441 y=  31 step= 12 C6  s=0.93
+x=  555 y=  50 step=  9 G5  s=0.82
+x=  642 y=  51 step=  9 G5  s=0.82
+x=  730 y=  51 step=  9 G5  s=0.87
+x=  816 y=  51 step=  9 G5  s=0.84
+x=  904 y=  51 step=  9 G5  s=0.85
+overlay: analysis/p047_s08_heads.png spacing=12.5 lines=[56, 68, 81, 93, 106]

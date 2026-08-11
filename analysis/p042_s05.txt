@@ -1,0 +1,7 @@
+x=  177 y=  61 step=  6 D5  s=0.79
+x=  276 y=  61 step=  6 D5  s=0.85
+x=  376 y=  61 step=  6 D5  s=0.87
+x=  464 y=  78 step=  3 A4  s=0.81
+x=  550 y=  78 step=  3 A4  s=0.78
+x=  637 y=  77 step=  3 A4  s=0.83
+overlay: analysis/p042_s05_heads.png spacing=12.5 lines=[48, 61, 73, 85, 98]

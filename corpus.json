@@ -30,8 +30,9 @@
    "no": 2,
    "page": 11,
    "key": "Dm",
-   "conf": "todo",
-   "note": "needs zoom pass"
+   "conf": "med",
+   "note": "read via head-detector + zoom verification; spans 2 systems (p033_s00+s01); 16th at F5 has visible double flag",
+   "enc": "E5:8 F5:8 r:8 | D5:8 C#5:8 D5:8 r:8 | E5:8 D5:8 C#5:8 r:8 | E5:8 C#5:8 D5:8 r:8 | E5:8 D5:8 E5:8 r:8 | E5:8 F5:8 G5:8 r:8 | E5:8 C#5:8 r:8 | D5:8 E5:8 F5:8 D5:8 r:8 | F5:16 E5:8 D5:8 r:8 | D5:8 E5:8 D5:8 C#5:8 r:8 | D5:8 C#5:8 D5:8"
   },
   {
    "id": "blue-04",

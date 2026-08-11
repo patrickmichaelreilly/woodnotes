@@ -1,0 +1,12 @@
+x=  126 y=  95 step=  8 F5  s=0.82
+x=  163 y=  90 step=  9 G5  s=0.82
+x=  201 y=  95 step=  8 F5  s=0.82
+x=  238 y=  90 step=  9 G5  s=0.81
+x=  277 y=  95 step=  8 F5  s=0.80
+x=  313 y=  90 step=  9 G5  s=0.80
+x=  352 y=  95 step=  8 F5  s=0.80
+x=  427 y=  94 step=  8 F5  s=0.78
+x=  466 y=  90 step=  9 G5  s=0.82
+x=  685 y=  91 step=  9 G5  s=0.79
+x=  915 y=  91 step=  9 G5  s=0.82
+overlay: analysis/p123_s00_heads.png spacing=12.5 lines=[95, 107, 120, 132, 145]

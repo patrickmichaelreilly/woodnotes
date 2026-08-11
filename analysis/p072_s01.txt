@@ -1,0 +1,16 @@
+x=   45 y= 134 step= -3 B3  s=0.78
+x=  202 y=  84 step=  5 C5  s=0.86
+x=  277 y=  84 step=  5 C5  s=0.84
+x=  352 y=  83 step=  5 C5  s=0.82
+x=  426 y=  87 step=  4 B4  s=0.84
+x=  475 y=  92 step=  3 A4  s=0.83
+x=  527 y=  83 step=  5 C5  s=0.80
+x=  602 y=  83 step=  5 C5  s=0.83
+x=  675 y=  83 step=  5 C5  s=0.82
+x=  750 y=  83 step=  5 C5  s=0.78
+x=  824 y=  87 step=  4 B4  s=0.83
+x=  888 y=  92 step=  3 A4  s=0.82
+x=  950 y=  75 step=  6 D5  s=0.80
+x= 1005 y= 114 step=  0 E4  s=0.76
+x= 1016 y=  83 step=  5 C5  s=0.80
+overlay: analysis/p072_s01_heads.png spacing=12.8 lines=[62, 75, 88, 100, 113]

@@ -1,0 +1,13 @@
+x=  154 y= 145 step=  0 E4  s=0.84
+x=  230 y= 151 step= -1 D4  s=0.87
+x=  230 y= 200 step= -9 C3  s=0.82
+x=  305 y= 146 step=  0 E4  s=0.88
+x=  380 y= 138 step=  1 F4  s=0.82
+x=  455 y= 134 step=  2 G4  s=0.86
+x=  529 y= 134 step=  2 G4  s=0.82
+x=  604 y= 139 step=  1 F4  s=0.81
+x=  679 y= 134 step=  2 G4  s=0.83
+x=  754 y= 139 step=  1 F4  s=0.81
+x=  829 y= 135 step=  2 G4  s=0.80
+x=  990 y= 134 step=  2 G4  s=0.81
+overlay: analysis/p042_s06_heads.png spacing=12.2 lines=[97, 109, 122, 134, 146]

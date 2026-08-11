@@ -1,0 +1,12 @@
+x=   45 y= 166 step= -3 B3  s=0.77
+x=  138 y= 104 step=  7 E5  s=0.82
+x=  226 y=  96 step=  8 F5  s=0.88
+x=  314 y=  91 step=  9 G5  s=0.82
+x=  401 y=  96 step=  8 F5  s=0.89
+x=  487 y= 103 step=  7 E5  s=0.86
+x=  575 y= 108 step=  6 D5  s=0.87
+x=  661 y= 116 step=  5 C5  s=0.85
+x=  811 y=  96 step=  8 F5  s=0.90
+x=  900 y= 104 step=  7 E5  s=0.88
+x=  987 y= 109 step=  6 D5  s=0.88
+overlay: analysis/p043_s00_heads.png spacing=12.5 lines=[96, 108, 121, 133, 146]

@@ -1,0 +1,10 @@
+x=  332 y=  77 step= 11 B5  s=0.81
+x=  382 y=  77 step= 11 B5  s=0.82
+x=  431 y=  77 step= 11 B5  s=0.84
+x=  483 y=  78 step= 11 B5  s=0.85
+x=  533 y=  78 step= 11 B5  s=0.84
+x=  583 y=  78 step= 11 B5  s=0.82
+x=  953 y=  85 step= 10 A5  s=0.86
+x=  989 y=  86 step=  9 G5  s=0.87
+x= 1027 y=  86 step=  9 G5  s=0.90
+overlay: analysis/p065_s01_heads.png spacing=12.5 lines=[95, 108, 120, 133, 145]

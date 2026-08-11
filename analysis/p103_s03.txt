@@ -1,0 +1,17 @@
+x=   44 y= 136 step= -3 B3  s=0.77
+x=  126 y=  79 step=  6 D5  s=0.84
+x=  201 y=  80 step=  6 D5  s=0.82
+x=  276 y=  79 step=  6 D5  s=0.80
+x=  351 y=  80 step=  6 D5  s=0.84
+x=  426 y=  79 step=  6 D5  s=0.77
+x=  440 y= 226 step=-17 B1  s=0.80
+x=  501 y=  79 step=  6 D5  s=0.80
+x=  576 y=  80 step=  6 D5  s=0.84
+x=  576 y= 226 step=-17 B1  s=0.81
+x=  650 y=  80 step=  6 D5  s=0.84
+x=  713 y= 226 step=-17 B1  s=0.84
+x=  725 y=  80 step=  6 D5  s=0.80
+x=  812 y=  80 step=  6 D5  s=0.78
+x=  900 y=  80 step=  6 D5  s=0.81
+x=  988 y=  80 step=  6 D5  s=0.81
+overlay: analysis/p103_s03_heads.png spacing=12.5 lines=[67, 79, 92, 104, 117]

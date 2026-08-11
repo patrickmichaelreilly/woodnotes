@@ -1,0 +1,12 @@
+x=  214 y=  37 step= 10 A5  s=0.86
+x=  314 y=  37 step= 10 A5  s=0.88
+x=  426 y=  54 step=  7 E5  s=0.84
+x=  482 y=  91 step=  1 F4  s=0.77
+x=  489 y=  50 step=  8 F5  s=0.89
+x=  551 y=  54 step=  7 E5  s=0.89
+x=  614 y=  50 step=  8 F5  s=0.86
+x=  675 y=  58 step=  7 E5  s=0.82
+x=  737 y=  51 step=  8 F5  s=0.84
+x=  799 y=  25 step= 12 C6  s=0.88
+x=  911 y=  39 step= 10 A5  s=0.85
+overlay: analysis/p046_s04_heads.png spacing=12.5 lines=[50, 63, 76, 88, 100]

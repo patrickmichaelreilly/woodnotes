@@ -1,0 +1,8 @@
+x=  150 y= 153 step= -1 D4  s=0.79
+x=  262 y= 151 step= -1 D4  s=0.83
+x=  362 y= 151 step= -1 D4  s=0.85
+x=  561 y= 145 step=  0 E4  s=0.84
+x=  673 y= 145 step=  0 E4  s=0.86
+x=  871 y= 150 step= -1 D4  s=0.82
+x=  984 y= 137 step=  1 F4  s=0.81
+overlay: analysis/p128_s00_heads.png spacing=12.8 lines=[95, 108, 120, 133, 146]

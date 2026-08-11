@@ -1,0 +1,8 @@
+x=  151 y= 116 step=  5 C5  s=0.80
+x=  226 y= 108 step=  6 D5  s=0.78
+x=  301 y= 108 step=  6 D5  s=0.83
+x=  375 y= 108 step=  6 D5  s=0.83
+x=  450 y= 108 step=  6 D5  s=0.84
+x=  524 y= 108 step=  6 D5  s=0.84
+x=  587 y= 116 step=  5 C5  s=0.80
+overlay: analysis/p073_s00_heads.png spacing=12.8 lines=[95, 108, 120, 133, 146]

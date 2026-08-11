@@ -1,0 +1,24 @@
+x=  113 y=  81 step=  6 D5  s=0.78
+x=  138 y= 205 step=-14 E2  s=0.83
+x=  163 y=  73 step=  8 F5  s=0.82
+x=  201 y= 209 step=-14 E2  s=0.80
+x=  213 y=  85 step=  6 D5  s=0.78
+x=  262 y= 204 step=-13 F2  s=0.81
+x=  350 y=  84 step=  6 D5  s=0.77
+x=  387 y= 229 step=-17 B1  s=0.77
+x=  448 y= 220 step=-16 C2  s=0.84
+x=  486 y=  54 step= 11 B5  s=0.81
+x=  512 y= 215 step=-15 D2  s=0.82
+x=  537 y=  59 step= 10 A5  s=0.82
+x=  587 y=  54 step= 11 B5  s=0.83
+x=  636 y= 219 step=-16 C2  s=0.82
+x=  673 y=  78 step=  7 E5  s=0.80
+x=  699 y= 214 step=-15 D2  s=0.79
+x=  724 y=  65 step=  9 G5  s=0.80
+x=  761 y= 206 step=-14 E2  s=0.85
+x=  773 y=  78 step=  7 E5  s=0.78
+x=  886 y= 201 step=-13 F2  s=0.81
+x=  911 y=  70 step=  8 F5  s=0.79
+x=  949 y= 206 step=-14 E2  s=0.84
+x= 1011 y= 201 step=-13 F2  s=0.77
+overlay: analysis/p038_s02_heads.png spacing=12.5 lines=[70, 83, 96, 110, 120]

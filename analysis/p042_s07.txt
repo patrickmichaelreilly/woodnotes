@@ -1,0 +1,11 @@
+x=   47 y= 136 step= -3 B3  s=0.77
+x=  168 y= 118 step=  0 E4  s=0.87
+x=  267 y= 124 step= -1 D4  s=0.87
+x=  367 y= 119 step=  0 E4  s=0.82
+x=  468 y= 112 step=  1 F4  s=0.83
+x=  567 y= 107 step=  2 G4  s=0.83
+x=  666 y= 107 step=  2 G4  s=0.82
+x=  766 y= 112 step=  1 F4  s=0.80
+x=  865 y= 111 step=  1 F4  s=0.82
+x=  965 y= 118 step=  0 E4  s=0.82
+overlay: analysis/p042_s07_heads.png spacing=12.5 lines=[69, 82, 94, 107, 119]

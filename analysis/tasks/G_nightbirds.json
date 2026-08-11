@@ -1,0 +1,142 @@
+[
+ {
+  "id": "bbc-01",
+  "bird": "Black-billed Cuckoo",
+  "no": 1,
+  "page": 87,
+  "key": "G",
+  "enc": "D5:8 B4:8 r:8 D5:8 B4:8 r:8 D5:8 B4:8 B4:8",
+  "conf": "med",
+  "note": "doleful; low pitch",
+  "lyric": "Cuck-oo, cuck-oo, cuck-oo, coo.",
+  "pdf_page": 109
+ },
+ {
+  "id": "bbc-new",
+  "bird": "Black-billed Cuckoo",
+  "no": 0,
+  "page": 88,
+  "key": "F",
+  "conf": "todo",
+  "note": "1888 new song + resolution, 2 figs",
+  "pdf_page": 110
+ },
+ {
+  "id": "ybc-01",
+  "bird": "Yellow-billed Cuckoo",
+  "no": 1,
+  "page": 89,
+  "key": "F",
+  "enc": "C5:4^ C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:8 A4:8",
+  "conf": "low",
+  "note": "Wau-olp bubbling, rit&dim; guttural",
+  "lyric": "Wau-olp, olp, olp...",
+  "pdf_page": 111
+ },
+ {
+  "id": "quail-01",
+  "bird": "Quail (Bob White)",
+  "no": 1,
+  "page": 90,
+  "key": "A",
+  "enc": "B4:8 r:8 B4:8 r:8 B4:16 B4:16 F#5:8^ B4:16 B4:16 F#5:8^ B4:8 B4:16 B4:16 F#5:8^",
+  "conf": "med",
+  "note": "rising accent to tonic",
+  "lyric": "Bob, Bob white, Bob white...",
+  "pdf_page": 112
+ },
+ {
+  "id": "grouse-drum",
+  "bird": "Ruffed Grouse",
+  "no": 1,
+  "page": 94,
+  "key": "Bb",
+  "enc": "Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:16 Bb2:16 Bb2:16 Bb2:16 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 ",
+  "conf": "med",
+  "note": "drumming accel into whir then dim; single pitch B-flat",
+  "lyric": "Thump thump... Whir.",
+  "pdf_page": 116
+ },
+ {
+  "id": "loon-cry",
+  "bird": "Loon",
+  "no": 1,
+  "page": 96,
+  "key": "?",
+  "conf": "todo",
+  "note": "3-tone wild cry, 2nd long+loud; bass; zoom",
+  "pdf_page": 118
+ },
+ {
+  "id": "loon-5",
+  "bird": "Loon",
+  "no": 2,
+  "page": 97,
+  "key": "F#m",
+  "enc": "F#3:8 A3:8 C#4:8 A3:8 F#3:8 F#3:8 A3:8 C#4:8 A3:8 F#3:8 ",
+  "conf": "low",
+  "note": "bass clef, 5-tone flight shout; zoom",
+  "lyric": "oo,oo,oo,oo,oo",
+  "pdf_page": 119
+ },
+ {
+  "id": "gho-01",
+  "bird": "Great Horned Owl",
+  "no": 1,
+  "page": 99,
+  "key": "Bb",
+  "enc": "Bb2:4 Ab2:4 r:4 Bb2:4 Ab2:4 Bb2:4 Ab2:8",
+  "conf": "low",
+  "note": "bass, slurred descending Hoo pairs; zoom",
+  "lyric": "Hoo, Hoo, Hoo.",
+  "pdf_page": 121
+ },
+ {
+  "id": "screech-ahee",
+  "bird": "Screech-Owl",
+  "no": 1,
+  "page": 101,
+  "key": "F",
+  "enc": "F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F#5:16 G5:8^ G#5:1^ G#5:1^",
+  "conf": "low",
+  "note": "tremolo+upward slide; portamento essential; zoom",
+  "lyric": "Ah---ee, Ah-ee, Ah-ee.",
+  "pdf_page": 123
+ },
+ {
+  "id": "screech-ahoo",
+  "bird": "Screech-Owl",
+  "no": 2,
+  "page": 101,
+  "key": "F",
+  "enc": "G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:8^ C5:1^",
+  "conf": "low",
+  "note": "descending chromatic slide + tremolo; zoom",
+  "lyric": "Ah---oo, Ah-oo...",
+  "pdf_page": 123
+ },
+ {
+  "id": "hen-wait",
+  "bird": "Hen Music",
+  "no": 1,
+  "page": 105,
+  "key": "C",
+  "enc": "C5:8. C5:16 C5:8 C5:8 r:8 C5:8 C5:8^ r:8 C5:8^ B4:8 C5:8 r:8 B4:8 B4:8 B4:8 C5:8",
+  "conf": "low",
+  "note": "Wait wait ok ik; zoom",
+  "lyric": "Wait, wait... ok, ik.",
+  "pdf_page": 127
+ },
+ {
+  "id": "hen-wauk",
+  "bird": "Hen Music",
+  "no": 2,
+  "page": 106,
+  "key": "F",
+  "enc": "A4:4^ A4:4^ A4:4^ A4:4^ A4:4^ A4:4^",
+  "conf": "low",
+  "note": "Wauk deliberate; zoom",
+  "lyric": "Wauk, wauk, wauk...",
+  "pdf_page": 128
+ }
+]

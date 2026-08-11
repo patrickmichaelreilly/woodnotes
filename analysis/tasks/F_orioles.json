@@ -1,0 +1,211 @@
+[
+ {
+  "id": "whip-01",
+  "bird": "Whippoorwill",
+  "no": 1,
+  "page": 68,
+  "key": "D",
+  "enc": "A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^",
+  "conf": "med",
+  "note": "8va, cresc et accel; favorite form",
+  "lyric": "Whip-poor-will x3",
+  "pdf_page": 90
+ },
+ {
+  "id": "whip-cluck",
+  "bird": "Whippoorwill",
+  "no": 2,
+  "page": 70,
+  "key": "Eb",
+  "enc": "Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 ",
+  "conf": "low",
+  "note": "cluck after each; several melodic variants p70; zoom",
+  "pdf_page": 92
+ },
+ {
+  "id": "ori-first",
+  "bird": "Baltimore Oriole",
+  "no": 0,
+  "page": 71,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "1884 arrival, 3 staves",
+  "pdf_page": 93
+ },
+ {
+  "id": "ori-elm",
+  "bird": "Baltimore Oriole",
+  "no": 0,
+  "page": 72,
+  "key": "?",
+  "conf": "todo",
+  "note": "minor-scale strain",
+  "pdf_page": 94
+ },
+ {
+  "id": "ori-curly",
+  "bird": "Baltimore Oriole",
+  "no": 3,
+  "page": 72,
+  "key": "Eb",
+  "enc": "Bb4:8 G4:8 Bb4:8 G4:8 r:8 Eb5:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8",
+  "conf": "low",
+  "note": "Curly curly Hey! Chickerway; verify",
+  "lyric": "Cur-ly, cur-ly, Hey! Chick-er-way...",
+  "pdf_page": 94
+ },
+ {
+  "id": "ori-curly2",
+  "bird": "Baltimore Oriole",
+  "no": 4,
+  "page": 72,
+  "key": "Eb",
+  "enc": "G4:16 Ab4:16 Bb4:8 r:8 Bb4:8 G4:8 Bb4:8 G4:8 Eb5:8. r:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8 G4:8",
+  "conf": "low",
+  "note": "kah-kue closing form; verify",
+  "lyric": "chew, cur-ly... kah, kue. Hey!",
+  "pdf_page": 94
+ },
+ {
+  "id": "ori-fly",
+  "bird": "Baltimore Oriole",
+  "no": 0,
+  "page": 73,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "pre-flight monotones",
+  "pdf_page": 95
+ },
+ {
+  "id": "ori-dorset",
+  "bird": "Baltimore Oriole",
+  "no": 0,
+  "page": 73,
+  "key": "A",
+  "conf": "todo",
+  "note": "first Dorset notes",
+  "pdf_page": 95
+ },
+ {
+  "id": "ori-nh",
+  "bird": "Baltimore Oriole",
+  "no": 0,
+  "page": 73,
+  "key": "F",
+  "conf": "todo",
+  "note": "Allegro NH song",
+  "pdf_page": 95
+ },
+ {
+  "id": "tan-01",
+  "bird": "Scarlet Tanager",
+  "no": 0,
+  "page": 74,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "main song",
+  "pdf_page": 96
+ },
+ {
+  "id": "tan-var",
+  "bird": "Scarlet Tanager",
+  "no": 0,
+  "page": 75,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "variations x3",
+  "pdf_page": 97
+ },
+ {
+  "id": "rgro-01",
+  "bird": "Rose-breasted Grosbeak",
+  "no": 0,
+  "page": 76,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "Loud+rapid 2 staves - MISSING (pdf98-99), audit \u2014 RESOLVED (draft added)",
+  "pdf_page": 98
+ },
+ {
+  "id": "rgro-draft",
+  "bird": "Rose-breasted Grosbeak",
+  "no": 1,
+  "page": 76,
+  "key": "Eb",
+  "enc": "G5:16 F5:16 Eb5:8 F5:8 G5:8 r:8 Bb5:8 G5:8 F5:8 Eb5:8 F5:16 G5:16 F5:8 Eb5:8 | Eb5:16 F5:16 G5:8 F5:8 Eb5:8 r:8 G5:8 Bb5:8 G5:8 F5:8 Eb5:4",
+  "conf": "low",
+  "note": "Loud and rapid; rolling warble draft; verify",
+  "pdf_page": 98
+ },
+ {
+  "id": "vireo-01",
+  "bird": "Red-eyed Vireo",
+  "no": 0,
+  "page": 78,
+  "key": "F",
+  "conf": "todo",
+  "note": "triplets w/ fermatas, 2 staves",
+  "pdf_page": 100
+ },
+ {
+  "id": "chat-rit",
+  "bird": "Yellow-breasted Chat",
+  "no": 0,
+  "page": 80,
+  "key": "F",
+  "conf": "todo",
+  "note": "rit&dim monotone",
+  "pdf_page": 102
+ },
+ {
+  "id": "chat-notes",
+  "bird": "Yellow-breasted Chat",
+  "no": 0,
+  "page": 80,
+  "key": "F",
+  "conf": "todo",
+  "note": "Quirp/charr/whir series p80-81",
+  "pdf_page": 102
+ },
+ {
+  "id": "bob-pileu",
+  "bird": "Bobolink",
+  "no": 0,
+  "page": 82,
+  "key": "F",
+  "conf": "todo",
+  "note": "Pi-leu pi-le-ah gurgle - partial, audit",
+  "pdf_page": 104
+ },
+ {
+  "id": "bob-song",
+  "bird": "Bobolink",
+  "no": 0,
+  "page": 83,
+  "key": "F",
+  "conf": "todo",
+  "note": "song proper opening, 2 staves",
+  "pdf_page": 105
+ },
+ {
+  "id": "indigo-01",
+  "bird": "Indigo-bird",
+  "no": 0,
+  "page": 85,
+  "key": "F",
+  "conf": "todo",
+  "note": "8va main + tonic + full form - MISSING (pdf107-108), audit \u2014 RESOLVED (draft added)",
+  "pdf_page": 107
+ },
+ {
+  "id": "indigo-main",
+  "bird": "Indigo-bird",
+  "no": 1,
+  "page": 85,
+  "key": "C",
+  "enc": "E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8",
+  "conf": "low",
+  "note": "8va applied; descending triplet clusters; verify",
+  "pdf_page": 107
+ }
+]

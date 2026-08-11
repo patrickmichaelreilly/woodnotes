@@ -1,0 +1,187 @@
+[
+ {
+  "id": "yw-01",
+  "bird": "Yellow Warbler",
+  "no": 0,
+  "page": 47,
+  "key": "A",
+  "conf": "todo",
+  "note": "brief rapid high",
+  "pdf_page": 69
+ },
+ {
+  "id": "btg-01",
+  "bird": "Black-throated Green Warbler",
+  "no": 1,
+  "page": 48,
+  "key": "?",
+  "conf": "todo",
+  "note": "5 tones, needs zoom (p69/pdf70 audit)",
+  "lyric": "Larboard watch a-hoy analog",
+  "pdf_page": 70
+ },
+ {
+  "id": "warb-cs",
+  "bird": "Chestnut-sided Warbler",
+  "no": 0,
+  "page": 49,
+  "key": "Db",
+  "conf": "todo",
+  "note": "8va",
+  "pdf_page": 71
+ },
+ {
+  "id": "warb-my",
+  "bird": "Maryland Yellow-throat",
+  "no": 0,
+  "page": 49,
+  "key": "F",
+  "conf": "todo",
+  "note": "8va",
+  "pdf_page": 71
+ },
+ {
+  "id": "warb-oth",
+  "bird": "Other Warblers",
+  "no": 0,
+  "page": 49,
+  "key": "var",
+  "conf": "todo",
+  "note": "8 short 8va songs p49-50",
+  "pdf_page": 71
+ },
+ {
+  "id": "redst-01",
+  "bird": "Redstart",
+  "no": 0,
+  "page": 51,
+  "key": "F",
+  "conf": "todo",
+  "note": "brief monotone",
+  "pdf_page": 73
+ },
+ {
+  "id": "cat-01",
+  "bird": "Cat-bird",
+  "no": 0,
+  "page": 52,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "Lively; snatchy 2 staves",
+  "pdf_page": 74
+ },
+ {
+  "id": "cat-02",
+  "bird": "Cat-bird",
+  "no": 0,
+  "page": 53,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "continuation",
+  "pdf_page": 75
+ },
+ {
+  "id": "bth-01",
+  "bird": "Brown Thrush",
+  "no": 0,
+  "page": 54,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "Lively fragments, 6+ staves p54-55",
+  "pdf_page": 76
+ },
+ {
+  "id": "wth-01",
+  "bird": "Wood Thrush",
+  "no": 0,
+  "page": 56,
+  "key": "F",
+  "conf": "todo",
+  "note": "twilight song",
+  "pdf_page": 78
+ },
+ {
+  "id": "wth-02",
+  "bird": "Wood Thrush",
+  "no": 0,
+  "page": 56,
+  "key": "F",
+  "conf": "todo",
+  "note": "new key strain",
+  "pdf_page": 78
+ },
+ {
+  "id": "wth-03",
+  "bird": "Wood Thrush",
+  "no": 0,
+  "page": 57,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "10 AM song, 3 staves",
+  "pdf_page": 79
+ },
+ {
+  "id": "veery-01",
+  "bird": "Tawny Thrush (Veery)",
+  "no": 0,
+  "page": 58,
+  "key": "F",
+  "conf": "todo",
+  "note": "8 slurred tones, silver thread; portamento",
+  "pdf_page": 80
+ },
+ {
+  "id": "herm-01",
+  "bird": "Hermit Thrush",
+  "no": 0,
+  "page": 60,
+  "key": "F",
+  "conf": "todo",
+  "note": "moves off with",
+  "pdf_page": 82
+ },
+ {
+  "id": "herm-02",
+  "bird": "Hermit Thrush",
+  "no": 0,
+  "page": 60,
+  "key": "F",
+  "conf": "todo",
+  "note": "steps up a degree",
+  "pdf_page": 82
+ },
+ {
+  "id": "herm-more",
+  "bird": "Hermit Thrush",
+  "no": 0,
+  "page": 60,
+  "key": "F",
+  "conf": "todo",
+  "note": "4 further strains p60-61",
+  "pdf_page": 82
+ },
+ {
+  "id": "oven-01",
+  "bird": "Oven-bird",
+  "no": 1,
+  "page": 63,
+  "key": "D",
+  "enc": "B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8",
+  "conf": "med",
+  "note": "8va cresc accented pairs; zeal",
+  "lyric": "tea-CHER analog",
+  "pdf_page": 85
+ },
+ {
+  "id": "pewee-01",
+  "bird": "Wood-Pewee",
+  "no": 1,
+  "page": 64,
+  "key": "Ab",
+  "enc": "C5:8. Eb5:16 C5:4^ r:8 C5:8. Ab4:16 Bb4:4^ r:8 C5:8. Eb5:16 C5:4^ C5:8 Bb4:8 Ab4:2^",
+  "conf": "low",
+  "note": "Slow, portamento; famous pee-a-wee; verify by ear",
+  "lyric": "Pe-wee peer...",
+  "pdf_page": 86
+ }
+]

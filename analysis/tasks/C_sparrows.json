@@ -1,0 +1,119 @@
+[
+ {
+  "id": "ssp-01",
+  "bird": "Song-sparrow",
+  "no": 1,
+  "page": 24,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 46
+ },
+ {
+  "id": "ssp-02",
+  "bird": "Song-sparrow",
+  "no": 2,
+  "page": 24,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 46
+ },
+ {
+  "id": "ssp-03",
+  "bird": "Song-sparrow",
+  "no": 3,
+  "page": 24,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 46
+ },
+ {
+  "id": "ssp-04",
+  "bird": "Song-sparrow",
+  "no": 4,
+  "page": 24,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 46
+ },
+ {
+  "id": "ssp-05",
+  "bird": "Song-sparrow",
+  "no": 5,
+  "page": 25,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 47
+ },
+ {
+  "id": "ssp-06",
+  "bird": "Song-sparrow",
+  "no": 6,
+  "page": 25,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 47
+ },
+ {
+  "id": "ssp-07",
+  "bird": "Song-sparrow",
+  "no": 7,
+  "page": 25,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 47
+ },
+ {
+  "id": "ssp-08",
+  "bird": "Song-sparrow",
+  "no": 8,
+  "page": 25,
+  "conf": "todo",
+  "note": "opening + trill; needs zoom",
+  "pdf_page": 47
+ },
+ {
+  "id": "ssp-more",
+  "bird": "Song-sparrow",
+  "no": 0,
+  "page": 25,
+  "key": "var",
+  "conf": "todo",
+  "note": "songs 5-8 incl 8va forms",
+  "pdf_page": 47
+ },
+ {
+  "id": "chick-01",
+  "bird": "Chickadee",
+  "no": 1,
+  "page": 27,
+  "key": "C",
+  "enc": "G5:2 E5:2",
+  "conf": "med",
+  "note": "descending pair",
+  "lyric": "Ear-ly.",
+  "pdf_page": 49
+ },
+ {
+  "id": "chick-02",
+  "bird": "Chickadee",
+  "no": 2,
+  "page": 28,
+  "key": "C",
+  "enc": "G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2",
+  "conf": "low",
+  "note": "responsive form; needs zoom",
+  "pdf_page": 50
+ },
+ {
+  "id": "nut-wait",
+  "bird": "White-bellied Nuthatch",
+  "no": 1,
+  "page": 15,
+  "key": "F",
+  "enc": "C5:8 C5:8 r:8 C5:8 C5:8 C5:8 r:8^ C5:8 C5:8 C5:8 C5:8 | C5:8 C5:8 C5:8 r:8^ C5:8 A4:8 C5:8 A4:8 C5:8 A4:8",
+  "conf": "med",
+  "note": "pitch center needs verify",
+  "lyric": "Wait wait wait... Ick-y ick-y ick-y.",
+  "pdf_page": 37
+ }
+]

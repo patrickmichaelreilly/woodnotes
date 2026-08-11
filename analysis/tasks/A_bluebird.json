@@ -1,0 +1,82 @@
+[
+ {
+  "id": "blue-04",
+  "bird": "Bluebird",
+  "no": 4,
+  "page": 13,
+  "key": "Em",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-05",
+  "bird": "Bluebird",
+  "no": 5,
+  "page": 13,
+  "key": "Em",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-06",
+  "bird": "Bluebird",
+  "no": 6,
+  "page": 13,
+  "key": "Em",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-07",
+  "bird": "Bluebird",
+  "no": 7,
+  "page": 13,
+  "key": "Em",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-08",
+  "bird": "Bluebird",
+  "no": 8,
+  "page": 13,
+  "key": "Em",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-09",
+  "bird": "Bluebird",
+  "no": 9,
+  "page": 13,
+  "key": "F#m",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-10",
+  "bird": "Bluebird",
+  "no": 10,
+  "page": 13,
+  "key": "Cm",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ },
+ {
+  "id": "blue-11",
+  "bird": "Bluebird",
+  "no": 11,
+  "page": 13,
+  "key": "Dm",
+  "conf": "todo",
+  "note": "needs zoom pass",
+  "pdf_page": 35
+ }
+]

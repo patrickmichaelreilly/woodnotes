@@ -1,0 +1,252 @@
+[
+ {
+  "id": "rob-salute",
+  "bird": "Robin",
+  "no": 0,
+  "page": 14,
+  "key": "?",
+  "conf": "todo",
+  "note": "first salute, needs zoom",
+  "pdf_page": 36
+ },
+ {
+  "id": "rob-lit",
+  "bird": "Robin",
+  "no": 0,
+  "page": 14,
+  "key": "?",
+  "conf": "todo",
+  "note": "Lit lit lit lit lit; repeated-note call",
+  "lyric": "Lit, lit, lit, lit, lit.",
+  "pdf_page": 36
+ },
+ {
+  "id": "rob-litleu",
+  "bird": "Robin",
+  "no": 0,
+  "page": 14,
+  "key": "?",
+  "conf": "todo",
+  "note": "Lit lit lit leu leu",
+  "lyric": "Lit, lit, lit, leu, leu.",
+  "pdf_page": 36
+ },
+ {
+  "id": "rob-01",
+  "bird": "Robin",
+  "no": 1,
+  "page": 15,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 37
+ },
+ {
+  "id": "rob-02",
+  "bird": "Robin",
+  "no": 2,
+  "page": 16,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 38
+ },
+ {
+  "id": "rob-03",
+  "bird": "Robin",
+  "no": 3,
+  "page": 16,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 38
+ },
+ {
+  "id": "rob-04",
+  "bird": "Robin",
+  "no": 4,
+  "page": 17,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 39
+ },
+ {
+  "id": "rob-05",
+  "bird": "Robin",
+  "no": 0,
+  "page": 16,
+  "key": "?",
+  "conf": "todo",
+  "note": "pewee + rain defiance - MISSING (pdf39), audit",
+  "pdf_page": 38
+ },
+ {
+  "id": "rob-06",
+  "bird": "Robin",
+  "no": 6,
+  "page": 17,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 39
+ },
+ {
+  "id": "rob-07",
+  "bird": "Robin",
+  "no": 7,
+  "page": 18,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 40
+ },
+ {
+  "id": "rob-08",
+  "bird": "Robin",
+  "no": 8,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-09",
+  "bird": "Robin",
+  "no": 9,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-10",
+  "bird": "Robin",
+  "no": 10,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-11",
+  "bird": "Robin",
+  "no": 11,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-16",
+  "bird": "Robin",
+  "no": 16,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-17",
+  "bird": "Robin",
+  "no": 17,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-18",
+  "bird": "Robin",
+  "no": 18,
+  "page": 19,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 41
+ },
+ {
+  "id": "rob-19",
+  "bird": "Robin",
+  "no": 19,
+  "page": 20,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-20",
+  "bird": "Robin",
+  "no": 20,
+  "page": 20,
+  "key": "F",
+  "enc": "C5:16 C5:16 C5:16 C5:16 A4:8 r:8 C5:16 C5:16 C5:16 C5:16 C#5:8",
+  "conf": "med",
+  "note": "Signal for flight; verify pitches",
+  "lyric": "Chick-y ick-y chick-y eu (x2)",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-21",
+  "bird": "Robin",
+  "no": 21,
+  "page": 20,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-22",
+  "bird": "Robin",
+  "no": 22,
+  "page": 20,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-23",
+  "bird": "Robin",
+  "no": 23,
+  "page": 20,
+  "conf": "todo",
+  "note": "needs zoom",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-24",
+  "bird": "Robin",
+  "no": 24,
+  "page": 20,
+  "key": "D",
+  "enc": "r:8 A4:8 r:8 A4:8 r:8 A4:8 F#5:8 F#5:8 F#5:8",
+  "conf": "low",
+  "note": "oe oe oe up up up; verify",
+  "lyric": "oe, oe, oe, up, up, up.",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-spin",
+  "bird": "Robin",
+  "no": 0,
+  "page": 20,
+  "key": "Eb",
+  "conf": "todo",
+  "note": "All along... link-tum loo spinning-song comparison, 2 staves",
+  "lyric": "All a-long ... link-tum loo.",
+  "pdf_page": 42
+ },
+ {
+  "id": "rob-sept21",
+  "bird": "Robin",
+  "no": 0,
+  "page": 21,
+  "key": "D",
+  "conf": "todo",
+  "note": "Sept 21 exclaim",
+  "pdf_page": 43
+ },
+ {
+  "id": "rob-farewell",
+  "bird": "Robin",
+  "no": 0,
+  "page": 22,
+  "key": "D",
+  "conf": "todo",
+  "note": "main notes at pond, 2 staves",
+  "pdf_page": 44
+ }
+]

@@ -52,11 +52,12 @@
    "no": 4,
    "page": 12,
    "key": "Em",
-   "conf": "todo",
-   "note": "needs zoom pass — (page corrected from 13 per full-book catalog)",
+   "conf": "med",
+   "note": "Sparse barlines in source (only ~3 real ones found via pixel scan; others placed cosmetically at phrase breaks). One note (F5 near end) missed by head detector due to an overlaid fermata arc above the notehead \u2014 pitch confirmed by row-density measurement against staff lines. B4-A#4 pair and B4 quarter/rest confirmed via tight zoom.",
    "crops": [
     "figs_new/p034_s01.png"
-   ]
+   ],
+   "enc": "E5:8 F5:8 E5:8 D#5:8 r:8 | E5:8 D#5:8 | E5:8 B4:8 A#4:8 B4:4 r:8 D#5:8 E5:8 r:8 E5:8 D#5:8 E5:8 r:8 F5:8^ r:8 | D#5:8 E5:8"
   },
   {
    "id": "blue-05",
@@ -64,11 +65,12 @@
    "no": 5,
    "page": 12,
    "key": "Em",
-   "conf": "todo",
-   "note": "needs zoom pass — (page corrected from 13 per full-book catalog)",
+   "conf": "med",
+   "note": "No internal barlines detected (pipes are cosmetic phrase breaks). Three notes (an E5 in the first beamed pair, a flagged isolated F5, and a final D#5) were missed by the standard head detector \u2014 recovered via a lowered-threshold rerun and confirmed by row-density pitch measurement. The isolated flagged note near the end has a small hooked flag (not a fermata, unlike blue-04's mark).",
    "crops": [
     "figs_new/p034_s02.png"
-   ]
+   ],
+   "enc": "F5:8 E5:8 | E5:8 G5:8 | F5:8 D#5:8 r:8 | F5:8 E5:8 | E5:8 D#5:8 r:8 | F5:8 E5:8 D#5:8"
   },
   {
    "id": "blue-06",
@@ -76,12 +78,13 @@
    "no": 6,
    "page": 13,
    "key": "Em",
-   "conf": "todo",
-   "note": "needs zoom pass",
+   "conf": "med",
+   "note": "Dense figure spanning two systems (p035_s00 + p035_s01); many notes have individual flags rather than beams, and several were missed by the standard detector \u2014 recovered via lowered-threshold rerun plus manual row-density pitch checks. No internal barlines found in either system (bars used only as cosmetic phrase separators). Rest/flag placements in a few spots are best-effort.",
    "crops": [
     "figs_new/p035_s00.png",
     "figs_new/p035_s01.png"
-   ]
+   ],
+   "enc": "E5:8 F5:8 E5:8 G5:8 E5:8 r:8 G5:8 E5:8 E5:8 D#5:8 r:8 F5:8 C5:8 G5:8 A5:8 r:8 G5:8 E5:8 E5:8 F5:8 r:8 E5:8 | F5:8 E5:8 D#5:8 r:8 G5:8 F5:8 E5:8 D5:8 E5:8 F5:8 G5:8 r:8 G5:8 r:8 G5:8 r:8 E5:8 r:8 E5:8 F5:8 G5:8"
   },
   {
    "id": "blue-07",
@@ -89,12 +92,13 @@
    "no": 7,
    "page": 13,
    "key": "Em",
-   "conf": "todo",
-   "note": "needs zoom pass",
+   "conf": "med",
+   "note": "Spans p035_s02 (full) plus the left portion of p035_s03 (before the double barline that separates it from fig. 8). Opening D5 has a natural sign of unclear purpose (D isn't altered by the Em key sig; encoded as plain D5). One note (originally read as E5 at x=441 in p035_s02) has a sharp directly before it with no clear diatonic explanation \u2014 encoded as its enharmonic equivalent F5 rather than the unusual spelling E#5; low confidence on that single note. Final note of the first system is an open (half-note) D#5.",
    "crops": [
     "figs_new/p035_s02.png",
     "figs_new/p035_s03.png"
-   ]
+   ],
+   "enc": "D5:8 E5:8 G5:8 F5:8 D#5:8 r:8 F5:8 A4:8 G5:8 r:8 E5:8 A4:8 G5:8 r:8 E5:8 F5:8 E5:8 D#5:2 r:8 | E5:8 G5:8 r:8 E5:8 G5:8"
   },
   {
    "id": "blue-08",
@@ -102,11 +106,12 @@
    "no": 8,
    "page": 13,
    "key": "Em",
-   "conf": "todo",
-   "note": "needs zoom pass",
+   "conf": "high",
+   "note": "Right portion of p035_s03, after the double barline and \"8.\" label. Two symmetric 3-note beamed groups (G5-A5-E5) separated by a rest; all three pitches per group confirmed via row-density measurement (middle and last notes of each group were missed by the standard detector but are unambiguous). Small dash marks beside the A5 noteheads look like tenuto marks, not encoded as they don't affect pitch/duration.",
    "crops": [
     "figs_new/p035_s03.png"
-   ]
+   ],
+   "enc": "G5:8 A5:8 E5:8 r:8 G5:8 A5:8 E5:8"
   },
   {
    "id": "blue-09",
@@ -114,23 +119,25 @@
    "no": 9,
    "page": 13,
    "key": "F#m",
-   "conf": "todo",
-   "note": "needs zoom pass",
+   "conf": "med",
+   "note": "Left portion of p035_s04 (\"9.\", key sig 3 sharps matching F#m). Opening E5 carries an elaborate turn/mordent ornament above it, not encoded (noted here only). The C5-A#4 pair's accidental was confirmed by row-density measurement (initial read as B4 was skewed by the sharp glyph). Final three notes are marked as a triplet (\"3\" over the beam) and encoded with trailing-3 triplet notation.",
    "crops": [
     "figs_new/p035_s04.png"
-   ]
+   ],
+   "enc": "E5:8 C5:8 C5:8 A#4:8 r:8 C5:83 D5:83 E5:83"
   },
   {
    "id": "blue-10",
    "bird": "Bluebird",
    "no": 10,
    "page": 13,
-   "key": "Cm",
-   "conf": "todo",
-   "note": "needs zoom pass",
+   "key": "Gm",
+   "conf": "med",
+   "note": "Right portion of p035_s04 (\"10.\"). NOTE: engraved key signature shows only 2 flats (Bb, Eb), consistent with Gm/Bb major, not the Cm (3 flats: Bb,Eb,Ab) given in the task file \u2014 flagging this discrepancy rather than silently correcting it. Opening G5 has a turn/mordent ornament (not encoded). The B4 has an explicit natural sign cancelling the key's Bb. Final pair (E5-C5) is drawn with a double beam (16ths) and the E5's stem has a wavy hook mark resembling a vocal-slide indicator (see METHOD.md) \u2014 not separately encoded. | key corrected Cm->Gm: engraving shows 2 flats",
    "crops": [
     "figs_new/p035_s04.png"
-   ]
+   ],
+   "enc": "G5:8 C5:8 r:8 C5:8 B4:8 r:8 E5:16 C5:16"
   },
   {
    "id": "blue-11",
@@ -138,50 +145,54 @@
    "no": 11,
    "page": 13,
    "key": "Dm",
-   "conf": "todo",
-   "note": "needs zoom pass",
+   "conf": "high",
+   "note": "Spans p035_s05 (\"11. July 14.\") + p035_s06. Clean engraving, mostly simple beamed eighth-note pairs. The second pair of the first system (F5-E5) is drawn with a wavy/zigzag beam \u2014 a vocal-slide marking per METHOD.md, encoded as plain F5:8 E5:8 with the slide noted here rather than as a trill. Second system has two C#5 chromatic passing tones confirmed via zoom.",
    "crops": [
     "figs_new/p035_s05.png",
     "figs_new/p035_s06.png"
-   ]
+   ],
+   "enc": "D5:8 E5:8 F5:8 E5:8 D5:8 D5:8 r:8 G5:8 F5:8 E5:8 F5:8 E5:8 D5:8 r:8 D5:8 E5:8 | F5:8 r:8 D5:8 C#5:8 r:8 D5:8 C#5:8 D5:8 r:8 E5:8 D5:8 G5:8 F5:8 D5:8 D5:8 r:8 D5:8 F5:8"
   },
   {
    "id": "rob-salute",
    "bird": "Robin",
    "no": 0,
    "page": 14,
-   "key": "?",
-   "conf": "todo",
-   "note": "first salute, needs zoom",
+   "key": "C",
+   "conf": "high",
+   "note": "First robin salute call, no lyric. All notes have staccato dots (matches rob-lit's opening figure style). Single 8th-note rest mid-phrase, no fermata. Key inferred C (no signature shown).",
    "crops": [
     "figs_new/p036_s00b.png"
-   ]
+   ],
+   "enc": "C5:8 D5:8 r:8 E5:8 F5:8 E5:8 D5:8 C5:8 C5:8"
   },
   {
    "id": "rob-lit",
    "bird": "Robin",
    "no": 0,
    "page": 14,
-   "key": "?",
-   "conf": "todo",
-   "note": "Lit lit lit lit lit; repeated-note call",
+   "key": "C",
+   "conf": "high",
+   "note": "Repeated-note 'Lit lit lit lit lit' call, all F5, staccato dots on every note. Fermata sits over the second (odd vertical glyph) rest, not a note.",
    "lyric": "Lit, lit, lit, lit, lit.",
    "crops": [
     "figs_new/p036_s00.png"
-   ]
+   ],
+   "enc": "F5:8 r:8 F5:8 r:8^ F5:8 F5:8 F5:8"
   },
   {
    "id": "rob-litleu",
    "bird": "Robin",
    "no": 0,
    "page": 14,
-   "key": "?",
-   "conf": "todo",
-   "note": "Lit lit lit leu leu",
+   "key": "C",
+   "conf": "high",
+   "note": "'Lit lit lit leu leu.' Flat accidental explicit before the two 'leu' notes (Bb5); no key signature shown.",
    "lyric": "Lit, lit, lit, leu, leu.",
    "crops": [
     "figs_new/p036_s01.png"
-   ]
+   ],
+   "enc": "F5:8 F5:8 F5:8 r:8 Bb5:8 Bb5:8"
   },
   {
    "id": "nut-wait",
@@ -189,9 +200,9 @@
    "no": 1,
    "page": 15,
    "key": "F",
-   "enc": "C5:8 C5:8 r:8 C5:8 C5:8 C5:8 r:8^ C5:8 C5:8 C5:8 C5:8 | C5:8 C5:8 C5:8 r:8^ C5:8 A4:8 C5:8 A4:8 C5:8 A4:8",
-   "conf": "med",
-   "note": "pitch center needs verify",
+   "enc": "F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8",
+   "conf": "high",
+   "note": "CORRECTED from existing C5/A4-centered encoding (which the previous note already flagged as needing pitch-center verification). Lyrics are printed under the staff and align exactly: 'Wait,'x9 (2 F5 + 3 F5 + 4 D5, with an 8th rest and a fermata-rest breaking up the wait's) then 'wait, wait, wait.' (3 more D5) then 'Ick-y, ick-y, ick-y.' (6 C5). p037_s02==p051_s00 and p037_s03==p051_s01 are duplicate scans of the same two systems (gap-page copy), not additional content - the 4 crops encode only 2 unique systems, concatenated here. Verified with a pixel grid overlay: F5 notes sit exactly on the top staff line, D5 on the second line - high confidence. Key = 1 flat (F, matches existing corpus key).",
    "lyric": "Wait wait wait... Ick-y ick-y ick-y.",
    "crops": [
     "figs_new/p037_s02.png",
@@ -205,192 +216,226 @@
    "bird": "Robin",
    "no": 1,
    "page": 16,
-   "conf": "todo",
-   "note": "needs zoom — (page corrected from 15 per full-book catalog)",
+   "conf": "med",
+   "note": "Two-system figure '1.', key F (1 flat). Five 16th-note triplet-figures separated by 16th rests per system; system 1 ends on a fermata rest, system 2 ends at a plain barline. The opening note of several triplet-figures and the sharped middle note of the two closing figures were faint/undetected by automated head-finding and filled in by melodic-pattern inference (mirrors the clearly-detected shape) \u2014 worth a second look at full source resolution.",
    "crops": [
     "figs_new/p038_s00.png",
     "figs_new/p038_s01.png"
-   ]
+   ],
+   "enc": "D5:16 E5:16 F5:16 r:16 F5:16 G5:16 D5:16 r:16 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 D5:16 r:16 A5:16 G#5:16 A5:16 r:16^ D5:16 E5:16 F5:16 r:16 E5:16 F5:16 D5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 G#5:16 A5:16",
+   "key": "F"
   },
   {
    "id": "rob-02",
    "bird": "Robin",
    "no": 2,
    "page": 16,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "'2. Another song at daybreak.' Two-system figure, key G (1 sharp). Contains explicit chromatic sharps on scale-degree turns (D#5, A#5) confirmed by visible accidental glyphs directly before those noteheads. Some notes in system 1 were reconstructed via low-threshold re-detection plus staff-line-ruled pixel measurement where the primary detector missed them.",
    "crops": [
     "figs_new/p038_s02.png",
     "figs_new/p038_s03.png"
-   ]
+   ],
+   "enc": "D5:16 F5:16 D#5:16 r:16 G5:16 D#5:16 E5:16 r:16 B5:16 A#5:16 B5:16 r:16 E5:16 G5:16 E5:16 r:16 E5:16 F5:16 E5:16 B5:16 A#5:16 B5:16 r:16 E5:16 F5:16 G5:16 r:16 F5:16 G5:16 A5:16 r:16 B5:16 A#5:16 B5:16",
+   "key": "G"
   },
   {
    "id": "rob-03",
    "bird": "Robin",
    "no": 3,
    "page": 16,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "'3.' figure, key G (1 sharp). Two turn-figures read as F5(8th)+D5+D#5(16ths beamed) \u2014 the isolated high note that looked like an 'R' glyph is simply an 8th note with a single flag/hook, not an ornament letter. Chromatic passing tones (C#5, D#5) inferred from visible sharp glyphs; exact scale step of the sharped note is a judgment call given scan resolution.",
    "crops": [
     "figs_new/p038_s04.png"
-   ]
+   ],
+   "enc": "D5:16 C#5:16 D5:16 r:16 F5:16 F5:16 F5:16 r:16 F5:8 D5:16 D#5:16 r:16 F5:8 D5:16 D#5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 B5:16 A5:16",
+   "key": "G"
   },
   {
    "id": "rob-04",
    "bird": "Robin",
    "no": 4,
    "page": 17,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "'4.' figure, key F (1 flat). Opens with a fast 16th-note beamed pair (F5,G5) where G5 carries an augmentation dot, then two 8th notes, repeated after a 16th rest. A stray low 'B3'-ish detection near the clef is a false positive from the figure-number glyph, disregarded.",
    "crops": [
     "figs_new/p039_s00.png"
-   ]
+   ],
+   "enc": "F5:16 G5:16. E5:8 F5:8 r:16 F5:16 G5:16. E5:8 F5:8",
+   "key": "F"
   },
   {
    "id": "rob-06",
    "bird": "Robin",
    "no": 6,
    "page": 18,
-   "conf": "todo",
-   "note": "needs zoom — (page corrected from 17 per full-book catalog)",
+   "conf": "med",
+   "note": "'6.' figure, key A (3 sharps). Five 16th-note triplet-figures with 16th rests; fermata over the fourth rest. Leftmost note of the first triplet-figure was undetected (obscured near the key signature) and filled in by matching the ascending D-E-F pattern seen elsewhere on this page.",
    "crops": [
     "figs_new/p040_s00.png"
-   ]
+   ],
+   "enc": "D5:16 E5:16 F5:16 r:16 G5:16 A5:16 G5:16 r:16 F5:16 G5:16 E5:16 r:16 F5:16 G5:16 F5:16 r:16^ G5:16 A5:16 F5:16",
+   "key": "A"
   },
   {
    "id": "rob-07",
    "bird": "Robin",
    "no": 7,
    "page": 18,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "high",
+   "note": "'7.' figure, key Bb (2 flats). Four clean 16th-note neighbor-tone figures separated by 16th rests, all 12 notes cleanly detected, no accidentals beyond key signature.",
    "crops": [
     "figs_new/p040_s01.png"
-   ]
+   ],
+   "enc": "E5:16 D5:16 E5:16 r:16 G5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 r:16 G5:16 F5:16 G5:16",
+   "key": "Bb"
   },
   {
    "id": "rob-08",
    "bird": "Robin",
    "no": 8,
    "page": 18,
-   "conf": "todo",
-   "note": "needs zoom — (page corrected from 19 per full-book catalog)",
+   "conf": "low",
+   "note": "'8.' figure (shares crop figs_new/p040_s02.png with '9.', split by the printed figure numbers), key Eb (3 flats). Small grace-note-like figure (tiny notehead, read as a 32nd) leads into a slanted-beam pair each time; pitch of the grace note is an estimate from a faint blob near the staff top. Needs a second look.",
    "crops": [
     "figs_new/p040_s02.png"
-   ]
+   ],
+   "enc": "F5:32 F5:16 E5:16 r:16 A5:8 r:16 A5:8 F5:32 F5:16 E5:16",
+   "key": "Eb"
   },
   {
    "id": "rob-09",
    "bird": "Robin",
    "no": 9,
    "page": 18,
-   "conf": "todo",
-   "note": "needs zoom — (page corrected from 19 per full-book catalog)",
+   "conf": "high",
+   "note": "'9.' figure (right-hand half of figs_new/p040_s02.png). Three clean 16th-note triplet-figures with 16th rests, key Eb (3 flats), all 9 notes cleanly detected.",
    "crops": [
     "figs_new/p040_s02.png"
-   ]
+   ],
+   "enc": "E5:16 F5:16 E5:16 r:16 A5:16 B5:16 A5:16 r:16 F5:16 G5:16 E5:16",
+   "key": "Eb"
   },
   {
    "id": "rob-10",
    "bird": "Robin",
    "no": 10,
    "page": 18,
-   "conf": "todo",
-   "note": "needs zoom — (page corrected from 19 per full-book catalog)",
+   "conf": "high",
+   "note": "'10. Sunset.' Key C (no signature). Three-rest phrase pairing a low neighbor-tone figure with an ascending higher figure each time, climbing D5-space to C6/D6 by the close; final figure is only 2 notes (D6,C6) as printed, cut short at the barline. All notes cleanly detected.",
    "crops": [
     "figs_new/p040_s03.png"
-   ]
+   ],
+   "enc": "E5:16 F5:16 E5:16 G5:16 A5:16 G5:16 r:16 E5:16 F5:16 E5:16 A5:16 B5:16 A5:16 r:16 E5:16 F5:16 E5:16 C6:16 D6:16 C6:16 r:16 D6:16 C6:16",
+   "key": "C"
   },
   {
    "id": "rob-11",
    "bird": "Robin",
    "no": 11,
    "page": 18,
-   "conf": "todo",
-   "note": "needs zoom — (page corrected from 19 per full-book catalog)",
+   "conf": "high",
+   "note": "'11.' figure, key F (1 flat). Repeated-note rattle on Bb5 (courtesy flat marked on the first note, redundant with key signature), one 16th rest, then a wavy vocal-slide mark down to the closing G5 (slide, not a trill \u2014 not separately encoded per convention).",
    "crops": [
     "figs_new/p040_s04.png"
-   ]
+   ],
+   "enc": "Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16",
+   "key": "F"
   },
   {
    "id": "rob-16",
    "bird": "Robin",
    "no": 16,
    "page": 19,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "low",
+   "note": "Two-system dense trill/turn figure, key G (1 sharp). The source clearly shows repeated chromatic upper/lower-neighbor turn ornaments (sharped passing tones) and sloped-beam fast runs, but at this scan resolution the automated head detector missed many of the ornamental notes and could not reliably localize the accidentals; the pitch skeleton given here is the plain-letter reading only (accidentals omitted). Needs re-verification from a higher-resolution source.",
    "crops": [
     "figs_new/p041_s04.png",
     "figs_new/p041_s05.png"
-   ]
+   ],
+   "enc": "D5:16 E5:16 F5:16 D5:16 E5:16 E5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 F5:16 G5:16 A5:16 F5:16 E5:16 D5:16 r:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16 G5:16 F5:16 E5:16 r:16 E5:16 D5:16 G5:16 E5:16 D5:16 E5:16 r:16 G5:16 A5:16 r:16 G5:16 A5:16 r:16 F5:16 E5:16 D5:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16",
+   "key": "G"
   },
   {
    "id": "rob-17",
    "bird": "Robin",
    "no": 17,
    "page": 19,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "'17. Just at dark.' Two-system figure, key C (no signature). Phrase length shortens across repeats (3,2 notes) suggesting the call fading toward dark, ending both systems in a fast pp run on C6/B5. No accidentals seen (unlike neighboring dense trill figures on this page).",
    "crops": [
     "figs_new/p041_s06.png",
     "figs_new/p041_s07.png"
-   ]
+   ],
+   "enc": "A5:16 G5:16 A5:16 r:16 F5:16 G5:16 r:16 A5:16 G5:16 A5:16 r:16 G5:16 F5:16 C6:16 B5:16 C6:16 B5:16 C6:16 A5:16 B5:16 A5:16 r:16 G5:16 F5:16 G5:16 r:16 G5:16 F5:16 r:16 G5:16 F5:16 r:16 C6:16 B5:16 C6:16 B5:16 C6:16",
+   "key": "C"
   },
   {
    "id": "rob-18",
    "bird": "Robin",
    "no": 18,
    "page": 19,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "Two-system figure, key C (no signature). Long rattle of nine repeated G5 8th notes into D5, fermata rest, then eight repeated F5 8th notes, rest, then two short 16th-note turn figures.",
    "crops": [
     "figs_new/p041_s08.png",
     "figs_new/p041_s09.png"
-   ]
+   ],
+   "enc": "G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 F5:16",
+   "key": "C"
   },
   {
    "id": "rob-19",
    "bird": "Robin",
    "no": 19,
    "page": 20,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "'19.' figure, key A (3 sharps). Three repeated B4 8th notes lead into a fast ascending 16th-note triplet-figure (C5,D5,E5), twice, separated by an 8th rest. The final triplet-figure's notes were reconstructed by symmetry with the first (a note in that region was not cleanly detected).",
    "crops": [
     "figs_new/p042_s00.png"
-   ]
+   ],
+   "enc": "B4:8 B4:8 B4:8 C5:16 D5:16 E5:16 r:8 B4:8 B4:8 B4:8 r:8 C5:16 D5:16 E5:16",
+   "key": "A"
   },
   {
    "id": "rob-21",
    "bird": "Robin",
    "no": 21,
    "page": 20,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "high",
+   "note": "'21. Sept 21, cold and rainy.' Key G (1 sharp). Clean stepwise descent F5 down to C5, fermata rest, then a shorter F5-E5-D5 descent. All notes cleanly detected.",
    "crops": [
     "figs_new/p042_s02.png"
-   ]
+   ],
+   "enc": "F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
+   "key": "G"
   },
   {
    "id": "rob-22",
    "bird": "Robin",
    "no": 22,
    "page": 20,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "high",
+   "note": "'22.' figure, key G (1 sharp). All notes cleanly detected, no accidentals beyond key signature.",
    "crops": [
     "figs_new/p042_s03.png"
-   ]
+   ],
+   "enc": "D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8",
+   "key": "G"
   },
   {
    "id": "rob-23",
    "bird": "Robin",
    "no": 23,
    "page": 20,
-   "conf": "todo",
-   "note": "needs zoom",
+   "conf": "med",
+   "note": "'23.' figure, key G (1 sharp). Rest placement within the four phrase-groups (4/4/2/5 notes) is read from spacing gaps between otherwise cleanly-detected notes; worth a quick visual double-check of exact rest positions.",
    "crops": [
     "figs_new/p042_s04.png"
-   ]
+   ],
+   "enc": "G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8",
+   "key": "G"
   },
   {
    "id": "rob-20",
@@ -398,9 +443,9 @@
    "no": 20,
    "page": 20,
    "key": "F",
-   "enc": "C5:16 C5:16 C5:16 C5:16 A4:8 r:8 C5:16 C5:16 C5:16 C5:16 C#5:8",
-   "conf": "med",
-   "note": "Signal for flight; verify pitches",
+   "enc": "F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 E5:16 D5:16 r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 D5:16 C5:16",
+   "conf": "high",
+   "note": "'20. Signal for flight.' Key F (1 flat). Re-verified from scratch and CORRECTED \u2014 previous encoding (C5/A4/C#5-based) did not match the crop; six repeated 16th notes (F5, then E5 after the rest) for 'Chick-y ick-y chick-y' with a 2-note melisma (E5,D5 then D5,C5) on 'eu', matching the printed lyric syllable count (7 syllables, 8 notes per half).",
    "lyric": "Chick-y ick-y chick-y eu (x2)",
    "crops": [
     "figs_new/p042_s01.png"
@@ -412,9 +457,9 @@
    "no": 24,
    "page": 20,
    "key": "D",
-   "enc": "r:8 A4:8 r:8 A4:8 r:8 A4:8 F#5:8 F#5:8 F#5:8",
-   "conf": "low",
-   "note": "oe oe oe up up up; verify",
+   "enc": "F#5:32 D5:8 F#5:32 D5:8 F#5:32 D5:8 A4:8 A4:8 A4:8",
+   "conf": "med",
+   "note": "'24.' figure, key D (2 sharps). Re-verified from scratch and CORRECTED \u2014 previous low-confidence encoding (rests + A4/F#5 in a different order) did not match the crop. Actual reading: three slurred grace-note-to-main-note figures (small high grace note, read as 32nd, sliding down into D5) for 'oe, oe, oe,' followed by three plain A4 8th notes for 'up, up, up.' Grace-note pitch (F#5, sitting on the top staff line) is a reasonable but not fully certain read of a small notehead.",
    "lyric": "oe, oe, oe, up, up, up.",
    "crops": [
     "figs_new/p042_s05.png"
@@ -426,13 +471,14 @@
    "no": 0,
    "page": 20,
    "key": "Eb",
-   "conf": "todo",
-   "note": "All along... link-tum loo spinning-song comparison, 2 staves",
+   "conf": "med",
+   "note": "Spinning-song comparison, 2 staves, key Eb (3 flats), lyric 'All a-long... link-tum loo.' Two notes in system 1 (2nd and 5th) carry a printed '3' triplet marker against their neighbors, encoded with the triplet suffix; the final note of system 1 is spaced noticeably wider than the rest (read as a quarter note, possibly holding 'long'). System 2 (9 notes for 9 syllables of 'all a-long, all a-long link-tum loo.') detected cleanly and matches the lyric one-to-one.",
    "lyric": "All a-long ... link-tum loo.",
    "crops": [
     "figs_new/p042_s06.png",
     "figs_new/p042_s07.png"
-   ]
+   ],
+   "enc": "E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8"
   },
   {
    "id": "rob-sept21",
@@ -440,11 +486,12 @@
    "no": 0,
    "page": 21,
    "key": "D",
-   "conf": "todo",
-   "note": "Sept 21 exclaim",
+   "conf": "med",
+   "note": "Under the text 'I heard a robin exclaim,\u2014', key D (2 sharps). Stepwise descent from a repeated E5 opening down to C5, fermata rest, then a shorter F5-E5-D5 descent. The repeated second E5 was faint/undetected by the automated head finder and filled in visually (two same-height noteheads clearly present before the rise to G5).",
    "crops": [
     "figs_new/p043_s00.png"
-   ]
+   ],
+   "enc": "E5:8 E5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8"
   },
   {
    "id": "rob-farewell",
@@ -452,100 +499,117 @@
    "no": 0,
    "page": 22,
    "key": "D",
-   "conf": "todo",
-   "note": "main notes at pond, 2 staves",
+   "conf": "high",
+   "note": "Main notes at the pond (farewell), 2 staves, key D (2 sharps). System 1 has two fermata rests; all 26 notes across both systems cleanly detected with no ambiguity.",
    "crops": [
     "figs_new/p044_s00.png",
     "figs_new/p044_s01.png"
-   ]
+   ],
+   "enc": "D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8^ D5:8 F5:8 F5:8 F5:8 F5:8 r:8^ G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 r:8 G5:8 G5:8 G5:8"
   },
   {
    "id": "ssp-01",
    "bird": "Song-sparrow",
    "no": 1,
    "page": 23,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 24 per full-book catalog)",
+   "conf": "med",
+   "note": "Opening (B4 + 5x F#5) then G#5 pickup into a 5-note 16th trill (A5/B5 alternating, ending A5). Pitches re-measured fresh (precomputed analysis/*.txt was stale/out of sync with current figs_new crop - re-ran heads.py and cross-checked overlay + zoomed PIL crops directly). Repeat dots :|| at end - passage encoded once.",
    "crops": [
     "figs_new/p045_s00.png"
-   ]
+   ],
+   "enc": "B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:16 B5:16 A5:16 B5:16 A5:16",
+   "key": "A"
   },
   {
    "id": "ssp-02",
    "bird": "Song-sparrow",
    "no": 2,
    "page": 23,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 24 per full-book catalog)",
+   "conf": "med",
+   "note": "Dotted-8th B4, D5, C#5, then 6-note 8th run (E5/F#5 alternating), G#5 pickup to end. Re-measured fresh (stale precomputed data had wrong pitches - D5/C#5 were misread as C#5/E5 in an earlier pass). Repeat dots :|| at end - encoded once.",
    "crops": [
     "figs_new/p045_s01.png"
-   ]
+   ],
+   "enc": "B4:8. D5:8 C#5:8 E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8",
+   "key": "A"
   },
   {
    "id": "ssp-03",
    "bird": "Song-sparrow",
    "no": 3,
    "page": 23,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 24 per full-book catalog)",
+   "conf": "med",
+   "note": "Key = 1 flat (Bb). Three grace(F5)+accented-quarter(C6) pairs (accent '>' not encoded), then quarter F5, then 5-note 16th trill A5/Bb5 (Bb per key sig). Grace notes tiny/ambiguous - encoded as 32nds per convention.",
    "crops": [
     "figs_new/p045_s02.png"
-   ]
+   ],
+   "enc": "F5:32 C6:4 F5:32 C6:4 F5:32 C6:4 F5:4 A5:16 Bb5:16 A5:16 Bb5:16 A5:16",
+   "key": "F"
   },
   {
    "id": "ssp-04",
    "bird": "Song-sparrow",
    "no": 4,
    "page": 23,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 24 per full-book catalog)",
+   "conf": "low",
+   "note": "Key = 2 sharps (F#,C#). Grace(A5, estimated)+E5, 16th rest, 6-note 16th run E5/F#5 alternating, dotted-8th G5, then two F#5 eighths (2nd F#5 has explicit courtesy sharp in source, 1st shown F# via key sig, both read at same staff position as first F#5). Grace-note pitch and rest duration are best estimates from a cluttered region - mark low pending a second look.",
    "crops": [
     "figs_new/p045_s03.png"
-   ]
+   ],
+   "enc": "A5:32 E5:8 r:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 G5:8. F#5:8 F#5:8",
+   "key": "D"
   },
   {
    "id": "ssp-05",
    "bird": "Song-sparrow",
    "no": 5,
    "page": 24,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 25 per full-book catalog)",
+   "conf": "med",
+   "note": "Key = 1 sharp (F#). D5/E5/D5 staccato-marked eighths, then 5x B5 eighths (each shows a pass-through A5 ledger, consistent with B5 in the space above), ending fermata over rest.",
    "crops": [
     "figs_new/p046_s00.png"
-   ]
+   ],
+   "enc": "D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^",
+   "key": "G"
   },
   {
    "id": "ssp-06",
    "bird": "Song-sparrow",
    "no": 6,
    "page": 24,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 25 per full-book catalog)",
+   "conf": "med",
+   "note": "Key = 1 sharp (F#, drawn as a blocky glyph on the F5 line that's easy to mistake for a repeat/box symbol at low zoom - confirmed sharp on closer crop). Three grace(A5)+G5 pairs, then 5-note 16th run E5/F#5/E5/F#5/D5, fermata over rest.",
    "crops": [
     "figs_new/p046_s01.png"
-   ]
+   ],
+   "enc": "A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 D5:16 r:8^",
+   "key": "G"
   },
   {
    "id": "ssp-07",
    "bird": "Song-sparrow",
    "no": 7,
    "page": 24,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 25 per full-book catalog)",
+   "conf": "med",
+   "note": "No key sig. Three grace(B5)+accented C6 pairs (two ledger lines confirm C6: pass-through A5 + through-head C6), then 5x G5 individually-flagged eighths, fermata over rest.",
    "crops": [
     "figs_new/p046_s02.png"
-   ]
+   ],
+   "enc": "B5:32 C6:8 B5:32 C6:8 B5:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
+   "key": "C"
   },
   {
    "id": "ssp-08",
    "bird": "Song-sparrow",
    "no": 8,
    "page": 24,
-   "conf": "todo",
-   "note": "opening + trill; needs zoom — (page corrected from 25 per full-book catalog)",
+   "conf": "med",
+   "note": "No key sig. Three grace(D5)+C5 pairs, then 5-note 16th trill G5/A5 alternating, 8th rest, then 3x C6 individual eighths (two-ledger pattern confirms C6), ends with repeat dots.",
    "crops": [
     "figs_new/p046_s03.png"
-   ]
+   ],
+   "enc": "D5:32 C5:8 D5:32 C5:8 D5:32 C5:8 G5:16 A5:16 G5:16 A5:16 G5:16 r:8 C6:8 C6:8 C6:8",
+   "key": "C"
   },
   {
    "id": "chick-01",
@@ -553,9 +617,9 @@
    "no": 1,
    "page": 27,
    "key": "C",
-   "enc": "G5:2 E5:2",
-   "conf": "med",
-   "note": "descending pair",
+   "enc": "A5:2 G5:2",
+   "conf": "high",
+   "note": "CORRECTED from existing G5:2/E5:2. Re-verified from scratch with a pixel/staff-position grid overlay: first (hollow) notehead centers on A5 (one ledger-line's worth above the staff), second centers on G5 (space just above the staff) - a descending whole step, not a third. No key sig (C).",
    "lyric": "Ear-ly.",
    "crops": [
     "figs_new/p049_s00.png"
@@ -567,9 +631,9 @@
    "no": 2,
    "page": 28,
    "key": "C",
-   "enc": "G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2",
-   "conf": "low",
-   "note": "responsive form; needs zoom",
+   "enc": "C6:2 A5:2 | A5:2 G5:2 | C6:2 A5:4 A5:4 | A5:2 G5:4 G5:4",
+   "conf": "med",
+   "note": "CORRECTED from existing guess (G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2), which does not match this crop. The crop actually shows FOUR numbered mini-figures ('1.'-'4.'), each a 2-pitch idea in one of two registers: C6-down-to-A5 (a third, figs 1&3) or A5-down-to-G5 (a step, figs 2&4), with the lower pitch either held as a half note (figs 1,2) or restruck as two quarters (figs 3,4). No key sig (C). Ledger-line count (pass-through vs through-head) used to disambiguate C6 vs A5 vs B5 vs G5 since notes sit right at/above the staff. Encoded all four, separated by '|'.",
    "crops": [
     "figs_new/p050_s00.png"
    ]
@@ -610,9 +674,9 @@
    "no": 1,
    "page": 36,
    "key": "F",
-   "enc": "C5:4 C5:4 C5:8 C5:8 C5:8 C5:8 C5:16 C#5:16 D5:16 D#5:16 E5:16 E5:16 E5:16 E5:16",
-   "conf": "med",
-   "note": "accelerando+crescendo, chromatic rise; verify pitch center",
+   "enc": "A5:8 A5:8 A5:8 A5:8 A5:8 Bb5:8 Bb5:8 B5:8 B5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16",
+   "conf": "high",
+   "note": "Re-verified from scratch; corrects prior med-conf draft (was a fabricated-looking chromatic run C5-E5 that does not match the crop at all). Actual reading, cross-checked with head-detection overlay and 5x zoom: 5 plain eighth notes on A5, 4 plain eighth notes on B-line (first two are Bb per the F-major key signature/1 flat, last two are B natural via an explicit natural sign visible before the 3rd note), then 7 sixteenth notes beamed together alternating C6/D6 (double beam confirmed at zoom). This matches the printed captions exactly: 'Cres- - - - cen - - - -do.' above the staff and 'Accelerando et crescendo.' below - the shift from slow discrete eighths to a fast beamed 16th run depicts the accelerando, and the rising pitch (A5->B5->C6/D6) depicts the crescendo/rise.",
    "crops": [
     "figs_new/p058_s00.png"
    ]
@@ -623,9 +687,9 @@
    "no": 1,
    "page": 42,
    "key": "C",
-   "enc": "G5:2 C6:2 C6:2 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83",
-   "conf": "med",
-   "note": "8va applied; 1 low long + 2 accented longs + 3 slurred triplet clusters",
+   "enc": "G5:2 F6:2 F6:2 | C6:83 C6:83 C6:83 | C6:83 C6:83 C6:83 | C6:83 C6:83 C6:83",
+   "conf": "high",
+   "note": "Re-verified from scratch; corrects the 2nd and 3rd notes of the prior med-conf draft (were C6, should be F6 - a clear 4th higher, confirmed both by head-measurement and by direct visual comparison against the triplet notes in the same crop). Written pitches (before 8va) are G4, F5, F5, then C5 x9; encoded here as sounding pitch per the 8va marking printed at the start of the staff, per the format's 8va convention. This matches the accompanying prose description exactly: 'First come three long tones of equal length, forming together one-half of the song entire [G5, F6, F6]; then three clusters of three short tones, triplets [C6 x9]... the little twelve-toned melody' (3 + 9 = 12 tones). The first two of the three long tones carry printed accent marks (>); accents are not representable in this encoding format and are only noted here, not encoded. | marks each triplet-group boundary (cosmetic, matching the printed slur+'3' groupings).",
    "lyric": "(Old Sam) Pea-body Pea-body Pea-body",
    "crops": [
     "figs_new/p064_s00.png"
@@ -636,14 +700,15 @@
    "bird": "Black-throated Green Warbler",
    "no": 1,
    "page": 48,
-   "key": "?",
-   "conf": "todo",
-   "note": "5 tones, needs zoom (p69/pdf70 audit)",
+   "key": "D (analog line); open/C (bird call line)",
+   "conf": "high",
+   "note": "Two systems: first (p070_s00) is the bird's actual call, 8va, no key signature (open/C), 5 eighth notes -> sounding up an octave. Second (p070_s01) is the human 'analog' mnemonic with lyric 'Lar-board watch a-hoy!' underlaid, key D (2 sharps), NOT 8va (sung in normal register), dotted rhythm matches the 5 syllables.",
    "lyric": "Larboard watch a-hoy analog",
    "crops": [
     "figs_new/p070_s00.png",
     "figs_new/p070_s01.png"
-   ]
+   ],
+   "enc": "D6:8 D6:8 D6:8 C6:8 E6:8 | A4:4. B4:8 B4:4. G4:8 B4:4"
   },
   {
    "id": "oven-01",
@@ -651,9 +716,9 @@
    "no": 1,
    "page": 63,
    "key": "D",
-   "enc": "B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8",
-   "conf": "med",
-   "note": "8va cresc accented pairs; zeal",
+   "enc": "D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16",
+   "conf": "high",
+   "note": "CORRECTED from prior 'B5:16 E6:8' encoding, which measured the wrong pitches. Re-verified from scratch: key D major (2 sharps, matches corpus), 8va confirmed in crop text ('8va. Cres---cen...do.'). Printed pitches are D5/C5 alternating (C5 -> C#5 per key sig), giving sounding D6/C#6 -- NOT B/E. The lower-step false detections (E4/F4/G4) next to each pair are sloped-beam artifacts, discarded. 6 accented 'teacher' pairs under a printed crescendo.",
    "lyric": "tea-CHER analog",
    "crops": [
     "figs_new/p085_s00.png"
@@ -665,9 +730,9 @@
    "no": 1,
    "page": 64,
    "key": "Ab",
-   "enc": "C5:8. Eb5:16 C5:4^ r:8 C5:8. Ab4:16 Bb4:4^ r:8 C5:8. Eb5:16 C5:4^ C5:8 Bb4:8 Ab4:2^",
-   "conf": "low",
-   "note": "Slow, portamento; famous pee-a-wee; verify by ear",
+   "enc": "Eb5:8. Bb4:16 Db5:4^ | Eb5:8. Bb4:16 Db5:4^ | Eb5:8. Bb4:16 Db5:4^ | Db5:4^ Bb4:2^",
+   "conf": "high",
+   "note": "CORRECTED from prior low-confidence 'C5/Eb5/Ab4/Bb4' encoding. Re-verified from scratch: key Ab major (4 flats, matches corpus), 'Slow.' tempo marking, no 8va. RESOLVED the flagged concern about the lyric belonging to a second figure: p086_s00 and p087_s00 are the SAME melody printed twice -- p086_s00 has no lyric, p087_s00 has the identical notation with 'Pe-wee peer! Pe-wee peer! Pe-wee peer! Pe-wee!' underlaid, confirming both crops are one figure, not two. 3 statements of a 3-note slurred-and-fermata figure (Eb5-Bb4-Db5) plus a shorter 2-note closing tag (Db5-Bb4), matching the lyric's 3x 'Pe-wee peer!' + 1x 'Pe-wee!'.",
    "lyric": "Pe-wee peer...",
    "crops": [
     "figs_new/p086_s00.png",
@@ -679,10 +744,10 @@
    "bird": "Whippoorwill",
    "no": 1,
    "page": 68,
-   "key": "D",
-   "enc": "A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^",
+   "key": "Bb",
+   "enc": "G6:8. Eb6:16 G6:16 Bb6:8 r:8 | G6:8. Eb6:16 G6:16 Bb6:8 r:8",
    "conf": "med",
-   "note": "8va, cresc et accel; favorite form",
+   "note": "Full re-transcription from scratch; result differs substantially from the draft (A4:16 A4:16 D5:8 F#5:8^ x3, conf med), which appears to have assumed the wrong key signature (2 sharps) and wrong octave register. Actual crop shows: (1) a 2-flat key signature (Bb, Eb) -- contradicts corpus's stated 'D major'; kept the corpus's 8va instruction since it wasn't something visible to re-derive from this crop alone, but flagging the key mismatch for review. (2) Only TWO written groups/repetitions are printed in this crop (not three, despite the 'Whip-poor-will x3' lyric) -- each group is a dotted-eighth + two 16ths (beamed) + eighth, followed by an eighth rest, ending on a final barline. (3) Notated (pre-8va) pitches per group are G5(dotted 8th) Eb5(16th) G5(16th) Bb5(8th, sits on a ledger line above the staff -- this ledger line was initially mistaken for a fermata/flag in early passes but is definitively a ledger line for the A5 line beneath the B5 space), confirmed via heads.py step data cross-checked against pixel y-positions and staff-line spacing. Sounding (8va, +1 octave) = G6/Eb6/G6/Bb6, outlining an Eb-major triad shape (G-Bb-Eb), which is musically coherent with the 2-flat key signature. No fermata is actually visible anywhere in this crop -- the draft's '^' on the last note appears to have been invented; dropped it. Verified with tools/parsecheck.py -- OK.",
    "lyric": "Whip-poor-will x3",
    "crops": [
     "figs_new/p090_s00.png"
@@ -694,9 +759,9 @@
    "no": 2,
    "page": 70,
    "key": "Eb",
-   "enc": "Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 ",
-   "conf": "low",
-   "note": "cluck after each; several melodic variants p70; zoom",
+   "enc": "Eb5:8 C5:16 Eb5:16 G5:8 r:8 | Eb5:8 C5:16 Eb5:16 G5:8 r:8 | Eb5:8 C5:16 Eb5:16 G5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 F5:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 | F#5:8 D5:16 F#6:16 D6:8 r:8 | F#5:8 D5:16 F#6:16 D6:8 r:8 | F#5:8 D5:16 F#6:16 D6:8",
+   "conf": "med",
+   "note": "Full re-transcription from scratch of all 9 crops (figs_new/p092_s00 through s08), superseding the draft (Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 x3, conf low), which does not match any of the 9 systems actually printed on the page -- treated as an unreliable guess and discarded. Each system prints a short 4-note-plus-rest cell (eighth, two beamed 16ths, accented eighth [accent '>' marks not encodable in this format, omitted], eighth rest) repeated 3x, matching the 'Whip-poor-will (cluck)' lyric printed under s00-s05 (lyric not repeated under s06-s08 but the musical cell is identical in form). Distinct melodic variants across systems: s00 Eb-C-Eb-G, s01/s02 G-Eb-G-Bb, s03/s04 Eb-Eb-G-Bb, s05 G-G-Bb-Bb (all in written Eb-major pitches, key sig applied). s06 is a stepwise D5-Eb5 variant ending G5 on reps 1-3 but F5(natural) on rep 4, and (like s07/s08) omits the trailing rest after its final repetition, ending straight at the barline. s07 and s08 are the only systems with an explicit '8va.' marking printed above the staff (verified visually) -- sounding pitch = written +1 octave; s07 is in Eb major (Ab-Eb-Ab-Eb pattern), s08 switches to a 2-sharp (D major) key signature for a wide-leap variant (D5-F#6 sounding, i.e. written D4-F#5) that was the hardest passage to verify: the heads.py detector threw multiple conflicting false-positive candidates (F4/A4/D5/F5 all fired near the same beam) because its elliptical matcher partially triggers on the thick sloped 16th-note beam itself, a known failure mode. I cross-checked by measuring per-row dark-pixel-density centroids against the calibrated staff-line y-positions (confirmed the method against the following note, which centered exactly on the D5 line as expected) and am reasonably confident in D4-to-F#5(written) for that beamed pair, but it remains the single lowest-confidence element in this transcription -- worth a second look against a higher-resolution source scan if available. All key-signature accidentals (Bb/Eb/Ab for Eb major; F#/C# for D major on s08) applied to the detector's bare letter-pitches. Full concatenated string verified with tools/parsecheck.py -- OK.",
    "crops": [
     "figs_new/p092_s00.png",
     "figs_new/p092_s01.png",
@@ -715,9 +780,9 @@
    "no": 1,
    "page": 87,
    "key": "G",
-   "enc": "D5:8 B4:8 r:8 D5:8 B4:8 r:8 D5:8 B4:8 B4:8",
-   "conf": "med",
-   "note": "doleful; low pitch",
+   "enc": "G4:8 G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 | G4:8 G4:8 r:8 G4:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 | G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8",
+   "conf": "high",
+   "note": "Re-verified from scratch across all 3 systems (p109_s00-s02); old enc (D5/B4, single system only) was wrong. Actual notation is a near-monotone G4 reciting tone (matching typical cuckoo call transcription) with a single dip to F4 on the final 'coo' syllable of each phrase. Key G (1 sharp, confirmed) unchanged.",
    "lyric": "Cuck-oo, cuck-oo, cuck-oo, coo.",
    "crops": [
     "figs_new/p109_s00.png",
@@ -731,9 +796,9 @@
    "no": 1,
    "page": 89,
    "key": "F",
-   "enc": "C5:4^ C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:8 A4:8",
-   "conf": "low",
-   "note": "Wau-olp bubbling, rit&dim; guttural",
+   "enc": "Bb4:8^ Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8",
+   "conf": "high",
+   "note": "Re-verified from scratch (p111_s00). Old enc (C5/Bb4/A4 mix) was wrong -- all 12 heads sit on the same staff position (middle line, letter B), and with the 1-flat key (F major) that's Bb4 throughout, not a descending tail. Fermata on note 1 only; 'Rit. & dim.' with staccato dots marks the tail (not separately encodable, noted here). Matches 'Wau-olp, olp, olp...' bubbling repeated-note character.",
    "lyric": "Wau-olp, olp, olp...",
    "crops": [
     "figs_new/p111_s00.png"
@@ -745,9 +810,9 @@
    "no": 1,
    "page": 90,
    "key": "A",
-   "enc": "B4:8 r:8 B4:8 r:8 B4:16 B4:16 F#5:8^ B4:16 B4:16 F#5:8^ B4:8 B4:16 B4:16 F#5:8^",
-   "conf": "med",
-   "note": "rising accent to tonic",
+   "enc": "A4:8 r:8 A4:8 r:8 B4:16 D5:16^ r:8 A4:8 B4:16 D5:16^ r:8 A4:8 r:8 A4:8 B4:16 D5:16",
+   "conf": "high",
+   "note": "Re-verified from scratch (p112_s00) with pixel-grid overlay on the 3 fast beamed runs (each is only 2 notes -- B4 then D5, both 16ths -- not a repeated-B4-then-F#5 figure as the old enc had). 8 lyric words (Bob,Bob,white,Bob,white,Bob,Bob,white.) map exactly to 5 plain A4:8 'Bob' notes + 3 B4:16 D5:16 'white' runs; fermata+accent on the D5 of runs 1-2, accent only (no fermata) on the final run. Key A (3 sharps) unchanged, doesn't affect A4/B4/D5.",
    "lyric": "Bob, Bob white, Bob white...",
    "crops": [
     "figs_new/p112_s00.png"
@@ -759,9 +824,9 @@
    "no": 2,
    "page": 97,
    "key": "F#m",
-   "enc": "F#3:8 A3:8 C#4:8 A3:8 F#3:8 F#3:8 A3:8 C#4:8 A3:8 F#3:8 ",
-   "conf": "low",
-   "note": "bass clef, 5-tone flight shout; zoom",
+   "enc": "A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 | A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8",
+   "conf": "med",
+   "note": "Re-verified from scratch (p119_s01+s02). Old enc (F#3/A3/C#4 5-note melody) was wrong -- this is a repeating unit of four quick A3 16ths + one longer/higher B3 8th (the double- vs single-hook flag style is the clearest visual discriminator, more reliable here than heads.py's noisy letter output), separated by short rests. This 4+1 unit is exactly the page's own caption 'his characteristic five tones.' 5 complete units total across the two crops (one straddles the s01/s02 boundary). Key left as corpus's F#m (3 sharps); doesn't affect A/B pitches so not independently re-verified.",
    "lyric": "oo,oo,oo,oo,oo",
    "crops": [
     "figs_new/p119_s01.png",
@@ -773,22 +838,23 @@
    "bird": "Loon",
    "no": 1,
    "page": 97,
-   "key": "?",
-   "conf": "todo",
-   "note": "3-tone wild cry, 2nd long+loud; bass; zoom — notation is on book 97 (PDF119 sys0), not book 96 — book 96 is prose-only and the sentence runs over the page break; the catalog's proposed 'loon-shout' is this same 3-tone ff cry, so it was not added separately — (page corrected from 96 per full-book catalog)",
+   "key": "E",
+   "conf": "low",
+   "note": "New transcription (was todo), p119_s00. Only 2 pitches are actually notated on the staff: G#3 (eighth, key sig is 4 sharps F#/C#/G#/D# -- confirmed by pixel count of sharp glyphs, so letter G reads as G#, not the 'G3' a naive read would give) with a small curved scoop/turn mark after it, then a big gap under an 'ff' marking with a small hollow oval floating ABOVE the staff (no definite pitch -- this is almost certainly Cheney's graphic stand-in for the '2nd, long and loud' cry the corpus note describes), then A3 (quarter, large notehead = the final loud tone). Only encoded the 2 definite pitches per 'don't invent notes'; the described 3rd 'tone' is the indeterminate floating symbol, not a playable pitch. Rest duration for the gap is a rough guess. Key corrected to E (4 sharps) from '?'.",
    "crops": [
     "figs_new/p119_s00.png"
-   ]
+   ],
+   "enc": "G#3:8 r:2 A3:4"
   },
   {
    "id": "gho-01",
    "bird": "Great Horned Owl",
    "no": 1,
    "page": 99,
-   "key": "Bb",
-   "enc": "Bb2:4 Ab2:4 r:4 Bb2:4 Ab2:4 Bb2:4 Ab2:8",
+   "key": "Eb",
+   "enc": "F3:16 Bb3:4 r:8 Bb3:8 D3:8 Bb3:8 G2:8 F3:2",
    "conf": "low",
-   "note": "bass, slurred descending Hoo pairs; zoom",
+   "note": "Re-verified from scratch (p121_s00). Old enc (Bb2/Ab2 pairs) was wrong. Key signature is actually 3 flats (Bb+Eb+Ab, pixel-verified), not 2 -- corrected key to Eb; this also means the 'B' pitches read as Bb. Reading is 3 slurred pairs ('Hoo' x3): pair1 rises F3->Bb3 (16th grace up to a longer note), pair2 and 3 fall from Bb3 to a lower note (D3, then G2), ending on a sustained F3. The within-pair direction is NOT consistent (pair1 rises, pairs 2-3 fall) which is unusual and I could not fully resolve at this resolution -- flagged low confidence; a full-page PDF re-check would help.",
    "lyric": "Hoo, Hoo, Hoo.",
    "crops": [
     "figs_new/p121_s00.png"
@@ -800,9 +866,9 @@
    "no": 1,
    "page": 101,
    "key": "F",
-   "enc": "F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F#5:16 G5:8^ G#5:1^ G#5:1^",
+   "enc": "F5:16 G5:16 F5:16 G5:16 F5:16 G5:16 F5:16 F#5:16 G5:8 r:4^ F#5:2 G5:16 r:4^ F#5:2 G5:16 r:4^",
    "conf": "low",
-   "note": "tremolo+upward slide; portamento essential; zoom",
+   "note": "Re-verified p123_s00. Corrected the opening run: it's a tremolo ALTERNATING F5/G5 (pixel-grid confirmed heads.py's alternation), not 8 repeated F5s as old enc had. The two later 'Ah-ee' phrases are a held F#5 half note (open notehead sitting on the top line, not G#5) slurred into a fast G5 16th flourish, then a fermata rest. Wavy/tremolo lines noted per instructions, not encoded as trills. Dense beaming made exact note count in the run hard to pin down with full confidence.",
    "lyric": "Ah---ee, Ah-ee, Ah-ee.",
    "crops": [
     "figs_new/p123_s00.png"
@@ -814,9 +880,9 @@
    "no": 2,
    "page": 101,
    "key": "F",
-   "enc": "G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:8^ C5:1^",
+   "enc": "G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ | G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^",
    "conf": "low",
-   "note": "descending chromatic slide + tremolo; zoom",
+   "note": "Re-verified p123_s01+s02. The old enc only covered a single 9-note run + 2 held notes; actual content is much longer: a descending chromatic run (G5 down to C5, kept from prior reading -- consistent with the 'descending chromatic slide' description) followed by, in total, 5 'Ah-oo' phrases (1 in s01's tail + 4 in s02) each built from a held F5 half note slurred into an F5 note with a wavy tremolo mark underneath, then a fermata rest. s02 restates its own descending run before its 4 phrases -- kept as printed rather than assumed to be a duplicate/error. Exact run pitches and the assumption that all 5 tremolo phrases are identical are not independently pixel-verified for each instance, hence low.",
    "lyric": "Ah---oo, Ah-oo...",
    "crops": [
     "figs_new/p123_s01.png",
@@ -829,9 +895,9 @@
    "no": 1,
    "page": 94,
    "key": "Bb",
-   "enc": "Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:16 Bb2:16 Bb2:16 Bb2:16 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 ",
+   "enc": "Bb2:4 Bb2:4 Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32",
    "conf": "med",
-   "note": "drumming accel into whir then dim; single pitch B-flat",
+   "note": "Re-verified p116_s00+s01. heads.py mislocked on the clef both crops; pitch confirmed manually from the one clear notehead (sits on the B2/4th line -> Bb2 with the 1-flat key). The source notation is NOT literal note values: it's 7 plain unflagged accent-marked noteheads (3 'v' + 3 '>' marks, spaced closer together = graphic accelerando) followed by a drawn chain of ~16 overlapping oval rings ('whir', growing larger toward the end = the buzz fading/slowing per Cheney's 'dim'). Single pitch throughout (Bb2). Durations here are an editorial translation of the graphic accelerando into decreasing note values, not a literal reading -- inherently approximate, hence med not high.",
    "lyric": "Thump thump... Whir.",
    "crops": [
     "figs_new/p116_s00.png",
@@ -844,9 +910,9 @@
    "no": 1,
    "page": 105,
    "key": "C",
-   "enc": "C5:8. C5:16 C5:8 C5:8 r:8 C5:8 C5:8^ r:8 C5:8^ B4:8 C5:8 r:8 B4:8 B4:8 B4:8 C5:8",
+   "enc": "F5:8. F5:16 F5:8 F5:8 r:8^ E5:8 E5:8 r:8^ G5:16 D5:8 r:8 B4:16 B4:16 B4:16 F5:8",
    "conf": "low",
-   "note": "Wait wait ok ik; zoom",
+   "note": "Re-verified p127_s00 (note: only this ONE crop belongs to hen-wait per corpus's crops list; p127_s01-s03 are a different, unrelated figure on the same page and were not used). 12 lyric syllables (Wait x6, ok, ik, ok, ok, ok, ik) mapped to 12 note events. First 4 'Wait's sit on the top line (F5); notes 5-6 look slightly lower (read as E5, not fully certain); 'ok'/'ik' pattern before the fermata reads high-then-lower (G5, D5, tentative), and the closing ok-ok-ok-ik reads as three B4 16ths then a final F5. Several individual pitch calls here are genuinely uncertain at this scan resolution.",
    "lyric": "Wait, wait... ok, ik.",
    "crops": [
     "figs_new/p127_s00.png"
@@ -858,9 +924,9 @@
    "no": 2,
    "page": 106,
    "key": "F",
-   "enc": "A4:4^ A4:4^ A4:4^ A4:4^ A4:4^ A4:4^",
-   "conf": "low",
-   "note": "Wauk deliberate; zoom",
+   "enc": "D4:4^ D4:4^ D4:4^ r:4 E4:4^ E4:4^ r:4 D4:4^ F4:4^ | F4:4^ r:4 C4:32 G4:4^ G4:4^ G4:4^ r:4 B4:4^ B4:4^ B4:4^",
+   "conf": "med",
+   "note": "Re-verified from scratch (p128_s00+s01). Old enc (6x identical A4 with fermata) was wrong -- every note DOES carry a fermata ('Wauk deliberate') but the pitches clearly rise over the course of the phrase: D4 x3, E4 x2, D4, F4 (s00) then F4, a short grace note (C4), G4 x3, B4 x3 (s01), matching the printed 'cres.' and 'f' markings (rising + louder toward the end). Exact rhythm (some notes may be dotted) not fully nailed down, hence med not high.",
    "lyric": "Wauk, wauk, wauk...",
    "crops": [
     "figs_new/p128_s00.png",
@@ -873,13 +939,14 @@
    "no": 0,
    "page": 52,
    "key": "Eb",
-   "conf": "todo",
-   "note": "Lively; snatchy 2 staves",
+   "conf": "med",
+   "note": "3 crops (p074_s00-s02), no 8va, key Eb (3 flats, matches corpus). Catbird's 'lively, snatchy' style: many short 2-6 note motifs separated by rests, matching the printed rest glyphs (encoded here as '|' phrase breaks rather than explicit r: tokens since exact rest DURATION per gap wasn't individually verified). Pitches measured via heads.py with tight-cluster false positives (beam-artifact detections at implausible low steps within a few px of a real note) dropped. Durations approximated as eighth notes throughout except one clear 16th-note run -- the fast, dense engraving did not get the same beam-by-beam verification as the simpler figures.",
    "crops": [
     "figs_new/p074_s00.png",
     "figs_new/p074_s01.png",
     "figs_new/p074_s02.png"
-   ]
+   ],
+   "enc": "F5:8 C5:8 | G5:8 Bb5:8 | F5:16 G5:16 Ab5:16 F5:16 | Eb5:8 | G5:8 F5:8 Eb5:8 | F5:8 F5:8 Eb5:8 Ab5:8 | Eb5:8 F5:8 Eb5:8 | F5:8 Bb5:8 C6:8 | F5:8 G5:8 F5:8 | Ab5:8 Bb5:8 F5:8 Ab5:8 Bb4:8 G5:8 | Eb5:8 G5:8 G5:8 G5:8 | F5:8 F5:8 F5:8 Eb5:8 | C5:8 D5:8 C5:8 D5:8 C5:8 | F5:8 G5:8 F5:8 | Eb5:8 C5:8 Eb5:8 | F5:8 Eb5:8"
   },
   {
    "id": "cat-02",
@@ -887,14 +954,15 @@
    "no": 0,
    "page": 53,
    "key": "Eb",
-   "conf": "todo",
-   "note": "continuation",
+   "conf": "med",
+   "note": "Continuation of cat-01, 4 crops (p075_s00-s03), same key Eb, same approach/caveats as cat-01 (durations approximated as eighths, dense passage not beam-verified note-by-note).",
    "crops": [
     "figs_new/p075_s00.png",
     "figs_new/p075_s01.png",
     "figs_new/p075_s02.png",
     "figs_new/p075_s03.png"
-   ]
+   ],
+   "enc": "Eb5:8 G5:8 Bb5:8 | F5:8 Ab5:8 G5:8 | F5:8 Ab5:8 Bb5:8 Ab5:8 F5:8 | Bb5:8 G5:8 Ab5:8 | F5:8 G5:8 F5:8 Eb5:8 | C5:8 F5:8 F5:8 Eb5:8 G5:8 F5:8 | G5:8 Bb5:8 | G5:8 Ab5:8 Bb5:8 Ab5:8 | G5:8 F5:8 Eb5:8 Bb5:8 | F5:8 F5:8 F5:8 Eb5:8 | G5:8 G5:8 Eb5:8 | Eb5:8 D5:8 | F5:8 G5:8 Ab5:8 | F5:8 G5:8 Ab5:8 | D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 | G5:8 C5:8 F5:8 Bb5:8 | Bb5:8 F5:8 Ab5:8 | G5:8 Ab5:8 G5:8 Ab5:8"
   },
   {
    "id": "bth-01",
@@ -902,8 +970,8 @@
    "no": 0,
    "page": 54,
    "key": "Eb",
-   "conf": "todo",
-   "note": "Lively fragments, 6+ staves p54-55",
+   "conf": "med",
+   "note": "'Lively fragments, 6+ staves p54-55' spans 10 crops total (figs_new/p076_s00, p077_s00 through p077_s08). Only the first 2 crops (p076_s00, p077_s00) are transcribed here, key Eb (3 flats), same fast 16th-run-plus-rest style as the catbird figures (same durations-approximated caveat applies). The remaining 8 crops (p077_s01 through p077_s08) are NOT transcribed -- visually similar continuing lively fragments in the same key/style, needing a future pass.",
    "crops": [
     "figs_new/p076_s00.png",
     "figs_new/p077_s00.png",
@@ -915,31 +983,34 @@
     "figs_new/p077_s06.png",
     "figs_new/p077_s07.png",
     "figs_new/p077_s08.png"
-   ]
+   ],
+   "enc": "D5:16 Eb5:16 D5:16 | D5:8 | F5:8 D5:8 F5:8 | G5:8 D5:8 Eb5:8 | F5:8 Eb5:8 | G5:8 Eb5:8 | F5:8 G5:8 Ab5:8 | F5:8 G5:8 Ab5:8 | G5:8 | Bb5:8 | Ab5:8 F5:8 Ab4:8 D5:8 | Ab5:8 F5:8 F4:8 D5:8"
   },
   {
    "id": "wth-01",
    "bird": "Wood Thrush",
    "no": 0,
    "page": 56,
-   "key": "F",
-   "conf": "todo",
-   "note": "twilight song",
+   "key": "Ab",
+   "conf": "high",
+   "note": "No 8va. Key is Ab major (4 flats: Bb,Eb,Ab,Db) -- corpus placeholder 'F' was wrong. Clean single-staff figure, dotted-eighth+16th pairs plus two long notes.",
    "crops": [
     "figs_new/p078_s00.png"
-   ]
+   ],
+   "enc": "F5:8. C5:16 Ab5:4 r:8 G5:8. Eb5:16 Bb5:4"
   },
   {
    "id": "wth-02",
    "bird": "Wood Thrush",
    "no": 0,
    "page": 56,
-   "key": "F",
-   "conf": "todo",
-   "note": "new key strain",
+   "key": "Ab",
+   "conf": "med",
+   "note": "Same key Ab major as wth-01 (4 flats) -- corpus placeholder 'F' was wrong. An explicit natural sign cancels the flat on one A4 (boxed accidental clearly visible next to the note). Two fermata-marked rests break the phrase into sub-strains.",
    "crops": [
     "figs_new/p078_s01.png"
-   ]
+   ],
+   "enc": "Bb4:8. A4:16 F5:4 r:8 | C5:8 Bb4:8 Eb5:4 C5:4 r:4^ | Eb5:16 Db5:16 Eb5:8 r:4^ | F5:16 G5:16 F5:8"
   },
   {
    "id": "wth-03",
@@ -947,13 +1018,14 @@
    "no": 0,
    "page": 57,
    "key": "Eb",
-   "conf": "todo",
-   "note": "10 AM song, 3 staves",
+   "conf": "med",
+   "note": "'10 o'clock A.M.' title confirmed in crop. 3 crops (p079_s00-s02), key Eb major (3 flats, matches corpus). Sparser/slower than the other thrush figures, matching a leisurely daytime song. One note (p079_s01) prints an explicit natural sign that cancels the printed flat, encoded as plain E5.",
    "crops": [
     "figs_new/p079_s00.png",
     "figs_new/p079_s01.png",
     "figs_new/p079_s02.png"
-   ]
+   ],
+   "enc": "Eb5:8. Bb4:16 C5:8 r:4 | C5:16 Ab4:16 r:8 Eb5:4 r:4 | C5:16 Ab4:16 r:8 C5:4 r:4 | F5:2^ | Eb5:8. D5:16 Eb5:8 r:8 | G5:16 F5:16 Eb5:8 r:8 Ab5:4 r:8 | F5:8 E5:8 Bb5:4 | Eb5:16 F5:16 G5:16 r:8 | G5:16 F5:16 C5:16 r:8 F5:4 r:8 | F5:8. Ab4:16 | Eb5:4 r:8 D5:2^ | Eb5:16 D5:16 Eb5:4"
   },
   {
    "id": "veery-01",
@@ -961,11 +1033,12 @@
    "no": 0,
    "page": 58,
    "key": "F",
-   "conf": "todo",
-   "note": "8 slurred tones, silver thread; portamento",
+   "conf": "high",
+   "note": "Key F major (1 flat, matches corpus). All 8 notes connected by slur marks (portamento/vocal-slide glide between tones, per Cheney's description and the task's 'silver thread' note) -- NOT trills, so no ornament encoded, slurring noted here instead.",
    "crops": [
     "figs_new/p080_s00.png"
-   ]
+   ],
+   "enc": "G5:4 F5:4 C6:4^ A5:4 A5:4 G5:4 G5:8 F5:8"
   },
   {
    "id": "herm-01",
@@ -973,11 +1046,12 @@
    "no": 0,
    "page": 60,
    "key": "F",
-   "conf": "todo",
-   "note": "moves off with",
+   "conf": "high",
+   "note": "Key F major (1 flat, matches corpus). Clean, well-spaced figure; leisurely fluting triplet-16th figures separated by single notes and rests.",
    "crops": [
     "figs_new/p082_s00.png"
-   ]
+   ],
+   "enc": "Bb4:4 D5:16 E5:16 D5:16 r:8 | F5:16 G5:16 F5:16 r:8 D5:4 r:8 Bb4:4 r:8 | E5:16 F5:16 E5:16 r:8 G5:16 A5:16 G5:16"
   },
   {
    "id": "herm-02",
@@ -985,11 +1059,12 @@
    "no": 0,
    "page": 60,
    "key": "F",
-   "conf": "todo",
-   "note": "steps up a degree",
+   "conf": "high",
+   "note": "Key F major (1 flat, matches corpus). Same clean style as herm-01, one B5 prints an explicit flat (redundant with key sig, consistent).",
    "crops": [
     "figs_new/p082_s01.png"
-   ]
+   ],
+   "enc": "Bb4:4 D5:16 F5:16 E5:16 C5:4 r:8 | F5:16 A5:16 G5:16 E5:4 r:4 F5:16 G5:16 F5:16 r:8 | A5:16 Bb5:16 A5:16"
   },
   {
    "id": "herm-more",
@@ -997,12 +1072,13 @@
    "no": 0,
    "page": 60,
    "key": "F",
-   "conf": "todo",
-   "note": "4 further strains p60-61",
+   "conf": "med",
+   "note": "'4 further strains p60-61' -- 2 crops (p082_s02, p082_s03), each crop contains 2 strains (separated by double barline / fermata), giving the 4 strains total. Key F major throughout.",
    "crops": [
     "figs_new/p082_s02.png",
     "figs_new/p082_s03.png"
-   ]
+   ],
+   "enc": "E5:4 G5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ | C5:4 F5:16 G5:16 F5:16 A5:16 Bb5:16 A5:16 C6:16 D6:16 C6:16 | Bb4:4 D5:16 F5:16 D5:16 r:8 F5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ | C5:4 G5:16 A5:16 G5:16 E5:8 r:8 G5:16 A5:16 G5:16 E5:8"
   },
   {
    "id": "ssp-more",
@@ -1010,8 +1086,8 @@
    "no": 0,
    "page": 24,
    "key": "var",
-   "conf": "todo",
-   "note": "songs 5-8 incl 8va forms — (page corrected from 25 per full-book catalog)",
+   "conf": "med",
+   "note": "13 crops = 13 distinct unnumbered systems (matches catalog's note of ~17 unnumbered variants on book pp.23-24; not all necessarily captured here). Encoded each system in reading order (p046_s04..s07, p047_s00..s08), separated by '|'. Per-system key signatures vary: p046_s04 none(C), s05 3 flats(Eb), s06 3 flats(Eb), s07 1 sharp(G) -- p047_s00/s01 1 sharp(G), s02 2 flats(Bb), s03 3 flats(Eb/Cm), s04 none(C, but explicit accidental Bb/B natural at end), s05 none(C), s06/s07/s08 1 sharp(G). p046_s05 is the highest/8va-like system (beamed run reaches 3 ledger lines above staff, Eb6/F6) but shows NO printed 8va bracket, so pitches are encoded as literally engraved (not further octave-shifted). Grace notes throughout are tiny and encoded as 32nds at an estimated pitch one step above their resolution note (a pattern that held consistently across every grace+main pair checked with a pixel grid overlay). Fermata+rest endings are common across systems. Overall med confidence: main notes cross-checked with fresh heads.py + grid overlays, but grace-note pitches and a few flat/sharp fringe cases are less certain.",
    "crops": [
     "figs_new/p046_s04.png",
     "figs_new/p046_s05.png",
@@ -1026,19 +1102,21 @@
     "figs_new/p047_s06.png",
     "figs_new/p047_s07.png",
     "figs_new/p047_s08.png"
-   ]
+   ],
+   "enc": "C5:8 B4:8 C5:8 B4:8 C5:8 B4:8 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | Eb5:8 Eb5:8 Eb5:8 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 r:16 Eb6:32 D6:8 Eb6:32 D6:8 | Bb5:32 Ab5:8 Bb5:32 Ab5:8 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 C6:8 Ab5:8 r:8^ | A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 B5:16 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | C6:32 B5:8 B5:8 B5:8 r:8 E6:32 D6:8 B5:8 C6:32 B5:8 B5:8 B5:8 | G5:8 D5:8 G5:8 D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 Bb5:8 Bb5:8 Bb5:8 r:8^ | Eb5:8 Eb5:8 Eb5:8 Ab5:8 Eb5:8 C6:8. Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 | C6:8 C6:8 C6:8 C6:8 C6:8 G5:8 Bb5:8 B5:8 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F5:16 E5:16 F5:16 E5:16 r:8^ | D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^ | D5:8 E5:8 E5:8 E5:8 E5:8 E6:8 E6:8 E6:8 r:8^ | D6:32 C6:8 D6:32 C6:8 D6:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^"
   },
   {
    "id": "warb-cs",
    "bird": "Chestnut-sided Warbler",
    "no": 0,
    "page": 49,
-   "key": "Db",
-   "conf": "todo",
-   "note": "8va",
+   "key": "Bb",
+   "conf": "med",
+   "note": "8va, key is Bb major (2 flats: Bb,Eb) -- corpus placeholder 'Db' was wrong (only 2 flats printed, verified by careful pixel-level recount). A '3' triplet marker and accent(>) appear over the D5-E5-E5 group near the end; exact triplet grouping is a best-effort read of a cramped, ink-heavy passage -- pitches are solid, fine rhythm less certain.",
    "crops": [
     "figs_new/p071_s00.png"
-   ]
+   ],
+   "enc": "Eb6:8 Eb6:8 Eb6:8 Eb6:8 Eb6:8 D6:83 Eb6:83 Eb6:83 Bb5:8"
   },
   {
    "id": "warb-my",
@@ -1046,20 +1124,21 @@
    "no": 0,
    "page": 49,
    "key": "F",
-   "conf": "todo",
-   "note": "8va",
+   "conf": "med",
+   "note": "8va, key F major (1 flat, matches corpus). Two identical fast 16th-note turn figures each print an explicit sharp before a B-line note (canceling the printed nowhere-flatted B and actually raising it past natural -- encoded literally as B# per the visible accidental, enharmonically = C). Final note F5 (sounding F6) ends the phrase, unflagged.",
    "crops": [
     "figs_new/p071_s00.png"
-   ]
+   ],
+   "enc": "D6:8 E6:8 D6:16 B#5:16 D6:8 D6:8 D6:16 B#5:16 D6:8 F6:4"
   },
   {
    "id": "warb-oth",
    "bird": "Other Warblers",
    "no": 0,
    "page": 49,
-   "key": "var",
-   "conf": "todo",
-   "note": "8 short 8va songs p49-50",
+   "key": "var (F/Bb, D, A shown; rest untranscribed)",
+   "conf": "med",
+   "note": "'Songs of other Warblers' spans 6 crops (figs_new/p071_s01, p071_s02, p071_s03, p072_s00, p072_s01, p072_s02) containing 11 distinct short 8va songs (2 per crop except p072_s02 which has 1), matching the catalog's count of 11. Only the first 3 songs are transcribed here (p071_s01 left=key F/Bb, p071_s01 right=key D, p071_s02 left=key A). The remaining 8 songs are NOT transcribed: p071_s02 right (C major), p071_s03 left+right, p072_s00 left+right, p072_s01 left+right, p072_s02 (single song) -- all similarly short 8va fragments in various keys, needing a future pass.",
    "crops": [
     "figs_new/p071_s01.png",
     "figs_new/p071_s02.png",
@@ -1067,31 +1146,34 @@
     "figs_new/p072_s00.png",
     "figs_new/p072_s01.png",
     "figs_new/p072_s02.png"
-   ]
+   ],
+   "enc": "F6:8 F6:8 F6:16 Bb5:16 r:8 F6:8 A6:8 r:8 F6:8 F6:8 F6:16 Bb5:16 E6:8 | B5:8 D6:16 C#6:16 D6:16 B5:16 D6:16 B5:16 B5:16 B5:16 | E6:8 D6:8 E6:8 D6:8 C#6:8 D6:8 C#6:8 B5:8 B5:8"
   },
   {
    "id": "redst-01",
    "bird": "Redstart",
    "no": 0,
    "page": 51,
-   "key": "F",
-   "conf": "todo",
-   "note": "brief monotone",
+   "key": "D",
+   "conf": "high",
+   "note": "No 8va marking. Key is D major (2 sharps: F#,C#) -- corpus placeholder 'F' was wrong. 7 plain eighth notes, repeated D5 bookended by C#5, matches 'brief monotone' description well.",
    "crops": [
     "figs_new/p073_s00.png"
-   ]
+   ],
+   "enc": "C#5:8 D5:8 D5:8 D5:8 D5:8 D5:8 C#5:8"
   },
   {
    "id": "yw-01",
    "bird": "Yellow Warbler",
    "no": 0,
    "page": 47,
-   "key": "A",
-   "conf": "todo",
-   "note": "brief rapid high",
+   "key": "D",
+   "conf": "high",
+   "note": "8va confirmed (missed in prior pass; sounding pitch up an octave from printed heads). Key sig is 2 sharps (F#,C#) = D major, not A as placeholder guessed. Printed C notes are C#. Two beamed 16th pairs (C#5-B4) resolved by discarding sloped-beam false-positive detections (D4/F4) next to them; final 4-note tail (A4 x4, individually flagged eighths) confirmed via connected-component blob analysis since heads.py only caught 2 of the 4.",
    "crops": [
     "figs_new/p069_s00.png"
-   ]
+   ],
+   "enc": "C#6:4 D6:4 D6:4 D6:4 D6:4 | C#6:16 B5:16 r:4^ | D6:4 D6:4 C#6:16 B5:16 B5:16 A5:16 r:4^ | D6:4 D6:4 D6:4 A5:8 A5:8 A5:8 A5:8"
   },
   {
    "id": "tan-01",
@@ -1099,11 +1181,12 @@
    "no": 0,
    "page": 74,
    "key": "Eb",
-   "conf": "todo",
-   "note": "main song",
+   "conf": "high",
+   "note": "p096_s00, key Eb (3 flats, applied: E->Eb, A->Ab). F5-Eb5 single-beam 8th pair, 8th rest, then a 4-note double-beamed 16th-note arch figure (F5-G5-Ab5-G5, Ab5 needs a leger line above the staff), then a 3-note single-beam eighth-note turn figure (Eb5-F5-Eb5) ending on the final barline. Resolved ambiguity at the end (single beam changes slope direction, forming one continuous 3-note group rather than two separate pairs) by overlaying detector x-coordinates directly on a 6-10x pixel crop; a detector hit at x=477 (A4) fell inside the F5 notehead's own ink blob and was discarded as noise, not a real note.",
    "crops": [
     "figs_new/p096_s00.png"
-   ]
+   ],
+   "enc": "F5:8 Eb5:8 r:8 F5:16 G5:16 Ab5:16 G5:16 Eb5:8 F5:8 Eb5:8"
   },
   {
    "id": "tan-var",
@@ -1111,13 +1194,14 @@
    "no": 0,
    "page": 75,
    "key": "Eb",
-   "conf": "todo",
-   "note": "variations x3",
+   "conf": "med",
+   "note": "Confirms catalog audit SURPRISE: page 75 actually shows 4 distinct melodic variations, not 3 as the old note said. Crop p097_s00 contains TWO variations (var 1 ends at internal double-bar ~mid-crop, var 2 begins right after with new clef/key sig and a chromatic F#5 passing tone); p097_s01 = variation 3; p097_s02 = variation 4 (opens with a grace note A4 slurred into F5, plus an accent mark, both not encodable in this format so noted here). All 4 use the same recurring 16-16-8 / 8-8 rhythmic cell (this internal consistency cross-check gave confidence in the rhythm reading). Var 1 pitches/rhythm are solidly cross-checked (near-high conf); var 2 has an unencoded staccato-looking dot near the peak note each repeat and an odd rest glyph (encoded r:8, Cheney's hook-shaped rest); var 3 and especially var 4's back half have some residual pitch/beam-grouping judgment calls in dense passages (detector threw spurious duplicate hits near sloped beams throughout, filtered by cross-checking zoomed crops, but a few notes in var 4 could not be triple-verified) \u2014 hence overall 'med' rather than 'high'. 8va not applicable (already at written pitch). Key Eb major (3 flats) confirmed from key signature in all 3 crops.",
    "crops": [
     "figs_new/p097_s00.png",
     "figs_new/p097_s01.png",
     "figs_new/p097_s02.png"
-   ]
+   ],
+   "enc": "F5:16 G5:16 A5:8 F5:8 G4:8 E5:8 F5:16 G5:16 A5:8 F5:8 E5:8 F5:8 A5:8 | G5:16 F#5:16 G5:8 r:8 A5:16 B5:16 G5:8 F5:8 A5:16 B5:16 G5:8 F5:8 G5:8 A5:16 B5:16 | A5:8 A5:8 F5:8 F5:8 G5:16 A5:16 A5:8 F5:8 F5:8 E5:8 F5:16 G5:16 A5:8 | A4:32 F5:8 E5:8 r:8 F5:8 A5:8 G5:8 F5:8 F5:16 G5:16 F5:8 r:8 F5:8 F5:8 A5:8 F5:16 D5:16 F5:8 A5:8 F5:8 F5:8"
   },
   {
    "id": "ori-first",
@@ -1125,25 +1209,27 @@
    "no": 0,
    "page": 71,
    "key": "Eb",
-   "conf": "todo",
-   "note": "1884 arrival, 3 staves",
+   "conf": "high",
+   "note": "1884 arrival, 3 staves (figs_new/p093_s00-s02.png). Every note is F5 or Eb5 (Eb applied per Eb-major key sig) alternating in a chattering rattle pattern with accents (not encoded) and one fermata-rest per system; verified with independent staff-line pixel calibration (dark-row detection) cross-checked against three separate systems that all reproduce the same F5/Eb5 cell, plus ledger/line-position confirmation at every note. heads.py's own pitch labels were unreliable (systematically one step flat vs the correct treble reading) so all pitches were read manually against measured staff-line y-coordinates.",
    "crops": [
     "figs_new/p093_s00.png",
     "figs_new/p093_s01.png",
     "figs_new/p093_s02.png"
-   ]
+   ],
+   "enc": "F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 Eb5:8 F5:16 Eb5:16 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 r:8^ Eb5:8 F5:8 r:8 Eb5:16 Eb5:16 r:8 Eb5:16 F5:16 r:8"
   },
   {
    "id": "ori-elm",
    "bird": "Baltimore Oriole",
    "no": 0,
    "page": 72,
-   "key": "?",
-   "conf": "todo",
-   "note": "minor-scale strain",
+   "key": "Am",
+   "conf": "high",
+   "note": "minor-scale strain (figs_new/p094_s00.png). No key signature at the clef (0 sharps/flats) -> A minor. Scale run G5-G#5(sharp, ledger-free space above staff)-A5(ledger line, confirmed twice)-A5-G5(explicit natural sign cancelling the sharp, dotted)-F5-E5-D5(descending, stepwise, on/around the staff lines), ending on a fermata rest before the final barline. The G#5->G-natural pair is a textbook melodic-minor raised-leading-tone/natural-descent, which is strong internal confirmation of A minor and of the pitch reading.",
    "crops": [
     "figs_new/p094_s00.png"
-   ]
+   ],
+   "enc": "G5:8 r:8 G#5:8 A5:8 A5:8 G5:8. F5:8 E5:8 D5:8 r:8^"
   },
   {
    "id": "ori-curly",
@@ -1151,9 +1237,9 @@
    "no": 3,
    "page": 72,
    "key": "Eb",
-   "enc": "Bb4:8 G4:8 Bb4:8 G4:8 r:8 Eb5:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8",
-   "conf": "low",
-   "note": "Curly curly Hey! Chickerway - MISSING from crops, audit — RESOLVED (draft added) — Curly curly Hey! Chickerway; verify",
+   "enc": "Eb5:8 F5:8 Eb5:8 F5:8 r:8 F5:4 Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 Eb5:16 r:8 Eb5:8 F5:8 Eb5:8 F5:8 r:8 Eb5:8. F5:16",
+   "conf": "high",
+   "note": "Curly curly Hey! Chickerway (figs_new/p094_s01.png + p094_s02.png). Independent re-read from scratch: differs substantially from the old low-conf draft (Bb4/G4/Eb5/D5/C5), which was checked against a mis-calibrated staff reference. Correct treble reading (verified via measured staff-line y-pixels) puts this whole figure in the Eb5-F5-C5 register: 'Cur-ly cur-ly' = Eb5-F5 alternation (8ths, accented on F5); 'Hey!' = F5 quarter note (forte, no flag - not an 8th); 'Chick-er-way' (x2, 16ths) = Eb5-C5-F5, a 3-note figure that recurs identically in both crops, a strong cross-check. p094_s02 continues with 'chew' (F5-Eb5 16th pair), rest, 'cur-ly cur-ly' (Eb5-F5 x2, 8ths), rest, 'cur-ly' (Eb5 dotted-8th + F5 16th) to the final barline.",
    "lyric": "Cur-ly, cur-ly, Hey! Chick-er-way...",
    "crops": [
     "figs_new/p094_s01.png",
@@ -1166,12 +1252,13 @@
    "no": 0,
    "page": 73,
    "key": "Eb",
-   "conf": "todo",
-   "note": "pre-flight monotones",
+   "conf": "high",
+   "note": "p095_s00+s01, key Eb (3 flats, applied to E->Eb). Three 16th-note pairs (Eb5-D5, double beam), accent mark over 3rd pair (not encoded), then fermata over an eighth rest, then repeated Eb5 eighth notes with eighth rests interspersed, continuing into s01 as 12 unbroken Eb5 eighth notes ending on the final barline. Detector threw phantom mid-beam hits (F4/A4/D5) on the sloped 16th beams in s00/s02 groups; confirmed real noteheads via 4x-8x pixel crop of each beam (only 2 real heads per pair). Matches 'pre-flight monotones' description well.",
    "crops": [
     "figs_new/p095_s00.png",
     "figs_new/p095_s01.png"
-   ]
+   ],
+   "enc": "Eb5:16 D5:16 Eb5:16 D5:16 Eb5:16 D5:16 r:8^ Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 r:8 | Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8"
   },
   {
    "id": "ori-dorset",
@@ -1179,11 +1266,12 @@
    "no": 0,
    "page": 73,
    "key": "A",
-   "conf": "todo",
-   "note": "first Dorset notes",
+   "conf": "high",
+   "note": "p095_s02. No key signature actually engraved on this line (clef only, verified by zoom) despite corpus key='A' -- only accidental present is a sharp on the very first note (C#5). All other notes read natural as printed. Sequence: C#5-D5 (single-beam 8th pair), 8th rest, F5-E5 (single-beam 8th pair, accent on F5), 8th rest with fermata, then 5 accented double-beamed 16th-note pairs (E5-D5 x5). Accents (6 total, one per group after the first pair) noted but not encoded (no accent symbol in the format). Phantom mid-beam hits (A4/G4/F4) on the sloped 16th pairs excluded after pixel cross-check, matching the pattern in ori-fly/tan-01.",
    "crops": [
     "figs_new/p095_s02.png"
-   ]
+   ],
+   "enc": "C#5:8 D5:8 r:8 F5:8 E5:8 r:8^ E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16"
   },
   {
    "id": "ori-nh",
@@ -1191,11 +1279,12 @@
    "no": 0,
    "page": 73,
    "key": "F",
-   "conf": "todo",
-   "note": "Allegro NH song",
+   "conf": "high",
+   "note": "p095_s03, marked 'f Allegro' above staff (dynamic+tempo, not encoded). Key F (1 flat, Bb) -- no B notes present so no accidentals needed. Five ascending 3-note double-beamed 16th-note figures (D5-E5-F5), with an 8th rest after the 3rd figure, ending in a 3-note single-beam eighth-note tail (E5-D5-E5). No tuplet '3' numeral visible over any group, so encoded as straight sixteenths rather than a triplet. Numerous phantom mid-beam detector hits (A4/G4/F4/E4) on the sloped triple-beams excluded after visual zoom confirmed only 3 real heads per group.",
    "crops": [
     "figs_new/p095_s03.png"
-   ]
+   ],
+   "enc": "D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 r:8 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 E5:8 D5:8 E5:8"
   },
   {
    "id": "vireo-01",
@@ -1203,12 +1292,13 @@
    "no": 0,
    "page": 78,
    "key": "F",
-   "conf": "todo",
-   "note": "triplets w/ fermatas, 2 staves",
+   "conf": "high",
+   "note": "2 systems (figs_new/p100_s00.png, p100_s01.png). F major, one flat (Bb) in key sig applied throughout - no natural signs seen, so every bare B is Bb5. F is consistently raised via an explicit written sharp (#) at every occurrence - a chromatic raised-4th figure, cross-checked in zoomed crops. Each phrase = 3 beamed 8th notes followed by a fermata over an 8th rest (r:8^), 13 phrases total across the 2 systems (6 in s00, 7 in s01), matching the 'triplets w/ fermatas' note. No literal triplet '3' numeral is visible above any beam group despite the catalog description calling them triplets - they are plain groups of 3 beamed 8ths, so encoded without a triplet marker. All pitches and durations cross-checked against 4x/8x zoom crops.",
    "crops": [
     "figs_new/p100_s00.png",
     "figs_new/p100_s01.png"
-   ]
+   ],
+   "enc": "G5:8 F#5:8 G5:8 r:8^ | Bb5:8 F#5:8 G5:8 r:8^ | G5:8 F#5:8 Bb5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | A5:8 Bb5:8 C6:8 r:8^ | A5:8 G5:8 F#5:8 r:8^ | G5:8 A5:8 Bb5:8 r:8^ | Bb5:8 F#5:8 G5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | C6:8 A5:8 Bb5:8 r:8^ | D6:8 A5:8 Bb5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | G5:8 F#5:8 Bb5:8"
   },
   {
    "id": "chat-rit",
@@ -1216,11 +1306,12 @@
    "no": 0,
    "page": 80,
    "key": "F",
-   "conf": "todo",
-   "note": "rit&dim monotone",
+   "conf": "med",
+   "note": "No pitch, rhythm only, rit. & dim. Staffless monotone row (figs_new/p102_s00b.png): 17 note-glyphs on a single line with no staff, marked 'f' at the start and 'Rit. & dim.' partway through. Careful pixel-level comparison of the note glyphs shows the first 11 have a double flag (16th notes, tight/even spacing ~50px) and the remaining 6 switch to a single flag (8th notes, wider spacing ~62px) with a small staccato dot added above each - i.e. the ritardando is written out as literally longer note values plus wider spacing, and the diminuendo as staccato dots, rather than any gradual/continuous ramp. Encoded on an arbitrary single pitch (C5) throughout since there is no staff or pitch information. Staccato dots on the second half are not representable in the pitch:dur format and are only noted here.",
    "crops": [
     "figs_new/p102_s00b.png"
-   ]
+   ],
+   "enc": "C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8"
   },
   {
    "id": "chat-notes",
@@ -1228,8 +1319,8 @@
    "no": 0,
    "page": 80,
    "key": "F",
-   "conf": "todo",
-   "note": "Quirp/charr/whir series p80-81",
+   "conf": "med",
+   "note": "Quirp/charr/whir series p80-81. 9 systems concatenated in crop order with '|': [1] figs_new/p102_s00.png (mf, unlabeled quirp phrase: 2 beamed 8th pairs, fermata-rest, a 3x16th-pair run, then 3 detached D5 8ths - the last D5 sits under a low F4 chord tone on one stem which was dropped since this encoding format is monophonic); [2] p102_s01.png (further phrase ending on fermata; the first two beamed pairs likewise carry a dropped F4 chord tone under each D5; a natural sign explicitly cancels the key-signature flat on one accented B4/C5 pair, encoded as B4 - all other B's in this figure/series default to Bb per the F-major key sig since no accidental is shown); [3] p102_s02.png ('f'...'Rit. & dim.' on-staff monotone E5 decay row, 13x16th notes -> 5x8th notes with staccato dots, same written-ritardando convention as the separate chat-rit figure); [4] p102_s03.png captioned 'Quirp, quirp. (3)'; [5] p103_s00.png captioned 'Quirp, charr, charr,' (includes an accented low A4/A4 pair read as plain quarter notes, no flags visible); [6] p103_s01.png on-staff monotone C5 decay row, 8x16th -> 8x8th; [7] p103_s02.png captioned 'Charr, charr, charr.' (3 accented Bb4 quarters + two 3-note 16th-beam groups F5-E5-F5 / E5-F5-E5); [8] p103_s03.png on-staff monotone D5 decay row, 6x16th -> 6x8th, marked 'etc.' at the end meaning the pattern continues beyond what is notated; [9] p103_s04.png captioned 'Whirr, whirr, whirr.' (3 accented C5 quarter notes, final barline). Accent marks ('>') appear over many notes throughout and staccato dots appear on the decay-row tails; neither is representable in the pitch:dur format and both are omitted from the encoding (noted here instead). Several duration/voicing judgment calls (dropped chord tones, quarter-vs-eighth reads on unflagged stems, decay-row tail values) keep the overall confidence at 'med' even though most pitches and beam groupings were cross-checked closely against 8-10x zoom crops and, where ambiguous, against connected-component pixel analysis of notehead positions.",
    "crops": [
     "figs_new/p102_s00.png",
     "figs_new/p102_s01.png",
@@ -1240,7 +1331,8 @@
     "figs_new/p103_s02.png",
     "figs_new/p103_s03.png",
     "figs_new/p103_s04.png"
-   ]
+   ],
+   "enc": "F5:8 E5:8 F5:8 E5:8 r:8^ A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 r:8 D5:8 D5:8 D5:8 r:8^ | D5:8 F5:8 D5:8 F5:8 r:8 Bb4:8 Bb4:8 Bb4:8 r:8^ B4:8 C5:8 B4:8 C5:8 r:8 A4:8 D5:8 A4:8 D5:8 A4:8 D5:8 r:8^ | E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:8 E5:8 E5:8 E5:8 E5:8 | E5:8 D5:8 F5:8 r:8 Bb4:16 A4:16 Bb4:16 A4:16 r:8 F5:8 E5:8 E5:8 F5:8 r:8 F5:8 F5:8 F5:8^ | Bb4:16 A4:16 r:8 D5:8 D5:8 D5:8 r:8 A4:4 A4:4 r:8 E5:8 E5:8 F5:8 | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 | Bb4:4 Bb4:4 Bb4:4 r:8^ F5:16 E5:16 F5:16 r:8 E5:16 F5:16 E5:16 r:8 | D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 | C5:4 C5:4 C5:4"
   },
   {
    "id": "bob-pileu",
@@ -1248,11 +1340,12 @@
    "no": 0,
    "page": 83,
    "key": "F",
-   "conf": "todo",
-   "note": "Pi-leu pi-le-ah gurgle - partial, audit — (page corrected from 82 per full-book catalog)",
+   "conf": "med",
+   "note": "Partial fragment (continuation from an earlier undigitized system, book p.82/PDF104). Crop figs_new/p105_s00.png only. Read: eighth G4 ('Pi'), dotted-eighth+sixteenth A4-G4 turn ('leu'), fermata over an eighth rest, then three 16ths C5-C#5-D5 ('pi-le-ah', explicit sharp accidental on the middle note). All noteheads/durations cross-checked against 4-12x zoomed crops and staff-line pixel calibration; rest duration (r:8) is a reasonable-but-not-certain read of Cheney's hook-shaped rest glyph.",
    "crops": [
     "figs_new/p105_s00.png"
-   ]
+   ],
+   "enc": "G4:8 A4:8. G4:16 r:8^ C5:16 C#5:16 D5:16"
   },
   {
    "id": "bob-song",
@@ -1260,26 +1353,28 @@
    "no": 0,
    "page": 83,
    "key": "F",
-   "conf": "todo",
-   "note": "song proper opening, 2 staves",
+   "conf": "med",
+   "note": "Full transcription from figs_new/p105_s01.png (first 12 notes) + figs_new/p105_s02.png (next 13 notes), concatenated in reading order. p105_s01: D5-C5 eighth pair (single beam), then two triplet-of-16ths groups (C5-D5-F5, D5-F5-G5, double beam), then four individual flagged eighths all on F5 -- the 1st and 3rd of these four (originally auto-detected as E5) carry a triangular ornament mark (turn/mordent) printed above the staff; re-measurement confirmed the noteheads sit ON the F5 line for all four, not E5 -- ornament is noted here but not encoded as extra pitches. p105_s02: triplet-16ths G5-F5-E5, four flagged eighths A5-F5-A5-F5, then two more triplet-16th groups E5-F5-G5 and F5-G5-B5. Every notehead cross-checked with a pixel-calibrated staff-line grid overlay; some early automated (heads.py) pitch guesses were wrong and corrected by direct visual measurement.",
    "crops": [
     "figs_new/p105_s01.png",
     "figs_new/p105_s02.png"
-   ]
+   ],
+   "enc": "D5:8 C5:8 C5:16 D5:16 F5:16 D5:16 F5:16 G5:16 F5:8 F5:8 F5:8 F5:8 G5:16 F5:16 E5:16 A5:8 F5:8 A5:8 F5:8 E5:16 F5:16 G5:16 F5:16 G5:16 B5:16"
   },
   {
    "id": "bbc-new",
    "bird": "Black-billed Cuckoo",
    "no": 0,
    "page": 88,
-   "key": "F",
-   "conf": "todo",
-   "note": "1888 new song + resolution, 2 figs",
+   "key": "Bb",
+   "conf": "med",
+   "note": "New transcription (was todo), 3 systems p110_s00-s02: 1888 new song. Key signature is actually 2 flats (Bb+Eb, pixel-verified against staff lines) = Bb major, not the 1-flat 'F' guessed in corpus -- so all lettered-E noteheads read as Eb. Main figure is an alternating Eb4(8th)/A4(quarter) call; s01 and s02 shift to straight 8ths with rests near phrase ends ('resolution'). Some rest placements inferred from spacing, hence med not high.",
    "crops": [
     "figs_new/p110_s00.png",
     "figs_new/p110_s01.png",
     "figs_new/p110_s02.png"
-   ]
+   ],
+   "enc": "Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 | Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 r:8 Eb4:8 Eb4:8 r:8 | Eb4:8 Eb4:8 r:8 Eb4:8 A4:4 Eb4:8 A4:4 r:8 A4:8 Eb4:8 r:8 A4:8 Eb4:8"
   },
   {
    "id": "rgro-01",
@@ -1287,13 +1382,14 @@
    "no": 0,
    "page": 76,
    "key": "Eb",
-   "conf": "todo",
-   "note": "Loud+rapid 2 staves - MISSING (pdf98-99), audit — RESOLVED (draft added)",
+   "conf": "med",
+   "note": "Confirms catalog audit: page 76 'Loud and rapid' Rose-breasted Grosbeak figure spans 3 systems (p098_s00, s01, s02), concatenated here in reading order. All three systems use the same running 16-16-8 (triplet-shaped double-beam group) / single-beamed-8th-pair rhythmic motif, built from a narrow C5-G5 stepwise range with recurring Cheney hook-shaped rests (encoded r:8) and a few accent marks (>) not representable in this encoding (noted, not encoded). Notably the melody stays diatonic (C/D/E/F/G/B, occasional B4) and never uses the key's flatted degrees (Bb/Eb/Ab) in this passage \u2014 worth flagging since it's what let me confirm rgro-draft (see that entry) is NOT a match for this content. Detector threw a number of spurious duplicate-pitch hits right next to real notes on sloped beams (classic false positive per METHOD.md); each was checked against a zoomed crop and dropped when no second notehead was visible. 'Med' confidence: pitches are solidly cross-checked against zoomed crops, but exact beam-grouping (which pairs are 16th vs 8th) involved some judgment in a few spots, particularly at low contrast beam junctions.",
    "crops": [
     "figs_new/p098_s00.png",
     "figs_new/p098_s01.png",
     "figs_new/p098_s02.png"
-   ]
+   ],
+   "enc": "C5:16 E5:16 D5:8 r:8 C5:16 D5:16 E5:8 D5:16 C5:16 r:8 C5:8 r:8 E5:16 D5:16 E5:8 F5:8 | C5:16 B4:16 C5:8 r:8 E5:16 D5:16 C5:8 r:8 D5:16 E5:16 F5:8 E5:8 C5:8 r:8 E5:16 F5:16 G5:8 F5:8 D5:8 | E5:16 D5:16 C5:8 D5:16 E5:16 F5:8 r:8 F5:16 E5:16 D5:8 E5:16 F5:16 G5:8 r:8 C5:16 E5:16 F5:8 E5:8"
   },
   {
    "id": "indigo-01",
@@ -1301,10 +1397,22 @@
    "no": 0,
    "page": 85,
    "key": "F",
-   "conf": "todo",
-   "note": "8va main + tonic + full form - MISSING (pdf107-108), audit — RESOLVED (draft added) — possible bundle/duplicate — see catalog",
+   "conf": "med",
+   "note": "FIRST figure only (crop figs_new/p107_s01.png, 'at first the tonic was not quite distinct...I caught this' -- tonic clarification). No 8va marking on this crop (plain staff-position pitches used). No key signature was actually engraved in this crop (bare treble clef) but corpus context says F major; the final note carries an explicit written flat (Bb4), consistent with F-major tonality. Structure: two identical D5-C5 sixteenth-note pairs (double beam), an eighth rest, a C5-B4 sixteenth pair, a single C5 eighth, another eighth rest, then A4 and Bb4 eighths. All pitches confirmed via a pixel-calibrated staff-line grid (a first-pass automated read wrongly called the first note E5; corrected to D5 after re-measurement, and this D5-C5-D5-C5 shape independently matches the analogous passage in the bundled second figure below, which cross-validates the reading). Bundled 2nd figure ('the form, then, was as follows', crop figs_new/p108_s00.png, key sig Bb visibly engraved there) -- recommend new id indigo-form when corpus is updated: enc: D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8 (note: the B4 in the third pair carries an explicit natural sign canceling the key-signature flat; four dots after the following D5 look like a repeat mark, not encoded as notes; final two notes A4/Bb4 each carry their own flag, Bb4 restates the flat explicitly).",
    "crops": [
-    "figs_new/p107_s01.png",
+    "figs_new/p107_s01.png"
+   ],
+   "enc": "D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 C5:8 r:8 A4:8 Bb4:8"
+  },
+  {
+   "id": "indigo-form",
+   "bird": "Indigo-bird",
+   "page": 86,
+   "key": "F",
+   "enc": "D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8",
+   "conf": "med",
+   "note": "split from indigo-01 bundle; 'the form, then, was as follows'; B4 carries explicit natural; four dots after D5 = repeat mark (not encoded)",
+   "crops": [
     "figs_new/p108_s00.png"
    ]
   },
@@ -1314,8 +1422,8 @@
    "no": 0,
    "page": 33,
    "key": "?",
-   "conf": "todo",
-   "note": "4-tone repeats + additions + full song - MISSING (pdf55-56), audit — RESOLVED (draft added) — possible bundle/duplicate — see catalog"
+   "conf": "dup",
+   "note": "RETIRED: duplicate placeholder, content covered by lark-4tone/lark-add/lark-song"
   },
   {
    "id": "chip-01",
@@ -1323,19 +1431,32 @@
    "no": 0,
    "page": 40,
    "key": "?",
-   "conf": "todo",
-   "note": "Chippy trill - MISSING (pdf62), audit — RESOLVED (draft added) — possible bundle/duplicate — see catalog"
+   "conf": "dup",
+   "note": "RETIRED: duplicate placeholder, content covered by chip-trill"
   },
   {
    "id": "rob-05",
    "bird": "Robin",
    "no": 0,
    "page": 17,
-   "key": "?",
-   "conf": "todo",
-   "note": "pewee + rain defiance - MISSING (pdf39), audit — (page corrected from 16 per full-book catalog) — possible bundle/duplicate — see catalog",
+   "key": "C",
+   "conf": "med",
+   "note": "Confirmed bundle of two distinct figures sharing this task id, as flagged. This encoding is the 'Pe-wee, pe-wee' pewee-call cameo (crop figs_new/p039_s01.png; no key signature, explicit flat on Eb5; rest glyph looks like a half rest). The SECOND figure in the bundle \u2014 an unrelated numbered '5.' robin figure (forte, marked with accent '>' marks, crop figs_new/p039_s02.png, key D/2 sharps, 'rain defiance') should be split into a NEW id; best-effort encoding for it: E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16 (conf low \u2014 accent marks not encoded, several accidentals and a descending slanted-beam passage are uncertain; sloped-beam false-positive risk per METHOD.md; needs full re-read).",
    "crops": [
-    "figs_new/p039_s01.png",
+    "figs_new/p039_s01.png"
+   ],
+   "enc": "D5:4 Eb5:4 r:2 F5:4 D5:4"
+  },
+  {
+   "id": "rob-defiance",
+   "bird": "Robin",
+   "no": 5,
+   "page": 17,
+   "key": "D",
+   "enc": "E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16",
+   "conf": "low",
+   "note": "split from rob-05 bundle; forte, accent marks not encoded; 'rain defiance'; needs re-verify",
+   "crops": [
     "figs_new/p039_s02.png"
    ]
   },
@@ -1346,7 +1467,7 @@
    "page": 42,
    "key": "D",
    "conf": "todo",
-   "note": "RESOLVED into wts-01; second song p64 bottom still todo"
+   "note": "second song = 6 white-throat variant figures on PDF p065 (figs_new/p065_*), absent from corpus; wts-01 covers all of PDF p064"
   },
   {
    "id": "lark-4tone",
@@ -1354,9 +1475,9 @@
    "no": 1,
    "page": 33,
    "key": "Ab",
-   "enc": "C5:8 Ab4:8 Bb4:8 C5:8",
-   "conf": "low",
-   "note": "4-tone favorite, repeated w/ rests; verify",
+   "enc": "C5:8 Bb4:8 Ab4:8 Eb5:8",
+   "conf": "high",
+   "note": "Re-read from scratch at full crop size; corrects prior low-conf draft (was C5 Ab4 Bb4 C5 - wrong order/pitches). Key sig has 4 flats (Bb Eb Ab Db = Ab major, confirmed by counting flat glyphs and cross-checked against corpus key field). Beamed pair C5-Bb4 (descending), then single Ab4, then single Eb5 (upward leap of a 6th), all plain eighth notes, no accidentals beyond the key signature. Passage ends with a repeat sign (:||) matching the text 'favorite pastime...repeat four tones many times' - repeat the 4-tone unit for performance.",
    "crops": [
     "figs_new/p055_s00.png"
    ]
@@ -1367,9 +1488,9 @@
    "no": 2,
    "page": 34,
    "key": "Ab",
-   "enc": "C5:8 Ab4:8 F4:8 Ab4:8 F4:4 Eb4:8 F4:8",
-   "conf": "low",
-   "note": "the added strain; verify",
+   "enc": "C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8",
+   "conf": "high",
+   "note": "Re-read from scratch; corrects prior low-conf draft (was C5 Ab4 F4 Ab4 F4:4 Eb4 F4 - those lower F4/Eb4 pitches do not appear anywhere in this crop; likely confused with a different figure). Actual content: two short phrases, first a beamed C5-Bb4 pair plus single Ab4, second a beamed C5-Bb4 pair, all plain eighth notes, no rests. One beam-partner notehead per phrase was missed by the automated detector (beamed pairs sometimes register only one head) and confirmed manually via pixel-grid overlay against the staff lines.",
    "crops": [
     "figs_new/p056_s00.png"
    ]
@@ -1380,9 +1501,9 @@
    "no": 3,
    "page": 34,
    "key": "Ab",
-   "enc": "C5:4 F5:8. Eb5:16 C5:8 r:8^ Ab4:8 Bb4:8 C5:8 r:8^ | C5:8 Eb5:8 C5:4 r:8^ C5:8 Ab4:8 Bb4:4 r:8^ | C5:8 B4:8 Bb4:8 A4:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 r:8^ | Ab4:8 C5:8 F5:8 Eb5:8 C5:8 r:8^ | Ab4:8 Bb4:8 C5:4 Ab4:8 F4:4^",
-   "conf": "low",
-   "note": "6-staff plaintive song, tremor staff included; DEDICATED PASS NEEDED",
+   "enc": "C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ | C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8 r:8^ | Eb5:8 D5:8 Db5:8 C5:8 r:8 C5:8 r:8^ C5:8 r:8^ Eb5:8 D5:8 Db5:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 r:8^ Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 r:8^ | Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ | C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8",
+   "conf": "med",
+   "note": "Dedicated full re-read of all 6 systems from scratch, cross-checked with the full page scan (pages/page056.png) in addition to the figs_new crops since the crops for system 3 and 6 were slightly narrower than the true system width and clipped trailing notes. Prior low-conf draft was a rough hypothesis (used F5/Eb5-heavy pitches not seen on re-read) and is superseded. | between the 6 systems marks system boundaries (cosmetic). Key = Ab major (4 flats) throughout, confirmed via clef. System 4 is a rapid same-pitch 16th-note passage (7x C5, rest+fermata, 7x Eb5, rest+fermata) - this is the 'exquisite, subtile tremor... resembles the Wilson thrush' passage described in the surrounding prose; it is notated as literal fast repeated 16ths rather than a wavy-line glyph, so it was encoded literally (not as r:8^ style ornament). System 3 uses an explicit natural sign then a (redundant) flat sign on repeated D notes (D5 nat, then Db5) - encoded literally as D5/Db5. System 5 uses slurs (curved lines) over each Eb5-F5 pair and a beam over each Eb5-C5 pair - slurs are not part of the encoding format and were omitted from the token stream (noted here only). System 6 ends with two notes (C5, Bb4) joined by a heavy slanted tremolo/measured-shake bar - this is the wavy/tremolo notation described in the task (a vocal slide between two different tones, not a same-pitch trill) - encoded as plain C5:8 Bb4:8 per the 'don't encode as trills' rule. Systems 1 and 6 both have small vertical tick marks above their first two notes (possibly accents/marcato); not encodable in this format, noted only. Several individual noteheads inside tight beam/tremolo groups were missed by the automated head-detector and were filled in by manual pixel-grid cross-check against the staff lines (particularly the second note of several beamed pairs, and 2 of 3 notes in some 3-note beam clusters in system 3). Given the length and number of manual judgment calls, marking med rather than high despite each individual passage being visually confirmed.",
    "crops": [
     "figs_new/p056_s01.png",
     "figs_new/p056_s02.png",
@@ -1398,9 +1519,9 @@
    "no": 1,
    "page": 40,
    "key": "C",
-   "enc": "C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8",
-   "conf": "med",
-   "note": "monotone staccato serenade; pitch center approx",
+   "enc": "C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 | C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8",
+   "conf": "high",
+   "note": "Re-verified from scratch. Both systems are monotone on C6 (prior med-conf draft had C5 - off by an octave; also had 13 sixteenth notes, but the notes are eighth notes, not sixteenths - single flag confirmed at high zoom). No key signature (plain C, matches corpus). 10 notes in system 1 + 12 notes in system 2 = 22 total, exactly matching the 'Chip-py' syllable count printed under each system (5x + 6x 'chip-py'). | marks the system boundary.",
    "lyric": "Chip-chip-chip...",
    "crops": [
     "figs_new/p062_s00.png",
@@ -1413,9 +1534,9 @@
    "no": 4,
    "page": 72,
    "key": "Eb",
-   "enc": "G4:16 Ab4:16 Bb4:8 r:8 Bb4:8 G4:8 Bb4:8 G4:8 Eb5:8. r:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8 G4:8",
-   "conf": "low",
-   "note": "kah-kue closing form; verify",
+   "enc": "F5:8 F5:16 Eb5:16 r:8 G5:8. Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 C5:16",
+   "conf": "high",
+   "note": "kah-kue closing form (figs_new/p094_s03.png). Independent re-read from scratch: differs from the old low-conf draft (G4/Ab4/Bb4/Eb5/D5/C5), same mis-calibration issue as ori-curly's draft. 'kah' = F5 8th; 'kue.' = F5-Eb5 16th beamed pair; rest; 'Hey!' = G5 dotted-8th (forte, accent) directly followed by 16th Eb5 ('Chick'), completing one beat; 'Chick-er-way' x2 (16ths) = Eb5-C5-F5, the identical 3-note cell found in ori-curly, a strong cross-check that the Eb-major staff calibration is correct; 'chew.' = F5-C5 16th beamed pair to the final barline.",
    "lyric": "chew, cur-ly... kah, kue. Hey!",
    "crops": [
     "figs_new/p094_s03.png"
@@ -1427,9 +1548,8 @@
    "no": 1,
    "page": 76,
    "key": "Eb",
-   "enc": "G5:16 F5:16 Eb5:8 F5:8 G5:8 r:8 Bb5:8 G5:8 F5:8 Eb5:8 F5:16 G5:16 F5:8 Eb5:8 | Eb5:16 F5:16 G5:8 F5:8 Eb5:8 r:8 G5:8 Bb5:8 G5:8 F5:8 Eb5:4",
-   "conf": "low",
-   "note": "Loud and rapid; rolling warble draft; verify — possible bundle/duplicate — see catalog"
+   "conf": "dup",
+   "note": "RETIRED: duplicate placeholder, content covered by rgro-01"
   },
   {
    "id": "indigo-main",
@@ -1437,9 +1557,9 @@
    "no": 1,
    "page": 85,
    "key": "C",
-   "enc": "E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8",
-   "conf": "low",
-   "note": "8va applied; descending triplet clusters; verify",
+   "enc": "D6:16 C6:16 D6:16 C6:16 r:8 C6:16 B5:16 C6:8 r:8",
+   "conf": "med",
+   "note": "Re-verified from scratch against crop figs_new/p107_s00.png. Confirmed '8va.' IS engraved above the staff (visible text), so sounding pitch is written (one octave above plain staff-position reading): plain reading D5-C5-D5-C5 r:8 C5-B4 C5:8 r:8, shifted up an octave. This differs substantially from the prior 'low' draft (E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8): the draft's E-C-A triple-note grouping was not supported by a fresh read -- the beamed groups are actually 2-note (not 3-note) double-beamed 16th pairs, matching the D5-C5 shape seen twice, then a rest, then a C5-B4 pair, then a single C5 eighth, then a second rest. This D-C-D-C-rest-C-B-C-rest shape independently matches the analogous passage in indigo-01's bundled figures (figs_new/p107_s01.png and figs_new/p108_s00.png, same page), which cross-validates the correction. A repeat mark (dots) follows at the crop's end, not encoded as notes. Pitches verified via pixel-calibrated staff-line grid overlays at 8-12x zoom; rest durations (r:8) are a reasonable but not fully certain read of Cheney's rest glyph shape.",
    "crops": [
     "figs_new/p107_s00.png"
    ]
@@ -1497,7 +1617,7 @@
    "no": 12,
    "page": 19,
    "conf": "todo",
-   "note": "June 5, 4 P.M. (caption) — NEW: numbered fig 12 not present in corpus at all",
+   "note": "June 5, 4 P.M. (caption) \u2014 NEW: numbered fig 12 not present in corpus at all",
    "crops": [
     "figs_new/p041_s00.png"
    ]
@@ -1508,7 +1628,7 @@
    "no": 13,
    "page": 19,
    "conf": "todo",
-   "note": "At evening (caption) — NEW: not in corpus",
+   "note": "At evening (caption) \u2014 NEW: not in corpus",
    "crops": [
     "figs_new/p041_s01.png"
    ]
@@ -1519,7 +1639,7 @@
    "no": 14,
    "page": 19,
    "conf": "todo",
-   "note": "June 19, A.M. Before rain (caption) — NEW: not in corpus",
+   "note": "June 19, A.M. Before rain (caption) \u2014 NEW: not in corpus",
    "crops": [
     "figs_new/p041_s02.png"
    ]
@@ -1530,7 +1650,7 @@
    "no": 15,
    "page": 19,
    "conf": "todo",
-   "note": "P.M. After rain (caption) — NEW: not in corpus",
+   "note": "P.M. After rain (caption) \u2014 NEW: not in corpus",
    "crops": [
     "figs_new/p041_s03.png"
    ]
@@ -1540,7 +1660,7 @@
    "bird": "Linnet; Purple Finch; Purple Grosbeak",
    "page": 37,
    "conf": "todo",
-   "note": "Rapid and spirited. — CORRECTED: Linnet chapter 3-row figure, all 3 systems detected; key sig 3 flats",
+   "note": "Rapid and spirited. \u2014 CORRECTED: Linnet chapter 3-row figure, all 3 systems detected; key sig 3 flats",
    "crops": [
     "figs_new/p059_s00.png",
     "figs_new/p059_s01.png",
@@ -1552,7 +1672,7 @@
    "bird": "Yellow-bird; American Goldfinch",
    "page": 39,
    "conf": "todo",
-   "note": "8va flight-song, four notes — CORRECTED: goldfinch chapter opener, 8va marking — sounding pitch an octave up",
+   "note": "8va flight-song, four notes \u2014 CORRECTED: goldfinch chapter opener, 8va marking \u2014 sounding pitch an octave up",
    "crops": [
     "figs_new/p061_s00.png"
    ]
@@ -1562,7 +1682,7 @@
    "bird": "Yellow-bird; American Goldfinch",
    "page": 39,
    "conf": "todo",
-   "note": "So here we go (sung on undulating wave-staves) — manually recovered; staves drawn as waves — transcribe from repeated motif",
+   "note": "So here we go (sung on undulating wave-staves) \u2014 manually recovered; staves drawn as waves \u2014 transcribe from repeated motif",
    "crops": [
     "figs_new/p061_s00b.png"
    ]
@@ -1683,7 +1803,7 @@
    "bird": "Hermit Thrush",
    "page": 61,
    "conf": "todo",
-   "note": "In a deep still forest. Slow. (caption) — NEW: distinctly captioned song not in corpus; fig start, spans sys1-3",
+   "note": "In a deep still forest. Slow. (caption) \u2014 NEW: distinctly captioned song not in corpus; fig start, spans sys1-3",
    "crops": [
     "figs_new/p083_s01.png",
     "figs_new/p083_s02.png",
@@ -1772,7 +1892,7 @@
    "bird": "Hen Music",
    "page": 105,
    "conf": "todo",
-   "note": "(notes of one hen, all the same, piano) — NEW: 'the notes of one hen were all the same, and piano'",
+   "note": "(notes of one hen, all the same, piano) \u2014 NEW: 'the notes of one hen were all the same, and piano'",
    "crops": [
     "figs_new/p127_s01.png"
    ]
@@ -1860,7 +1980,7 @@
    "bird": "Loon",
    "page": 117,
    "conf": "todo",
-   "note": "Loon's loud, long call to young in peril (\"a fourth and a true third\") — Bass-ish notation but written in treble w/ key sig; illustrates a wide interval, not a literal transcription of a specific song.",
+   "note": "Loon's loud, long call to young in peril (\"a fourth and a true third\") \u2014 Bass-ish notation but written in treble w/ key sig; illustrates a wide interval, not a literal transcription of a specific song.",
    "crops": [
     "figs_new/p139_s00.png"
    ]
@@ -1870,7 +1990,7 @@
    "bird": "Chickadee",
    "page": 117,
    "conf": "todo",
-   "note": "Titmouse/chickadee song, sustained notes (\"true third\" and \"true second\") — Text calls the bird 'titmouse,' Cheney's era name for the chickadee (same species discussed again at p145, p164).",
+   "note": "Titmouse/chickadee song, sustained notes (\"true third\" and \"true second\") \u2014 Text calls the bird 'titmouse,' Cheney's era name for the chickadee (same species discussed again at p145, p164).",
    "crops": [
     "figs_new/p139_s01.png"
    ]
@@ -1890,7 +2010,7 @@
    "bird": "Black-throated Green Warbler",
    "page": 117,
    "conf": "todo",
-   "note": "Second illustration, said to match 'Larboard Watch Ahoy' melody — Not a literal continuation of the previous staff — a separate illustrative phrase for the same bird/paragraph.",
+   "note": "Second illustration, said to match 'Larboard Watch Ahoy' melody \u2014 Not a literal continuation of the previous staff \u2014 a separate illustrative phrase for the same bird/paragraph.",
    "crops": [
     "figs_new/p139_s03.png"
    ]
@@ -1942,7 +2062,7 @@
    "bird": "Domestic Cock (rooster)",
    "page": 119,
    "conf": "todo",
-   "note": "Cock crow, \"an exclamatory phrase\" likened to oratorio 'Seven Sleepers' (\"O Proconsul\") — Not a bird per se — farmyard-animal comparison in the same 'Music in Nature' essay.",
+   "note": "Cock crow, \"an exclamatory phrase\" likened to oratorio 'Seven Sleepers' (\"O Proconsul\") \u2014 Not a bird per se \u2014 farmyard-animal comparison in the same 'Music in Nature' essay.",
    "crops": [
     "figs_new/p141_s00.png"
    ]
@@ -1952,7 +2072,7 @@
    "bird": "Horse (Fanny, the Morgan mare)",
    "page": 119,
    "conf": "todo",
-   "note": "Frozen-morning scale-exercise, \"worthy of a skilful artist on the trombone\" — Non-bird; bass clef.",
+   "note": "Frozen-morning scale-exercise, \"worthy of a skilful artist on the trombone\" \u2014 Non-bird; bass clef.",
    "crops": [
     "figs_new/p141_s01.png"
    ]
@@ -1962,7 +2082,7 @@
    "bird": "Horse (Fanny, the Morgan mare)",
    "page": 119,
    "conf": "todo",
-   "note": "Thawing-morning subdued call — Non-bird; bass clef; same horse as previous system, different morning/mood, not a literal continuation.",
+   "note": "Thawing-morning subdued call \u2014 Non-bird; bass clef; same horse as previous system, different morning/mood, not a literal continuation.",
    "crops": [
     "figs_new/p141_s02.png"
    ]
@@ -1972,7 +2092,7 @@
    "bird": "Colt (yearling)",
    "page": 120,
    "conf": "todo",
-   "note": "Yearling colt's \"challenge\" to a strange horse at the hitching-post — Non-bird; bass clef.",
+   "note": "Yearling colt's \"challenge\" to a strange horse at the hitching-post \u2014 Non-bird; bass clef.",
    "crops": [
     "figs_new/p142_s00.png"
    ]
@@ -1982,7 +2102,7 @@
    "bird": "Bull (young bull, No. 1)",
    "page": 120,
    "conf": "todo",
-   "note": "\"Two young bulls gave me a musical entertainment\" — No. 1, \"Moo-uh\"/\"Boo-uh\" — Non-bird; bass clef; two mini-staves (treble-ish then lower) captioned with lyrics.",
+   "note": "\"Two young bulls gave me a musical entertainment\" \u2014 No. 1, \"Moo-uh\"/\"Boo-uh\" \u2014 Non-bird; bass clef; two mini-staves (treble-ish then lower) captioned with lyrics.",
    "crops": [
     "figs_new/p142_s01.png"
    ]
@@ -1992,7 +2112,7 @@
    "bird": "Bull (young bull, No. 2)",
    "page": 120,
    "conf": "todo",
-   "note": "No. 2, order reversed, while pawing ground — Non-bird; bass clef.",
+   "note": "No. 2, order reversed, while pawing ground \u2014 Non-bird; bass clef.",
    "crops": [
     "figs_new/p142_s02.png"
    ]
@@ -2002,7 +2122,7 @@
    "bird": "Bull (young bull, No. 2)",
    "page": 120,
    "conf": "todo",
-   "note": "Same bull \"thrust up his nose and trumpeted\" — \"Moo-uh\" x4, interval of a tenth — Non-bird; bass clef; follows ess-bull-2 narratively (same animal, next action) but is a distinct notated figure, not a literal staff continuation.",
+   "note": "Same bull \"thrust up his nose and trumpeted\" \u2014 \"Moo-uh\" x4, interval of a tenth \u2014 Non-bird; bass clef; follows ess-bull-2 narratively (same animal, next action) but is a distinct notated figure, not a literal staff continuation.",
    "crops": [
     "figs_new/p142_s03.png"
    ]
@@ -2012,7 +2132,7 @@
    "bird": "Chickadee",
    "page": 123,
    "conf": "todo",
-   "note": "\"Chickadees, singing responses\" — four numbered call-and-response phrases in one staff — Single wide crop containing phrases labeled 1./2./3./4.",
+   "note": "\"Chickadees, singing responses\" \u2014 four numbered call-and-response phrases in one staff \u2014 Single wide crop containing phrases labeled 1./2./3./4.",
    "crops": [
     "figs_new/p145_s00.png"
    ]
@@ -2043,7 +2163,7 @@
    "bird": "Wood Thrush",
    "page": 124,
    "conf": "todo",
-   "note": "Wood Thrush song, labeled \"Wood Thrush.\" — Caption cites 'See Index, Sully, J.'",
+   "note": "Wood Thrush song, labeled \"Wood Thrush.\" \u2014 Caption cites 'See Index, Sully, J.'",
    "crops": [
     "figs_new/p146_s03.png"
    ]
@@ -2084,7 +2204,7 @@
    "bird": "Song Sparrow",
    "page": 125,
    "conf": "todo",
-   "note": "Cheney's own Song-Sparrow transcription, variants \"1.\" and \"2.\" side by side — Captioned \"Song-Sparrow. — Cheney. (See Index, Song-Sparrow.)\"; compares against Flagg's version above.",
+   "note": "Cheney's own Song-Sparrow transcription, variants \"1.\" and \"2.\" side by side \u2014 Captioned \"Song-Sparrow. \u2014 Cheney. (See Index, Song-Sparrow.)\"; compares against Flagg's version above.",
    "crops": [
     "figs_new/p147_s04.png"
    ]
@@ -2104,7 +2224,7 @@
    "bird": "Niagara Falls (harmonic tones, non-bird)",
    "page": 130,
    "conf": "todo",
-   "note": "Principal tone and harmonics claimed for the sound of Niagara (per Dr. Weber letter, 1891) — Non-bird; bass clef into treble; illustrates acoustic harmonics, not a bird song.",
+   "note": "Principal tone and harmonics claimed for the sound of Niagara (per Dr. Weber letter, 1891) \u2014 Non-bird; bass clef into treble; illustrates acoustic harmonics, not a bird song.",
    "crops": [
     "figs_new/p152_s00.png",
     "figs_new/p152_s01.png"
@@ -2115,7 +2235,7 @@
    "bird": "German waltz (flageolet, non-bird)",
    "page": 134,
    "conf": "todo",
-   "note": "\"Let the following bars of a favorite waltz, of German composition, be played on the flageolet\" (3/8) — Non-bird; quoted as a possible source of imitation hints for bird-song mimicry theory.",
+   "note": "\"Let the following bars of a favorite waltz, of German composition, be played on the flageolet\" (3/8) \u2014 Non-bird; quoted as a possible source of imitation hints for bird-song mimicry theory.",
    "crops": [
     "figs_new/p156_s00.png"
    ]
@@ -2146,7 +2266,7 @@
    "bird": "Kamtschatkales chant (imitates wild duck; non-bird)",
    "page": 136,
    "conf": "todo",
-   "note": "\"Succession of tones... by imitating the cry of the wild duck\" (Crowest, Musical Groundwork) — Non-bird human chant said to imitate a duck's cry; included in the 'Genesis of Bird Song' essay as evidence of imitation.",
+   "note": "\"Succession of tones... by imitating the cry of the wild duck\" (Crowest, Musical Groundwork) \u2014 Non-bird human chant said to imitate a duck's cry; included in the 'Genesis of Bird Song' essay as evidence of imitation.",
    "crops": [
     "figs_new/p158_s00.png"
    ]
@@ -2166,7 +2286,7 @@
    "bird": "Wood-Pewee",
    "page": 143,
    "conf": "todo",
-   "note": "\"Hear, O Lord! Hear, I pray! A-men, A-men.\" — Cheney's words for the pewee's song",
+   "note": "\"Hear, O Lord! Hear, I pray! A-men, A-men.\" \u2014 Cheney's words for the pewee's song",
    "crops": [
     "figs_new/p165_s00.png"
    ]
@@ -2176,7 +2296,7 @@
    "bird": "Field-Sparrow",
    "page": 148,
    "conf": "todo",
-   "note": "\"Nobody can tell me what 'feller' sings\" — unidentified singer's phrase quoted alongside field-sparrow discussion — Letter quote arguably about an unknown ('feller') bird rather than the field-sparrow itself, but placed within the Field-Sparrow entry.",
+   "note": "\"Nobody can tell me what 'feller' sings\" \u2014 unidentified singer's phrase quoted alongside field-sparrow discussion \u2014 Letter quote arguably about an unknown ('feller') bird rather than the field-sparrow itself, but placed within the Field-Sparrow entry.",
    "crops": [
     "figs_new/p170_s00.png"
    ]
@@ -2186,7 +2306,7 @@
    "bird": "White-throated Sparrow",
    "page": 150,
    "conf": "todo",
-   "note": "\"Oh hear me, Theresa, Theresa, Theresa!\" — flute-stop transcription (C, G, E half notes + eighth-note triplets)",
+   "note": "\"Oh hear me, Theresa, Theresa, Theresa!\" \u2014 flute-stop transcription (C, G, E half notes + eighth-note triplets)",
    "crops": [
     "figs_new/p172_s00.png"
    ]
@@ -2226,7 +2346,7 @@
    "bird": "White-throated Sparrow",
    "page": 152,
    "conf": "todo",
-   "note": "Wilkinson, Dartmouth River, Andante — \"Nos. 1 and 2, different songs of one bird\"",
+   "note": "Wilkinson, Dartmouth River, Andante \u2014 \"Nos. 1 and 2, different songs of one bird\"",
    "crops": [
     "figs_new/p174_s00.png"
    ]
@@ -2236,7 +2356,7 @@
    "bird": "White-throated Sparrow",
    "page": 152,
    "conf": "todo",
-   "note": "Wilkinson, Dartmouth River — \"Nos. 3 and 4, songs of another bird\"",
+   "note": "Wilkinson, Dartmouth River \u2014 \"Nos. 3 and 4, songs of another bird\"",
    "crops": [
     "figs_new/p174_s01.png"
    ]
@@ -2257,7 +2377,7 @@
    "bird": "Gambel's White-crowned Sparrow / Golden-crowned Sparrow",
    "page": 153,
    "conf": "todo",
-   "note": "Two Pacific-coast cousins of the white-throat, side by side (Keeler, Zoe vol. i, 1891) — Single crop contains BOTH birds' figures side by side: left = Gambel's White-crowned Sparrow (Z. leucophrys gambeli), right = Golden-crowned Sparrow (Z. Coronata). Both 8va.",
+   "note": "Two Pacific-coast cousins of the white-throat, side by side (Keeler, Zoe vol. i, 1891) \u2014 Single crop contains BOTH birds' figures side by side: left = Gambel's White-crowned Sparrow (Z. leucophrys gambeli), right = Golden-crowned Sparrow (Z. Coronata). Both 8va.",
    "crops": [
     "figs_new/p175_s00.png"
    ]
@@ -2267,7 +2387,7 @@
    "bird": "Chewink",
    "page": 156,
    "conf": "todo",
-   "note": "Flagg's chewink song: \"two long notes... last part made up of several rapidly uttered liquid notes\" — Caption: In his A Year with the Birds, p.96.",
+   "note": "Flagg's chewink song: \"two long notes... last part made up of several rapidly uttered liquid notes\" \u2014 Caption: In his A Year with the Birds, p.96.",
    "crops": [
     "figs_new/p178_s00.png"
    ]
@@ -2307,7 +2427,7 @@
    "bird": "Wood Thrush",
    "page": 162,
    "conf": "todo",
-   "note": "\"Compare first two measures of No. 1 with this\" — Wood Thrush comparison figure — Small comparison figure set against Big-tree Thrush No.1 (ess-bigtree-thrush-1).",
+   "note": "\"Compare first two measures of No. 1 with this\" \u2014 Wood Thrush comparison figure \u2014 Small comparison figure set against Big-tree Thrush No.1 (ess-bigtree-thrush-1).",
    "crops": [
     "figs_new/p184_s02.png"
    ]
@@ -2317,7 +2437,7 @@
    "bird": "Wood Thrush",
    "page": 162,
    "conf": "todo",
-   "note": "\"And first measure of No. 2 with this\" — Wood Thrush comparison figure — Small comparison figure set against Big-tree Thrush No.2 (ess-bigtree-thrush-2).",
+   "note": "\"And first measure of No. 2 with this\" \u2014 Wood Thrush comparison figure \u2014 Small comparison figure set against Big-tree Thrush No.2 (ess-bigtree-thrush-2).",
    "crops": [
     "figs_new/p184_s03.png"
    ]
@@ -2327,7 +2447,7 @@
    "bird": "Wilson's Thrush (Veery)",
    "page": 164,
    "conf": "todo",
-   "note": "\"It is all on the swing and jingle\" — letter from S.P.C. to Franklin Fairbanks, Jan. 3, 1886 — Page heading reads 'Tawny Thrush' (= Wilson's thrush / veery).",
+   "note": "\"It is all on the swing and jingle\" \u2014 letter from S.P.C. to Franklin Fairbanks, Jan. 3, 1886 \u2014 Page heading reads 'Tawny Thrush' (= Wilson's thrush / veery).",
    "crops": [
     "figs_new/p186_s00.png"
    ]
@@ -2358,7 +2478,7 @@
    "bird": "Oriole",
    "page": 169,
    "conf": "todo",
-   "note": "\"Chorister of the park\" responding, same key — Call-and-response with previous system (ess-oriole-2), a different individual oriole, not a literal staff continuation.",
+   "note": "\"Chorister of the park\" responding, same key \u2014 Call-and-response with previous system (ess-oriole-2), a different individual oriole, not a literal staff continuation.",
    "crops": [
     "figs_new/p191_s01.png"
    ]
@@ -2379,7 +2499,7 @@
    "bird": "(non-bird) The Author's Power of Memory",
    "page": 189,
    "conf": "todo",
-   "note": "Dated \"Dec. 15, 1889\" — tune notated from memory, staff line 1 of 4 — Not a bird song. Section demonstrates Cheney's own musical memory (context: horses Old Pink, Dresser Mare, Lightfoot, Flying Jennie discussed just below). Likely a fiddle/vocal air recalled from memory.",
+   "note": "Dated \"Dec. 15, 1889\" \u2014 tune notated from memory, staff line 1 of 4 \u2014 Not a bird song. Section demonstrates Cheney's own musical memory (context: horses Old Pink, Dresser Mare, Lightfoot, Flying Jennie discussed just below). Likely a fiddle/vocal air recalled from memory.",
    "crops": [
     "figs_new/p211_s00.png",
     "figs_new/p211_s01.png",
@@ -2392,7 +2512,7 @@
    "bird": "Bobolink",
    "page": 191,
    "conf": "todo",
-   "note": "Pitch-reference tones from Cheney's reed instrument (\"about five inches long and two inches wide\"), used before transcribing the bobolink's song — Not the bobolink's song itself — a calibration/pitch reference; the actual bobolink transcription is presumably elsewhere (See p.82, outside this range).",
+   "note": "Pitch-reference tones from Cheney's reed instrument (\"about five inches long and two inches wide\"), used before transcribing the bobolink's song \u2014 Not the bobolink's song itself \u2014 a calibration/pitch reference; the actual bobolink transcription is presumably elsewhere (See p.82, outside this range).",
    "crops": [
     "figs_new/p213_s00.png"
    ]
@@ -2432,7 +2552,7 @@
    "bird": "Crow",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — CROW.",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 CROW.",
    "crops": [
     "figs_new/p227_s00.png"
    ]
@@ -2442,7 +2562,7 @@
    "bird": "Roosters",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — ROOSTERS. Nos. 1-2.",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 1-2.",
    "crops": [
     "figs_new/p227_s01.png"
    ]
@@ -2452,7 +2572,7 @@
    "bird": "Roosters",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — ROOSTERS. Nos. 3-4 (no. 4 'On the perch').",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 3-4 (no. 4 'On the perch').",
    "crops": [
     "figs_new/p227_s02.png"
    ]
@@ -2462,7 +2582,7 @@
    "bird": "Roosters",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — ROOSTERS. No. 5 'Out of doors'.",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. No. 5 'Out of doors'.",
    "crops": [
     "figs_new/p227_s03.png"
    ]
@@ -2472,7 +2592,7 @@
    "bird": "Roosters",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — ROOSTERS. Nos. 6-7 (no. 6 'Lynn, Feb., 1886', no. 7 'Again').",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 6-7 (no. 6 'Lynn, Feb., 1886', no. 7 'Again').",
    "crops": [
     "figs_new/p227_s04.png"
    ]
@@ -2482,7 +2602,7 @@
    "bird": "Roosters",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — ROOSTERS. Nos. 8-9 (no. 8 'Small').",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 8-9 (no. 8 'Small').",
    "crops": [
     "figs_new/p227_s05.png"
    ]
@@ -2492,7 +2612,7 @@
    "bird": "Colt",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — COLT. Nos. 1-2 ('To a strange horse' / 'To his mother').",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 COLT. Nos. 1-2 ('To a strange horse' / 'To his mother').",
    "crops": [
     "figs_new/p227_s06.png"
    ]
@@ -2502,7 +2622,7 @@
    "bird": "Colt",
    "page": 205,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — COLT. Nos. 3-4 ('To me' / 'Out of doors, alone, uneasy').",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 COLT. Nos. 3-4 ('To me' / 'Out of doors, alone, uneasy').",
    "crops": [
     "figs_new/p227_s07.png"
    ]
@@ -2512,7 +2632,7 @@
    "bird": "Mare",
    "page": 206,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — MARE. Nos. 1-2 ('For hay, Dec. 23' / 'Louder, Dec. 24').",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 MARE. Nos. 1-2 ('For hay, Dec. 23' / 'Louder, Dec. 24').",
    "crops": [
     "figs_new/p228_s00.png"
    ]
@@ -2522,7 +2642,7 @@
    "bird": "Mare",
    "page": 206,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — MARE. No. 3 'For oats'.",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 MARE. No. 3 'For oats'.",
    "crops": [
     "figs_new/p228_s01.png"
    ]
@@ -2532,7 +2652,7 @@
    "bird": "Two-year-old bull",
    "page": 206,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — TWO-YEAR-OLD BULL. 'Boh-oo wah, boh-oo wah.'",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 TWO-YEAR-OLD BULL. 'Boh-oo wah, boh-oo wah.'",
    "crops": [
     "figs_new/p228_s02.png"
    ]
@@ -2542,7 +2662,7 @@
    "bird": "Young cow",
    "page": 206,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — YOUNG COW. 'Calling to go out to grass.' 'Bwa, bwa, bwa.'",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 YOUNG COW. 'Calling to go out to grass.' 'Bwa, bwa, bwa.'",
    "crops": [
     "figs_new/p228_s03.png"
    ]
@@ -2552,7 +2672,7 @@
    "bird": "Dog",
    "page": 206,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — DOG. 'Howling at the blowing of whistles.' Lynn, January, 1888.",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 DOG. 'Howling at the blowing of whistles.' Lynn, January, 1888.",
    "crops": [
     "figs_new/p228_s04.png"
    ]
@@ -2562,7 +2682,7 @@
    "bird": "Bull-frogs",
    "page": 206,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — BULL-FROGS. 'Near a floating bridge.' Nos. 1-4.",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 BULL-FROGS. 'Near a floating bridge.' Nos. 1-4.",
    "crops": [
     "figs_new/p228_s05.png",
     "figs_new/p229_s00.png"
@@ -2573,7 +2693,7 @@
    "bird": "Cat",
    "page": 207,
    "conf": "todo",
-   "note": "Source: Simeon Pease Cheney (the author). — Cat ('Tim') purring, row 1. 'Made close observations this morning on Tim's purring...'",
+   "note": "Source: Simeon Pease Cheney (the author). \u2014 Cat ('Tim') purring, row 1. 'Made close observations this morning on Tim's purring...'",
    "crops": [
     "figs_new/p229_s01.png",
     "figs_new/p229_s02.png"
@@ -2584,7 +2704,7 @@
    "bird": "unnamed bird (Darling Downs, Australia)",
    "page": 208,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — DARLING DOWNS. 'Heard frequently.' No. 1.",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 DARLING DOWNS. 'Heard frequently.' No. 1.",
    "crops": [
     "figs_new/p230_s00.png"
    ]
@@ -2594,7 +2714,7 @@
    "bird": "unnamed bird (Darling Downs, Australia)",
    "page": 208,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — 2. DARLING DOWNS, row 1 (ends 'ad lib pause').",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 2. DARLING DOWNS, row 1 (ends 'ad lib pause').",
    "crops": [
     "figs_new/p230_s01.png",
     "figs_new/p230_s02.png"
@@ -2605,7 +2725,7 @@
    "bird": "unnamed bird (Hastings River, New South Wales)",
    "page": 209,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — 3. HASTINGS RIVER, New South Wales, row 1 (ends 'ad lib pause').",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 3. HASTINGS RIVER, New South Wales, row 1 (ends 'ad lib pause').",
    "crops": [
     "figs_new/p231_s00.png",
     "figs_new/p231_s01.png"
@@ -2616,7 +2736,7 @@
    "bird": "unnamed bird (Tenterfield, New England, New South Wales)",
    "page": 209,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — 4. Tenterfield, New England, in New South Wales, row 1 (ends 'or ad lib pause').",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 4. Tenterfield, New England, in New South Wales, row 1 (ends 'or ad lib pause').",
    "crops": [
     "figs_new/p231_s02.png",
     "figs_new/p231_s03.png",
@@ -2628,7 +2748,7 @@
    "bird": "unnamed bird(s), various localities",
    "page": 209,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — 5. Various localities.",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 5. Various localities.",
    "crops": [
     "figs_new/p231_s05.png"
    ]
@@ -2638,7 +2758,7 @@
    "bird": "unnamed birds",
    "page": 210,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — Nos. 6-7 (no. 7 marked 'e e i e e e').",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 Nos. 6-7 (no. 7 marked 'e e i e e e').",
    "crops": [
     "figs_new/p232_s00.png"
    ]
@@ -2648,7 +2768,7 @@
    "bird": "unnamed birds",
    "page": 210,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — Nos. 8-9 (no. 9 marked with trills 'tr').",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 Nos. 8-9 (no. 9 marked with trills 'tr').",
    "crops": [
     "figs_new/p232_s01.png"
    ]
@@ -2658,7 +2778,7 @@
    "bird": "unnamed bird",
    "page": 210,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — No. 10, marked 'e i i i'.",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 No. 10, marked 'e i i i'.",
    "crops": [
     "figs_new/p232_s02.png"
    ]
@@ -2668,7 +2788,7 @@
    "bird": "unnamed bird",
    "page": 210,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — No. 11, marked with trills 'tr'.",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 No. 11, marked with trills 'tr'.",
    "crops": [
     "figs_new/p232_s03.png"
    ]
@@ -2678,7 +2798,7 @@
    "bird": "'soldier' or 'leather-head' (bird, colonists' name)",
    "page": 210,
    "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). — No. 12, 'Marcato' -- the 'soldier' or 'leather-head', row 1.",
+   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 No. 12, 'Marcato' -- the 'soldier' or 'leather-head', row 1.",
    "crops": [
     "figs_new/p232_s04.png",
     "figs_new/p232_s05.png"
@@ -2689,7 +2809,7 @@
    "bird": "Nightingale",
    "page": 211,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — NIGHTINGALE. Nos. 1-2.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 NIGHTINGALE. Nos. 1-2.",
    "crops": [
     "figs_new/p233_s00.png"
    ]
@@ -2699,7 +2819,7 @@
    "bird": "Nightingale",
    "page": 211,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — NIGHTINGALE. No. 3.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 NIGHTINGALE. No. 3.",
    "crops": [
     "figs_new/p233_s01.png"
    ]
@@ -2709,7 +2829,7 @@
    "bird": "Throstle",
    "page": 211,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — THROSTLE.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 THROSTLE.",
    "crops": [
     "figs_new/p233_s02.png"
    ]
@@ -2719,7 +2839,7 @@
    "bird": "Blackbird",
    "page": 211,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — BLACKBIRD. No. 1.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 BLACKBIRD. No. 1.",
    "crops": [
     "figs_new/p233_s03.png"
    ]
@@ -2729,7 +2849,7 @@
    "bird": "Blackbird",
    "page": 211,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — BLACKBIRD. No. 2.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 BLACKBIRD. No. 2.",
    "crops": [
     "figs_new/p233_s04.png"
    ]
@@ -2739,7 +2859,7 @@
    "bird": "Hen",
    "page": 211,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — HEN.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 HEN.",
    "crops": [
     "figs_new/p233_s05.png"
    ]
@@ -2749,7 +2869,7 @@
    "bird": "Dog",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — DOG.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 DOG.",
    "crops": [
     "figs_new/p234_s00.png"
    ]
@@ -2759,7 +2879,7 @@
    "bird": "Ox",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — OX. No. 1.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 OX. No. 1.",
    "crops": [
     "figs_new/p234_s01.png"
    ]
@@ -2769,7 +2889,7 @@
    "bird": "Ox",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — OX. No. 2.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 OX. No. 2.",
    "crops": [
     "figs_new/p234_s02.png"
    ]
@@ -2779,7 +2899,7 @@
    "bird": "Horse",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — HORSE.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 HORSE.",
    "crops": [
     "figs_new/p234_s03.png"
    ]
@@ -2789,7 +2909,7 @@
    "bird": "Fowls",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — FOWLS. No. 1 'In the morning'.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 FOWLS. No. 1 'In the morning'.",
    "crops": [
     "figs_new/p234_s04.png"
    ]
@@ -2799,7 +2919,7 @@
    "bird": "Fowls",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — FOWLS. No. 2 'In the evening'.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 FOWLS. No. 2 'In the evening'.",
    "crops": [
     "figs_new/p234_s05.png"
    ]
@@ -2809,7 +2929,7 @@
    "bird": "Fowls (Cock / Bantam Cock)",
    "page": 212,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — FOWLS. Nos. 3-4 'Cock' / 'Bantam Cock'.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 FOWLS. Nos. 3-4 'Cock' / 'Bantam Cock'.",
    "crops": [
     "figs_new/p234_s06.png"
    ]
@@ -2819,7 +2939,7 @@
    "bird": "Cuckoo",
    "page": 213,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — CUCKOO.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 CUCKOO.",
    "crops": [
     "figs_new/p235_s00.png"
    ]
@@ -2829,7 +2949,7 @@
    "bird": "Lark",
    "page": 213,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — LARK, row 1.",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 LARK, row 1.",
    "crops": [
     "figs_new/p235_s01.png",
     "figs_new/p235_s02.png"
@@ -2840,7 +2960,7 @@
    "bird": "Ass",
    "page": 213,
    "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). — ASS. 'Una Corde.'",
+   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 ASS. 'Una Corde.'",
    "crops": [
     "figs_new/p235_s03.png"
    ]
@@ -2850,7 +2970,7 @@
    "bird": "Solitaire",
    "page": 214,
    "conf": "todo",
-   "note": "Source: A. G. Johnston (In 'Birds of Jamaica,' by Philip Henry Gosse). — SOLITAIRE.",
+   "note": "Source: A. G. Johnston (In 'Birds of Jamaica,' by Philip Henry Gosse). \u2014 SOLITAIRE.",
    "crops": [
     "figs_new/p236_s00.png"
    ]
@@ -2860,7 +2980,7 @@
    "bird": "Solitaire",
    "page": 214,
    "conf": "todo",
-   "note": "Source: A. G. Johnston (In 'Birds of Jamaica,' by Philip Henry Gosse). — SOLITAIRE. 'Sometimes thus:--' (variant phrase).",
+   "note": "Source: A. G. Johnston (In 'Birds of Jamaica,' by Philip Henry Gosse). \u2014 SOLITAIRE. 'Sometimes thus:--' (variant phrase).",
    "crops": [
     "figs_new/p236_s01.png"
    ]
@@ -2870,7 +2990,7 @@
    "bird": "Blackcap (Sylvia atricapilla)",
    "page": 215,
    "conf": "todo",
-   "note": "Source: J. E. Harting (In 'Birds of Middlesex'). — BLACKCAP. 'Passage in song of.' 8va alt.",
+   "note": "Source: J. E. Harting (In 'Birds of Middlesex'). \u2014 BLACKCAP. 'Passage in song of.' 8va alt.",
    "crops": [
     "figs_new/p237_s00.png"
    ]
@@ -2880,7 +3000,7 @@
    "bird": "Willow Warbler (Sylvia trochilus)",
    "page": 215,
    "conf": "todo",
-   "note": "Source: J. E. Harting (In 'Birds of Middlesex'). — WILLOW WARBLER. Attributed to J. V. Stewart, in 'Birds of the N. E. coast of Donegal', quoted in Harting. — Sub-attributed to J. V. Stewart within Harting's Birds of Middlesex, p. 53.",
+   "note": "Source: J. E. Harting (In 'Birds of Middlesex'). \u2014 WILLOW WARBLER. Attributed to J. V. Stewart, in 'Birds of the N. E. coast of Donegal', quoted in Harting. \u2014 Sub-attributed to J. V. Stewart within Harting's Birds of Middlesex, p. 53.",
    "crops": [
     "figs_new/p237_s01.png"
    ]
@@ -2890,7 +3010,7 @@
    "bird": "Swan",
    "page": 216,
    "conf": "todo",
-   "note": "Source: J. E. Harting, quoting a transcription by Auguste Bertini. — SWAN. 'Singing on the water in Regent's Park. (Auguste Bertini.)' Allegro, row 1. — Quoted in Harting, Ornithology of Shakespeare, pp. 201-202; melody taken down by Auguste Bertini.",
+   "note": "Source: J. E. Harting, quoting a transcription by Auguste Bertini. \u2014 SWAN. 'Singing on the water in Regent's Park. (Auguste Bertini.)' Allegro, row 1. \u2014 Quoted in Harting, Ornithology of Shakespeare, pp. 201-202; melody taken down by Auguste Bertini.",
    "crops": [
     "figs_new/p238_s00.png",
     "figs_new/p238_s01.png",
@@ -2902,7 +3022,7 @@
    "bird": "Blackbird",
    "page": 217,
    "conf": "todo",
-   "note": "Source: Sir John Hawkins (In 'History of Science and Practice of Music'). — BLACKBIRD. 'Part of song.'",
+   "note": "Source: Sir John Hawkins (In 'History of Science and Practice of Music'). \u2014 BLACKBIRD. 'Part of song.'",
    "crops": [
     "figs_new/p239_s00.png"
    ]
@@ -2912,7 +3032,7 @@
    "bird": "Cuckoo",
    "page": 217,
    "conf": "todo",
-   "note": "Source: Sir John Hawkins (In 'History of Science and Practice of Music'). — CUCKOO. 'Cu-cu, cu-cu, cu-cu.'",
+   "note": "Source: Sir John Hawkins (In 'History of Science and Practice of Music'). \u2014 CUCKOO. 'Cu-cu, cu-cu, cu-cu.'",
    "crops": [
     "figs_new/p239_s01.png"
    ]
@@ -2922,7 +3042,7 @@
    "bird": "Pigritia, or Sloth",
    "page": 217,
    "conf": "todo",
-   "note": "Source: Athanasius Kircher (quoted in Hawkins). — PIGRITIA, OR SLOTH. 'Ha, ha, ha, ...' Attributed 'Kircher'. — Attributed to Kircher within Hawkins' History of Science and Practice of Music.",
+   "note": "Source: Athanasius Kircher (quoted in Hawkins). \u2014 PIGRITIA, OR SLOTH. 'Ha, ha, ha, ...' Attributed 'Kircher'. \u2014 Attributed to Kircher within Hawkins' History of Science and Practice of Music.",
    "crops": [
     "figs_new/p239_s02.png"
    ]
@@ -2932,7 +3052,7 @@
    "bird": "Hen",
    "page": 217,
    "conf": "todo",
-   "note": "Source: Athanasius Kircher (quoted in Hawkins). — HEN. 'After laying.' Attributed 'Kircher'. — Attributed to Kircher within Hawkins' History of Science and Practice of Music.",
+   "note": "Source: Athanasius Kircher (quoted in Hawkins). \u2014 HEN. 'After laying.' Attributed 'Kircher'. \u2014 Attributed to Kircher within Hawkins' History of Science and Practice of Music.",
    "crops": [
     "figs_new/p239_s03.png"
    ]
@@ -2942,7 +3062,7 @@
    "bird": "Nightingale",
    "page": 218,
    "conf": "todo",
-   "note": "Source: Athanasius Kircher (In 'Musurgia'). — NIGHTINGALE. 'Glottismi modulationum sibilo exprimendi in Luscinia observati' (vocal techniques: Pigolismus, Glazismus, Teretismus).",
+   "note": "Source: Athanasius Kircher (In 'Musurgia'). \u2014 NIGHTINGALE. 'Glottismi modulationum sibilo exprimendi in Luscinia observati' (vocal techniques: Pigolismus, Glazismus, Teretismus).",
    "crops": [
     "figs_new/p240_s00.png",
     "figs_new/p240_s01.png",
@@ -2962,7 +3082,7 @@
    "bird": "Rossignol (Nightingale)",
    "page": 220,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ROSSIGNOL. No. 1 '3 octaves above.' Expressivo.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. No. 1 '3 octaves above.' Expressivo.",
    "crops": [
     "figs_new/p242_s00.png"
    ]
@@ -2972,7 +3092,7 @@
    "bird": "Rossignol (Nightingale)",
    "page": 220,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ROSSIGNOL. No. 2.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. No. 2.",
    "crops": [
     "figs_new/p242_s01.png"
    ]
@@ -2982,7 +3102,7 @@
    "bird": "Rossignol (Nightingale)",
    "page": 220,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ROSSIGNOL. Nos. 3-4.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. Nos. 3-4.",
    "crops": [
     "figs_new/p242_s02.png"
    ]
@@ -2992,7 +3112,7 @@
    "bird": "Rossignol (Nightingale)",
    "page": 220,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ROSSIGNOL. Nos. 5-6.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. Nos. 5-6.",
    "crops": [
     "figs_new/p242_s03.png"
    ]
@@ -3002,7 +3122,7 @@
    "bird": "Grive chanteuse (Song Thrush)",
    "page": 220,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — GRIVE CHANTEUSE. Nos. 1-2 (no. 2 '2 octaves above').",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 GRIVE CHANTEUSE. Nos. 1-2 (no. 2 '2 octaves above').",
    "crops": [
     "figs_new/p242_s04.png"
    ]
@@ -3012,7 +3132,7 @@
    "bird": "Grive chanteuse (Song Thrush)",
    "page": 220,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — GRIVE CHANTEUSE. Nos. 3-4.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 GRIVE CHANTEUSE. Nos. 3-4.",
    "crops": [
     "figs_new/p242_s05.png"
    ]
@@ -3022,7 +3142,7 @@
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ALOUETTE DES CHAMPS. No. 1 '4 octaves above.'",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. No. 1 '4 octaves above.'",
    "crops": [
     "figs_new/p243_s00.png"
    ]
@@ -3032,7 +3152,7 @@
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ALOUETTE DES CHAMPS. Nos. 2-3-4.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. Nos. 2-3-4.",
    "crops": [
     "figs_new/p243_s01.png"
    ]
@@ -3042,7 +3162,7 @@
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ALOUETTE DES CHAMPS. No. 5 '3 octaves above.' Expressivo.",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. No. 5 '3 octaves above.' Expressivo.",
    "crops": [
     "figs_new/p243_s02.png"
    ]
@@ -3052,7 +3172,7 @@
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
    "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). — ALOUETTE DES CHAMPS. No. 6 '4 octaves above.'",
+   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. No. 6 '4 octaves above.'",
    "crops": [
     "figs_new/p243_s03.png"
    ]
@@ -3062,7 +3182,7 @@
    "bird": "Thrush (Turdus musicus)",
    "page": 222,
    "conf": "todo",
-   "note": "Source: Alfred Smee (In 'My Garden'). — THRUSH, row 1.",
+   "note": "Source: Alfred Smee (In 'My Garden'). \u2014 THRUSH, row 1.",
    "crops": [
     "figs_new/p244_s00.png",
     "figs_new/p244_s01.png",
@@ -3076,7 +3196,7 @@
    "bird": "Blackbird (Turdus merula)",
    "page": 222,
    "conf": "todo",
-   "note": "Source: Alfred Smee (In 'My Garden'). — BLACKBIRD, row 1.",
+   "note": "Source: Alfred Smee (In 'My Garden'). \u2014 BLACKBIRD, row 1.",
    "crops": [
     "figs_new/p244_s05.png",
     "figs_new/p244_s06.png",
@@ -3088,7 +3208,7 @@
    "bird": "Wind",
    "page": 224,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — WIND. No. 1 'Over the roof of a house', row 1.",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 WIND. No. 1 'Over the roof of a house', row 1.",
    "crops": [
     "figs_new/p246_s00.png",
     "figs_new/p246_s01.png"
@@ -3099,7 +3219,7 @@
    "bird": "Wind",
    "page": 224,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — WIND. No. 2 'Wailing.'",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 WIND. No. 2 'Wailing.'",
    "crops": [
     "figs_new/p246_s02.png"
    ]
@@ -3109,7 +3229,7 @@
    "bird": "Cow",
    "page": 224,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — COW. 'M-o-o, m-o-o.'",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 COW. 'M-o-o, m-o-o.'",
    "crops": [
     "figs_new/p246_s03.png"
    ]
@@ -3119,7 +3239,7 @@
    "bird": "Dog",
    "page": 224,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — DOG. 'Barking.'",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 DOG. 'Barking.'",
    "crops": [
     "figs_new/p246_s04.png"
    ]
@@ -3129,7 +3249,7 @@
    "bird": "Donkey",
    "page": 224,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — DONKEY. 'rit. diminuendo.'",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 DONKEY. 'rit. diminuendo.'",
    "crops": [
     "figs_new/p246_s05.png"
    ]
@@ -3139,7 +3259,7 @@
    "bird": "Horse",
    "page": 225,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — HORSE. (bass clef)",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 HORSE. (bass clef)",
    "crops": [
     "figs_new/p247_s00.png"
    ]
@@ -3149,7 +3269,7 @@
    "bird": "Cat",
    "page": 225,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — CAT. Nos. 1-2 (no. 2 'When excited').",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 CAT. Nos. 1-2 (no. 2 'When excited').",
    "crops": [
     "figs_new/p247_s01.png"
    ]
@@ -3159,7 +3279,7 @@
    "bird": "Cock",
    "page": 225,
    "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). — COCK.",
+   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 COCK.",
    "crops": [
     "figs_new/p247_s02.png"
    ]
@@ -3169,7 +3289,7 @@
    "bird": "Cock chaffer (insect)",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). — COCK CHAFFER.",
+   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 COCK CHAFFER.",
    "crops": [
     "figs_new/p248_s00.png"
    ]
@@ -3179,7 +3299,7 @@
    "bird": "Death-watch (insect)",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). — Death-watch Call. / Answer.",
+   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 Death-watch Call. / Answer.",
    "crops": [
     "figs_new/p248_s01.png"
    ]
@@ -3189,7 +3309,7 @@
    "bird": "Cricket",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs. — CRICKET. — manually recovered detector gap at y926-1067",
+   "note": "Source: Anna Hinrichs. \u2014 CRICKET. \u2014 manually recovered detector gap at y926-1067",
    "crops": [
     "figs_new/p248_s01b.png"
    ]
@@ -3199,7 +3319,7 @@
    "bird": "Grasshopper (insect)",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). — GRASSHOPPER, row 1. — Detected system bounding box only captures the dense beamed run near the end of the row; the row also includes the 'Grasshopper.' label and initial notes not separately boxed. Also: the 'CRICKET.' notation (labeled between Death-watch/Answer and Grasshopper in the source) has NO corresponding entry in systems.json for this page -- it appears to have been missed by the system detector (falls in the y-gap between sys1 and sys2, roughly y=926-1067). No catalog record created for it since there is no system id, but flagging the gap.",
+   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 GRASSHOPPER, row 1. \u2014 Detected system bounding box only captures the dense beamed run near the end of the row; the row also includes the 'Grasshopper.' label and initial notes not separately boxed. Also: the 'CRICKET.' notation (labeled between Death-watch/Answer and Grasshopper in the source) has NO corresponding entry in systems.json for this page -- it appears to have been missed by the system detector (falls in the y-gap between sys1 and sys2, roughly y=926-1067). No catalog record created for it since there is no system id, but flagging the gap.",
    "crops": [
     "figs_new/p248_s02.png",
     "figs_new/p248_s03.png"
@@ -3210,7 +3330,7 @@
    "bird": "Bumble-bee (insect)",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). — BUMBLE-BEE.",
+   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 BUMBLE-BEE.",
    "crops": [
     "figs_new/p248_s04.png"
    ]
@@ -3220,7 +3340,7 @@
    "bird": "House-fly (insect)",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). — HOUSE-FLY.",
+   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 HOUSE-FLY.",
    "crops": [
     "figs_new/p248_s05.png"
    ]
@@ -3230,7 +3350,7 @@
    "bird": "Gnat (insect)",
    "page": 226,
    "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). — GNAT.",
+   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 GNAT.",
    "crops": [
     "figs_new/p248_s06.png"
    ]

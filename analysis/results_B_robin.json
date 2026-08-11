@@ -1,0 +1,187 @@
+[
+ {
+  "id": "rob-salute",
+  "enc": "C5:8 D5:8 r:8 E5:8 F5:8 E5:8 D5:8 C5:8 C5:8",
+  "conf": "high",
+  "note": "First robin salute call, no lyric. All notes have staccato dots (matches rob-lit's opening figure style). Single 8th-note rest mid-phrase, no fermata. Key inferred C (no signature shown).",
+  "key": "C"
+ },
+ {
+  "id": "rob-lit",
+  "enc": "F5:8 r:8 F5:8 r:8^ F5:8 F5:8 F5:8",
+  "conf": "high",
+  "note": "Repeated-note 'Lit lit lit lit lit' call, all F5, staccato dots on every note. Fermata sits over the second (odd vertical glyph) rest, not a note.",
+  "key": "C"
+ },
+ {
+  "id": "rob-litleu",
+  "enc": "F5:8 F5:8 F5:8 r:8 Bb5:8 Bb5:8",
+  "conf": "high",
+  "note": "'Lit lit lit leu leu.' Flat accidental explicit before the two 'leu' notes (Bb5); no key signature shown.",
+  "key": "C"
+ },
+ {
+  "id": "rob-01",
+  "enc": "D5:16 E5:16 F5:16 r:16 F5:16 G5:16 D5:16 r:16 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 D5:16 r:16 A5:16 G#5:16 A5:16 r:16^ D5:16 E5:16 F5:16 r:16 E5:16 F5:16 D5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 G#5:16 A5:16",
+  "conf": "med",
+  "note": "Two-system figure '1.', key F (1 flat). Five 16th-note triplet-figures separated by 16th rests per system; system 1 ends on a fermata rest, system 2 ends at a plain barline. The opening note of several triplet-figures and the sharped middle note of the two closing figures were faint/undetected by automated head-finding and filled in by melodic-pattern inference (mirrors the clearly-detected shape) — worth a second look at full source resolution.",
+  "key": "F"
+ },
+ {
+  "id": "rob-02",
+  "enc": "D5:16 F5:16 D#5:16 r:16 G5:16 D#5:16 E5:16 r:16 B5:16 A#5:16 B5:16 r:16 E5:16 G5:16 E5:16 r:16 E5:16 F5:16 E5:16 B5:16 A#5:16 B5:16 r:16 E5:16 F5:16 G5:16 r:16 F5:16 G5:16 A5:16 r:16 B5:16 A#5:16 B5:16",
+  "conf": "med",
+  "note": "'2. Another song at daybreak.' Two-system figure, key G (1 sharp). Contains explicit chromatic sharps on scale-degree turns (D#5, A#5) confirmed by visible accidental glyphs directly before those noteheads. Some notes in system 1 were reconstructed via low-threshold re-detection plus staff-line-ruled pixel measurement where the primary detector missed them.",
+  "key": "G"
+ },
+ {
+  "id": "rob-03",
+  "enc": "D5:16 C#5:16 D5:16 r:16 F5:16 F5:16 F5:16 r:16 F5:8 D5:16 D#5:16 r:16 F5:8 D5:16 D#5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 B5:16 A5:16",
+  "conf": "med",
+  "note": "'3.' figure, key G (1 sharp). Two turn-figures read as F5(8th)+D5+D#5(16ths beamed) — the isolated high note that looked like an 'R' glyph is simply an 8th note with a single flag/hook, not an ornament letter. Chromatic passing tones (C#5, D#5) inferred from visible sharp glyphs; exact scale step of the sharped note is a judgment call given scan resolution.",
+  "key": "G"
+ },
+ {
+  "id": "rob-04",
+  "enc": "F5:16 G5:16. E5:8 F5:8 r:16 F5:16 G5:16. E5:8 F5:8",
+  "conf": "med",
+  "note": "'4.' figure, key F (1 flat). Opens with a fast 16th-note beamed pair (F5,G5) where G5 carries an augmentation dot, then two 8th notes, repeated after a 16th rest. A stray low 'B3'-ish detection near the clef is a false positive from the figure-number glyph, disregarded.",
+  "key": "F"
+ },
+ {
+  "id": "rob-05",
+  "enc": "D5:4 Eb5:4 r:2 F5:4 D5:4",
+  "conf": "med",
+  "note": "Confirmed bundle of two distinct figures sharing this task id, as flagged. This encoding is the 'Pe-wee, pe-wee' pewee-call cameo (crop figs_new/p039_s01.png; no key signature, explicit flat on Eb5; rest glyph looks like a half rest). The SECOND figure in the bundle — an unrelated numbered '5.' robin figure (forte, marked with accent '>' marks, crop figs_new/p039_s02.png, key D/2 sharps, 'rain defiance') should be split into a NEW id; best-effort encoding for it: E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16 (conf low — accent marks not encoded, several accidentals and a descending slanted-beam passage are uncertain; sloped-beam false-positive risk per METHOD.md; needs full re-read).",
+  "key": "C"
+ },
+ {
+  "id": "rob-06",
+  "enc": "D5:16 E5:16 F5:16 r:16 G5:16 A5:16 G5:16 r:16 F5:16 G5:16 E5:16 r:16 F5:16 G5:16 F5:16 r:16^ G5:16 A5:16 F5:16",
+  "conf": "med",
+  "note": "'6.' figure, key A (3 sharps). Five 16th-note triplet-figures with 16th rests; fermata over the fourth rest. Leftmost note of the first triplet-figure was undetected (obscured near the key signature) and filled in by matching the ascending D-E-F pattern seen elsewhere on this page.",
+  "key": "A"
+ },
+ {
+  "id": "rob-07",
+  "enc": "E5:16 D5:16 E5:16 r:16 G5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 r:16 G5:16 F5:16 G5:16",
+  "conf": "high",
+  "note": "'7.' figure, key Bb (2 flats). Four clean 16th-note neighbor-tone figures separated by 16th rests, all 12 notes cleanly detected, no accidentals beyond key signature.",
+  "key": "Bb"
+ },
+ {
+  "id": "rob-08",
+  "enc": "F5:32 F5:16 E5:16 r:16 A5:8 r:16 A5:8 F5:32 F5:16 E5:16",
+  "conf": "low",
+  "note": "'8.' figure (shares crop figs_new/p040_s02.png with '9.', split by the printed figure numbers), key Eb (3 flats). Small grace-note-like figure (tiny notehead, read as a 32nd) leads into a slanted-beam pair each time; pitch of the grace note is an estimate from a faint blob near the staff top. Needs a second look.",
+  "key": "Eb"
+ },
+ {
+  "id": "rob-09",
+  "enc": "E5:16 F5:16 E5:16 r:16 A5:16 B5:16 A5:16 r:16 F5:16 G5:16 E5:16",
+  "conf": "high",
+  "note": "'9.' figure (right-hand half of figs_new/p040_s02.png). Three clean 16th-note triplet-figures with 16th rests, key Eb (3 flats), all 9 notes cleanly detected.",
+  "key": "Eb"
+ },
+ {
+  "id": "rob-10",
+  "enc": "E5:16 F5:16 E5:16 G5:16 A5:16 G5:16 r:16 E5:16 F5:16 E5:16 A5:16 B5:16 A5:16 r:16 E5:16 F5:16 E5:16 C6:16 D6:16 C6:16 r:16 D6:16 C6:16",
+  "conf": "high",
+  "note": "'10. Sunset.' Key C (no signature). Three-rest phrase pairing a low neighbor-tone figure with an ascending higher figure each time, climbing D5-space to C6/D6 by the close; final figure is only 2 notes (D6,C6) as printed, cut short at the barline. All notes cleanly detected.",
+  "key": "C"
+ },
+ {
+  "id": "rob-11",
+  "enc": "Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16",
+  "conf": "high",
+  "note": "'11.' figure, key F (1 flat). Repeated-note rattle on Bb5 (courtesy flat marked on the first note, redundant with key signature), one 16th rest, then a wavy vocal-slide mark down to the closing G5 (slide, not a trill — not separately encoded per convention).",
+  "key": "F"
+ },
+ {
+  "id": "rob-16",
+  "enc": "D5:16 E5:16 F5:16 D5:16 E5:16 E5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 F5:16 G5:16 A5:16 F5:16 E5:16 D5:16 r:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16 G5:16 F5:16 E5:16 r:16 E5:16 D5:16 G5:16 E5:16 D5:16 E5:16 r:16 G5:16 A5:16 r:16 G5:16 A5:16 r:16 F5:16 E5:16 D5:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16",
+  "conf": "low",
+  "note": "Two-system dense trill/turn figure, key G (1 sharp). The source clearly shows repeated chromatic upper/lower-neighbor turn ornaments (sharped passing tones) and sloped-beam fast runs, but at this scan resolution the automated head detector missed many of the ornamental notes and could not reliably localize the accidentals; the pitch skeleton given here is the plain-letter reading only (accidentals omitted). Needs re-verification from a higher-resolution source.",
+  "key": "G"
+ },
+ {
+  "id": "rob-17",
+  "enc": "A5:16 G5:16 A5:16 r:16 F5:16 G5:16 r:16 A5:16 G5:16 A5:16 r:16 G5:16 F5:16 C6:16 B5:16 C6:16 B5:16 C6:16 A5:16 B5:16 A5:16 r:16 G5:16 F5:16 G5:16 r:16 G5:16 F5:16 r:16 G5:16 F5:16 r:16 C6:16 B5:16 C6:16 B5:16 C6:16",
+  "conf": "med",
+  "note": "'17. Just at dark.' Two-system figure, key C (no signature). Phrase length shortens across repeats (3,2 notes) suggesting the call fading toward dark, ending both systems in a fast pp run on C6/B5. No accidentals seen (unlike neighboring dense trill figures on this page).",
+  "key": "C"
+ },
+ {
+  "id": "rob-18",
+  "enc": "G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 F5:16",
+  "conf": "med",
+  "note": "Two-system figure, key C (no signature). Long rattle of nine repeated G5 8th notes into D5, fermata rest, then eight repeated F5 8th notes, rest, then two short 16th-note turn figures.",
+  "key": "C"
+ },
+ {
+  "id": "rob-19",
+  "enc": "B4:8 B4:8 B4:8 C5:16 D5:16 E5:16 r:8 B4:8 B4:8 B4:8 r:8 C5:16 D5:16 E5:16",
+  "conf": "med",
+  "note": "'19.' figure, key A (3 sharps). Three repeated B4 8th notes lead into a fast ascending 16th-note triplet-figure (C5,D5,E5), twice, separated by an 8th rest. The final triplet-figure's notes were reconstructed by symmetry with the first (a note in that region was not cleanly detected).",
+  "key": "A"
+ },
+ {
+  "id": "rob-20",
+  "enc": "F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 E5:16 D5:16 r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 D5:16 C5:16",
+  "conf": "high",
+  "note": "'20. Signal for flight.' Key F (1 flat). Re-verified from scratch and CORRECTED — previous encoding (C5/A4/C#5-based) did not match the crop; six repeated 16th notes (F5, then E5 after the rest) for 'Chick-y ick-y chick-y' with a 2-note melisma (E5,D5 then D5,C5) on 'eu', matching the printed lyric syllable count (7 syllables, 8 notes per half).",
+  "lyric": "Chick-y ick-y chick-y eu (x2)",
+  "key": "F"
+ },
+ {
+  "id": "rob-21",
+  "enc": "F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
+  "conf": "high",
+  "note": "'21. Sept 21, cold and rainy.' Key G (1 sharp). Clean stepwise descent F5 down to C5, fermata rest, then a shorter F5-E5-D5 descent. All notes cleanly detected.",
+  "key": "G"
+ },
+ {
+  "id": "rob-22",
+  "enc": "D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8",
+  "conf": "high",
+  "note": "'22.' figure, key G (1 sharp). All notes cleanly detected, no accidentals beyond key signature.",
+  "key": "G"
+ },
+ {
+  "id": "rob-23",
+  "enc": "G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8",
+  "conf": "med",
+  "note": "'23.' figure, key G (1 sharp). Rest placement within the four phrase-groups (4/4/2/5 notes) is read from spacing gaps between otherwise cleanly-detected notes; worth a quick visual double-check of exact rest positions.",
+  "key": "G"
+ },
+ {
+  "id": "rob-24",
+  "enc": "F#5:32 D5:8 F#5:32 D5:8 F#5:32 D5:8 A4:8 A4:8 A4:8",
+  "conf": "med",
+  "note": "'24.' figure, key D (2 sharps). Re-verified from scratch and CORRECTED — previous low-confidence encoding (rests + A4/F#5 in a different order) did not match the crop. Actual reading: three slurred grace-note-to-main-note figures (small high grace note, read as 32nd, sliding down into D5) for 'oe, oe, oe,' followed by three plain A4 8th notes for 'up, up, up.' Grace-note pitch (F#5, sitting on the top staff line) is a reasonable but not fully certain read of a small notehead.",
+  "lyric": "oe, oe, oe, up, up, up.",
+  "key": "D"
+ },
+ {
+  "id": "rob-spin",
+  "enc": "E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8",
+  "conf": "med",
+  "note": "Spinning-song comparison, 2 staves, key Eb (3 flats), lyric 'All a-long... link-tum loo.' Two notes in system 1 (2nd and 5th) carry a printed '3' triplet marker against their neighbors, encoded with the triplet suffix; the final note of system 1 is spaced noticeably wider than the rest (read as a quarter note, possibly holding 'long'). System 2 (9 notes for 9 syllables of 'all a-long, all a-long link-tum loo.') detected cleanly and matches the lyric one-to-one.",
+  "lyric": "All a-long... link-tum loo.",
+  "key": "Eb"
+ },
+ {
+  "id": "rob-sept21",
+  "enc": "E5:8 E5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
+  "conf": "med",
+  "note": "Under the text 'I heard a robin exclaim,—', key D (2 sharps). Stepwise descent from a repeated E5 opening down to C5, fermata rest, then a shorter F5-E5-D5 descent. The repeated second E5 was faint/undetected by the automated head finder and filled in visually (two same-height noteheads clearly present before the rise to G5).",
+  "key": "D"
+ },
+ {
+  "id": "rob-farewell",
+  "enc": "D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8^ D5:8 F5:8 F5:8 F5:8 F5:8 r:8^ G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 r:8 G5:8 G5:8 G5:8",
+  "conf": "high",
+  "note": "Main notes at the pond (farewell), 2 staves, key D (2 sharps). System 1 has two fermata rests; all 26 notes across both systems cleanly detected with no ambiguity.",
+  "key": "D"
+ }
+]

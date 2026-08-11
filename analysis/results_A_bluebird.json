@@ -1,0 +1,50 @@
+[
+ {
+  "id": "blue-04",
+  "enc": "E5:8 F5:8 E5:8 D#5:8 r:8 | E5:8 D#5:8 | E5:8 B4:8 A#4:8 B4:4 r:8 D#5:8 E5:8 r:8 E5:8 D#5:8 E5:8 r:8 F5:8^ r:8 | D#5:8 E5:8",
+  "conf": "med",
+  "note": "Sparse barlines in source (only ~3 real ones found via pixel scan; others placed cosmetically at phrase breaks). One note (F5 near end) missed by head detector due to an overlaid fermata arc above the notehead — pitch confirmed by row-density measurement against staff lines. B4-A#4 pair and B4 quarter/rest confirmed via tight zoom."
+ },
+ {
+  "id": "blue-05",
+  "enc": "F5:8 E5:8 | E5:8 G5:8 | F5:8 D#5:8 r:8 | F5:8 E5:8 | E5:8 D#5:8 r:8 | F5:8 E5:8 D#5:8",
+  "conf": "med",
+  "note": "No internal barlines detected (pipes are cosmetic phrase breaks). Three notes (an E5 in the first beamed pair, a flagged isolated F5, and a final D#5) were missed by the standard head detector — recovered via a lowered-threshold rerun and confirmed by row-density pitch measurement. The isolated flagged note near the end has a small hooked flag (not a fermata, unlike blue-04's mark)."
+ },
+ {
+  "id": "blue-06",
+  "enc": "E5:8 F5:8 E5:8 G5:8 E5:8 r:8 G5:8 E5:8 E5:8 D#5:8 r:8 F5:8 C5:8 G5:8 A5:8 r:8 G5:8 E5:8 E5:8 F5:8 r:8 E5:8 | F5:8 E5:8 D#5:8 r:8 G5:8 F5:8 E5:8 D5:8 E5:8 F5:8 G5:8 r:8 G5:8 r:8 G5:8 r:8 E5:8 r:8 E5:8 F5:8 G5:8",
+  "conf": "med",
+  "note": "Dense figure spanning two systems (p035_s00 + p035_s01); many notes have individual flags rather than beams, and several were missed by the standard detector — recovered via lowered-threshold rerun plus manual row-density pitch checks. No internal barlines found in either system (bars used only as cosmetic phrase separators). Rest/flag placements in a few spots are best-effort."
+ },
+ {
+  "id": "blue-07",
+  "enc": "D5:8 E5:8 G5:8 F5:8 D#5:8 r:8 F5:8 A4:8 G5:8 r:8 E5:8 A4:8 G5:8 r:8 E5:8 F5:8 E5:8 D#5:2 r:8 | E5:8 G5:8 r:8 E5:8 G5:8",
+  "conf": "med",
+  "note": "Spans p035_s02 (full) plus the left portion of p035_s03 (before the double barline that separates it from fig. 8). Opening D5 has a natural sign of unclear purpose (D isn't altered by the Em key sig; encoded as plain D5). One note (originally read as E5 at x=441 in p035_s02) has a sharp directly before it with no clear diatonic explanation — encoded as its enharmonic equivalent F5 rather than the unusual spelling E#5; low confidence on that single note. Final note of the first system is an open (half-note) D#5."
+ },
+ {
+  "id": "blue-08",
+  "enc": "G5:8 A5:8 E5:8 r:8 G5:8 A5:8 E5:8",
+  "conf": "high",
+  "note": "Right portion of p035_s03, after the double barline and \"8.\" label. Two symmetric 3-note beamed groups (G5-A5-E5) separated by a rest; all three pitches per group confirmed via row-density measurement (middle and last notes of each group were missed by the standard detector but are unambiguous). Small dash marks beside the A5 noteheads look like tenuto marks, not encoded as they don't affect pitch/duration."
+ },
+ {
+  "id": "blue-09",
+  "enc": "E5:8 C5:8 C5:8 A#4:8 r:8 C5:83 D5:83 E5:83",
+  "conf": "med",
+  "note": "Left portion of p035_s04 (\"9.\", key sig 3 sharps matching F#m). Opening E5 carries an elaborate turn/mordent ornament above it, not encoded (noted here only). The C5-A#4 pair's accidental was confirmed by row-density measurement (initial read as B4 was skewed by the sharp glyph). Final three notes are marked as a triplet (\"3\" over the beam) and encoded with trailing-3 triplet notation."
+ },
+ {
+  "id": "blue-10",
+  "enc": "G5:8 C5:8 r:8 C5:8 B4:8 r:8 E5:16 C5:16",
+  "conf": "med",
+  "note": "Right portion of p035_s04 (\"10.\"). NOTE: engraved key signature shows only 2 flats (Bb, Eb), consistent with Gm/Bb major, not the Cm (3 flats: Bb,Eb,Ab) given in the task file — flagging this discrepancy rather than silently correcting it. Opening G5 has a turn/mordent ornament (not encoded). The B4 has an explicit natural sign cancelling the key's Bb. Final pair (E5-C5) is drawn with a double beam (16ths) and the E5's stem has a wavy hook mark resembling a vocal-slide indicator (see METHOD.md) — not separately encoded."
+ },
+ {
+  "id": "blue-11",
+  "enc": "D5:8 E5:8 F5:8 E5:8 D5:8 D5:8 r:8 G5:8 F5:8 E5:8 F5:8 E5:8 D5:8 r:8 D5:8 E5:8 | F5:8 r:8 D5:8 C#5:8 r:8 D5:8 C#5:8 D5:8 r:8 E5:8 D5:8 G5:8 F5:8 D5:8 D5:8 r:8 D5:8 F5:8",
+  "conf": "high",
+  "note": "Spans p035_s05 (\"11. July 14.\") + p035_s06. Clean engraving, mostly simple beamed eighth-note pairs. The second pair of the first system (F5-E5) is drawn with a wavy/zigzag beam — a vocal-slide marking per METHOD.md, encoded as plain F5:8 E5:8 with the slide noted here rather than as a trill. Second system has two C#5 chromatic passing tones confirmed via zoom."
+ }
+]

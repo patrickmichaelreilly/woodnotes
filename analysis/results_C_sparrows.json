@@ -1,0 +1,86 @@
+[
+ {
+  "id": "ssp-01",
+  "enc": "B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:16 B5:16 A5:16 B5:16 A5:16",
+  "conf": "med",
+  "key": "A",
+  "note": "Opening (B4 + 5x F#5) then G#5 pickup into a 5-note 16th trill (A5/B5 alternating, ending A5). Pitches re-measured fresh (precomputed analysis/*.txt was stale/out of sync with current figs_new crop - re-ran heads.py and cross-checked overlay + zoomed PIL crops directly). Repeat dots :|| at end - passage encoded once."
+ },
+ {
+  "id": "ssp-02",
+  "enc": "B4:8. D5:8 C#5:8 E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8",
+  "conf": "med",
+  "key": "A",
+  "note": "Dotted-8th B4, D5, C#5, then 6-note 8th run (E5/F#5 alternating), G#5 pickup to end. Re-measured fresh (stale precomputed data had wrong pitches - D5/C#5 were misread as C#5/E5 in an earlier pass). Repeat dots :|| at end - encoded once."
+ },
+ {
+  "id": "ssp-03",
+  "enc": "F5:32 C6:4 F5:32 C6:4 F5:32 C6:4 F5:4 A5:16 Bb5:16 A5:16 Bb5:16 A5:16",
+  "conf": "med",
+  "key": "F",
+  "note": "Key = 1 flat (Bb). Three grace(F5)+accented-quarter(C6) pairs (accent '>' not encoded), then quarter F5, then 5-note 16th trill A5/Bb5 (Bb per key sig). Grace notes tiny/ambiguous - encoded as 32nds per convention."
+ },
+ {
+  "id": "ssp-04",
+  "enc": "A5:32 E5:8 r:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 G5:8. F#5:8 F#5:8",
+  "conf": "low",
+  "key": "D",
+  "note": "Key = 2 sharps (F#,C#). Grace(A5, estimated)+E5, 16th rest, 6-note 16th run E5/F#5 alternating, dotted-8th G5, then two F#5 eighths (2nd F#5 has explicit courtesy sharp in source, 1st shown F# via key sig, both read at same staff position as first F#5). Grace-note pitch and rest duration are best estimates from a cluttered region - mark low pending a second look."
+ },
+ {
+  "id": "ssp-05",
+  "enc": "D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^",
+  "conf": "med",
+  "key": "G",
+  "note": "Key = 1 sharp (F#). D5/E5/D5 staccato-marked eighths, then 5x B5 eighths (each shows a pass-through A5 ledger, consistent with B5 in the space above), ending fermata over rest."
+ },
+ {
+  "id": "ssp-06",
+  "enc": "A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 D5:16 r:8^",
+  "conf": "med",
+  "key": "G",
+  "note": "Key = 1 sharp (F#, drawn as a blocky glyph on the F5 line that's easy to mistake for a repeat/box symbol at low zoom - confirmed sharp on closer crop). Three grace(A5)+G5 pairs, then 5-note 16th run E5/F#5/E5/F#5/D5, fermata over rest."
+ },
+ {
+  "id": "ssp-07",
+  "enc": "B5:32 C6:8 B5:32 C6:8 B5:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
+  "conf": "med",
+  "key": "C",
+  "note": "No key sig. Three grace(B5)+accented C6 pairs (two ledger lines confirm C6: pass-through A5 + through-head C6), then 5x G5 individually-flagged eighths, fermata over rest."
+ },
+ {
+  "id": "ssp-08",
+  "enc": "D5:32 C5:8 D5:32 C5:8 D5:32 C5:8 G5:16 A5:16 G5:16 A5:16 G5:16 r:8 C6:8 C6:8 C6:8",
+  "conf": "med",
+  "key": "C",
+  "note": "No key sig. Three grace(D5)+C5 pairs, then 5-note 16th trill G5/A5 alternating, 8th rest, then 3x C6 individual eighths (two-ledger pattern confirms C6), ends with repeat dots."
+ },
+ {
+  "id": "ssp-more",
+  "key": "var",
+  "conf": "med",
+  "enc": "C5:8 B4:8 C5:8 B4:8 C5:8 B4:8 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | Eb5:8 Eb5:8 Eb5:8 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 r:16 Eb6:32 D6:8 Eb6:32 D6:8 | Bb5:32 Ab5:8 Bb5:32 Ab5:8 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 C6:8 Ab5:8 r:8^ | A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 B5:16 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | C6:32 B5:8 B5:8 B5:8 r:8 E6:32 D6:8 B5:8 C6:32 B5:8 B5:8 B5:8 | G5:8 D5:8 G5:8 D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 Bb5:8 Bb5:8 Bb5:8 r:8^ | Eb5:8 Eb5:8 Eb5:8 Ab5:8 Eb5:8 C6:8. Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 | C6:8 C6:8 C6:8 C6:8 C6:8 G5:8 Bb5:8 B5:8 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F5:16 E5:16 F5:16 E5:16 r:8^ | D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^ | D5:8 E5:8 E5:8 E5:8 E5:8 E6:8 E6:8 E6:8 r:8^ | D6:32 C6:8 D6:32 C6:8 D6:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
+  "note": "13 crops = 13 distinct unnumbered systems (matches catalog's note of ~17 unnumbered variants on book pp.23-24; not all necessarily captured here). Encoded each system in reading order (p046_s04..s07, p047_s00..s08), separated by '|'. Per-system key signatures vary: p046_s04 none(C), s05 3 flats(Eb), s06 3 flats(Eb), s07 1 sharp(G) -- p047_s00/s01 1 sharp(G), s02 2 flats(Bb), s03 3 flats(Eb/Cm), s04 none(C, but explicit accidental Bb/B natural at end), s05 none(C), s06/s07/s08 1 sharp(G). p046_s05 is the highest/8va-like system (beamed run reaches 3 ledger lines above staff, Eb6/F6) but shows NO printed 8va bracket, so pitches are encoded as literally engraved (not further octave-shifted). Grace notes throughout are tiny and encoded as 32nds at an estimated pitch one step above their resolution note (a pattern that held consistently across every grace+main pair checked with a pixel grid overlay). Fermata+rest endings are common across systems. Overall med confidence: main notes cross-checked with fresh heads.py + grid overlays, but grace-note pitches and a few flat/sharp fringe cases are less certain."
+ },
+ {
+  "id": "chick-01",
+  "enc": "A5:2 G5:2",
+  "conf": "high",
+  "key": "C",
+  "note": "CORRECTED from existing G5:2/E5:2. Re-verified from scratch with a pixel/staff-position grid overlay: first (hollow) notehead centers on A5 (one ledger-line's worth above the staff), second centers on G5 (space just above the staff) - a descending whole step, not a third. No key sig (C)."
+ },
+ {
+  "id": "chick-02",
+  "enc": "C6:2 A5:2 | A5:2 G5:2 | C6:2 A5:4 A5:4 | A5:2 G5:4 G5:4",
+  "conf": "med",
+  "key": "C",
+  "note": "CORRECTED from existing guess (G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2), which does not match this crop. The crop actually shows FOUR numbered mini-figures ('1.'-'4.'), each a 2-pitch idea in one of two registers: C6-down-to-A5 (a third, figs 1&3) or A5-down-to-G5 (a step, figs 2&4), with the lower pitch either held as a half note (figs 1,2) or restruck as two quarters (figs 3,4). No key sig (C). Ledger-line count (pass-through vs through-head) used to disambiguate C6 vs A5 vs B5 vs G5 since notes sit right at/above the staff. Encoded all four, separated by '|'."
+ },
+ {
+  "id": "nut-wait",
+  "enc": "F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8",
+  "conf": "high",
+  "key": "F",
+  "note": "CORRECTED from existing C5/A4-centered encoding (which the previous note already flagged as needing pitch-center verification). Lyrics are printed under the staff and align exactly: 'Wait,'x9 (2 F5 + 3 F5 + 4 D5, with an 8th rest and a fermata-rest breaking up the wait's) then 'wait, wait, wait.' (3 more D5) then 'Ick-y, ick-y, ick-y.' (6 C5). p037_s02==p051_s00 and p037_s03==p051_s01 are duplicate scans of the same two systems (gap-page copy), not additional content - the 4 crops encode only 2 unique systems, concatenated here. Verified with a pixel grid overlay: F5 notes sit exactly on the top staff line, D5 on the second line - high confidence. Key = 1 flat (F, matches existing corpus key)."
+ }
+]

@@ -6,7 +6,7 @@
   "page": 33,
   "key": "?",
   "conf": "todo",
-  "note": "4-tone repeats + additions + full song - MISSING (pdf55-56), audit \u2014 RESOLVED (draft added)",
+  "note": "4-tone repeats + additions + full song - MISSING (pdf55-56), audit \u2014 RESOLVED (draft added) \u2014 possible bundle/duplicate \u2014 see catalog",
   "pdf_page": 55
  },
  {
@@ -18,6 +18,9 @@
   "enc": "C5:8 Ab4:8 Bb4:8 C5:8",
   "conf": "low",
   "note": "4-tone favorite, repeated w/ rests; verify",
+  "crops": [
+   "figs_new/p055_s00.png"
+  ],
   "pdf_page": 55
  },
  {
@@ -29,6 +32,9 @@
   "enc": "C5:8 Ab4:8 F4:8 Ab4:8 F4:4 Eb4:8 F4:8",
   "conf": "low",
   "note": "the added strain; verify",
+  "crops": [
+   "figs_new/p056_s00.png"
+  ],
   "pdf_page": 56
  },
  {
@@ -40,6 +46,14 @@
   "enc": "C5:4 F5:8. Eb5:16 C5:8 r:8^ Ab4:8 Bb4:8 C5:8 r:8^ | C5:8 Eb5:8 C5:4 r:8^ C5:8 Ab4:8 Bb4:4 r:8^ | C5:8 B4:8 Bb4:8 A4:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 r:8^ | Ab4:8 C5:8 F5:8 Eb5:8 C5:8 r:8^ | Ab4:8 Bb4:8 C5:4 Ab4:8 F4:4^",
   "conf": "low",
   "note": "6-staff plaintive song, tremor staff included; DEDICATED PASS NEEDED",
+  "crops": [
+   "figs_new/p056_s01.png",
+   "figs_new/p056_s02.png",
+   "figs_new/p056_s03.png",
+   "figs_new/p056_s04.png",
+   "figs_new/p056_s05.png",
+   "figs_new/p056_s06.png"
+  ],
   "pdf_page": 56
  },
  {
@@ -49,7 +63,7 @@
   "page": 40,
   "key": "?",
   "conf": "todo",
-  "note": "Chippy trill - MISSING (pdf62), audit \u2014 RESOLVED (draft added)",
+  "note": "Chippy trill - MISSING (pdf62), audit \u2014 RESOLVED (draft added) \u2014 possible bundle/duplicate \u2014 see catalog",
   "pdf_page": 62
  },
  {
@@ -62,6 +76,10 @@
   "conf": "med",
   "note": "monotone staccato serenade; pitch center approx",
   "lyric": "Chip-chip-chip...",
+  "crops": [
+   "figs_new/p062_s00.png",
+   "figs_new/p062_s01.png"
+  ],
   "pdf_page": 62
  },
  {
@@ -73,6 +91,9 @@
   "enc": "C5:4 C5:4 C5:8 C5:8 C5:8 C5:8 C5:16 C#5:16 D5:16 D#5:16 E5:16 E5:16 E5:16 E5:16",
   "conf": "med",
   "note": "accelerando+crescendo, chromatic rise; verify pitch center",
+  "crops": [
+   "figs_new/p058_s00.png"
+  ],
   "pdf_page": 58
  },
  {
@@ -85,6 +106,9 @@
   "conf": "med",
   "note": "8va applied; 1 low long + 2 accented longs + 3 slurred triplet clusters",
   "lyric": "(Old Sam) Pea-body Pea-body Pea-body",
+  "crops": [
+   "figs_new/p064_s00.png"
+  ],
   "pdf_page": 64
  },
  {

@@ -3,21 +3,27 @@
   "id": "blue-04",
   "bird": "Bluebird",
   "no": 4,
-  "page": 13,
+  "page": 12,
   "key": "Em",
   "conf": "todo",
-  "note": "needs zoom pass",
-  "pdf_page": 35
+  "note": "needs zoom pass \u2014 (page corrected from 13 per full-book catalog)",
+  "crops": [
+   "figs_new/p034_s01.png"
+  ],
+  "pdf_page": 34
  },
  {
   "id": "blue-05",
   "bird": "Bluebird",
   "no": 5,
-  "page": 13,
+  "page": 12,
   "key": "Em",
   "conf": "todo",
-  "note": "needs zoom pass",
-  "pdf_page": 35
+  "note": "needs zoom pass \u2014 (page corrected from 13 per full-book catalog)",
+  "crops": [
+   "figs_new/p034_s02.png"
+  ],
+  "pdf_page": 34
  },
  {
   "id": "blue-06",
@@ -27,6 +33,10 @@
   "key": "Em",
   "conf": "todo",
   "note": "needs zoom pass",
+  "crops": [
+   "figs_new/p035_s00.png",
+   "figs_new/p035_s01.png"
+  ],
   "pdf_page": 35
  },
  {
@@ -37,6 +47,10 @@
   "key": "Em",
   "conf": "todo",
   "note": "needs zoom pass",
+  "crops": [
+   "figs_new/p035_s02.png",
+   "figs_new/p035_s03.png"
+  ],
   "pdf_page": 35
  },
  {
@@ -47,6 +61,9 @@
   "key": "Em",
   "conf": "todo",
   "note": "needs zoom pass",
+  "crops": [
+   "figs_new/p035_s03.png"
+  ],
   "pdf_page": 35
  },
  {
@@ -57,6 +74,9 @@
   "key": "F#m",
   "conf": "todo",
   "note": "needs zoom pass",
+  "crops": [
+   "figs_new/p035_s04.png"
+  ],
   "pdf_page": 35
  },
  {
@@ -67,6 +87,9 @@
   "key": "Cm",
   "conf": "todo",
   "note": "needs zoom pass",
+  "crops": [
+   "figs_new/p035_s04.png"
+  ],
   "pdf_page": 35
  },
  {
@@ -77,6 +100,10 @@
   "key": "Dm",
   "conf": "todo",
   "note": "needs zoom pass",
+  "crops": [
+   "figs_new/p035_s05.png",
+   "figs_new/p035_s06.png"
+  ],
   "pdf_page": 35
  }
 ]

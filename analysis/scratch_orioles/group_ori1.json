@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ori-first",
+    "enc": "F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 Eb5:8 F5:16 Eb5:16 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 r:8^ Eb5:8 F5:8 r:8 Eb5:16 Eb5:16 r:8 Eb5:16 F5:16 r:8",
+    "conf": "high",
+    "note": "1884 arrival, 3 staves (figs_new/p093_s00-s02.png). Every note is F5 or Eb5 (Eb applied per Eb-major key sig) alternating in a chattering rattle pattern with accents (not encoded) and one fermata-rest per system; verified with independent staff-line pixel calibration (dark-row detection) cross-checked against three separate systems that all reproduce the same F5/Eb5 cell, plus ledger/line-position confirmation at every note. heads.py's own pitch labels were unreliable (systematically one step flat vs the correct treble reading) so all pitches were read manually against measured staff-line y-coordinates.",
+    "key": "Eb"
+  },
+  {
+    "id": "ori-elm",
+    "enc": "G5:8 r:8 G#5:8 A5:8 A5:8 G5:8. F5:8 E5:8 D5:8 r:8^",
+    "conf": "high",
+    "note": "minor-scale strain (figs_new/p094_s00.png). No key signature at the clef (0 sharps/flats) -> A minor. Scale run G5-G#5(sharp, ledger-free space above staff)-A5(ledger line, confirmed twice)-A5-G5(explicit natural sign cancelling the sharp, dotted)-F5-E5-D5(descending, stepwise, on/around the staff lines), ending on a fermata rest before the final barline. The G#5->G-natural pair is a textbook melodic-minor raised-leading-tone/natural-descent, which is strong internal confirmation of A minor and of the pitch reading.",
+    "key": "Am"
+  },
+  {
+    "id": "ori-curly",
+    "enc": "Eb5:8 F5:8 Eb5:8 F5:8 r:8 F5:4 Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 Eb5:16 r:8 Eb5:8 F5:8 Eb5:8 F5:8 r:8 Eb5:8. F5:16",
+    "conf": "high",
+    "note": "Curly curly Hey! Chickerway (figs_new/p094_s01.png + p094_s02.png). Independent re-read from scratch: differs substantially from the old low-conf draft (Bb4/G4/Eb5/D5/C5), which was checked against a mis-calibrated staff reference. Correct treble reading (verified via measured staff-line y-pixels) puts this whole figure in the Eb5-F5-C5 register: 'Cur-ly cur-ly' = Eb5-F5 alternation (8ths, accented on F5); 'Hey!' = F5 quarter note (forte, no flag - not an 8th); 'Chick-er-way' (x2, 16ths) = Eb5-C5-F5, a 3-note figure that recurs identically in both crops, a strong cross-check. p094_s02 continues with 'chew' (F5-Eb5 16th pair), rest, 'cur-ly cur-ly' (Eb5-F5 x2, 8ths), rest, 'cur-ly' (Eb5 dotted-8th + F5 16th) to the final barline.",
+    "lyric": "Cur-ly, cur-ly, Hey! Chick-er-way, chick-er-way, / chew, cur-ly, cur-ly, cur-ly.",
+    "key": "Eb"
+  },
+  {
+    "id": "ori-curly2",
+    "enc": "F5:8 F5:16 Eb5:16 r:8 G5:8. Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 C5:16",
+    "conf": "high",
+    "note": "kah-kue closing form (figs_new/p094_s03.png). Independent re-read from scratch: differs from the old low-conf draft (G4/Ab4/Bb4/Eb5/D5/C5), same mis-calibration issue as ori-curly's draft. 'kah' = F5 8th; 'kue.' = F5-Eb5 16th beamed pair; rest; 'Hey!' = G5 dotted-8th (forte, accent) directly followed by 16th Eb5 ('Chick'), completing one beat; 'Chick-er-way' x2 (16ths) = Eb5-C5-F5, the identical 3-note cell found in ori-curly, a strong cross-check that the Eb-major staff calibration is correct; 'chew.' = F5-C5 16th beamed pair to the final barline.",
+    "lyric": "kah, kue. Hey! Chick-er-way, chick-er-way, chew.",
+    "key": "Eb"
+  }
+]

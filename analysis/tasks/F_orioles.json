@@ -9,6 +9,9 @@
   "conf": "med",
   "note": "8va, cresc et accel; favorite form",
   "lyric": "Whip-poor-will x3",
+  "crops": [
+   "figs_new/p090_s00.png"
+  ],
   "pdf_page": 90
  },
  {
@@ -20,6 +23,17 @@
   "enc": "Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 ",
   "conf": "low",
   "note": "cluck after each; several melodic variants p70; zoom",
+  "crops": [
+   "figs_new/p092_s00.png",
+   "figs_new/p092_s01.png",
+   "figs_new/p092_s02.png",
+   "figs_new/p092_s03.png",
+   "figs_new/p092_s04.png",
+   "figs_new/p092_s05.png",
+   "figs_new/p092_s06.png",
+   "figs_new/p092_s07.png",
+   "figs_new/p092_s08.png"
+  ],
   "pdf_page": 92
  },
  {
@@ -30,6 +44,11 @@
   "key": "Eb",
   "conf": "todo",
   "note": "1884 arrival, 3 staves",
+  "crops": [
+   "figs_new/p093_s00.png",
+   "figs_new/p093_s01.png",
+   "figs_new/p093_s02.png"
+  ],
   "pdf_page": 93
  },
  {
@@ -40,6 +59,9 @@
   "key": "?",
   "conf": "todo",
   "note": "minor-scale strain",
+  "crops": [
+   "figs_new/p094_s00.png"
+  ],
   "pdf_page": 94
  },
  {
@@ -50,8 +72,12 @@
   "key": "Eb",
   "enc": "Bb4:8 G4:8 Bb4:8 G4:8 r:8 Eb5:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8",
   "conf": "low",
-  "note": "Curly curly Hey! Chickerway; verify",
+  "note": "Curly curly Hey! Chickerway - MISSING from crops, audit \u2014 RESOLVED (draft added) \u2014 Curly curly Hey! Chickerway; verify",
   "lyric": "Cur-ly, cur-ly, Hey! Chick-er-way...",
+  "crops": [
+   "figs_new/p094_s01.png",
+   "figs_new/p094_s02.png"
+  ],
   "pdf_page": 94
  },
  {
@@ -64,6 +90,9 @@
   "conf": "low",
   "note": "kah-kue closing form; verify",
   "lyric": "chew, cur-ly... kah, kue. Hey!",
+  "crops": [
+   "figs_new/p094_s03.png"
+  ],
   "pdf_page": 94
  },
  {
@@ -74,6 +103,10 @@
   "key": "Eb",
   "conf": "todo",
   "note": "pre-flight monotones",
+  "crops": [
+   "figs_new/p095_s00.png",
+   "figs_new/p095_s01.png"
+  ],
   "pdf_page": 95
  },
  {
@@ -84,6 +117,9 @@
   "key": "A",
   "conf": "todo",
   "note": "first Dorset notes",
+  "crops": [
+   "figs_new/p095_s02.png"
+  ],
   "pdf_page": 95
  },
  {
@@ -94,6 +130,9 @@
   "key": "F",
   "conf": "todo",
   "note": "Allegro NH song",
+  "crops": [
+   "figs_new/p095_s03.png"
+  ],
   "pdf_page": 95
  },
  {
@@ -104,6 +143,9 @@
   "key": "Eb",
   "conf": "todo",
   "note": "main song",
+  "crops": [
+   "figs_new/p096_s00.png"
+  ],
   "pdf_page": 96
  },
  {
@@ -114,6 +156,11 @@
   "key": "Eb",
   "conf": "todo",
   "note": "variations x3",
+  "crops": [
+   "figs_new/p097_s00.png",
+   "figs_new/p097_s01.png",
+   "figs_new/p097_s02.png"
+  ],
   "pdf_page": 97
  },
  {
@@ -124,6 +171,11 @@
   "key": "Eb",
   "conf": "todo",
   "note": "Loud+rapid 2 staves - MISSING (pdf98-99), audit \u2014 RESOLVED (draft added)",
+  "crops": [
+   "figs_new/p098_s00.png",
+   "figs_new/p098_s01.png",
+   "figs_new/p098_s02.png"
+  ],
   "pdf_page": 98
  },
  {
@@ -134,7 +186,7 @@
   "key": "Eb",
   "enc": "G5:16 F5:16 Eb5:8 F5:8 G5:8 r:8 Bb5:8 G5:8 F5:8 Eb5:8 F5:16 G5:16 F5:8 Eb5:8 | Eb5:16 F5:16 G5:8 F5:8 Eb5:8 r:8 G5:8 Bb5:8 G5:8 F5:8 Eb5:4",
   "conf": "low",
-  "note": "Loud and rapid; rolling warble draft; verify",
+  "note": "Loud and rapid; rolling warble draft; verify \u2014 possible bundle/duplicate \u2014 see catalog",
   "pdf_page": 98
  },
  {
@@ -145,6 +197,10 @@
   "key": "F",
   "conf": "todo",
   "note": "triplets w/ fermatas, 2 staves",
+  "crops": [
+   "figs_new/p100_s00.png",
+   "figs_new/p100_s01.png"
+  ],
   "pdf_page": 100
  },
  {
@@ -155,6 +211,9 @@
   "key": "F",
   "conf": "todo",
   "note": "rit&dim monotone",
+  "crops": [
+   "figs_new/p102_s00b.png"
+  ],
   "pdf_page": 102
  },
  {
@@ -165,17 +224,31 @@
   "key": "F",
   "conf": "todo",
   "note": "Quirp/charr/whir series p80-81",
+  "crops": [
+   "figs_new/p102_s00.png",
+   "figs_new/p102_s01.png",
+   "figs_new/p102_s02.png",
+   "figs_new/p102_s03.png",
+   "figs_new/p103_s00.png",
+   "figs_new/p103_s01.png",
+   "figs_new/p103_s02.png",
+   "figs_new/p103_s03.png",
+   "figs_new/p103_s04.png"
+  ],
   "pdf_page": 102
  },
  {
   "id": "bob-pileu",
   "bird": "Bobolink",
   "no": 0,
-  "page": 82,
+  "page": 83,
   "key": "F",
   "conf": "todo",
-  "note": "Pi-leu pi-le-ah gurgle - partial, audit",
-  "pdf_page": 104
+  "note": "Pi-leu pi-le-ah gurgle - partial, audit \u2014 (page corrected from 82 per full-book catalog)",
+  "crops": [
+   "figs_new/p105_s00.png"
+  ],
+  "pdf_page": 105
  },
  {
   "id": "bob-song",
@@ -185,6 +258,10 @@
   "key": "F",
   "conf": "todo",
   "note": "song proper opening, 2 staves",
+  "crops": [
+   "figs_new/p105_s01.png",
+   "figs_new/p105_s02.png"
+  ],
   "pdf_page": 105
  },
  {
@@ -194,7 +271,11 @@
   "page": 85,
   "key": "F",
   "conf": "todo",
-  "note": "8va main + tonic + full form - MISSING (pdf107-108), audit \u2014 RESOLVED (draft added)",
+  "note": "8va main + tonic + full form - MISSING (pdf107-108), audit \u2014 RESOLVED (draft added) \u2014 possible bundle/duplicate \u2014 see catalog",
+  "crops": [
+   "figs_new/p107_s01.png",
+   "figs_new/p108_s00.png"
+  ],
   "pdf_page": 107
  },
  {
@@ -206,6 +287,9 @@
   "enc": "E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8",
   "conf": "low",
   "note": "8va applied; descending triplet clusters; verify",
+  "crops": [
+   "figs_new/p107_s00.png"
+  ],
   "pdf_page": 107
  }
 ]

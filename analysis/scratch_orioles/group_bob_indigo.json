@@ -1,0 +1,30 @@
+[
+  {
+    "id": "bob-pileu",
+    "enc": "G4:8 A4:8. G4:16 r:8^ C5:16 C#5:16 D5:16",
+    "conf": "med",
+    "note": "Partial fragment (continuation from an earlier undigitized system, book p.82/PDF104). Crop figs_new/p105_s00.png only. Read: eighth G4 ('Pi'), dotted-eighth+sixteenth A4-G4 turn ('leu'), fermata over an eighth rest, then three 16ths C5-C#5-D5 ('pi-le-ah', explicit sharp accidental on the middle note). All noteheads/durations cross-checked against 4-12x zoomed crops and staff-line pixel calibration; rest duration (r:8) is a reasonable-but-not-certain read of Cheney's hook-shaped rest glyph.",
+    "key": "F major"
+  },
+  {
+    "id": "bob-song",
+    "enc": "D5:8 C5:8 C5:16 D5:16 F5:16 D5:16 F5:16 G5:16 F5:8 F5:8 F5:8 F5:8 G5:16 F5:16 E5:16 A5:8 F5:8 A5:8 F5:8 E5:16 F5:16 G5:16 F5:16 G5:16 B5:16",
+    "conf": "med",
+    "note": "Full transcription from figs_new/p105_s01.png (first 12 notes) + figs_new/p105_s02.png (next 13 notes), concatenated in reading order. p105_s01: D5-C5 eighth pair (single beam), then two triplet-of-16ths groups (C5-D5-F5, D5-F5-G5, double beam), then four individual flagged eighths all on F5 -- the 1st and 3rd of these four (originally auto-detected as E5) carry a triangular ornament mark (turn/mordent) printed above the staff; re-measurement confirmed the noteheads sit ON the F5 line for all four, not E5 -- ornament is noted here but not encoded as extra pitches. p105_s02: triplet-16ths G5-F5-E5, four flagged eighths A5-F5-A5-F5, then two more triplet-16th groups E5-F5-G5 and F5-G5-B5. Every notehead cross-checked with a pixel-calibrated staff-line grid overlay; some early automated (heads.py) pitch guesses were wrong and corrected by direct visual measurement.",
+    "key": "F major"
+  },
+  {
+    "id": "indigo-01",
+    "enc": "D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 C5:8 r:8 A4:8 Bb4:8",
+    "conf": "med",
+    "note": "FIRST figure only (crop figs_new/p107_s01.png, 'at first the tonic was not quite distinct...I caught this' -- tonic clarification). No 8va marking on this crop (plain staff-position pitches used). No key signature was actually engraved in this crop (bare treble clef) but corpus context says F major; the final note carries an explicit written flat (Bb4), consistent with F-major tonality. Structure: two identical D5-C5 sixteenth-note pairs (double beam), an eighth rest, a C5-B4 sixteenth pair, a single C5 eighth, another eighth rest, then A4 and Bb4 eighths. All pitches confirmed via a pixel-calibrated staff-line grid (a first-pass automated read wrongly called the first note E5; corrected to D5 after re-measurement, and this D5-C5-D5-C5 shape independently matches the analogous passage in the bundled second figure below, which cross-validates the reading). Bundled 2nd figure ('the form, then, was as follows', crop figs_new/p108_s00.png, key sig Bb visibly engraved there) -- recommend new id indigo-form when corpus is updated: enc: D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8 (note: the B4 in the third pair carries an explicit natural sign canceling the key-signature flat; four dots after the following D5 look like a repeat mark, not encoded as notes; final two notes A4/Bb4 each carry their own flag, Bb4 restates the flat explicitly).",
+    "key": "F major"
+  },
+  {
+    "id": "indigo-main",
+    "enc": "D6:16 C6:16 D6:16 C6:16 r:8 C6:16 B5:16 C6:8 r:8",
+    "conf": "med",
+    "note": "Re-verified from scratch against crop figs_new/p107_s00.png. Confirmed '8va.' IS engraved above the staff (visible text), so sounding pitch is written (one octave above plain staff-position reading): plain reading D5-C5-D5-C5 r:8 C5-B4 C5:8 r:8, shifted up an octave. This differs substantially from the prior 'low' draft (E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8): the draft's E-C-A triple-note grouping was not supported by a fresh read -- the beamed groups are actually 2-note (not 3-note) double-beamed 16th pairs, matching the D5-C5 shape seen twice, then a rest, then a C5-B4 pair, then a single C5 eighth, then a second rest. This D-C-D-C-rest-C-B-C-rest shape independently matches the analogous passage in indigo-01's bundled figures (figs_new/p107_s01.png and figs_new/p108_s00.png, same page), which cross-validates the correction. A repeat mark (dots) follows at the crop's end, not encoded as notes. Pitches verified via pixel-calibrated staff-line grid overlays at 8-12x zoom; rest durations (r:8) are a reasonable but not fully certain read of Cheney's rest glyph shape.",
+    "key": "C major"
+  }
+]

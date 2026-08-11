@@ -9,6 +9,11 @@
   "conf": "med",
   "note": "doleful; low pitch",
   "lyric": "Cuck-oo, cuck-oo, cuck-oo, coo.",
+  "crops": [
+   "figs_new/p109_s00.png",
+   "figs_new/p109_s01.png",
+   "figs_new/p109_s02.png"
+  ],
   "pdf_page": 109
  },
  {
@@ -19,6 +24,11 @@
   "key": "F",
   "conf": "todo",
   "note": "1888 new song + resolution, 2 figs",
+  "crops": [
+   "figs_new/p110_s00.png",
+   "figs_new/p110_s01.png",
+   "figs_new/p110_s02.png"
+  ],
   "pdf_page": 110
  },
  {
@@ -31,6 +41,9 @@
   "conf": "low",
   "note": "Wau-olp bubbling, rit&dim; guttural",
   "lyric": "Wau-olp, olp, olp...",
+  "crops": [
+   "figs_new/p111_s00.png"
+  ],
   "pdf_page": 111
  },
  {
@@ -43,6 +56,9 @@
   "conf": "med",
   "note": "rising accent to tonic",
   "lyric": "Bob, Bob white, Bob white...",
+  "crops": [
+   "figs_new/p112_s00.png"
+  ],
   "pdf_page": 112
  },
  {
@@ -55,17 +71,24 @@
   "conf": "med",
   "note": "drumming accel into whir then dim; single pitch B-flat",
   "lyric": "Thump thump... Whir.",
+  "crops": [
+   "figs_new/p116_s00.png",
+   "figs_new/p116_s01.png"
+  ],
   "pdf_page": 116
  },
  {
   "id": "loon-cry",
   "bird": "Loon",
   "no": 1,
-  "page": 96,
+  "page": 97,
   "key": "?",
   "conf": "todo",
-  "note": "3-tone wild cry, 2nd long+loud; bass; zoom",
-  "pdf_page": 118
+  "note": "3-tone wild cry, 2nd long+loud; bass; zoom \u2014 notation is on book 97 (PDF119 sys0), not book 96 \u2014 book 96 is prose-only and the sentence runs over the page break; the catalog's proposed 'loon-shout' is this same 3-tone ff cry, so it was not added separately \u2014 (page corrected from 96 per full-book catalog)",
+  "crops": [
+   "figs_new/p119_s00.png"
+  ],
+  "pdf_page": 119
  },
  {
   "id": "loon-5",
@@ -77,6 +100,10 @@
   "conf": "low",
   "note": "bass clef, 5-tone flight shout; zoom",
   "lyric": "oo,oo,oo,oo,oo",
+  "crops": [
+   "figs_new/p119_s01.png",
+   "figs_new/p119_s02.png"
+  ],
   "pdf_page": 119
  },
  {
@@ -89,6 +116,9 @@
   "conf": "low",
   "note": "bass, slurred descending Hoo pairs; zoom",
   "lyric": "Hoo, Hoo, Hoo.",
+  "crops": [
+   "figs_new/p121_s00.png"
+  ],
   "pdf_page": 121
  },
  {
@@ -101,6 +131,9 @@
   "conf": "low",
   "note": "tremolo+upward slide; portamento essential; zoom",
   "lyric": "Ah---ee, Ah-ee, Ah-ee.",
+  "crops": [
+   "figs_new/p123_s00.png"
+  ],
   "pdf_page": 123
  },
  {
@@ -113,6 +146,10 @@
   "conf": "low",
   "note": "descending chromatic slide + tremolo; zoom",
   "lyric": "Ah---oo, Ah-oo...",
+  "crops": [
+   "figs_new/p123_s01.png",
+   "figs_new/p123_s02.png"
+  ],
   "pdf_page": 123
  },
  {
@@ -125,6 +162,9 @@
   "conf": "low",
   "note": "Wait wait ok ik; zoom",
   "lyric": "Wait, wait... ok, ik.",
+  "crops": [
+   "figs_new/p127_s00.png"
+  ],
   "pdf_page": 127
  },
  {
@@ -137,6 +177,10 @@
   "conf": "low",
   "note": "Wauk deliberate; zoom",
   "lyric": "Wauk, wauk, wauk...",
+  "crops": [
+   "figs_new/p128_s00.png",
+   "figs_new/p128_s01.png"
+  ],
   "pdf_page": 128
  }
 ]

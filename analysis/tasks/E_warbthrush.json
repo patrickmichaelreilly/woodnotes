@@ -7,6 +7,9 @@
   "key": "A",
   "conf": "todo",
   "note": "brief rapid high",
+  "crops": [
+   "figs_new/p069_s00.png"
+  ],
   "pdf_page": 69
  },
  {
@@ -18,6 +21,10 @@
   "conf": "todo",
   "note": "5 tones, needs zoom (p69/pdf70 audit)",
   "lyric": "Larboard watch a-hoy analog",
+  "crops": [
+   "figs_new/p070_s00.png",
+   "figs_new/p070_s01.png"
+  ],
   "pdf_page": 70
  },
  {
@@ -28,6 +35,9 @@
   "key": "Db",
   "conf": "todo",
   "note": "8va",
+  "crops": [
+   "figs_new/p071_s00.png"
+  ],
   "pdf_page": 71
  },
  {
@@ -38,6 +48,9 @@
   "key": "F",
   "conf": "todo",
   "note": "8va",
+  "crops": [
+   "figs_new/p071_s00.png"
+  ],
   "pdf_page": 71
  },
  {
@@ -48,6 +61,14 @@
   "key": "var",
   "conf": "todo",
   "note": "8 short 8va songs p49-50",
+  "crops": [
+   "figs_new/p071_s01.png",
+   "figs_new/p071_s02.png",
+   "figs_new/p071_s03.png",
+   "figs_new/p072_s00.png",
+   "figs_new/p072_s01.png",
+   "figs_new/p072_s02.png"
+  ],
   "pdf_page": 71
  },
  {
@@ -58,6 +79,9 @@
   "key": "F",
   "conf": "todo",
   "note": "brief monotone",
+  "crops": [
+   "figs_new/p073_s00.png"
+  ],
   "pdf_page": 73
  },
  {
@@ -68,6 +92,11 @@
   "key": "Eb",
   "conf": "todo",
   "note": "Lively; snatchy 2 staves",
+  "crops": [
+   "figs_new/p074_s00.png",
+   "figs_new/p074_s01.png",
+   "figs_new/p074_s02.png"
+  ],
   "pdf_page": 74
  },
  {
@@ -78,6 +107,12 @@
   "key": "Eb",
   "conf": "todo",
   "note": "continuation",
+  "crops": [
+   "figs_new/p075_s00.png",
+   "figs_new/p075_s01.png",
+   "figs_new/p075_s02.png",
+   "figs_new/p075_s03.png"
+  ],
   "pdf_page": 75
  },
  {
@@ -88,6 +123,18 @@
   "key": "Eb",
   "conf": "todo",
   "note": "Lively fragments, 6+ staves p54-55",
+  "crops": [
+   "figs_new/p076_s00.png",
+   "figs_new/p077_s00.png",
+   "figs_new/p077_s01.png",
+   "figs_new/p077_s02.png",
+   "figs_new/p077_s03.png",
+   "figs_new/p077_s04.png",
+   "figs_new/p077_s05.png",
+   "figs_new/p077_s06.png",
+   "figs_new/p077_s07.png",
+   "figs_new/p077_s08.png"
+  ],
   "pdf_page": 76
  },
  {
@@ -98,6 +145,9 @@
   "key": "F",
   "conf": "todo",
   "note": "twilight song",
+  "crops": [
+   "figs_new/p078_s00.png"
+  ],
   "pdf_page": 78
  },
  {
@@ -108,6 +158,9 @@
   "key": "F",
   "conf": "todo",
   "note": "new key strain",
+  "crops": [
+   "figs_new/p078_s01.png"
+  ],
   "pdf_page": 78
  },
  {
@@ -118,6 +171,11 @@
   "key": "Eb",
   "conf": "todo",
   "note": "10 AM song, 3 staves",
+  "crops": [
+   "figs_new/p079_s00.png",
+   "figs_new/p079_s01.png",
+   "figs_new/p079_s02.png"
+  ],
   "pdf_page": 79
  },
  {
@@ -128,6 +186,9 @@
   "key": "F",
   "conf": "todo",
   "note": "8 slurred tones, silver thread; portamento",
+  "crops": [
+   "figs_new/p080_s00.png"
+  ],
   "pdf_page": 80
  },
  {
@@ -138,6 +199,9 @@
   "key": "F",
   "conf": "todo",
   "note": "moves off with",
+  "crops": [
+   "figs_new/p082_s00.png"
+  ],
   "pdf_page": 82
  },
  {
@@ -148,6 +212,9 @@
   "key": "F",
   "conf": "todo",
   "note": "steps up a degree",
+  "crops": [
+   "figs_new/p082_s01.png"
+  ],
   "pdf_page": 82
  },
  {
@@ -158,6 +225,10 @@
   "key": "F",
   "conf": "todo",
   "note": "4 further strains p60-61",
+  "crops": [
+   "figs_new/p082_s02.png",
+   "figs_new/p082_s03.png"
+  ],
   "pdf_page": 82
  },
  {
@@ -170,6 +241,9 @@
   "conf": "med",
   "note": "8va cresc accented pairs; zeal",
   "lyric": "tea-CHER analog",
+  "crops": [
+   "figs_new/p085_s00.png"
+  ],
   "pdf_page": 85
  },
  {
@@ -182,6 +256,10 @@
   "conf": "low",
   "note": "Slow, portamento; famous pee-a-wee; verify by ear",
   "lyric": "Pe-wee peer...",
+  "crops": [
+   "figs_new/p086_s00.png",
+   "figs_new/p087_s00.png"
+  ],
   "pdf_page": 86
  }
 ]

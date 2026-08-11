@@ -6,7 +6,7 @@ Digitizing "Wood Notes Wild" (Cheney, 1892): bird songs in music notation → te
 Work through `corpus.json`:
 1. Treat every existing encoding as a draft. Compare it directly with the source crop at full size.
 2. Correct pitch, duration, rests, accidentals, and source-system line breaks by hand.
-3. Set `"reviewed": true` only after the full figure has been checked against every source crop.
+3. Set `"approved": true` only when the user officially approves the full figure after checking every source crop.
 4. Update `corpus.json` in place. The player loads it at runtime and renders the selected
    figure on demand; run `python3 tools/genplayer.py` to validate encodings, IDs, and crop paths.
 

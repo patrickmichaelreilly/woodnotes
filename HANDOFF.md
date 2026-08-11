@@ -30,6 +30,8 @@
   showed that they did not reliably predict correctness.
 - Cosmetic bar tokens were removed. Newlines now mean actual source-system breaks and must be set
   during manual review.
+- Every figure has an `approved` boolean. Approval can be toggled in the browser and is included
+  with locally persisted encoding edits in the shared-footer export.
 - The player engraves the editable draft with client-side Verovio beside the original crop, making
   pitch, rhythm, accidental, and system-break corrections faster to inspect.
 - Stale-data warning: analysis/pNNN_sNN.txt head detections predate the figs_new crops —

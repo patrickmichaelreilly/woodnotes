@@ -22,6 +22,9 @@ if duplicates:
     errors.append(f"duplicate ids: {', '.join(duplicates)}")
 
 for figure in figures:
+    if not isinstance(figure.get("approved"), bool):
+        errors.append(f"{figure['id']}: approved must be true or false")
+
     encoding = figure.get("enc")
     if encoding:
         try:

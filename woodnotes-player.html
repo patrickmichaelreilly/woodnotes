@@ -50,6 +50,7 @@
   .fig-no{font-family:'IM Fell English',serif;font-size:1.3rem}
   .fig-bird{font-family:'IM Fell English SC',serif;letter-spacing:.16em;font-size:1rem}
   .fig-latin{font-style:italic;color:var(--faded);font-size:.85rem}
+  .approval{margin-left:auto;font:0.78rem var(--mono);color:var(--faded);display:flex;gap:.35rem;align-items:center}
   .lyric{text-align:center;font-family:'IM Fell English SC',serif;letter-spacing:.16em;
          font-size:.9rem;color:var(--blue-deep);margin:.65rem 0}
   .notation{margin-top:.7rem;min-height:150px;border:1px solid var(--rule);background:white;
@@ -76,8 +77,9 @@
   input[type=range]{accent-color:var(--blue);width:120px}
   .err{color:#8a2f1e;font:.85rem var(--mono);min-height:1.2em;margin-top:.5rem}
   .save-state{font:.75rem var(--mono);color:var(--faded)}
-  .export{margin-top:.8rem;border:1px solid var(--rule);background:var(--wash);padding:.7rem}
-  .export textarea{width:100%;min-height:9rem;margin-top:.5rem;font:.78rem/1.4 var(--mono);resize:vertical}
+  dialog{width:min(720px,calc(100% - 2rem));border:2px solid var(--ink);background:var(--paper);padding:1rem}
+  dialog::backdrop{background:rgba(27,26,23,.45)}
+  dialog textarea{width:100%;min-height:16rem;margin-top:.5rem;font:.78rem/1.4 var(--mono);resize:vertical}
 
   @media(max-width:760px){
     body{padding-top:1.5rem}.layout{grid-template-columns:1fr}.catalog{grid-template-columns:1fr auto}
@@ -121,6 +123,7 @@
       <span class="fig-no" id="figureId"></span>
       <span class="fig-bird" id="figureBird"></span>
       <span class="fig-latin" id="figureMeta"></span>
+      <label class="approval"><input id="figureApproved" type="checkbox"> Officially approved</label>
     </div>
     <div class="lyric" id="figureLyric" hidden></div>
     <div class="notation" id="notation"><div class="empty">Engraving will appear here.</div></div>
@@ -131,24 +134,18 @@
       <button class="play" id="play" type="button">Play</button>
       <button id="render" type="button">Render draft</button>
       <button id="resetDraft" type="button">Reset figure</button>
-      <button id="exportDrafts" type="button">Export changes</button>
       <label class="ov">♩=<input type="number" id="figureTempo" min="30" max="240" placeholder="—"></label>
       <label class="ov">oct<select id="figureOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
       <span class="note-now" id="noteNow"></span>
       <span class="save-state" id="saveState"></span>
     </div>
     <div class="err" id="playerError"></div>
-    <div class="export" id="exportPanel" hidden>
-      <div id="exportSummary"></div>
-      <textarea id="exportText" readonly aria-label="Changed transcription JSON"></textarea>
-      <div class="row"><button id="copyExport" type="button">Copy JSON</button></div>
-    </div>
   </section>
 </main>
 
 <div class="controls">
-  <div class="ctl">Tempo <input type="range" id="tempo" min="40" max="200" value="96"><output id="tempoOut">96 bpm</output></div>
-  <div class="ctl">Octave <input type="range" id="octave" min="-2" max="2" value="0" step="1"><output id="octOut">+0</output></div>
+  <button id="exportDrafts" type="button">Export all changes</button>
+  <span class="save-state" id="footerChangeCount">No local changes</span>
   <div class="ctl">Timbre
     <select id="timbre"><option value="whistle">Whistle</option><option value="pure">Pure tone</option><option value="reed">Reed</option></select>
   </div>
@@ -156,6 +153,12 @@
     <select id="slide"><option value="0">Off</option><option value="1">Bird glide</option></select>
   </div>
 </div>
+
+<dialog id="exportDialog">
+  <div id="exportSummary"></div>
+  <textarea id="exportText" readonly aria-label="All changed transcription JSON"></textarea>
+  <div class="row"><button id="copyExport" type="button">Copy JSON</button><button id="closeExport" type="button">Close</button></div>
+</dialog>
 
 <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"></script>
 <script>
@@ -179,12 +182,26 @@ let engravingToolkit=null;
 async function toolkit(){await vrvReady;if(!engravingToolkit)engravingToolkit=new verovio.toolkit();return engravingToolkit}
 
 function audio(){ if(!ctx) ctx = new (window.AudioContext||window.webkitAudioContext)(); return ctx; }
-function loadDrafts(){try{return JSON.parse(localStorage.getItem(DRAFT_KEY)||'{}')}catch{return {}}}
+function loadDrafts(){
+  try{
+    const stored=JSON.parse(localStorage.getItem(DRAFT_KEY)||'{}');
+    for(const [id,value] of Object.entries(stored))if(typeof value==='string')stored[id]={enc:value};
+    return stored;
+  }catch{return {}}
+}
 function persistDrafts(){localStorage.setItem(DRAFT_KEY,JSON.stringify(drafts))}
-function currentEncoding(){return drafts[current.id]??current.enc??''}
+function currentEncoding(){return drafts[current.id]?.enc??current.enc??''}
+function currentApproved(){return drafts[current.id]?.approved??Boolean(current.approved)}
+function updateDraftField(field,value){
+  const draft={...(drafts[current.id]||{})},canonical=field==='enc'?(current.enc||''):Boolean(current.approved);
+  if(value===canonical)delete draft[field];else draft[field]=value;
+  if(Object.keys(draft).length)drafts[current.id]=draft;else delete drafts[current.id];
+  persistDrafts();updateSaveState();
+}
 function updateSaveState(){
   const count=Object.keys(drafts).length;
   $('saveState').textContent=current&&Object.hasOwn(drafts,current.id)?`saved locally · ${count} changed`:(count?`${count} changed locally`:'canonical draft');
+  $('footerChangeCount').textContent=count?`${count} changed figure${count===1?'':'s'}`:'No local changes';
 }
 function freq(tok,octShift){
   const m=tok.match(/^([A-Ga-g])([#b]{0,2})(\d)$/); if(!m)return null;
@@ -257,9 +274,9 @@ async function playSeq(){
   if(stopCurrent)stopCurrent();
   let stopped=false;const ac=audio();if(ac.state==='suspended')await ac.resume();
   const localTempo=+$('figureTempo').value;
-  const bpm=localTempo||+$('tempo').value;
+  const bpm=localTempo||96;
   const localOct=$('figureOct').value;
-  const octShift=localOct===''?+$('octave').value:+localOct;
+  const octShift=localOct===''?0:+localOct;
   const timbre=$('timbre').value,glide=$('slide').value==='1',spb=60/bpm;
   const master=ac.createGain();master.gain.value=.25;master.connect(ac.destination);
   const btn=$('play');btn.classList.add('playing');btn.textContent='Stop';
@@ -313,6 +330,7 @@ function selectFigure(id){
   $('figureMeta').textContent=`p. ${f.page??'?'}${f.key&&f.key!=='?'?` · ${f.key}`:''}`;
   $('figureLyric').textContent=f.lyric||'';$('figureLyric').hidden=!f.lyric;
   $('figureEncoding').value=currentEncoding();
+  $('figureApproved').checked=currentApproved();
   $('todoNote').hidden=!!f.enc;
   $('figureTempo').value=f.tempo||'';$('figureOct').value='';
   $('play').disabled=!f.enc;$('play').onclick=f.enc?playSeq:null;
@@ -354,17 +372,18 @@ $('render').addEventListener('click',renderNotation);
 let renderTimer=null;
 $('figureEncoding').addEventListener('input',()=>{
   const value=$('figureEncoding').value;
-  if(value===(current.enc||''))delete drafts[current.id];else drafts[current.id]=value;
-  persistDrafts();updateSaveState();clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250);
+  updateDraftField('enc',value);clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250);
 });
+$('figureApproved').addEventListener('change',e=>updateDraftField('approved',e.target.checked));
 $('resetDraft').addEventListener('click',()=>{
-  delete drafts[current.id];persistDrafts();$('figureEncoding').value=current.enc||'';updateSaveState();renderNotation();
+  delete drafts[current.id];persistDrafts();$('figureEncoding').value=current.enc||'';
+  $('figureApproved').checked=Boolean(current.approved);updateSaveState();renderNotation();
 });
 $('exportDrafts').addEventListener('click',()=>{
-  const changes=Object.keys(drafts).sort().map(id=>({id,enc:drafts[id]}));
+  const changes=Object.keys(drafts).sort().map(id=>({id,...drafts[id]}));
   $('exportText').value=JSON.stringify({format:'woodnotes-transcription-changes',version:1,changes},null,2);
   $('exportSummary').textContent=`${changes.length} changed figure${changes.length===1?'':'s'}; copy this JSON back for canonical application.`;
-  $('exportPanel').hidden=false;$('exportText').select();
+  $('exportDialog').showModal();$('exportText').select();
 });
 $('copyExport').addEventListener('click',async()=>{
   $('exportText').select();
@@ -372,9 +391,8 @@ $('copyExport').addEventListener('click',async()=>{
   catch{document.execCommand('copy');$('copyExport').textContent='Copied'}
   setTimeout(()=>$('copyExport').textContent='Copy JSON',1200);
 });
+$('closeExport').addEventListener('click',()=>$('exportDialog').close());
 $('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));
-$('tempo').addEventListener('input',e=>$('tempoOut').textContent=e.target.value+' bpm');
-$('octave').addEventListener('input',e=>$('octOut').textContent=(e.target.value>=0?'+':'')+e.target.value);
 init();
 </script>
 </body>

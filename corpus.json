@@ -1469,10 +1469,14 @@
    "id": "wts-main",
    "bird": "White-throated Sparrow",
    "no": 0,
-   "page": 42,
+   "page": 43,
    "key": "D",
-   "conf": "todo",
-   "note": "second song = 6 white-throat variant figures on PDF p065 (figs_new/p065_*), absent from corpus; wts-01 covers all of PDF p064"
+   "conf": "high",
+   "note": "Sixth and shortest farewell-song variant on the right of PDF p065_s02: two accented half notes under 8va, written B4-E5 and encoded at sounding pitch.",
+   "enc": "B5:2 E6:2",
+   "crops": [
+    "figs_new/p065_s02.png"
+   ]
   },
   {
    "id": "lark-4tone",
@@ -1711,51 +1715,61 @@
    "id": "wts-var1",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "conf": "todo",
-   "note": "NEW: not in corpus. 'I once heard the following variation' -- first (longest) farewell-song variation, full-width single system",
+   "conf": "high",
+   "key": "D",
+   "note": "First and longest farewell-song variation. Under 8va: three half notes (written F#5-D5-D5), followed by four slurred eighth-note triplets on D5; encoded at sounding pitch.",
    "crops": [
     "figs_new/p065_s00.png"
-   ]
+   ],
+   "enc": "F#6:2 D6:2 D6:2 D6:83 D6:83 D6:83 | D6:83 D6:83 D6:83 | D6:83 D6:83 D6:83 | D6:83 D6:83 D6:83"
   },
   {
    "id": "wts-var2",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "conf": "todo",
-   "note": "NEW: left half of sys1 (side-by-side pair) -- shortened variation",
+   "conf": "high",
+   "key": "F",
+   "note": "Second variant, left half of p065_s01. Under 8va: three half notes (written F5-A5-A5) followed by two B5 eighth-note triplets; encoded at sounding pitch.",
    "crops": [
     "figs_new/p065_s01.png"
-   ]
+   ],
+   "enc": "F6:2 A6:2 A6:2 B6:83 B6:83 B6:83 | B6:83 B6:83 B6:83"
   },
   {
    "id": "wts-var3",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "conf": "todo",
-   "note": "NEW: right half of sys1 (side-by-side pair) -- shortened variation",
+   "conf": "high",
+   "key": "A",
+   "note": "Third variant, right half of p065_s01. Under 8va: three half notes (written D5-B5-B5) followed by one A5 eighth-note triplet; encoded at sounding pitch.",
    "crops": [
     "figs_new/p065_s01.png"
-   ]
+   ],
+   "enc": "D6:2 B6:2 B6:2 A6:83 A6:83 A6:83"
   },
   {
    "id": "wts-var4",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "conf": "todo",
-   "note": "NEW: left half of sys2 (side-by-side pair) -- further shortened variation",
+   "conf": "high",
+   "key": "B",
+   "note": "Fourth variant, left figure on p065_s02. Under 8va: a B4 half note, an accented E5 half note, then one E5 eighth-note triplet; encoded at sounding pitch.",
    "crops": [
     "figs_new/p065_s02.png"
-   ]
+   ],
+   "enc": "B5:2 E6:2 E6:83 E6:83 E6:83"
   },
   {
    "id": "wts-var5",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "conf": "todo",
-   "note": "NEW: right half of sys2 (side-by-side pair) -- final, shortest 'farewell' variation ('There, you know the rest')",
+   "conf": "high",
+   "key": "Ab",
+   "note": "Fifth variant, center figure on p065_s02. Under 8va: a written Bb4 half note followed by two accented Eb5 half notes; encoded at sounding pitch.",
    "crops": [
     "figs_new/p065_s02.png"
-   ]
+   ],
+   "enc": "Bb5:2 Eb6:2 Eb6:2"
   },
   {
    "id": "foxsp-01",
@@ -1772,41 +1786,49 @@
    "id": "chewink-01",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 45,
-   "conf": "todo",
-   "note": "NEW CHAPTER not in corpus. Main song: one long tone + soft trill a sixth higher, x3",
+   "conf": "med",
+   "key": "C",
+   "note": "Main song in three phrases, each opening with an accented eighth and continuing as a rapid seven-note 16th figure. Fermata rests separate the first two phrases. The final rapid group is less regular than the first two and is retained as visibly engraved.",
    "crops": [
     "figs_new/p067_s00.png"
-   ]
+   ],
+   "enc": "D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 r:8^ E5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 r:8^ E5:8 D6:16 D6:16 D6:16 E6:16 D6:16 E6:16 D6:16"
   },
   {
    "id": "chewink-var1",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 46,
-   "conf": "todo",
-   "note": "NEW: 'exact copy of his variation' -- 1st extemporized variation",
+   "conf": "high",
+   "key": "C",
+   "note": "First extemporized variation, marked forte then piano and 8va. Four isolated written eighths G4-A4-G4-E4 lead to a seven-note C5-D5 alternation; encoded at sounding pitch. Repeat sign is not expanded.",
    "crops": [
     "figs_new/p068_s00.png"
-   ]
+   ],
+   "enc": "G5:8 A5:8 G5:8 E5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16"
   },
   {
    "id": "chewink-var2",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 46,
-   "conf": "todo",
-   "note": "NEW: 2nd variation ('not satisfied with this...another variation')",
+   "conf": "high",
+   "key": "C",
+   "note": "Second variation, marked forte then piano and 8va. Written C5 and G4 eighths precede a seven-note C5-D5 alternation; encoded at sounding pitch. Repeat sign is not expanded.",
    "crops": [
     "figs_new/p068_s01.png"
-   ]
+   ],
+   "enc": "C6:8 G5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16"
   },
   {
    "id": "chewink-var3",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 46,
-   "conf": "todo",
-   "note": "NEW: 3rd variation ('became dissatisfied with his key, and went up')",
+   "conf": "high",
+   "key": "F",
+   "note": "Third variation after the bird 'went up,' marked forte then piano with one flat and 8va. Written F5 and C5 eighths precede a seven-note C6-D6 alternation; encoded at sounding pitch. Repeat sign is not expanded.",
    "crops": [
     "figs_new/p068_s02.png"
-   ]
+   ],
+   "enc": "F6:8 C6:8 C7:16 D7:16 C7:16 D7:16 C7:16 D7:16 C7:16"
   },
   {
    "id": "herm-extra",

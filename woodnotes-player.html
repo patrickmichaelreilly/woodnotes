@@ -31,6 +31,9 @@
   .catalog label{display:flex;flex-direction:column;gap:.2rem;font-family:'IM Fell English SC',serif;
                  letter-spacing:.08em;font-size:.78rem;color:var(--faded)}
   .catalog input,.catalog select{border:1px solid var(--rule);background:var(--paper);padding:.45rem .55rem}
+  .catalog select{font-family:var(--mono)}
+  .picker-columns{display:grid;grid-template-columns:5.5rem 1fr;font:0.68rem var(--mono);color:var(--faded);
+                  letter-spacing:.04em;text-transform:uppercase;margin:.15rem 0 -.1rem}
   .nav{display:flex;gap:.4rem}
   .catalog-count{font:0.8rem var(--mono);color:var(--faded);padding:.45rem 0}
 
@@ -58,6 +61,10 @@
   .notation svg{display:block;max-width:none;height:auto}
   .draft-label{display:block;margin-top:.7rem;font-family:'IM Fell English SC',serif;
                letter-spacing:.1em;font-size:.75rem;color:var(--faded)}
+  .cheatsheet{margin-top:.55rem;border:1px solid var(--rule);padding:.4rem .6rem;background:var(--wash)}
+  .cheatsheet summary{cursor:pointer;font-family:'IM Fell English SC',serif;letter-spacing:.08em;color:var(--blue-deep)}
+  .cheatsheet code{font-family:var(--mono);white-space:nowrap}
+  .cheatsheet-grid{display:grid;grid-template-columns:max-content 1fr;gap:.25rem .8rem;margin-top:.45rem;font-size:.8rem}
   .enc{display:block;width:100%;min-height:6rem;font:0.82rem/1.5 var(--mono);background:var(--wash);
        border:1px solid var(--rule);padding:.55rem .7rem;resize:vertical;margin-top:.2rem}
   .row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:.7rem}
@@ -105,6 +112,7 @@
   </div>
   <div class="catalog-count" id="catalogCount" aria-live="polite"></div>
   <label style="grid-column:1/-1">Matching figures
+    <div class="picker-columns"><span>Approved</span><span>Figure</span></div>
     <select id="figureSelect" size="7" aria-label="Matching figures"></select>
   </label>
 </nav>
@@ -129,6 +137,25 @@
     <div class="notation" id="notation"><div class="empty">Engraving will appear here.</div></div>
     <label class="draft-label" for="figureEncoding">Draft transcription · newline = source system</label>
     <textarea class="enc" id="figureEncoding" spellcheck="false"></textarea>
+    <details class="cheatsheet">
+      <summary>Transcription syntax cheat sheet</summary>
+      <div class="cheatsheet-grid">
+        <code>D5:8</code><span>eighth note</span>
+        <code>r:8</code><span>eighth rest</span>
+        <code>D5:8.</code><span>dotted eighth</span>
+        <code>D5:83</code><span>eighth-note triplet member</span>
+        <code>D5:8^</code><span>fermata</span>
+        <code>D5:16/</code><span>unslashed grace note</span>
+        <code>D5:16//</code><span>slashed grace note</span>
+        <code>D5:8-.</code><span>staccato</span>
+        <code>D5:8-!</code><span>staccatissimo</span>
+        <code>D5:8-&gt;</code><span>accent</span>
+        <code>D5:8-^</code><span>marcato</span>
+        <code>D5:8-sfz</code><span>sforzando</span>
+        <code>[ D5:8 E5:8 ]</code><span>notes joined in one beam group</span>
+        <code>newline</code><span>new system matching the source engraving</span>
+      </div>
+    </details>
     <div class="todo-note" id="todoNote" hidden>Not yet transcribed. The source crop is available for the next transcription pass.</div>
     <div class="row">
       <button class="play" id="play" type="button">Play</button>
@@ -210,42 +237,62 @@ function freq(tok,octShift){
   return 440*Math.pow(2,(midi-69)/12);
 }
 function parse(enc){
-  const events=[];
+  const events=[];let beamStart=-1;
   for(const raw of enc.trim().split(/\s+/)){
     if(raw==='')continue;
     if(raw==='|')throw new Error('bar tokens are not supported; use newlines only for source-system breaks');
+    if(raw==='['){if(beamStart>=0)throw new Error('beam groups cannot be nested');beamStart=events.length;continue}
+    if(raw===']'){
+      if(beamStart<0)throw new Error('beam group closes without an opening bracket');
+      if(events.length-beamStart<2)throw new Error('beam groups need at least two notes');
+      applyBeams(events,beamStart,events.length);beamStart=-1;continue;
+    }
     const parts=raw.split(':'); if(parts.length!==2)throw new Error(`bad token "${raw}"`);
-    const [p,dRaw]=parts; let d=dRaw,mult=1;
-    if(d.endsWith('^')){mult*=1.7;d=d.slice(0,-1)}
-    if(d.endsWith('.')){mult*=1.5;d=d.slice(0,-1)}
-    let trip=false;if(d.endsWith('3')&&d.length>1){trip=true;d=d.slice(0,-1)}
-    const base=parseInt(d);if(![1,2,4,8,16,32].includes(base))throw new Error(`bad duration in "${raw}"`);
-    let beats=4/base*mult;if(trip)beats*=2/3;
-    if(/^r$/i.test(p))events.push({rest:true,beats,label:raw});
-    else{if(!/^[A-Ga-g][#b]{0,2}\d$/.test(p))throw new Error(`bad pitch in "${raw}"`);events.push({pitch:p,beats,label:p})}
+    const [p,dRaw]=parts,mark=dRaw.match(/^(1|2|4|8|16|32)(\.?)(3?)(\/{0,2})(\^?)(-\.|-!|->|-\^|-sfz)?$/);
+    if(!mark)throw new Error(`bad duration or modifier in "${raw}"`);
+    const base=+mark[1],dotted=Boolean(mark[2]),triplet=Boolean(mark[3]),grace=mark[4].length,
+          fermata=Boolean(mark[5]),articulation=mark[6]||'';
+    let beats=4/base*(dotted?1.5:1)*(triplet?2/3:1)*(fermata?1.7:1);
+    if(grace)beats=Math.min(beats,.25);
+    const event={base,dotted,triplet,grace,fermata,articulation,beats,label:p,beams:{}};
+    if(/^r$/i.test(p)){if(grace)throw new Error('rests cannot be grace notes');event.rest=true;event.label=raw}
+    else{if(!/^[A-Ga-g][#b]{0,2}\d$/.test(p))throw new Error(`bad pitch in "${raw}"`);event.pitch=p}
+    events.push(event);
   }
+  if(beamStart>=0)throw new Error('beam group is missing a closing bracket');
   if(!events.length)throw new Error('no notes');return events;
 }
-function xmlText(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]))}
-function tokenParts(raw){
-  const [pitch,dRaw]=raw.split(':');let d=dRaw,fermata=false,dotted=false,triplet=false;
-  if(d.endsWith('^')){fermata=true;d=d.slice(0,-1)}
-  if(d.endsWith('.')){dotted=true;d=d.slice(0,-1)}
-  if(d.endsWith('3')&&d.length>1){triplet=true;d=d.slice(0,-1)}
-  return {pitch,base:+d,fermata,dotted,triplet};
+function applyBeams(events,start,end){
+  const group=events.slice(start,end);
+  if(group.some(ev=>ev.rest||ev.base<8))throw new Error('beam groups may contain only eighth, 16th, or 32nd notes');
+  for(let level=1;level<=3;level++){
+    let run=[];
+    const flush=()=>{
+      if(!run.length)return;
+      if(run.length===1){const i=run[0],hasBefore=i>0,hasAfter=i<group.length-1;group[i].beams[level]=hasBefore&&!hasAfter?'backward hook':'forward hook'}
+      else run.forEach((i,n)=>group[i].beams[level]=n===0?'begin':n===run.length-1?'end':'continue');
+      run=[];
+    };
+    group.forEach((ev,i)=>{if(Math.log2(ev.base/4)>=level)run.push(i);else flush()});flush();
+  }
 }
-function noteXML(raw){
-  const ev=tokenParts(raw),types={1:'whole',2:'half',4:'quarter',8:'eighth',16:'16th',32:'32nd'};
+function xmlText(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]))}
+function noteXML(ev){
+  const types={1:'whole',2:'half',4:'quarter',8:'eighth',16:'16th',32:'32nd'};
   let duration=384/ev.base;if(ev.dotted)duration*=1.5;if(ev.triplet)duration*=2/3;
-  let pitch='<rest/>';
-  if(!/^r$/i.test(ev.pitch)){
+  let pitch='<rest/>',grace=ev.grace?`<grace${ev.grace===2?' slash="yes"':''}/>`:'';
+  if(!ev.rest){
     const m=ev.pitch.match(/^([A-G])([#b]{0,2})(\d)$/),alter=[...m[2]].reduce((n,a)=>n+(a==='#'?1:-1),0);
     const accidental={'#':'sharp','##':'double-sharp','b':'flat','bb':'flat-flat'}[m[2]]||'';
     pitch=`<pitch><step>${m[1]}</step>${alter?`<alter>${alter}</alter>`:''}<octave>${m[3]}</octave></pitch>${accidental?`<accidental>${accidental}</accidental>`:''}`;
   }
-  return `<note>${pitch}<duration>${duration}</duration><voice>1</voice><type>${types[ev.base]}</type>`+
+  const articulation={'-.':'staccato','-!':'staccatissimo','->':'accent','-^':'strong-accent'}[ev.articulation];
+  const notations=[ev.fermata?'<fermata/>':'',articulation?`<articulations><${articulation}/></articulations>`:''].join('');
+  const dynamics=ev.articulation==='-sfz'?'<direction placement="below"><direction-type><dynamics><sfz/></dynamics></direction-type></direction>':'';
+  const beams=Object.entries(ev.beams).map(([number,value])=>`<beam number="${number}">${value}</beam>`).join('');
+  return `${dynamics}<note>${grace}${pitch}${ev.grace?'':`<duration>${duration}</duration>`}<voice>1</voice><type>${types[ev.base]}</type>`+
     `${ev.dotted?'<dot/>':''}${ev.triplet?'<time-modification><actual-notes>3</actual-notes><normal-notes>2</normal-notes></time-modification>':''}`+
-    `${ev.fermata?'<notations><fermata/></notations>':''}</note>`;
+    `${beams}${notations?`<notations>${notations}</notations>`:''}</note>`;
 }
 function musicXML(encoding,key){
   const lines=encoding.split(/\n/).map(line=>line.trim()).filter(Boolean);
@@ -253,7 +300,7 @@ function musicXML(encoding,key){
   const measures=lines.map((line,index)=>{
     const attrs=index===0?`<attributes><divisions>96</divisions><key><fifths>${fifths}</fifths><mode>${mode}</mode></key><time><senza-misura/></time><clef><sign>G</sign><line>2</line></clef></attributes>`:'';
     const print=index?'<print new-system="yes"/>':'';
-    return `<measure number="${index+1}" implicit="yes">${print}${attrs}${line.split(/\s+/).map(noteXML).join('')}<barline location="right"><bar-style>none</bar-style></barline></measure>`;
+    return `<measure number="${index+1}" implicit="yes">${print}${attrs}${parse(line).map(noteXML).join('')}<barline location="right"><bar-style>none</bar-style></barline></measure>`;
   }).join('');
   return `<?xml version="1.0" encoding="UTF-8"?><score-partwise version="4.0"><part-list><score-part id="P1"><part-name print-object="no">Bird song</part-name></score-part></part-list><part id="P1">${measures}</part></score-partwise>`;
 }
@@ -312,7 +359,12 @@ async function playSeq(){
     btn.classList.remove('playing');btn.textContent='Play';btn.onclick=playSeq;$('noteNow').textContent='';stopCurrent=null;
   }
 }
-function optionLabel(f){return `${f.bird||'Unknown'} — ${f.id} — p. ${f.page??'?'}`}
+function approvedFor(f){return drafts[f.id]?.approved??Boolean(f.approved)}
+function optionLabel(f){return `${approvedFor(f)?'✓':'—'}        ${f.bird||'Unknown'} — ${f.id} — p. ${f.page??'?'}`}
+function refreshCurrentOption(){
+  const option=[...$('figureSelect').options].find(item=>item.value===current.id);
+  if(option)option.textContent=optionLabel(current);
+}
 function applyFilter(){
   const q=$('search').value.trim().toLowerCase();
   filtered=figures.filter(f=>!q||[f.id,f.bird,f.lyric].some(v=>String(v||'').toLowerCase().includes(q)));
@@ -374,7 +426,7 @@ $('figureEncoding').addEventListener('input',()=>{
   const value=$('figureEncoding').value;
   updateDraftField('enc',value);clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250);
 });
-$('figureApproved').addEventListener('change',e=>updateDraftField('approved',e.target.checked));
+$('figureApproved').addEventListener('change',e=>{updateDraftField('approved',e.target.checked);refreshCurrentOption()});
 $('resetDraft').addEventListener('click',()=>{
   delete drafts[current.id];persistDrafts();$('figureEncoding').value=current.enc||'';
   $('figureApproved').checked=Boolean(current.approved);updateSaveState();renderNotation();

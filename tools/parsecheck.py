@@ -6,26 +6,39 @@ import sys, re, json
 
 def parse(enc):
     events = []
+    beam_start = None
     for raw in enc.strip().split():
         if raw == '|':
             raise ValueError('bar tokens are not supported; use a newline only for source-system breaks')
+        if raw == '[':
+            if beam_start is not None:
+                raise ValueError('beam groups cannot be nested')
+            beam_start = len(events)
+            continue
+        if raw == ']':
+            if beam_start is None:
+                raise ValueError('beam group closes without an opening bracket')
+            if len(events) - beam_start < 2:
+                raise ValueError('beam groups need at least two notes')
+            if any(event['rest'] or event['base'] < 8 for event in events[beam_start:]):
+                raise ValueError('beam groups may contain only eighth, 16th, or 32nd notes')
+            beam_start = None
+            continue
         parts = raw.split(':')
         if len(parts) != 2:
             raise ValueError(f'bad token "{raw}"')
         p, d = parts
-        mult = 1.0
-        if d.endswith('^'):
-            mult *= 1.7; d = d[:-1]
-        if d.endswith('.'):
-            mult *= 1.5; d = d[:-1]
-        trip = False
-        if d.endswith('3') and len(d) > 1:
-            trip = True; d = d[:-1]
-        if d not in ('1', '2', '4', '8', '16', '32'):
-            raise ValueError(f'bad duration in "{raw}"')
+        mark = re.fullmatch(r'(1|2|4|8|16|32)(\.?)(3?)(/{0,2})(\^?)(-\.|-!|->|-\^|-sfz)?', d)
+        if not mark:
+            raise ValueError(f'bad duration or modifier in "{raw}"')
+        base, _, _, grace, _, _ = mark.groups()
         if p not in ('r', 'R') and not re.match(r'^[A-Ga-g][#b]{0,2}\d$', p):
             raise ValueError(f'bad pitch in "{raw}"')
-        events.append(raw)
+        if p in ('r', 'R') and grace:
+            raise ValueError('rests cannot be grace notes')
+        events.append({'raw': raw, 'base': int(base), 'rest': p in ('r', 'R')})
+    if beam_start is not None:
+        raise ValueError('beam group is missing a closing bracket')
     if not events:
         raise ValueError('no notes')
     return events

@@ -41,6 +41,8 @@
 `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member;
 `^` fermata ≈1.7×; `r:dur` rest. Bar tokens are not used. A newline starts a new staff system
 and must match the original engraving. Existing encodings are drafts awaiting hand correction.
+Explicit beam groups use `[ ... ]`. Additional suffixes: `/` grace, `//` slashed grace,
+`-.` staccato, `-!` staccatissimo, `->` accent, `-^` marcato, and `-sfz` sforzando.
 8va figures: write sounding pitch. Bass clef only: grouse, loon, great horned owl.
 
 ## Remaining work (priority order)

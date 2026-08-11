@@ -3057,21 +3057,25 @@
    "id": "app-johnston-solitaire-1",
    "bird": "Solitaire",
    "page": 214,
-   "conf": "todo",
-   "note": "Source: A. G. Johnston (In 'Birds of Jamaica,' by Philip Henry Gosse). \u2014 SOLITAIRE.",
+   "conf": "med",
+   "key": "G",
+   "note": "A. G. Johnston, quoted by Gosse. A trilled A4 whole note leads to eight alternating D5-B4 16ths, two fermata-separated D5-B4 calls, then trilled A4 and high A5 whole notes. Ornament timing is approximate.",
    "crops": [
     "figs_new/p236_s00.png"
-   ]
+   ],
+   "enc": "A4:1 D5:16 B4:16 D5:16 B4:16 D5:16 B4:16 D5:16 B4:16 r:4 r:4 D5:8. B4:8 r:4^ D5:8. B4:8 r:4^ A4:1 A5:1 r:4 r:4"
   },
   {
    "id": "app-johnston-solitaire-2",
    "bird": "Solitaire",
    "page": 214,
-   "conf": "todo",
-   "note": "Source: A. G. Johnston (In 'Birds of Jamaica,' by Philip Henry Gosse). \u2014 SOLITAIRE. 'Sometimes thus:--' (variant phrase).",
+   "conf": "high",
+   "key": "C",
+   "note": "A. G. Johnston's short 'Sometimes thus' variant: dotted B4, G4, B4, then closing G4.",
    "crops": [
     "figs_new/p236_s01.png"
-   ]
+   ],
+   "enc": "B4:8. G4:8 B4:8 G4:4"
   },
   {
    "id": "app-harting-blackcap",
@@ -3183,101 +3187,121 @@
    "id": "app-lescuyer-rossignol-1",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. No. 1 '3 octaves above.' Expressivo.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. No. 1, marked '3 octaves above'; the encoding uses sounding G7 and D7 and preserves the repeated-note contour.",
    "crops": [
     "figs_new/p242_s00.png"
-   ]
+   ],
+   "enc": "G7:8 G7:8 G7:8 G7:8 D7:16 D7:16 D7:16 D7:16 D7:16 G7:8"
   },
   {
    "id": "app-lescuyer-rossignol-2",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. No. 2.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. No. 2; compact repeated G4-D4 figures are followed by an alternating closing figure.",
    "crops": [
     "figs_new/p242_s01.png"
-   ]
+   ],
+   "enc": "G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 G4:8 | G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 F4:8 | G4:16 D4:16 G4:16 D4:16 G4:16 D4:16 G4:8"
   },
   {
    "id": "app-lescuyer-rossignol-3-4",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. Nos. 3-4.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. Nos. 3-4; the bar line separates the two numbered examples.",
    "crops": [
     "figs_new/p242_s02.png"
-   ]
+   ],
+   "enc": "G4:8 G4:8 G4:8 G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 D4:16 G4:8 | G4:8 G4:8 D4:16 D4:16 D4:16 D4:16"
   },
   {
    "id": "app-lescuyer-rossignol-5-6",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ROSSIGNOL. Nos. 5-6.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. Nos. 5-6; the bar line separates the two numbered examples.",
    "crops": [
     "figs_new/p242_s03.png"
-   ]
+   ],
+   "enc": "G4:8 G4:16 D4:16 G4:16 D4:16 G4:16 D4:16 | G4:8 D4:8 G4:8 D4:8 D4:16 D4:16 D4:16 D4:16 G4:8"
   },
   {
    "id": "app-lescuyer-grive-1-2",
    "bird": "Grive chanteuse (Song Thrush)",
    "page": 220,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 GRIVE CHANTEUSE. Nos. 1-2 (no. 2 '2 octaves above').",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. Nos. 1-2; no. 2 is marked '2 octaves above,' represented at sounding G6. The bar line separates the examples.",
    "crops": [
     "figs_new/p242_s04.png"
-   ]
+   ],
+   "enc": "G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 | G6:16 G6:16 G6:8 G6:16 G6:16 G6:8 G6:16 G6:16 G6:8 G6:16 G6:16 G6:8"
   },
   {
    "id": "app-lescuyer-grive-3-4",
    "bird": "Grive chanteuse (Song Thrush)",
    "page": 220,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 GRIVE CHANTEUSE. Nos. 3-4.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. Nos. 3-4; bars separate the repeated three-note cells and the two engraved phrases.",
    "crops": [
     "figs_new/p242_s05.png"
-   ]
+   ],
+   "enc": "B4:8 C5:16 B4:16 | B4:8 C5:16 B4:16 | B4:8 C5:16 B4:16 | B4:8 F5:8 B4:8 F5:8 | F5:16 B4:16 F5:16 B4:16 F5:16 B4:16"
   },
   {
    "id": "app-lescuyer-alouette-1",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. No. 1 '4 octaves above.'",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. No. 1, marked '4 octaves above'; encoded at sounding E8 and C8.",
    "crops": [
     "figs_new/p243_s00.png"
-   ]
+   ],
+   "enc": "E8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 E8:16 E8:16 E8:16 E8:16 C8:16 E8:8"
   },
   {
    "id": "app-lescuyer-alouette-2-3-4",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. Nos. 2-3-4.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. Nos. 2-4; no. 3 is marked '3 octaves above' and no. 4 '4 octaves above.' Bars separate the examples.",
    "crops": [
     "figs_new/p243_s01.png"
-   ]
+   ],
+   "enc": "E4:16 E4:16 E4:8 | G7:16 G7:16 G7:16 G7:16 G7:8 | E8:32 E8:16 E8:32 E8:16 E8:32 E8:16"
   },
   {
    "id": "app-lescuyer-alouette-5",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. No. 5 '3 octaves above.' Expressivo.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. No. 5, marked '3 octaves above' and expressivo; encoded at sounding pitch.",
    "crops": [
     "figs_new/p243_s02.png"
-   ]
+   ],
+   "enc": "B7:16 G7:16 E8:16 A7:16 A7:16 A7:16 A7:16 E8:8 E8:8 E8:8 E8:16 E8:16 E8:16 E8:16 G7:8"
   },
   {
    "id": "app-lescuyer-alouette-6",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "conf": "todo",
-   "note": "Source: F. Lescuyer (In 'Langage et chant des oiseaux'). \u2014 ALOUETTE DES CHAMPS. No. 6 '4 octaves above.'",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Lescuyer. No. 6, marked '4 octaves above'; encoded at sounding pitch. The engraved bar line is retained.",
    "crops": [
     "figs_new/p243_s03.png"
-   ]
+   ],
+   "enc": "E8:16 C8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 E8:16 E8:16 E8:16 E8:16 C8:16 E8:16 E8:16 | D8:16 F8:16 F8:16 D8:16"
   },
   {
    "id": "app-smee-thrush-1",
@@ -3309,82 +3333,99 @@
    "id": "app-weber-wind-1",
    "bird": "Wind",
    "page": 224,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 WIND. No. 1 'Over the roof of a house', row 1.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Weber, Longman's Magazine. Two-system 'wind over the roof' melody, read as a sequence of quarter/eighth tones with the printed crescendo and diminuendo described but not encoded.",
    "crops": [
     "figs_new/p246_s00.png",
     "figs_new/p246_s01.png"
-   ]
+   ],
+   "enc": "A4:4 B4:4 C5:4 D5:4 C5:4 A4:4 E5:2 D5:4 C5:4 E5:4 C5:8 A4:8 | D5:4 C5:4 A4:2 A4:4 F#4:4 A4:4 C5:2 B4:4 B4:4 A4:4"
   },
   {
    "id": "app-weber-wind-2-wailing",
    "bird": "Wind",
    "page": 224,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 WIND. No. 2 'Wailing.'",
+   "conf": "low",
+   "key": "C",
+   "note": "F. Weber's 'Wailing' wind example is engraved largely as dyads, which the monophonic encoding cannot represent. The upper sounding line is encoded; simultaneous lower tones remain visible in the source crop.",
    "crops": [
     "figs_new/p246_s02.png"
-   ]
+   ],
+   "enc": "G4:4 B4:4 D5:2 C5:4 D5:4 C5:4 B4:4 B4:4 A4:4"
   },
   {
    "id": "app-weber-cow",
    "bird": "Cow",
    "page": 224,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 COW. 'M-o-o, m-o-o.'",
+   "conf": "med",
+   "key": "C",
+   "lyric": "M-o-o, m-o-o",
+   "note": "F. Weber. Two bass-clef moo gestures: a sustained low tone into G3 and up to C4, then the same contour reaching E4.",
    "crops": [
     "figs_new/p246_s03.png"
-   ]
+   ],
+   "enc": "A2:2 G3:4 C4:8 | A2:2 G3:4 E4:8"
   },
   {
    "id": "app-weber-dog-barking",
    "bird": "Dog",
    "page": 224,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 DOG. 'Barking.'",
+   "conf": "high",
+   "key": "C",
+   "note": "F. Weber. Eight identical sharp barking gestures, each a G4-C4 eighth-note drop followed by an eighth rest; the double bar divides two groups of four.",
    "crops": [
     "figs_new/p246_s04.png"
-   ]
+   ],
+   "enc": "G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8 | G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8"
   },
   {
    "id": "app-weber-donkey",
    "bird": "Donkey",
    "page": 224,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 DONKEY. 'rit. diminuendo.'",
+   "conf": "high",
+   "key": "C",
+   "note": "F. Weber. Eight bass-clef bray pairs under ritardando/diminuendo: three E4-E3 figures followed by five D4-D3 figures.",
    "crops": [
     "figs_new/p246_s05.png"
-   ]
+   ],
+   "enc": "E4:8 E3:8. E4:8 E3:8. E4:8 E3:8. D4:8 D3:8. D4:8 D3:8. D4:8 D3:8. D4:8 D3:8. D4:8 D3:8."
   },
   {
    "id": "app-weber-horse",
    "bird": "Horse",
    "page": 225,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 HORSE. (bass clef)",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Weber. Bass-clef chromatic horse call descending from D4 to D3 in paired 16ths; printed sharps, naturals, and flat are retained where legible.",
    "crops": [
     "figs_new/p247_s00.png"
-   ]
+   ],
+   "enc": "D4:8 C#4:16 C4:16 B3:16 Bb3:16 A3:16 G#3:16 G3:16 F#3:16 F3:16 E3:16 Eb3:16 D3:8"
   },
   {
    "id": "app-weber-cat-1-2",
    "bird": "Cat",
    "page": 225,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 CAT. Nos. 1-2 (no. 2 'When excited').",
+   "conf": "high",
+   "key": "C",
+   "note": "F. Weber. Two cat calls share the crop: No. 1 repeats B4-E4 twice; excited No. 2 repeats accented B4-G4 twice.",
    "crops": [
     "figs_new/p247_s01.png"
-   ]
+   ],
+   "enc": "B4:8 E4:4 B4:8 E4:4 | B4:8 G4:4 B4:8 G4:4"
   },
   {
    "id": "app-weber-cock",
    "bird": "Cock",
    "page": 225,
-   "conf": "todo",
-   "note": "Source: Dr. F. Weber (In 'Longman's Magazine,' vol. ix, Feb. 1887, pp. 399-400). \u2014 COCK.",
+   "conf": "med",
+   "key": "C",
+   "note": "F. Weber. Two related cock phrases: G#4-B4-D5-C5, then the same opening with a slurred C5-to-E4 close.",
    "crops": [
     "figs_new/p247_s02.png"
-   ]
+   ],
+   "enc": "G#4:8 B4:8 D5:4 C5:2. | G#4:8 B4:8 D5:4 C5:2 E4:4"
   },
   {
    "id": "app-hinrichs-cockchaffer",

@@ -3077,21 +3077,25 @@
    "id": "app-harting-blackcap",
    "bird": "Blackcap (Sylvia atricapilla)",
    "page": 215,
-   "conf": "todo",
-   "note": "Source: J. E. Harting (In 'Birds of Middlesex'). \u2014 BLACKCAP. 'Passage in song of.' 8va alt.",
+   "conf": "med",
+   "key": "C",
+   "note": "J. E. Harting, Birds of Middlesex. Two closely related, staccato passage-length phrases under 8va alta; encoded at sounding pitch. Pitches were detector-checked, while several mixed beam values remain interpretive.",
    "crops": [
     "figs_new/p237_s00.png"
-   ]
+   ],
+   "enc": "C6:8 C6:16 D6:16 E6:16 E6:16 C6:8 D6:8 D6:16 E6:16 F6:16 F6:16 D6:8 | C6:8 C6:16 D6:16 E6:16 E6:16 C6:8 D6:8 D6:16 E6:16 F6:16 F6:16 D6:8"
   },
   {
    "id": "app-harting-willow-warbler",
    "bird": "Willow Warbler (Sylvia trochilus)",
    "page": 215,
-   "conf": "todo",
-   "note": "Source: J. E. Harting (In 'Birds of Middlesex'). \u2014 WILLOW WARBLER. Attributed to J. V. Stewart, in 'Birds of the N. E. coast of Donegal', quoted in Harting. \u2014 Sub-attributed to J. V. Stewart within Harting's Birds of Middlesex, p. 53.",
+   "conf": "high",
+   "key": "C",
+   "note": "J. V. Stewart, quoted by J. E. Harting. A clean nine-note diatonic descent under 8va alta, encoded at sounding pitch from written E5-D5-C5-B4-A4-G4-F4-D4-C4.",
    "crops": [
     "figs_new/p237_s01.png"
-   ]
+   ],
+   "enc": "E6:8 D6:8 C6:8 B5:8 A5:8 G5:8 F5:8 D5:8 C5:8"
   },
   {
    "id": "app-harting-swan-1",
@@ -3109,41 +3113,51 @@
    "id": "app-hawkins-blackbird",
    "bird": "Blackbird",
    "page": 217,
-   "conf": "todo",
-   "note": "Source: Sir John Hawkins (In 'History of Science and Practice of Music'). \u2014 BLACKBIRD. 'Part of song.'",
+   "conf": "med",
+   "key": "F",
+   "note": "Sir John Hawkins. Two compact 'part of song' phrases: dotted low F4 and A4 pickups, a quick upper pair, then a longer close. The second phrase varies the upper pair and ends in a rest.",
    "crops": [
     "figs_new/p239_s00.png"
-   ]
+   ],
+   "enc": "F4:8. A4:8 C5:16 A4:16 F5:4 | F4:8. A4:8 B4:16 G4:16 r:4"
   },
   {
    "id": "app-hawkins-cuckoo",
    "bird": "Cuckoo",
    "page": 217,
-   "conf": "todo",
-   "note": "Source: Sir John Hawkins (In 'History of Science and Practice of Music'). \u2014 CUCKOO. 'Cu-cu, cu-cu, cu-cu.'",
+   "conf": "high",
+   "key": "F",
+   "lyric": "Cu-cu, cu-cu, cu-cu",
+   "note": "Sir John Hawkins. Three plainly engraved cuckoo pairs, each E5 half note to C5 half note in F major.",
    "crops": [
     "figs_new/p239_s01.png"
-   ]
+   ],
+   "enc": "E5:2 C5:2 E5:2 C5:2 E5:2 C5:2"
   },
   {
    "id": "app-hawkins-kircher-sloth",
    "bird": "Pigritia, or Sloth",
    "page": 217,
-   "conf": "todo",
-   "note": "Source: Athanasius Kircher (quoted in Hawkins). \u2014 PIGRITIA, OR SLOTH. 'Ha, ha, ha, ...' Attributed 'Kircher'. \u2014 Attributed to Kircher within Hawkins' History of Science and Practice of Music.",
+   "conf": "med",
+   "key": "C",
+   "lyric": "Ha, ha, ha, ha, ha, ha, ha, ha, ha, ha, ha",
+   "note": "Athanasius Kircher, quoted by Hawkins. Eleven separated half-note 'Ha' tones make a slow stepwise arch and descent; the engraved rests are retained between tones.",
    "crops": [
     "figs_new/p239_s02.png"
-   ]
+   ],
+   "enc": "G4:2 r:4 G4:2 r:4 A4:2 r:4 A4:2 r:4 B4:2 r:4 C5:2 r:4 B4:2 r:4 A4:2 r:4 G4:2 r:4 F4:2 r:4 E4:2"
   },
   {
    "id": "app-hawkins-kircher-hen",
    "bird": "Hen",
    "page": 217,
-   "conf": "todo",
-   "note": "Source: Athanasius Kircher (quoted in Hawkins). \u2014 HEN. 'After laying.' Attributed 'Kircher'. \u2014 Attributed to Kircher within Hawkins' History of Science and Practice of Music.",
+   "conf": "high",
+   "key": "C",
+   "note": "Athanasius Kircher, quoted by Hawkins. The after-laying call consists of four groups of repeated G4 quarters, each resolving to a C5 half note.",
    "crops": [
     "figs_new/p239_s03.png"
-   ]
+   ],
+   "enc": "G4:4 G4:4 G4:4 G4:4 C5:2 | G4:4 G4:4 G4:4 C5:2 | G4:4 G4:4 G4:4 G4:4 C5:2 | G4:4 G4:4 G4:4 G4:4 C5:2"
   },
   {
    "id": "app-kircher-nightingale-1",

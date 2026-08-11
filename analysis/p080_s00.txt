@@ -1,9 +1,0 @@
-x=  138 y=  90 step=  9 G5  s=0.82
-x=  238 y=  95 step=  8 F5  s=0.82
-x=  312 y=  70 step= 12 C6  s=0.83
-x=  412 y=  83 step= 10 A5  s=0.82
-x=  487 y=  83 step= 10 A5  s=0.90
-x=  587 y=  90 step=  9 G5  s=0.82
-x=  661 y=  89 step=  9 G5  s=0.83
-x=  711 y=  94 step=  8 F5  s=0.79
-overlay: analysis/p080_s00_heads.png spacing=12.5 lines=[95, 107, 120, 132, 145]

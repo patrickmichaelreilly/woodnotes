@@ -21,8 +21,8 @@ grace, `^` fermata, `-.` staccato, `-!` staccatissimo, `->` accent, `-^` marcato
 ## Reading tips (see HANDOFF.md for full list)
 - Cheney's rests are odd vertical glyphs; wavy lines = vocal slides not trills
 - Bass clef only: grouse, loon, great horned owl
-- If a crop is clipped/missing, the full page is in figs/gap_pages/ or ask the user for the PDF
-  (IA: woodnoteswildnot00chen, book page = PDF page − 22)
+- If a crop is clipped or missing, consult the committed source PDF
+  (`woodnoteswildnot00chen_bw.pdf`; book page = PDF page − 22).
 
 ## Verify as you go
 Parse-check each encoding with the regex/rules in woodnotes-player.html `parse()`.

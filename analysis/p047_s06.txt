@@ -1,9 +1,0 @@
-x=  139 y=  68 step=  6 D5  s=0.85
-x=  277 y=  63 step=  7 E5  s=0.85
-x=  414 y=  69 step=  6 D5  s=0.91
-x=  553 y=  39 step= 11 B5  s=0.82
-x=  640 y=  39 step= 11 B5  s=0.86
-x=  728 y=  39 step= 11 B5  s=0.85
-x=  816 y=  39 step= 11 B5  s=0.86
-x=  903 y=  39 step= 11 B5  s=0.85
-overlay: analysis/p047_s06_heads.png spacing=12.5 lines=[56, 68, 81, 94, 106]

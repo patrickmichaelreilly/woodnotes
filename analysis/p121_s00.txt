@@ -1,4 +1,0 @@
-x=  183 y= 104 step=  7 E5  s=0.79
-x=  319 y= 104 step=  7 E5  s=0.87
-x=  456 y= 104 step=  7 E5  s=0.86
-overlay: analysis/p121_s00_heads.png spacing=12.5 lines=[96, 108, 121, 133, 146]

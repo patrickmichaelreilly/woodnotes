@@ -1,9 +1,0 @@
-x=  124 y=  39 step= 11 B5  s=0.81
-x=  211 y=  38 step= 11 B5  s=0.86
-x=  361 y=  39 step= 11 B5  s=0.85
-x=  436 y=  39 step= 11 B5  s=0.82
-x=  510 y=  38 step= 11 B5  s=0.85
-x=  585 y=  37 step= 11 B5  s=0.85
-x=  659 y=  39 step= 11 B5  s=0.87
-x=  733 y=  50 step=  9 G5  s=0.88
-overlay: analysis/p040_s04_heads.png spacing=12.5 lines=[56, 69, 81, 94, 106]

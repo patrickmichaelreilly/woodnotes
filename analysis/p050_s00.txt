@@ -1,7 +1,0 @@
-x=  307 y= 167 step= -4 A3  s=0.76
-x=  569 y= 165 step= -3 B3  s=0.78
-x=  709 y=  83 step= 10 A5  s=0.91
-x=  758 y=  83 step= 10 A5  s=0.87
-x=  976 y=  89 step=  9 G5  s=0.78
-x= 1026 y=  89 step=  9 G5  s=0.83
-overlay: analysis/p050_s00_heads.png spacing=12.5 lines=[95, 107, 120, 132, 145]

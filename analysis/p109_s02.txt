@@ -1,8 +1,0 @@
-x=  138 y=  96 step=  2 G4  s=0.82
-x=  251 y=  96 step=  2 G4  s=0.80
-x=  427 y=  95 step=  2 G4  s=0.80
-x=  538 y=  96 step=  2 G4  s=0.81
-x=  651 y= 100 step=  1 F4  s=0.81
-x=  851 y=  95 step=  2 G4  s=0.84
-x=  963 y=  95 step=  2 G4  s=0.80
-overlay: analysis/p109_s02_heads.png spacing=12.5 lines=[58, 70, 83, 95, 108]

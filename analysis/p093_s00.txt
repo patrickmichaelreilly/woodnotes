@@ -1,1 +1,0 @@
-overlay: analysis/p093_s00_heads.png spacing=18.2 lines=[95, 112, 131, 151, 168]

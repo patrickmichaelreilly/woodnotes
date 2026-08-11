@@ -1,8 +1,0 @@
-x=  126 y=  61 step=  6 D5  s=0.77
-x=  276 y=  48 step=  8 F5  s=0.81
-x=  427 y=  61 step=  6 D5  s=0.77
-x=  552 y=  43 step=  9 G5  s=0.81
-x=  653 y=  56 step=  7 E5  s=0.79
-x=  702 y=  48 step=  8 F5  s=0.82
-x=  766 y=  56 step=  7 E5  s=0.78
-overlay: analysis/p035_s05_heads.png spacing=12.8 lines=[48, 61, 73, 86, 99]

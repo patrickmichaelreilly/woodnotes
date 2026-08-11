@@ -1,6 +1,0 @@
-x=  138 y=  95 step=  8 F5  s=0.85
-x=  214 y=  95 step=  8 F5  s=0.87
-x=  288 y=  95 step=  8 F5  s=0.89
-x=  375 y= 103 step=  7 E5  s=0.82
-x=  462 y= 115 step=  5 C5  s=0.81
-overlay: analysis/p129_s00_heads.png spacing=12.5 lines=[95, 108, 120, 132, 145]

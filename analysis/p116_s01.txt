@@ -1,2 +1,0 @@
-x=   49 y= 112 step=  5 C5  s=0.86
-overlay: analysis/p116_s01_heads.png spacing=12.2 lines=[96, 109, 121, 133, 145]

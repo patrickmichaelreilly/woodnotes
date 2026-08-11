@@ -13,12 +13,12 @@
    "no": 1,
    "page": 11,
    "key": "Dm",
-   "enc": "D5:8 C#5:8 D5:4 r:8^ E5:8 D5:8 C#5:8",
+   "enc": "[ D5:8 C#5:8 ] D5:8 r:8^ E5:8 [ D5:8 C#5:8 ]",
    "lyric": "Hear me, hear me.",
    "crops": [
     "figs_new/p033_s00.png"
    ],
-   "approved": false
+   "approved": true
   },
   {
    "id": "blue-03",
@@ -26,12 +26,12 @@
    "no": 3,
    "page": 12,
    "key": "Dm",
-   "enc": "C#5:8 D5:8 E5:8 C#5:8",
+   "enc": "C#5:16 D5:8 E5:8 C#5:8",
    "lyric": "Che-way che-chute.",
    "crops": [
     "figs_new/p034_s00.png"
    ],
-   "approved": false
+   "approved": true
   },
   {
    "id": "blue-02",
@@ -39,12 +39,12 @@
    "no": 2,
    "page": 11,
    "key": "Dm",
-   "enc": "E5:8 F5:8 r:8 D5:8 C#5:8 D5:8 r:8 E5:8 D5:8 C#5:8 r:8 E5:8 C#5:8 D5:8 r:8 E5:8 D5:8 E5:8 r:8 E5:8 F5:8 G5:8 r:8 E5:8 C#5:8 r:8 D5:8 E5:8 F5:8 D5:8 r:8 F5:16 E5:8 D5:8 r:8 D5:8 E5:8 D5:8 C#5:8 r:8 D5:8 C#5:8 D5:8",
+   "enc": "[ E5:8 F5:8 ] r:8 [ D5:8 C#5:8 D5:8 ] r:8 [ E5:8 D5:8 C#5:8 ] r:8 [ E5:8 C#5:8 D5:8 ] r:8 [ E5:8 D5:8 E5:8 ] r:8 [ E5:8 F5:8 G5:8 ] r:8\n[ E5:8 C#5:8 ] r:8 [ D5:8 E5:8 ] [ F5:8 D5:8 ] r:8 F5:16 [ E5:8 D5:8 ] r:8 [ D5:8 E5:8 D5:8 C#5:8 ] r:8 [ D5:8 C#5:8 D5:8 ]",
    "crops": [
     "figs_new/p033_s01.png",
     "figs_new/p033_s02.png"
    ],
-   "approved": false
+   "approved": true
   },
   {
    "id": "blue-04",
@@ -55,8 +55,8 @@
    "crops": [
     "figs_new/p034_s01.png"
    ],
-   "enc": "E5:8 F5:8 E5:8 D#5:8 r:8 E5:8 D#5:8 E5:8 B4:8 A#4:8 B4:4 r:8 D#5:8 E5:8 r:8 E5:8 D#5:8 E5:8 r:8 F5:8^ r:8 D#5:8 E5:8",
-   "approved": false
+   "enc": "[ E5:8 F5:8 E5:8 D#5:8 ] r:8 [ E5:8 D#5:8 E5:8 ] r:8 [ B4:8 A#4:8 B4:8 ] r:8 [ D#5:8 E5:8 ] r:8 [ E5:8 D#5:8 ] [ E5:8 F5:8 ] r:8 [ E5:8 D#5:8 E5:8 ]",
+   "approved": true
   },
   {
    "id": "blue-05",
@@ -67,8 +67,8 @@
    "crops": [
     "figs_new/p034_s02.png"
    ],
-   "enc": "F5:8 E5:8 E5:8 G5:8 F5:8 D#5:8 r:8 F5:8 E5:8 E5:8 D#5:8 r:8 F5:8 E5:8 D#5:8",
-   "approved": false
+   "enc": "[ F5:8 E5:8 ] [ E5:8 G5:8 ] [ F5:8 D#5:8 ] r:8 [ F5:8 E5:8 ] [ E5:8 D#5:8 ] r:8 F5:16/ [ E5:8 D#5:8 ]",
+   "approved": true
   },
   {
    "id": "blue-06",
@@ -80,8 +80,8 @@
     "figs_new/p035_s00.png",
     "figs_new/p035_s01.png"
    ],
-   "enc": "E5:8 F5:8 E5:8 G5:8 E5:8 r:8 G5:8 E5:8 E5:8 D#5:8 r:8 F5:8 C5:8 G5:8 A5:8 r:8 G5:8 E5:8 E5:8 F5:8 r:8 E5:8 F5:8 E5:8 D#5:8 r:8 G5:8 F5:8 E5:8 D5:8 E5:8 F5:8 G5:8 r:8 G5:8 r:8 G5:8 r:8 E5:8 r:8 E5:8 F5:8 G5:8",
-   "approved": false
+   "enc": "E5:16 F5:8 E5:8 [ G5:8 E5:8 ] r:8 [ G5:8 E5:8 ] [ E5:8 D#5:8 ] r:8 [ F5:16 G5:16 ] A5:8 r:8 [ G5:8 E5:8 ] [ E5:8 F5:8 ] [ G5:8 E5:8 ]\nF5:16/ [ E5:8 D#5:8 ] r:8 [ G5:8 E5:8 ] [ E5:8 D#5:8 ] [ E5:16 F5:16 ] G5:8 r:8 [ G5:8 E5:8 ] r:8 [ G5:8 E5:8 ] r:8 [ E5:16 F5:16 ] G5:8",
+   "approved": true
   },
   {
    "id": "blue-07",
@@ -93,8 +93,8 @@
     "figs_new/p035_s02.png",
     "figs_new/p035_s03.png"
    ],
-   "enc": "D5:8 E5:8 G5:8 F5:8 D#5:8 r:8 F5:8 A4:8 G5:8 r:8 E5:8 A4:8 G5:8 r:8 E5:8 F5:8 E5:8 D#5:2 r:8 E5:8 G5:8 r:8 E5:8 G5:8",
-   "approved": false
+   "enc": "D5:16/ E5:8 G5:8 [ F5:16 D#5:16 ] r:8 D#5:16/ [ E5:8 G5:8 ] r:8 D#5:16/ [ E5:8 G5:8 ] r:8 [ E5:8 F5:8 E5:8 D#5:8 ] r:8 [ E5:8 G5:8 ] r:8 [ E5:8 G5:8 ]",
+   "approved": true
   },
   {
    "id": "blue-08",
@@ -105,8 +105,8 @@
    "crops": [
     "figs_new/p035_s03.png"
    ],
-   "enc": "G5:8 A5:8 E5:8 r:8 G5:8 A5:8 E5:8",
-   "approved": false
+   "enc": "[ G5:8 A5:8 E5:8 ] r:8 [ G5:8 A5:8 E5:8 ] r:8",
+   "approved": true
   },
   {
    "id": "blue-09",
@@ -117,7 +117,7 @@
    "crops": [
     "figs_new/p035_s04.png"
    ],
-   "enc": "E5:8 C5:8 C5:8 A#4:8 r:8 C5:83 D5:83 E5:83",
+   "enc": "[ E5:8 C#5:8 ] [ C#5:8 B#4:8 ] r:8 [ C#5:83 D5:83 E5:83 ]",
    "approved": false
   },
   {
@@ -129,7 +129,7 @@
    "crops": [
     "figs_new/p035_s04.png"
    ],
-   "enc": "G5:8 C5:8 r:8 C5:8 B4:8 r:8 E5:16 C5:16",
+   "enc": "D5:16/ C5:8 r:8 [ C5:8 B4:8 ] r:8 [ E5:16 C5:16 ]",
    "approved": false
   },
   {
@@ -142,8 +142,8 @@
     "figs_new/p035_s05.png",
     "figs_new/p035_s06.png"
    ],
-   "enc": "D5:8 E5:8 F5:8 E5:8 D5:8 D5:8 r:8 G5:8 F5:8 E5:8 F5:8 E5:8 D5:8 r:8 D5:8 E5:8 F5:8 r:8 D5:8 C#5:8 r:8 D5:8 C#5:8 D5:8 r:8 E5:8 D5:8 G5:8 F5:8 D5:8 D5:8 r:8 D5:8 F5:8",
-   "approved": false
+   "enc": "[ D5:16 E5:16 ] [ D5:16 F5:16 ] [ E5:16 D5:16 ] D5:8 r:8 [ G5:16 F5:16 ] [ E5:16 F5:16 ] [ E5:16 D5:16 ] r:8 [ D5:16 E5:16 ]\nF5:8 r:8 [ D5:8 C#5:8 ] r:8 [ D5:16 C#5:16 D5:16 ] r:8 [ E5:16 D5:16 ] [ G5:16 F5:16 ] [ E5:16 D5:16 ] r:8 [ D5:16 F5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-salute",
@@ -154,8 +154,8 @@
    "crops": [
     "figs_new/p036_s00b.png"
    ],
-   "enc": "C5:8 D5:8 r:8 E5:8 F5:8 E5:8 D5:8 C5:8 C5:8",
-   "approved": false
+   "enc": "C5:8-! D5:8-! r:8 E5:16-! F5:16-! E5:16-! D5:16-! C5:8-! C5:8-!",
+   "approved": true
   },
   {
    "id": "rob-lit",
@@ -167,8 +167,8 @@
    "crops": [
     "figs_new/p036_s00.png"
    ],
-   "enc": "F5:8 r:8 F5:8 r:8^ F5:8 F5:8 F5:8",
-   "approved": false
+   "enc": "F5:8-! r:8 F5:8-! r:8^ F5:16-! F5:16-! F5:16-!",
+   "approved": true
   },
   {
    "id": "rob-litleu",
@@ -180,8 +180,8 @@
    "crops": [
     "figs_new/p036_s01.png"
    ],
-   "enc": "F5:8 F5:8 F5:8 r:8 Bb5:8 Bb5:8",
-   "approved": false
+   "enc": "F5:8-! F5:8-! F5:8-! r:8 Bb4:8 Bb4:8",
+   "approved": true
   },
   {
    "id": "nut-wait",
@@ -208,9 +208,9 @@
     "figs_new/p038_s00.png",
     "figs_new/p038_s01.png"
    ],
-   "enc": "D5:16 E5:16 F5:16 r:16 F5:16 G5:16 D5:16 r:16 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 D5:16 r:16 A5:16 G#5:16 A5:16 r:16^ D5:16 E5:16 F5:16 r:16 E5:16 F5:16 D5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 G#5:16 A5:16",
+   "enc": "[ D5:16 E5:16 F5:16 ] r:16 [ F5:16 G5:16 D5:16 ] r:16 [ E5:16 F5:16 G5:16 ] r:16 [ E5:16 F5:16 D5:16 ] r:16 [ A5:16 G#5:16 A5:16 ] r:16^\n[ D5:16 E5:16 F5:16 ] r:16 [ E5:16 F5:16 D5:16 ] r:16 [ G5:16 A5:16 E5:16 ] r:16 [ A5:16 G#5:16 A5:16 ]",
    "key": "F",
-   "approved": false
+   "approved": true
   },
   {
    "id": "rob-02",

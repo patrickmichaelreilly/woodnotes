@@ -217,6 +217,17 @@ function loadDrafts(){
   }catch{return {}}
 }
 function persistDrafts(){localStorage.setItem(DRAFT_KEY,JSON.stringify(drafts))}
+function reconcileDrafts(){
+  const byId=Object.fromEntries(figures.map(figure=>[figure.id,figure]));
+  for(const [id,stored] of Object.entries(drafts)){
+    const figure=byId[id];if(!figure){delete drafts[id];continue}
+    const draft={...stored};
+    if(draft.enc===(figure.enc||''))delete draft.enc;
+    if(draft.approved===Boolean(figure.approved))delete draft.approved;
+    if(Object.keys(draft).length)drafts[id]=draft;else delete drafts[id];
+  }
+  persistDrafts();
+}
 function currentEncoding(){return drafts[current.id]?.enc??current.enc??''}
 function currentApproved(){return drafts[current.id]?.approved??Boolean(current.approved)}
 function updateDraftField(field,value){
@@ -407,7 +418,7 @@ function move(delta){
 async function init(){
   try{
     const response=await fetch('corpus.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);
-    const corpus=await response.json();figures=corpus.figures;drafts=loadDrafts();
+    const corpus=await response.json();figures=corpus.figures;drafts=loadDrafts();reconcileDrafts();
     const playable=figures.filter(f=>f.enc).length;
     $('credit').textContent=`Simeon Pease Cheney — ${playable} draft transcriptions awaiting hand correction`;
     applyFilter();

@@ -13,7 +13,7 @@
    "no": 1,
    "page": 11,
    "key": "Dm",
-   "enc": "D5:8 C#5:8 D5:4^ r:8 E5:8 D5:8 C#5:8",
+   "enc": "D5:8 C#5:8 D5:4 r:8^ E5:8 D5:8 C#5:8",
    "reviewed": true,
    "lyric": "Hear me, hear me.",
    "crops": [

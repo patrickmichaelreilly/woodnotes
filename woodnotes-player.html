@@ -75,6 +75,9 @@
   .ctl output{font:0.85rem var(--mono);color:var(--ink);letter-spacing:0;text-transform:none}
   input[type=range]{accent-color:var(--blue);width:120px}
   .err{color:#8a2f1e;font:.85rem var(--mono);min-height:1.2em;margin-top:.5rem}
+  .save-state{font:.75rem var(--mono);color:var(--faded)}
+  .export{margin-top:.8rem;border:1px solid var(--rule);background:var(--wash);padding:.7rem}
+  .export textarea{width:100%;min-height:9rem;margin-top:.5rem;font:.78rem/1.4 var(--mono);resize:vertical}
 
   @media(max-width:760px){
     body{padding-top:1.5rem}.layout{grid-template-columns:1fr}.catalog{grid-template-columns:1fr auto}
@@ -127,11 +130,19 @@
     <div class="row">
       <button class="play" id="play" type="button">Play</button>
       <button id="render" type="button">Render draft</button>
+      <button id="resetDraft" type="button">Reset figure</button>
+      <button id="exportDrafts" type="button">Export changes</button>
       <label class="ov">♩=<input type="number" id="figureTempo" min="30" max="240" placeholder="—"></label>
       <label class="ov">oct<select id="figureOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
       <span class="note-now" id="noteNow"></span>
+      <span class="save-state" id="saveState"></span>
     </div>
     <div class="err" id="playerError"></div>
+    <div class="export" id="exportPanel" hidden>
+      <div id="exportSummary"></div>
+      <textarea id="exportText" readonly aria-label="Changed transcription JSON"></textarea>
+      <div class="row"><button id="copyExport" type="button">Copy JSON</button></div>
+    </div>
   </section>
 </main>
 
@@ -153,6 +164,8 @@ let figures = [];
 let filtered = [];
 let current = null;
 let stopCurrent = null;
+const DRAFT_KEY='woodnotes:transcription-drafts:v1';
+let drafts={};
 const $ = id => document.getElementById(id);
 const NOTE = {C:0,D:2,E:4,F:5,G:7,A:9,B:11};
 const FIFTHS={C:0,G:1,D:2,A:3,E:4,B:5,'F#':6,'C#':7,F:-1,Bb:-2,Eb:-3,Ab:-4,Db:-5,Gb:-6,Cb:-7,
@@ -166,6 +179,13 @@ let engravingToolkit=null;
 async function toolkit(){await vrvReady;if(!engravingToolkit)engravingToolkit=new verovio.toolkit();return engravingToolkit}
 
 function audio(){ if(!ctx) ctx = new (window.AudioContext||window.webkitAudioContext)(); return ctx; }
+function loadDrafts(){try{return JSON.parse(localStorage.getItem(DRAFT_KEY)||'{}')}catch{return {}}}
+function persistDrafts(){localStorage.setItem(DRAFT_KEY,JSON.stringify(drafts))}
+function currentEncoding(){return drafts[current.id]??current.enc??''}
+function updateSaveState(){
+  const count=Object.keys(drafts).length;
+  $('saveState').textContent=current&&Object.hasOwn(drafts,current.id)?`saved locally · ${count} changed`:(count?`${count} changed locally`:'canonical draft');
+}
 function freq(tok,octShift){
   const m=tok.match(/^([A-Ga-g])([#b]{0,2})(\d)$/); if(!m)return null;
   let semis=NOTE[m[1].toUpperCase()]; for(const a of m[2])semis+=a==='#'?1:-1;
@@ -203,7 +223,8 @@ function noteXML(raw){
   let pitch='<rest/>';
   if(!/^r$/i.test(ev.pitch)){
     const m=ev.pitch.match(/^([A-G])([#b]{0,2})(\d)$/),alter=[...m[2]].reduce((n,a)=>n+(a==='#'?1:-1),0);
-    pitch=`<pitch><step>${m[1]}</step>${alter?`<alter>${alter}</alter>`:''}<octave>${m[3]}</octave></pitch>`;
+    const accidental={'#':'sharp','##':'double-sharp','b':'flat','bb':'flat-flat'}[m[2]]||'';
+    pitch=`<pitch><step>${m[1]}</step>${alter?`<alter>${alter}</alter>`:''}<octave>${m[3]}</octave></pitch>${accidental?`<accidental>${accidental}</accidental>`:''}`;
   }
   return `<note>${pitch}<duration>${duration}</duration><voice>1</voice><type>${types[ev.base]}</type>`+
     `${ev.dotted?'<dot/>':''}${ev.triplet?'<time-modification><actual-notes>3</actual-notes><normal-notes>2</normal-notes></time-modification>':''}`+
@@ -217,7 +238,7 @@ function musicXML(encoding,key){
     const print=index?'<print new-system="yes"/>':'';
     return `<measure number="${index+1}" implicit="yes">${print}${attrs}${line.split(/\s+/).map(noteXML).join('')}<barline location="right"><bar-style>none</bar-style></barline></measure>`;
   }).join('');
-  return `<?xml version="1.0" encoding="UTF-8"?><score-partwise version="4.0"><work><work-title>${xmlText(current?.bird||'Draft')}</work-title></work><part-list><score-part id="P1"><part-name>Bird song</part-name></score-part></part-list><part id="P1">${measures}</part></score-partwise>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><score-partwise version="4.0"><part-list><score-part id="P1"><part-name print-object="no">Bird song</part-name></score-part></part-list><part id="P1">${measures}</part></score-partwise>`;
 }
 async function renderNotation(){
   const encoding=$('figureEncoding').value.trim();$('playerError').textContent='';
@@ -291,10 +312,11 @@ function selectFigure(id){
   $('figureId').textContent=f.id;$('figureBird').textContent=f.bird||'Unknown';
   $('figureMeta').textContent=`p. ${f.page??'?'}${f.key&&f.key!=='?'?` · ${f.key}`:''}`;
   $('figureLyric').textContent=f.lyric||'';$('figureLyric').hidden=!f.lyric;
-  $('figureEncoding').value=f.enc||'';
+  $('figureEncoding').value=currentEncoding();
   $('todoNote').hidden=!!f.enc;
   $('figureTempo').value=f.tempo||'';$('figureOct').value='';
   $('play').disabled=!f.enc;$('play').onclick=f.enc?playSeq:null;
+  updateSaveState();
   renderNotation();
   const crops=Array.isArray(f.crops)?f.crops:[];
   $('sourceCount').textContent=crops.length?`${crops.length} crop${crops.length===1?'':'s'}`:'';
@@ -315,7 +337,7 @@ function move(delta){
 async function init(){
   try{
     const response=await fetch('corpus.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);
-    const corpus=await response.json();figures=corpus.figures;
+    const corpus=await response.json();figures=corpus.figures;drafts=loadDrafts();
     const playable=figures.filter(f=>f.enc).length;
     $('credit').textContent=`Simeon Pease Cheney — ${playable} draft transcriptions awaiting hand correction`;
     applyFilter();
@@ -330,7 +352,26 @@ $('search').addEventListener('input',applyFilter);
 $('figureSelect').addEventListener('change',e=>selectFigure(e.target.value));
 $('render').addEventListener('click',renderNotation);
 let renderTimer=null;
-$('figureEncoding').addEventListener('input',()=>{clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250)});
+$('figureEncoding').addEventListener('input',()=>{
+  const value=$('figureEncoding').value;
+  if(value===(current.enc||''))delete drafts[current.id];else drafts[current.id]=value;
+  persistDrafts();updateSaveState();clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250);
+});
+$('resetDraft').addEventListener('click',()=>{
+  delete drafts[current.id];persistDrafts();$('figureEncoding').value=current.enc||'';updateSaveState();renderNotation();
+});
+$('exportDrafts').addEventListener('click',()=>{
+  const changes=Object.keys(drafts).sort().map(id=>({id,enc:drafts[id]}));
+  $('exportText').value=JSON.stringify({format:'woodnotes-transcription-changes',version:1,changes},null,2);
+  $('exportSummary').textContent=`${changes.length} changed figure${changes.length===1?'':'s'}; copy this JSON back for canonical application.`;
+  $('exportPanel').hidden=false;$('exportText').select();
+});
+$('copyExport').addEventListener('click',async()=>{
+  $('exportText').select();
+  try{await navigator.clipboard.writeText($('exportText').value);$('copyExport').textContent='Copied'}
+  catch{document.execCommand('copy');$('copyExport').textContent='Copied'}
+  setTimeout(()=>$('copyExport').textContent='Copy JSON',1200);
+});
 $('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));
 $('tempo').addEventListener('input',e=>$('tempoOut').textContent=e.target.value+' bpm');
 $('octave').addEventListener('input',e=>$('octOut').textContent=(e.target.value>=0?'+':'')+e.target.value);

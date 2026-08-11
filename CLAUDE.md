@@ -13,7 +13,7 @@ Work through `corpus.json`:
 ## Encoding format
 `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member; `^` fermata;
 `r:dur` rest. Do not add barline tokens. A literal newline starts a new staff system and must
-match a line break in the original engraving. Example: `D5:8 C#5:8 D5:4^ r:8 E5:8 D5:8 C#5:8`
+match a line break in the original engraving. Example: `D5:8 C#5:8 D5:4 r:8^ E5:8 D5:8 C#5:8`
 8va figures: write sounding pitch (already up an octave).
 
 ## Reading tips (see HANDOFF.md for full list)

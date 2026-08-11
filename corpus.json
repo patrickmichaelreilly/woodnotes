@@ -2866,61 +2866,73 @@
    "id": "app-gardiner-nightingale-1-2",
    "bird": "Nightingale",
    "page": 211,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 NIGHTINGALE. Nos. 1-2.",
+   "conf": "med",
+   "key": "D",
+   "note": "William Gardiner, The Music of Nature. Two numbered examples share the crop. No. 1 repeats a low D4 pickup into D5 three times; No. 2 repeats the rapid F#4-A4-D4 cell three times and closes on a sustained trilled D4.",
    "crops": [
     "figs_new/p233_s00.png"
-   ]
+   ],
+   "enc": "D4:8 D5:4 r:8 r:8 D4:8 D5:4 r:8 r:8 D4:8 D5:4 | F#4:16 A4:16 D4:16 F#4:16 A4:16 E4:16 F#4:16 A4:16 E4:16 D4:2"
   },
   {
    "id": "app-gardiner-nightingale-3",
    "bird": "Nightingale",
    "page": 211,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 NIGHTINGALE. No. 3.",
+   "conf": "med",
+   "key": "D",
+   "note": "William Gardiner, The Music of Nature. No. 3 begins with an alternating D4-E4 rattle, settles through tied D4s, then repeats three rising D4-F#4-A4 figures before its final D4.",
    "crops": [
     "figs_new/p233_s01.png"
-   ]
+   ],
+   "enc": "D4:16 E4:16 D4:16 E4:16 D4:16 E4:16 D4:16 D4:16 D4:16 D4:4 D4:4 | D4:16 F#4:16 A4:16 D4:16 F#4:16 A4:16 D4:16 F#4:16 A4:16 D4:4"
   },
   {
    "id": "app-gardiner-throstle",
    "bird": "Throstle",
    "page": 211,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 THROSTLE.",
+   "conf": "high",
+   "key": "C",
+   "note": "William Gardiner, The Music of Nature. Four short rising figures built from B4-C5-D5, with the second and third varied by their opening and closing notes.",
    "crops": [
     "figs_new/p233_s02.png"
-   ]
+   ],
+   "enc": "B4:8 C5:8 D5:8 | C5:8 B4:8 C5:8 D5:8 C5:8 | B4:8 C5:8 D5:8 C5:8 | B4:8 C5:8 D5:8 C5:8"
   },
   {
    "id": "app-gardiner-blackbird-1",
    "bird": "Blackbird",
    "page": 211,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 BLACKBIRD. No. 1.",
+   "conf": "high",
+   "key": "G",
+   "note": "William Gardiner, The Music of Nature. No. 1 is a clearly engraved chain of paired D5 and G5 eighths with staccato dots.",
    "crops": [
     "figs_new/p233_s03.png"
-   ]
+   ],
+   "enc": "D5:8 D5:8 G5:8 G5:8 D5:8 D5:8 G5:8 G5:8 D5:8 D5:8 G5:8 D5:8 D5:8 G5:8 G5:8"
   },
   {
    "id": "app-gardiner-blackbird-2",
    "bird": "Blackbird",
    "page": 211,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 BLACKBIRD. No. 2.",
+   "conf": "high",
+   "key": "C",
+   "note": "William Gardiner, The Music of Nature. No. 2 repeats four times the same dotted F5 followed by a slurred E5-C5 descent and a rest.",
    "crops": [
     "figs_new/p233_s04.png"
-   ]
+   ],
+   "enc": "F5:8. E5:16 C5:16 r:4 F5:8. E5:16 C5:16 r:4 F5:8. E5:16 C5:16 r:4 F5:8. E5:16 C5:16"
   },
   {
    "id": "app-gardiner-hen",
    "bird": "Hen",
    "page": 211,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 HEN.",
+   "conf": "med",
+   "key": "C",
+   "note": "William Gardiner, The Music of Nature. Two matching phrases: four even D5s, a dotted D5-short D5 pair, then F5-A5; the phrases are separated by the engraved rest.",
    "crops": [
     "figs_new/p233_s05.png"
-   ]
+   ],
+   "enc": "D5:8 D5:8 D5:8 D5:8 D5:8. D5:16 F5:8 A5:4 r:4 D5:8 D5:8 D5:8 D5:8 D5:8. D5:16 F5:8 A5:4"
   },
   {
    "id": "app-gardiner-dog",

@@ -3022,11 +3022,13 @@
    "id": "app-gardiner-cuckoo",
    "bird": "Cuckoo",
    "page": 213,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 CUCKOO.",
+   "conf": "high",
+   "key": "A",
+   "note": "William Gardiner, The Music of Nature. Two identical accented cuckoo calls in A: F#5 quarter to D5 half, each followed by a quarter rest.",
    "crops": [
     "figs_new/p235_s00.png"
-   ]
+   ],
+   "enc": "F#5:4 D5:2 r:4 F#5:4 D5:2 r:4"
   },
   {
    "id": "app-gardiner-lark-1",
@@ -3043,11 +3045,13 @@
    "id": "app-gardiner-ass",
    "bird": "Ass",
    "page": 213,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 ASS. 'Una Corde.'",
+   "conf": "low",
+   "key": "D",
+   "note": "William Gardiner, The Music of Nature. 'Una Corda' ass call: a trilled D5 opening leads into a wide descending broken-chord figure, ending on a sustained low B3 fermata. Slurs and exact short-note values in the dense middle remain provisional.",
    "crops": [
     "figs_new/p235_s03.png"
-   ]
+   ],
+   "enc": "D5:2 D5:8 G5:8 B4:8 D5:8 G4:8 B4:8 D4:8 G4:8 B3:8 D4:8 B3:2^"
   },
   {
    "id": "app-johnston-solitaire-1",

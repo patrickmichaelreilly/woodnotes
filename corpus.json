@@ -1,0 +1,1042 @@
+{
+ "meta": {
+  "source": "Cheney, Wood Notes Wild (1892), IA woodnoteswildnot00chen",
+  "enc_format": "pitch:dur tokens; dur 1/2/4/8/16, . dotted, 3 triplet, ^ fermata; r rest; | cosmetic"
+ },
+ "figures": [
+  {
+   "id": "blue-01",
+   "bird": "Bluebird",
+   "no": 1,
+   "page": 11,
+   "key": "Dm",
+   "enc": "E5:8 C#5:8 | D5:4^ r:8 A4:8 | E5:8 C#5:8",
+   "conf": "high",
+   "lyric": "Hear me, hear me."
+  },
+  {
+   "id": "blue-03",
+   "bird": "Bluebird",
+   "no": 3,
+   "page": 12,
+   "key": "Dm",
+   "enc": "C#5:8 D5:8 E5:8 C#5:8",
+   "conf": "high",
+   "lyric": "Che-way che-chute."
+  },
+  {
+   "id": "blue-02",
+   "bird": "Bluebird",
+   "no": 2,
+   "page": 11,
+   "key": "Dm",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-04",
+   "bird": "Bluebird",
+   "no": 4,
+   "page": 13,
+   "key": "Em",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-05",
+   "bird": "Bluebird",
+   "no": 5,
+   "page": 13,
+   "key": "Em",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-06",
+   "bird": "Bluebird",
+   "no": 6,
+   "page": 13,
+   "key": "Em",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-07",
+   "bird": "Bluebird",
+   "no": 7,
+   "page": 13,
+   "key": "Em",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-08",
+   "bird": "Bluebird",
+   "no": 8,
+   "page": 13,
+   "key": "Em",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-09",
+   "bird": "Bluebird",
+   "no": 9,
+   "page": 13,
+   "key": "F#m",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-10",
+   "bird": "Bluebird",
+   "no": 10,
+   "page": 13,
+   "key": "Cm",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "blue-11",
+   "bird": "Bluebird",
+   "no": 11,
+   "page": 13,
+   "key": "Dm",
+   "conf": "todo",
+   "note": "needs zoom pass"
+  },
+  {
+   "id": "rob-salute",
+   "bird": "Robin",
+   "no": 0,
+   "page": 14,
+   "key": "?",
+   "conf": "todo",
+   "note": "first salute, needs zoom"
+  },
+  {
+   "id": "rob-lit",
+   "bird": "Robin",
+   "no": 0,
+   "page": 14,
+   "key": "?",
+   "conf": "todo",
+   "note": "Lit lit lit lit lit; repeated-note call",
+   "lyric": "Lit, lit, lit, lit, lit."
+  },
+  {
+   "id": "rob-litleu",
+   "bird": "Robin",
+   "no": 0,
+   "page": 14,
+   "key": "?",
+   "conf": "todo",
+   "note": "Lit lit lit leu leu",
+   "lyric": "Lit, lit, lit, leu, leu."
+  },
+  {
+   "id": "nut-wait",
+   "bird": "White-bellied Nuthatch",
+   "no": 1,
+   "page": 15,
+   "key": "F",
+   "enc": "C5:8 C5:8 r:8 C5:8 C5:8 C5:8 r:8^ C5:8 C5:8 C5:8 C5:8 | C5:8 C5:8 C5:8 r:8^ C5:8 A4:8 C5:8 A4:8 C5:8 A4:8",
+   "conf": "med",
+   "note": "pitch center needs verify",
+   "lyric": "Wait wait wait... Ick-y ick-y ick-y."
+  },
+  {
+   "id": "rob-01",
+   "bird": "Robin",
+   "no": 1,
+   "page": 15,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-02",
+   "bird": "Robin",
+   "no": 2,
+   "page": 16,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-03",
+   "bird": "Robin",
+   "no": 3,
+   "page": 16,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-04",
+   "bird": "Robin",
+   "no": 4,
+   "page": 17,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-06",
+   "bird": "Robin",
+   "no": 6,
+   "page": 17,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-07",
+   "bird": "Robin",
+   "no": 7,
+   "page": 18,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-08",
+   "bird": "Robin",
+   "no": 8,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-09",
+   "bird": "Robin",
+   "no": 9,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-10",
+   "bird": "Robin",
+   "no": 10,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-11",
+   "bird": "Robin",
+   "no": 11,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-16",
+   "bird": "Robin",
+   "no": 16,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-17",
+   "bird": "Robin",
+   "no": 17,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-18",
+   "bird": "Robin",
+   "no": 18,
+   "page": 19,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-19",
+   "bird": "Robin",
+   "no": 19,
+   "page": 20,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-21",
+   "bird": "Robin",
+   "no": 21,
+   "page": 20,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-22",
+   "bird": "Robin",
+   "no": 22,
+   "page": 20,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-23",
+   "bird": "Robin",
+   "no": 23,
+   "page": 20,
+   "conf": "todo",
+   "note": "needs zoom"
+  },
+  {
+   "id": "rob-20",
+   "bird": "Robin",
+   "no": 20,
+   "page": 20,
+   "key": "F",
+   "enc": "C5:16 C5:16 C5:16 C5:16 A4:8 r:8 C5:16 C5:16 C5:16 C5:16 C#5:8",
+   "conf": "med",
+   "note": "Signal for flight; verify pitches",
+   "lyric": "Chick-y ick-y chick-y eu (x2)"
+  },
+  {
+   "id": "rob-24",
+   "bird": "Robin",
+   "no": 24,
+   "page": 20,
+   "key": "D",
+   "enc": "r:8 A4:8 r:8 A4:8 r:8 A4:8 F#5:8 F#5:8 F#5:8",
+   "conf": "low",
+   "note": "oe oe oe up up up; verify",
+   "lyric": "oe, oe, oe, up, up, up."
+  },
+  {
+   "id": "rob-spin",
+   "bird": "Robin",
+   "no": 0,
+   "page": 20,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "All along... link-tum loo spinning-song comparison, 2 staves",
+   "lyric": "All a-long ... link-tum loo."
+  },
+  {
+   "id": "rob-sept21",
+   "bird": "Robin",
+   "no": 0,
+   "page": 21,
+   "key": "D",
+   "conf": "todo",
+   "note": "Sept 21 exclaim"
+  },
+  {
+   "id": "rob-farewell",
+   "bird": "Robin",
+   "no": 0,
+   "page": 22,
+   "key": "D",
+   "conf": "todo",
+   "note": "main notes at pond, 2 staves"
+  },
+  {
+   "id": "ssp-01",
+   "bird": "Song-sparrow",
+   "no": 1,
+   "page": 24,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-02",
+   "bird": "Song-sparrow",
+   "no": 2,
+   "page": 24,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-03",
+   "bird": "Song-sparrow",
+   "no": 3,
+   "page": 24,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-04",
+   "bird": "Song-sparrow",
+   "no": 4,
+   "page": 24,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-05",
+   "bird": "Song-sparrow",
+   "no": 5,
+   "page": 25,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-06",
+   "bird": "Song-sparrow",
+   "no": 6,
+   "page": 25,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-07",
+   "bird": "Song-sparrow",
+   "no": 7,
+   "page": 25,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "ssp-08",
+   "bird": "Song-sparrow",
+   "no": 8,
+   "page": 25,
+   "conf": "todo",
+   "note": "opening + trill; needs zoom"
+  },
+  {
+   "id": "chick-01",
+   "bird": "Chickadee",
+   "no": 1,
+   "page": 27,
+   "key": "C",
+   "enc": "G5:2 E5:2",
+   "conf": "med",
+   "note": "descending pair",
+   "lyric": "Ear-ly."
+  },
+  {
+   "id": "chick-02",
+   "bird": "Chickadee",
+   "no": 2,
+   "page": 28,
+   "key": "C",
+   "enc": "G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2",
+   "conf": "low",
+   "note": "responsive form; needs zoom"
+  },
+  {
+   "id": "flick-wet",
+   "bird": "Flicker",
+   "no": 1,
+   "page": 30,
+   "key": "D",
+   "enc": "D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 ",
+   "conf": "high",
+   "note": "minor-2nd alternation, cresc-dim-cresc; text-confirmed",
+   "lyric": "Wet, wet, wet..."
+  },
+  {
+   "id": "flick-wake",
+   "bird": "Flicker",
+   "no": 2,
+   "page": 31,
+   "key": "F",
+   "enc": "C5:8 A4:8 C5:8 A4:8 C5:8 A4:8 C5:8 A4:8",
+   "conf": "med",
+   "note": "grace-accented pairs",
+   "lyric": "Wake up, wake up..."
+  },
+  {
+   "id": "fsp-01",
+   "bird": "Field Sparrow",
+   "no": 1,
+   "page": 36,
+   "key": "F",
+   "enc": "C5:4 C5:4 C5:8 C5:8 C5:8 C5:8 C5:16 C#5:16 D5:16 D#5:16 E5:16 E5:16 E5:16 E5:16",
+   "conf": "med",
+   "note": "accelerando+crescendo, chromatic rise; verify pitch center"
+  },
+  {
+   "id": "wts-01",
+   "bird": "White-throated Sparrow",
+   "no": 1,
+   "page": 42,
+   "key": "C",
+   "enc": "G5:2 C6:2 C6:2 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83",
+   "conf": "med",
+   "note": "8va applied; 1 low long + 2 accented longs + 3 slurred triplet clusters",
+   "lyric": "(Old Sam) Pea-body Pea-body Pea-body"
+  },
+  {
+   "id": "btg-01",
+   "bird": "Black-throated Green Warbler",
+   "no": 1,
+   "page": 48,
+   "key": "?",
+   "conf": "todo",
+   "note": "5 tones, needs zoom (p69/pdf70 audit)",
+   "lyric": "Larboard watch a-hoy analog"
+  },
+  {
+   "id": "oven-01",
+   "bird": "Oven-bird",
+   "no": 1,
+   "page": 63,
+   "key": "D",
+   "enc": "B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8",
+   "conf": "med",
+   "note": "8va cresc accented pairs; zeal",
+   "lyric": "tea-CHER analog"
+  },
+  {
+   "id": "pewee-01",
+   "bird": "Wood-Pewee",
+   "no": 1,
+   "page": 64,
+   "key": "Ab",
+   "enc": "C5:8. Eb5:16 C5:4^ r:8 C5:8. Ab4:16 Bb4:4^ r:8 C5:8. Eb5:16 C5:4^ C5:8 Bb4:8 Ab4:2^",
+   "conf": "low",
+   "note": "Slow, portamento; famous pee-a-wee; verify by ear",
+   "lyric": "Pe-wee peer..."
+  },
+  {
+   "id": "whip-01",
+   "bird": "Whippoorwill",
+   "no": 1,
+   "page": 68,
+   "key": "D",
+   "enc": "A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^",
+   "conf": "med",
+   "note": "8va, cresc et accel; favorite form",
+   "lyric": "Whip-poor-will x3"
+  },
+  {
+   "id": "whip-cluck",
+   "bird": "Whippoorwill",
+   "no": 2,
+   "page": 70,
+   "key": "Eb",
+   "enc": "Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 ",
+   "conf": "low",
+   "note": "cluck after each; several melodic variants p70; zoom"
+  },
+  {
+   "id": "bbc-01",
+   "bird": "Black-billed Cuckoo",
+   "no": 1,
+   "page": 87,
+   "key": "G",
+   "enc": "D5:8 B4:8 r:8 D5:8 B4:8 r:8 D5:8 B4:8 B4:8",
+   "conf": "med",
+   "note": "doleful; low pitch",
+   "lyric": "Cuck-oo, cuck-oo, cuck-oo, coo."
+  },
+  {
+   "id": "ybc-01",
+   "bird": "Yellow-billed Cuckoo",
+   "no": 1,
+   "page": 89,
+   "key": "F",
+   "enc": "C5:4^ C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:8 A4:8",
+   "conf": "low",
+   "note": "Wau-olp bubbling, rit&dim; guttural",
+   "lyric": "Wau-olp, olp, olp..."
+  },
+  {
+   "id": "quail-01",
+   "bird": "Quail (Bob White)",
+   "no": 1,
+   "page": 90,
+   "key": "A",
+   "enc": "B4:8 r:8 B4:8 r:8 B4:16 B4:16 F#5:8^ B4:16 B4:16 F#5:8^ B4:8 B4:16 B4:16 F#5:8^",
+   "conf": "med",
+   "note": "rising accent to tonic",
+   "lyric": "Bob, Bob white, Bob white..."
+  },
+  {
+   "id": "loon-5",
+   "bird": "Loon",
+   "no": 2,
+   "page": 97,
+   "key": "F#m",
+   "enc": "F#3:8 A3:8 C#4:8 A3:8 F#3:8 F#3:8 A3:8 C#4:8 A3:8 F#3:8 ",
+   "conf": "low",
+   "note": "bass clef, 5-tone flight shout; zoom",
+   "lyric": "oo,oo,oo,oo,oo"
+  },
+  {
+   "id": "loon-cry",
+   "bird": "Loon",
+   "no": 1,
+   "page": 96,
+   "key": "?",
+   "conf": "todo",
+   "note": "3-tone wild cry, 2nd long+loud; bass; zoom"
+  },
+  {
+   "id": "gho-01",
+   "bird": "Great Horned Owl",
+   "no": 1,
+   "page": 99,
+   "key": "Bb",
+   "enc": "Bb2:4 Ab2:4 r:4 Bb2:4 Ab2:4 Bb2:4 Ab2:8",
+   "conf": "low",
+   "note": "bass, slurred descending Hoo pairs; zoom",
+   "lyric": "Hoo, Hoo, Hoo."
+  },
+  {
+   "id": "screech-ahee",
+   "bird": "Screech-Owl",
+   "no": 1,
+   "page": 101,
+   "key": "F",
+   "enc": "F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F#5:16 G5:8^ G#5:1^ G#5:1^",
+   "conf": "low",
+   "note": "tremolo+upward slide; portamento essential; zoom",
+   "lyric": "Ah---ee, Ah-ee, Ah-ee."
+  },
+  {
+   "id": "screech-ahoo",
+   "bird": "Screech-Owl",
+   "no": 2,
+   "page": 101,
+   "key": "F",
+   "enc": "G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:8^ C5:1^",
+   "conf": "low",
+   "note": "descending chromatic slide + tremolo; zoom",
+   "lyric": "Ah---oo, Ah-oo..."
+  },
+  {
+   "id": "grouse-drum",
+   "bird": "Ruffed Grouse",
+   "no": 1,
+   "page": 94,
+   "key": "Bb",
+   "enc": "Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:16 Bb2:16 Bb2:16 Bb2:16 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 ",
+   "conf": "med",
+   "note": "drumming accel into whir then dim; single pitch B-flat",
+   "lyric": "Thump thump... Whir."
+  },
+  {
+   "id": "hen-wait",
+   "bird": "Hen Music",
+   "no": 1,
+   "page": 105,
+   "key": "C",
+   "enc": "C5:8. C5:16 C5:8 C5:8 r:8 C5:8 C5:8^ r:8 C5:8^ B4:8 C5:8 r:8 B4:8 B4:8 B4:8 C5:8",
+   "conf": "low",
+   "note": "Wait wait ok ik; zoom",
+   "lyric": "Wait, wait... ok, ik."
+  },
+  {
+   "id": "hen-wauk",
+   "bird": "Hen Music",
+   "no": 2,
+   "page": 106,
+   "key": "F",
+   "enc": "A4:4^ A4:4^ A4:4^ A4:4^ A4:4^ A4:4^",
+   "conf": "low",
+   "note": "Wauk deliberate; zoom",
+   "lyric": "Wauk, wauk, wauk..."
+  },
+  {
+   "id": "cat-01",
+   "bird": "Cat-bird",
+   "no": 0,
+   "page": 52,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "Lively; snatchy 2 staves"
+  },
+  {
+   "id": "cat-02",
+   "bird": "Cat-bird",
+   "no": 0,
+   "page": 53,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "continuation"
+  },
+  {
+   "id": "bth-01",
+   "bird": "Brown Thrush",
+   "no": 0,
+   "page": 54,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "Lively fragments, 6+ staves p54-55"
+  },
+  {
+   "id": "wth-01",
+   "bird": "Wood Thrush",
+   "no": 0,
+   "page": 56,
+   "key": "F",
+   "conf": "todo",
+   "note": "twilight song"
+  },
+  {
+   "id": "wth-02",
+   "bird": "Wood Thrush",
+   "no": 0,
+   "page": 56,
+   "key": "F",
+   "conf": "todo",
+   "note": "new key strain"
+  },
+  {
+   "id": "wth-03",
+   "bird": "Wood Thrush",
+   "no": 0,
+   "page": 57,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "10 AM song, 3 staves"
+  },
+  {
+   "id": "veery-01",
+   "bird": "Tawny Thrush (Veery)",
+   "no": 0,
+   "page": 58,
+   "key": "F",
+   "conf": "todo",
+   "note": "8 slurred tones, silver thread; portamento"
+  },
+  {
+   "id": "herm-01",
+   "bird": "Hermit Thrush",
+   "no": 0,
+   "page": 60,
+   "key": "F",
+   "conf": "todo",
+   "note": "moves off with"
+  },
+  {
+   "id": "herm-02",
+   "bird": "Hermit Thrush",
+   "no": 0,
+   "page": 60,
+   "key": "F",
+   "conf": "todo",
+   "note": "steps up a degree"
+  },
+  {
+   "id": "herm-more",
+   "bird": "Hermit Thrush",
+   "no": 0,
+   "page": 60,
+   "key": "F",
+   "conf": "todo",
+   "note": "4 further strains p60-61"
+  },
+  {
+   "id": "ssp-more",
+   "bird": "Song-sparrow",
+   "no": 0,
+   "page": 25,
+   "key": "var",
+   "conf": "todo",
+   "note": "songs 5-8 incl 8va forms"
+  },
+  {
+   "id": "warb-cs",
+   "bird": "Chestnut-sided Warbler",
+   "no": 0,
+   "page": 49,
+   "key": "Db",
+   "conf": "todo",
+   "note": "8va"
+  },
+  {
+   "id": "warb-my",
+   "bird": "Maryland Yellow-throat",
+   "no": 0,
+   "page": 49,
+   "key": "F",
+   "conf": "todo",
+   "note": "8va"
+  },
+  {
+   "id": "warb-oth",
+   "bird": "Other Warblers",
+   "no": 0,
+   "page": 49,
+   "key": "var",
+   "conf": "todo",
+   "note": "8 short 8va songs p49-50"
+  },
+  {
+   "id": "redst-01",
+   "bird": "Redstart",
+   "no": 0,
+   "page": 51,
+   "key": "F",
+   "conf": "todo",
+   "note": "brief monotone"
+  },
+  {
+   "id": "yw-01",
+   "bird": "Yellow Warbler",
+   "no": 0,
+   "page": 47,
+   "key": "A",
+   "conf": "todo",
+   "note": "brief rapid high"
+  },
+  {
+   "id": "tan-01",
+   "bird": "Scarlet Tanager",
+   "no": 0,
+   "page": 74,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "main song"
+  },
+  {
+   "id": "tan-var",
+   "bird": "Scarlet Tanager",
+   "no": 0,
+   "page": 75,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "variations x3"
+  },
+  {
+   "id": "ori-first",
+   "bird": "Baltimore Oriole",
+   "no": 0,
+   "page": 71,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "1884 arrival, 3 staves"
+  },
+  {
+   "id": "ori-elm",
+   "bird": "Baltimore Oriole",
+   "no": 0,
+   "page": 72,
+   "key": "?",
+   "conf": "todo",
+   "note": "minor-scale strain"
+  },
+  {
+   "id": "ori-curly",
+   "bird": "Baltimore Oriole",
+   "no": 0,
+   "page": 72,
+   "key": "?",
+   "conf": "todo",
+   "note": "Curly curly Hey! Chickerway - MISSING from crops, audit \u2014 RESOLVED (draft added)"
+  },
+  {
+   "id": "ori-fly",
+   "bird": "Baltimore Oriole",
+   "no": 0,
+   "page": 73,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "pre-flight monotones"
+  },
+  {
+   "id": "ori-dorset",
+   "bird": "Baltimore Oriole",
+   "no": 0,
+   "page": 73,
+   "key": "A",
+   "conf": "todo",
+   "note": "first Dorset notes"
+  },
+  {
+   "id": "ori-nh",
+   "bird": "Baltimore Oriole",
+   "no": 0,
+   "page": 73,
+   "key": "F",
+   "conf": "todo",
+   "note": "Allegro NH song"
+  },
+  {
+   "id": "vireo-01",
+   "bird": "Red-eyed Vireo",
+   "no": 0,
+   "page": 78,
+   "key": "F",
+   "conf": "todo",
+   "note": "triplets w/ fermatas, 2 staves"
+  },
+  {
+   "id": "chat-rit",
+   "bird": "Yellow-breasted Chat",
+   "no": 0,
+   "page": 80,
+   "key": "F",
+   "conf": "todo",
+   "note": "rit&dim monotone"
+  },
+  {
+   "id": "chat-notes",
+   "bird": "Yellow-breasted Chat",
+   "no": 0,
+   "page": 80,
+   "key": "F",
+   "conf": "todo",
+   "note": "Quirp/charr/whir series p80-81"
+  },
+  {
+   "id": "bob-pileu",
+   "bird": "Bobolink",
+   "no": 0,
+   "page": 82,
+   "key": "F",
+   "conf": "todo",
+   "note": "Pi-leu pi-le-ah gurgle - partial, audit"
+  },
+  {
+   "id": "bob-song",
+   "bird": "Bobolink",
+   "no": 0,
+   "page": 83,
+   "key": "F",
+   "conf": "todo",
+   "note": "song proper opening, 2 staves"
+  },
+  {
+   "id": "bbc-new",
+   "bird": "Black-billed Cuckoo",
+   "no": 0,
+   "page": 88,
+   "key": "F",
+   "conf": "todo",
+   "note": "1888 new song + resolution, 2 figs"
+  },
+  {
+   "id": "rgro-01",
+   "bird": "Rose-breasted Grosbeak",
+   "no": 0,
+   "page": 76,
+   "key": "Eb",
+   "conf": "todo",
+   "note": "Loud+rapid 2 staves - MISSING (pdf98-99), audit \u2014 RESOLVED (draft added)"
+  },
+  {
+   "id": "indigo-01",
+   "bird": "Indigo-bird",
+   "no": 0,
+   "page": 85,
+   "key": "F",
+   "conf": "todo",
+   "note": "8va main + tonic + full form - MISSING (pdf107-108), audit \u2014 RESOLVED (draft added)"
+  },
+  {
+   "id": "lark-01",
+   "bird": "Meadow Lark",
+   "no": 0,
+   "page": 33,
+   "key": "?",
+   "conf": "todo",
+   "note": "4-tone repeats + additions + full song - MISSING (pdf55-56), audit \u2014 RESOLVED (draft added)"
+  },
+  {
+   "id": "chip-01",
+   "bird": "Chipping Sparrow",
+   "no": 0,
+   "page": 40,
+   "key": "?",
+   "conf": "todo",
+   "note": "Chippy trill - MISSING (pdf62), audit \u2014 RESOLVED (draft added)"
+  },
+  {
+   "id": "rob-05",
+   "bird": "Robin",
+   "no": 0,
+   "page": 16,
+   "key": "?",
+   "conf": "todo",
+   "note": "pewee + rain defiance - MISSING (pdf39), audit"
+  },
+  {
+   "id": "wts-main",
+   "bird": "White-throated Sparrow",
+   "no": 0,
+   "page": 42,
+   "key": "D",
+   "conf": "todo",
+   "note": "RESOLVED into wts-01; second song p64 bottom still todo"
+  },
+  {
+   "id": "lark-4tone",
+   "bird": "Meadow Lark",
+   "no": 1,
+   "page": 33,
+   "key": "Ab",
+   "enc": "C5:8 Ab4:8 Bb4:8 C5:8",
+   "conf": "low",
+   "note": "4-tone favorite, repeated w/ rests; verify"
+  },
+  {
+   "id": "lark-add",
+   "bird": "Meadow Lark",
+   "no": 2,
+   "page": 34,
+   "key": "Ab",
+   "enc": "C5:8 Ab4:8 F4:8 Ab4:8 F4:4 Eb4:8 F4:8",
+   "conf": "low",
+   "note": "the added strain; verify"
+  },
+  {
+   "id": "lark-song",
+   "bird": "Meadow Lark",
+   "no": 3,
+   "page": 34,
+   "key": "Ab",
+   "enc": "C5:4 F5:8. Eb5:16 C5:8 r:8^ Ab4:8 Bb4:8 C5:8 r:8^ | C5:8 Eb5:8 C5:4 r:8^ C5:8 Ab4:8 Bb4:4 r:8^ | C5:8 B4:8 Bb4:8 A4:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 r:8^ | Ab4:8 C5:8 F5:8 Eb5:8 C5:8 r:8^ | Ab4:8 Bb4:8 C5:4 Ab4:8 F4:4^",
+   "conf": "low",
+   "note": "6-staff plaintive song, tremor staff included; DEDICATED PASS NEEDED"
+  },
+  {
+   "id": "chip-trill",
+   "bird": "Chipping Sparrow",
+   "no": 1,
+   "page": 40,
+   "key": "C",
+   "enc": "C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8",
+   "conf": "med",
+   "note": "monotone staccato serenade; pitch center approx",
+   "lyric": "Chip-chip-chip..."
+  },
+  {
+   "id": "ori-curly",
+   "bird": "Baltimore Oriole",
+   "no": 3,
+   "page": 72,
+   "key": "Eb",
+   "enc": "Bb4:8 G4:8 Bb4:8 G4:8 r:8 Eb5:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8",
+   "conf": "low",
+   "note": "Curly curly Hey! Chickerway; verify",
+   "lyric": "Cur-ly, cur-ly, Hey! Chick-er-way..."
+  },
+  {
+   "id": "ori-curly2",
+   "bird": "Baltimore Oriole",
+   "no": 4,
+   "page": 72,
+   "key": "Eb",
+   "enc": "G4:16 Ab4:16 Bb4:8 r:8 Bb4:8 G4:8 Bb4:8 G4:8 Eb5:8. r:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8 G4:8",
+   "conf": "low",
+   "note": "kah-kue closing form; verify",
+   "lyric": "chew, cur-ly... kah, kue. Hey!"
+  },
+  {
+   "id": "rgro-draft",
+   "bird": "Rose-breasted Grosbeak",
+   "no": 1,
+   "page": 76,
+   "key": "Eb",
+   "enc": "G5:16 F5:16 Eb5:8 F5:8 G5:8 r:8 Bb5:8 G5:8 F5:8 Eb5:8 F5:16 G5:16 F5:8 Eb5:8 | Eb5:16 F5:16 G5:8 F5:8 Eb5:8 r:8 G5:8 Bb5:8 G5:8 F5:8 Eb5:4",
+   "conf": "low",
+   "note": "Loud and rapid; rolling warble draft; verify"
+  },
+  {
+   "id": "indigo-main",
+   "bird": "Indigo-bird",
+   "no": 1,
+   "page": 85,
+   "key": "C",
+   "enc": "E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8",
+   "conf": "low",
+   "note": "8va applied; descending triplet clusters; verify"
+  }
+ ]
+}

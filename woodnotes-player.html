@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wood Notes Wild — Notation Player</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fdfcf8; --ink:#1b1a17; --rule:#b9b2a4;
+    --blue:#3e5f7a; --blue-deep:#2b4458; --faded:#6d675c;
+    --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--paper);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif;
+       max-width:680px;margin:0 auto;padding:2.5rem 1.25rem 7.5rem}
+  header{text-align:center;border-bottom:3px double var(--ink);padding-bottom:1.4rem;margin-bottom:2rem}
+  h1{font-family:'IM Fell English',serif;font-weight:400;font-size:2.4rem;letter-spacing:.02em}
+  .sub{font-family:'IM Fell English SC',serif;font-size:.95rem;letter-spacing:.28em;color:var(--faded);margin-top:.35rem}
+  .credit{font-style:italic;color:var(--faded);font-size:.85rem;margin-top:.6rem}
+
+  /* global controls */
+  .controls{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;flex-wrap:wrap;
+            gap:.6rem 1.4rem;align-items:center;justify-content:center;
+            border-top:2px solid var(--ink);padding:.55rem 1rem;background:#f7f5eeF2;
+            backdrop-filter:blur(3px);box-shadow:0 -3px 12px rgba(27,26,23,.08)}
+  .ctl{flex-direction:row!important;align-items:center;gap:.45rem!important}
+  .ov{font-size:.72rem;color:var(--faded);display:inline-flex;align-items:center;gap:.2rem}
+  .ov input{width:3.6rem;font:.8rem var(--mono);border:1px solid var(--rule);background:var(--paper);padding:.12rem .25rem}
+  .ov select{font-size:.8rem;padding:.1rem}
+  .fig-note{font-size:.78rem;font-style:italic;color:var(--faded);margin-top:.3rem}
+  .ctl{display:flex;flex-direction:column;gap:.25rem;font-size:.75rem;letter-spacing:.12em;
+       text-transform:uppercase;color:var(--faded)}
+  .ctl output{font-family:var(--mono);color:var(--ink);font-size:.85rem;letter-spacing:0;text-transform:none}
+  input[type=range]{accent-color:var(--blue);width:130px}
+  select{font:inherit;font-size:.9rem;padding:.15rem .3rem;border:1px solid var(--rule);background:var(--paper)}
+
+  /* figure cards — Cheney caption signature */
+  .fig{margin-bottom:2.4rem}
+  .fig-head{display:flex;align-items:baseline;gap:.7rem;margin-bottom:.15rem}
+  .fig-no{font-family:'IM Fell English',serif;font-size:1.3rem}
+  .fig-bird{font-family:'IM Fell English SC',serif;letter-spacing:.2em;font-size:1.05rem}
+  .fig-latin{font-style:italic;color:var(--faded);font-size:.85rem}
+  .staffline{border-top:1px solid var(--rule);margin:.4rem 0 .55rem}
+  .lyric{text-align:center;font-family:'IM Fell English SC',serif;letter-spacing:.22em;
+         font-size:.9rem;color:var(--blue-deep);margin:.3rem 0 .6rem}
+  .enc{font-family:var(--mono);font-size:.82rem;background:#f2efe7;border:1px solid var(--rule);
+       padding:.55rem .7rem;white-space:pre-wrap;word-break:break-word}
+  .row{display:flex;gap:.7rem;align-items:center;margin-top:.6rem}
+  button{font-family:'IM Fell English SC',serif;letter-spacing:.15em;font-size:.95rem;
+         padding:.4rem 1.3rem;background:var(--blue);color:var(--paper);border:none;cursor:pointer}
+  button:hover{background:var(--blue-deep)}
+  button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+  button.playing{background:var(--ink)}
+  .note-now{font-family:var(--mono);font-size:.85rem;color:var(--blue-deep);min-width:4ch}
+
+  /* annotation workbench */
+  .bench{border:1px solid var(--ink);padding:1.2rem;margin-top:3rem}
+  .bench h2{font-family:'IM Fell English',serif;font-weight:400;font-size:1.5rem;margin-bottom:.3rem}
+  .bench p{font-size:.9rem;color:var(--faded);margin-bottom:.8rem}
+  textarea{width:100%;min-height:4.2rem;font:0.85rem/1.5 var(--mono);border:1px solid var(--rule);
+           padding:.6rem;background:var(--paper);resize:vertical}
+  #imgSlot{margin-top:.8rem}
+  #imgSlot img{max-width:100%;border:1px solid var(--rule)}
+  input[type=file]{font-size:.85rem}
+  .err{color:#8a2f1e;font-size:.85rem;font-family:var(--mono);margin-top:.4rem;min-height:1.2em}
+  .fmt{font-size:.8rem;color:var(--faded);margin-top:.6rem}
+  .fmt code{font-family:var(--mono);background:#f2efe7;padding:0 .25em}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Wood Notes Wild</h1>
+  <div class="sub">Notations of Bird Music · 1892</div>
+  <div class="credit">Simeon Pease Cheney — corpus v0 · 33 playable / 111 catalogued · ~ = verify by ear, ?? = low confidence</div>
+</header>
+
+<div class="controls">
+  <div class="ctl">Tempo
+    <input type="range" id="tempo" min="40" max="200" value="96">
+    <output id="tempoOut">96 bpm</output>
+  </div>
+  <div class="ctl">Octave
+    <input type="range" id="octave" min="-2" max="2" value="0" step="1">
+    <output id="octOut">+0</output>
+  </div>
+  <div class="ctl">Timbre
+    <select id="timbre">
+      <option value="whistle">Whistle</option>
+      <option value="pure">Pure tone</option>
+      <option value="reed">Reed</option>
+    </select>
+  </div>
+  <div class="ctl">Slide
+    <select id="slide">
+      <option value="0">Off</option>
+      <option value="1">Bird glide</option>
+    </select>
+  </div>
+</div>
+
+<section class="fig" data-enc="E5:8 C#5:8 | D5:4^ r:8 A4:8 | E5:8 C#5:8">
+  <div class="fig-head"><span class="fig-no">blue-01</span>
+    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 11 · Dm</span></div>
+  <div class="staffline"></div>
+  <div class="enc">E5:8 C#5:8 | D5:4^ r:8 A4:8 | E5:8 C#5:8</div><div class="lyric">Hear me, hear me.</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C#5:8 D5:8 E5:8 C#5:8">
+  <div class="fig-head"><span class="fig-no">blue-03</span>
+    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 12 · Dm</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C#5:8 D5:8 E5:8 C#5:8</div><div class="lyric">Che-way che-chute.</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:8 C5:8 r:8 C5:8 C5:8 C5:8 r:8^ C5:8 C5:8 C5:8 C5:8 | C5:8 C5:8 C5:8 r:8^ C5:8 A4:8 C5:8 A4:8 C5:8 A4:8">
+  <div class="fig-head"><span class="fig-no">nut-wait ~</span>
+    <span class="fig-bird">White-bellied Nuthatch</span><span class="fig-latin">p. 15 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:8 C5:8 r:8 C5:8 C5:8 C5:8 r:8^ C5:8 C5:8 C5:8 C5:8 | C5:8 C5:8 C5:8 r:8^ C5:8 A4:8 C5:8 A4:8 C5:8 A4:8</div><div class="lyric">Wait wait wait... Ick-y ick-y ick-y.</div><div class="fig-note">pitch center needs verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:16 C5:16 C5:16 C5:16 A4:8 r:8 C5:16 C5:16 C5:16 C5:16 C#5:8">
+  <div class="fig-head"><span class="fig-no">rob-20 ~</span>
+    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:16 C5:16 C5:16 C5:16 A4:8 r:8 C5:16 C5:16 C5:16 C5:16 C#5:8</div><div class="lyric">Chick-y ick-y chick-y eu (x2)</div><div class="fig-note">Signal for flight; verify pitches</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="r:8 A4:8 r:8 A4:8 r:8 A4:8 F#5:8 F#5:8 F#5:8">
+  <div class="fig-head"><span class="fig-no">rob-24 ??</span>
+    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · D</span></div>
+  <div class="staffline"></div>
+  <div class="enc">r:8 A4:8 r:8 A4:8 r:8 A4:8 F#5:8 F#5:8 F#5:8</div><div class="lyric">oe, oe, oe, up, up, up.</div><div class="fig-note">oe oe oe up up up; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="G5:2 E5:2">
+  <div class="fig-head"><span class="fig-no">chick-01 ~</span>
+    <span class="fig-bird">Chickadee</span><span class="fig-latin">p. 27 · C</span></div>
+  <div class="staffline"></div>
+  <div class="enc">G5:2 E5:2</div><div class="lyric">Ear-ly.</div><div class="fig-note">descending pair</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2">
+  <div class="fig-head"><span class="fig-no">chick-02 ??</span>
+    <span class="fig-bird">Chickadee</span><span class="fig-latin">p. 28 · C</span></div>
+  <div class="staffline"></div>
+  <div class="enc">G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2</div><div class="fig-note">responsive form; needs zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8">
+  <div class="fig-head"><span class="fig-no">flick-wet</span>
+    <span class="fig-bird">Flicker</span><span class="fig-latin">p. 30 · D</span></div>
+  <div class="staffline"></div>
+  <div class="enc">D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8</div><div class="lyric">Wet, wet, wet...</div><div class="fig-note">minor-2nd alternation, cresc-dim-cresc; text-confirmed</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:8 A4:8 C5:8 A4:8 C5:8 A4:8 C5:8 A4:8">
+  <div class="fig-head"><span class="fig-no">flick-wake ~</span>
+    <span class="fig-bird">Flicker</span><span class="fig-latin">p. 31 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:8 A4:8 C5:8 A4:8 C5:8 A4:8 C5:8 A4:8</div><div class="lyric">Wake up, wake up...</div><div class="fig-note">grace-accented pairs</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:4 C5:4 C5:8 C5:8 C5:8 C5:8 C5:16 C#5:16 D5:16 D#5:16 E5:16 E5:16 E5:16 E5:16">
+  <div class="fig-head"><span class="fig-no">fsp-01 ~</span>
+    <span class="fig-bird">Field Sparrow</span><span class="fig-latin">p. 36 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:4 C5:4 C5:8 C5:8 C5:8 C5:8 C5:16 C#5:16 D5:16 D#5:16 E5:16 E5:16 E5:16 E5:16</div><div class="fig-note">accelerando+crescendo, chromatic rise; verify pitch center</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="100"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="G5:2 C6:2 C6:2 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83">
+  <div class="fig-head"><span class="fig-no">wts-01 ~</span>
+    <span class="fig-bird">White-throated Sparrow</span><span class="fig-latin">p. 42 · C</span></div>
+  <div class="staffline"></div>
+  <div class="enc">G5:2 C6:2 C6:2 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83</div><div class="lyric">(Old Sam) Pea-body Pea-body Pea-body</div><div class="fig-note">8va applied; 1 low long + 2 accented longs + 3 slurred triplet clusters</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8">
+  <div class="fig-head"><span class="fig-no">oven-01 ~</span>
+    <span class="fig-bird">Oven-bird</span><span class="fig-latin">p. 63 · D</span></div>
+  <div class="staffline"></div>
+  <div class="enc">B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8 B5:16 E6:8</div><div class="lyric">tea-CHER analog</div><div class="fig-note">8va cresc accented pairs; zeal</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:8. Eb5:16 C5:4^ r:8 C5:8. Ab4:16 Bb4:4^ r:8 C5:8. Eb5:16 C5:4^ C5:8 Bb4:8 Ab4:2^">
+  <div class="fig-head"><span class="fig-no">pewee-01 ??</span>
+    <span class="fig-bird">Wood-Pewee</span><span class="fig-latin">p. 64 · Ab</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:8. Eb5:16 C5:4^ r:8 C5:8. Ab4:16 Bb4:4^ r:8 C5:8. Eb5:16 C5:4^ C5:8 Bb4:8 Ab4:2^</div><div class="lyric">Pe-wee peer...</div><div class="fig-note">Slow, portamento; famous pee-a-wee; verify by ear</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="56"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^">
+  <div class="fig-head"><span class="fig-no">whip-01 ~</span>
+    <span class="fig-bird">Whippoorwill</span><span class="fig-latin">p. 68 · D</span></div>
+  <div class="staffline"></div>
+  <div class="enc">A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^ A4:16 A4:16 D5:8 F#5:8^</div><div class="lyric">Whip-poor-will x3</div><div class="fig-note">8va, cresc et accel; favorite form</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="100"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16">
+  <div class="fig-head"><span class="fig-no">whip-cluck ??</span>
+    <span class="fig-bird">Whippoorwill</span><span class="fig-latin">p. 70 · Eb</span></div>
+  <div class="staffline"></div>
+  <div class="enc">Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16</div><div class="fig-note">cluck after each; several melodic variants p70; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="D5:8 B4:8 r:8 D5:8 B4:8 r:8 D5:8 B4:8 B4:8">
+  <div class="fig-head"><span class="fig-no">bbc-01 ~</span>
+    <span class="fig-bird">Black-billed Cuckoo</span><span class="fig-latin">p. 87 · G</span></div>
+  <div class="staffline"></div>
+  <div class="enc">D5:8 B4:8 r:8 D5:8 B4:8 r:8 D5:8 B4:8 B4:8</div><div class="lyric">Cuck-oo, cuck-oo, cuck-oo, coo.</div><div class="fig-note">doleful; low pitch</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:4^ C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:8 A4:8">
+  <div class="fig-head"><span class="fig-no">ybc-01 ??</span>
+    <span class="fig-bird">Yellow-billed Cuckoo</span><span class="fig-latin">p. 89 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:4^ C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:8 A4:8</div><div class="lyric">Wau-olp, olp, olp...</div><div class="fig-note">Wau-olp bubbling, rit&amp;dim; guttural</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="B4:8 r:8 B4:8 r:8 B4:16 B4:16 F#5:8^ B4:16 B4:16 F#5:8^ B4:8 B4:16 B4:16 F#5:8^">
+  <div class="fig-head"><span class="fig-no">quail-01 ~</span>
+    <span class="fig-bird">Quail (Bob White)</span><span class="fig-latin">p. 90 · A</span></div>
+  <div class="staffline"></div>
+  <div class="enc">B4:8 r:8 B4:8 r:8 B4:16 B4:16 F#5:8^ B4:16 B4:16 F#5:8^ B4:8 B4:16 B4:16 F#5:8^</div><div class="lyric">Bob, Bob white, Bob white...</div><div class="fig-note">rising accent to tonic</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="F#3:8 A3:8 C#4:8 A3:8 F#3:8 F#3:8 A3:8 C#4:8 A3:8 F#3:8">
+  <div class="fig-head"><span class="fig-no">loon-5 ??</span>
+    <span class="fig-bird">Loon</span><span class="fig-latin">p. 97 · F#m</span></div>
+  <div class="staffline"></div>
+  <div class="enc">F#3:8 A3:8 C#4:8 A3:8 F#3:8 F#3:8 A3:8 C#4:8 A3:8 F#3:8</div><div class="lyric">oo,oo,oo,oo,oo</div><div class="fig-note">bass clef, 5-tone flight shout; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="Bb2:4 Ab2:4 r:4 Bb2:4 Ab2:4 Bb2:4 Ab2:8">
+  <div class="fig-head"><span class="fig-no">gho-01 ??</span>
+    <span class="fig-bird">Great Horned Owl</span><span class="fig-latin">p. 99 · Bb</span></div>
+  <div class="staffline"></div>
+  <div class="enc">Bb2:4 Ab2:4 r:4 Bb2:4 Ab2:4 Bb2:4 Ab2:8</div><div class="lyric">Hoo, Hoo, Hoo.</div><div class="fig-note">bass, slurred descending Hoo pairs; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F#5:16 G5:8^ G#5:1^ G#5:1^">
+  <div class="fig-head"><span class="fig-no">screech-ahee ??</span>
+    <span class="fig-bird">Screech-Owl</span><span class="fig-latin">p. 101 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F#5:16 G5:8^ G#5:1^ G#5:1^</div><div class="lyric">Ah---ee, Ah-ee, Ah-ee.</div><div class="fig-note">tremolo+upward slide; portamento essential; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:8^ C5:1^">
+  <div class="fig-head"><span class="fig-no">screech-ahoo ??</span>
+    <span class="fig-bird">Screech-Owl</span><span class="fig-latin">p. 101 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:8^ C5:1^</div><div class="lyric">Ah---oo, Ah-oo...</div><div class="fig-note">descending chromatic slide + tremolo; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:16 Bb2:16 Bb2:16 Bb2:16 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32">
+  <div class="fig-head"><span class="fig-no">grouse-drum ~</span>
+    <span class="fig-bird">Ruffed Grouse</span><span class="fig-latin">p. 94 · Bb</span></div>
+  <div class="staffline"></div>
+  <div class="enc">Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:16 Bb2:16 Bb2:16 Bb2:16 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32</div><div class="lyric">Thump thump... Whir.</div><div class="fig-note">drumming accel into whir then dim; single pitch B-flat</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="100"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:8. C5:16 C5:8 C5:8 r:8 C5:8 C5:8^ r:8 C5:8^ B4:8 C5:8 r:8 B4:8 B4:8 B4:8 C5:8">
+  <div class="fig-head"><span class="fig-no">hen-wait ??</span>
+    <span class="fig-bird">Hen Music</span><span class="fig-latin">p. 105 · C</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:8. C5:16 C5:8 C5:8 r:8 C5:8 C5:8^ r:8 C5:8^ B4:8 C5:8 r:8 B4:8 B4:8 B4:8 C5:8</div><div class="lyric">Wait, wait... ok, ik.</div><div class="fig-note">Wait wait ok ik; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="A4:4^ A4:4^ A4:4^ A4:4^ A4:4^ A4:4^">
+  <div class="fig-head"><span class="fig-no">hen-wauk ??</span>
+    <span class="fig-bird">Hen Music</span><span class="fig-latin">p. 106 · F</span></div>
+  <div class="staffline"></div>
+  <div class="enc">A4:4^ A4:4^ A4:4^ A4:4^ A4:4^ A4:4^</div><div class="lyric">Wauk, wauk, wauk...</div><div class="fig-note">Wauk deliberate; zoom</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="60"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:8 Ab4:8 Bb4:8 C5:8">
+  <div class="fig-head"><span class="fig-no">lark-4tone ??</span>
+    <span class="fig-bird">Meadow Lark</span><span class="fig-latin">p. 33 · Ab</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:8 Ab4:8 Bb4:8 C5:8</div><div class="fig-note">4-tone favorite, repeated w/ rests; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:8 Ab4:8 F4:8 Ab4:8 F4:4 Eb4:8 F4:8">
+  <div class="fig-head"><span class="fig-no">lark-add ??</span>
+    <span class="fig-bird">Meadow Lark</span><span class="fig-latin">p. 34 · Ab</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:8 Ab4:8 F4:8 Ab4:8 F4:4 Eb4:8 F4:8</div><div class="fig-note">the added strain; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:4 F5:8. Eb5:16 C5:8 r:8^ Ab4:8 Bb4:8 C5:8 r:8^ | C5:8 Eb5:8 C5:4 r:8^ C5:8 Ab4:8 Bb4:4 r:8^ | C5:8 B4:8 Bb4:8 A4:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 r:8^ | Ab4:8 C5:8 F5:8 Eb5:8 C5:8 r:8^ | Ab4:8 Bb4:8 C5:4 Ab4:8 F4:4^">
+  <div class="fig-head"><span class="fig-no">lark-song ??</span>
+    <span class="fig-bird">Meadow Lark</span><span class="fig-latin">p. 34 · Ab</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:4 F5:8. Eb5:16 C5:8 r:8^ Ab4:8 Bb4:8 C5:8 r:8^ | C5:8 Eb5:8 C5:4 r:8^ C5:8 Ab4:8 Bb4:4 r:8^ | C5:8 B4:8 Bb4:8 A4:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 r:8^ | Ab4:8 C5:8 F5:8 Eb5:8 C5:8 r:8^ | Ab4:8 Bb4:8 C5:4 Ab4:8 F4:4^</div><div class="fig-note">6-staff plaintive song, tremor staff included; DEDICATED PASS NEEDED</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8">
+  <div class="fig-head"><span class="fig-no">chip-trill ~</span>
+    <span class="fig-bird">Chipping Sparrow</span><span class="fig-latin">p. 40 · C</span></div>
+  <div class="staffline"></div>
+  <div class="enc">C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8</div><div class="lyric">Chip-chip-chip...</div><div class="fig-note">monotone staccato serenade; pitch center approx</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="140"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="Bb4:8 G4:8 Bb4:8 G4:8 r:8 Eb5:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8">
+  <div class="fig-head"><span class="fig-no">ori-curly ??</span>
+    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 72 · Eb</span></div>
+  <div class="staffline"></div>
+  <div class="enc">Bb4:8 G4:8 Bb4:8 G4:8 r:8 Eb5:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8</div><div class="lyric">Cur-ly, cur-ly, Hey! Chick-er-way...</div><div class="fig-note">Curly curly Hey! Chickerway; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="G4:16 Ab4:16 Bb4:8 r:8 Bb4:8 G4:8 Bb4:8 G4:8 Eb5:8. r:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8 G4:8">
+  <div class="fig-head"><span class="fig-no">ori-curly2 ??</span>
+    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 72 · Eb</span></div>
+  <div class="staffline"></div>
+  <div class="enc">G4:16 Ab4:16 Bb4:8 r:8 Bb4:8 G4:8 Bb4:8 G4:8 Eb5:8. r:8 Eb5:16 D5:16 C5:8 Eb5:16 D5:16 C5:8 G4:8</div><div class="lyric">chew, cur-ly... kah, kue. Hey!</div><div class="fig-note">kah-kue closing form; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="G5:16 F5:16 Eb5:8 F5:8 G5:8 r:8 Bb5:8 G5:8 F5:8 Eb5:8 F5:16 G5:16 F5:8 Eb5:8 | Eb5:16 F5:16 G5:8 F5:8 Eb5:8 r:8 G5:8 Bb5:8 G5:8 F5:8 Eb5:4">
+  <div class="fig-head"><span class="fig-no">rgro-draft ??</span>
+    <span class="fig-bird">Rose-breasted Grosbeak</span><span class="fig-latin">p. 76 · Eb</span></div>
+  <div class="staffline"></div>
+  <div class="enc">G5:16 F5:16 Eb5:8 F5:8 G5:8 r:8 Bb5:8 G5:8 F5:8 Eb5:8 F5:16 G5:16 F5:8 Eb5:8 | Eb5:16 F5:16 G5:8 F5:8 Eb5:8 r:8 G5:8 Bb5:8 G5:8 F5:8 Eb5:4</div><div class="fig-note">Loud and rapid; rolling warble draft; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="152"></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+<section class="fig" data-enc="E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8">
+  <div class="fig-head"><span class="fig-no">indigo-main ??</span>
+    <span class="fig-bird">Indigo-bird</span><span class="fig-latin">p. 85 · C</span></div>
+  <div class="staffline"></div>
+  <div class="enc">E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8</div><div class="fig-note">8va applied; descending triplet clusters; verify</div>
+  <div class="row"><button class="play">Play</button>
+    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
+    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+    <span class="note-now"></span></div>
+</section>
+
+<div class="bench">
+  <h2>Annotation workbench</h2>
+  <p>Load a cropped figure image, transcribe it in the box, and audition the result.</p>
+  <input type="file" id="imgFile" accept="image/*">
+  <div id="imgSlot"></div>
+  <textarea id="benchEnc" spellcheck="false">A4:8 D5:8 F5:8 D5:8 | A4:4</textarea>
+  <div class="row"><button id="benchPlay">Play</button><span class="note-now" id="benchNow"></span></div>
+  <div class="err" id="benchErr"></div>
+  <div class="fmt">Format: <code>pitch:duration</code> tokens, space-separated. Durations
+    <code>1 2 4 8 16</code> (add <code>.</code> for dotted, <code>3</code> suffix for triplet
+    member, <code>^</code> for fermata ≈1.7×). <code>r:8</code> = rest. Bars <code>|</code> are
+    ignored by the parser — keep them for readability.</div>
+</div>
+
+<script>
+let ctx = null;
+function audio(){ if(!ctx) ctx = new (window.AudioContext||window.webkitAudioContext)(); return ctx; }
+
+const NOTE = {C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+function freq(tok, octShift){
+  const m = tok.match(/^([A-Ga-g])([#b]{0,2})(\d)$/);
+  if(!m) return null;
+  let semis = NOTE[m[1].toUpperCase()];
+  for(const a of m[2]) semis += (a === '#' ? 1 : -1);
+  const midi = (parseInt(m[3]) + 1 + octShift) * 12 + semis;
+  return 440 * Math.pow(2, (midi - 69) / 12);
+}
+
+function parse(enc){
+  const events = [];
+  for(const raw of enc.trim().split(/\s+/)){
+    if(raw === '|' || raw === '') continue;
+    const parts = raw.split(':');
+    if(parts.length !== 2) throw `bad token "${raw}"`;
+    const [p, dRaw] = parts;
+    let d = dRaw, mult = 1;
+    if(d.endsWith('^')){ mult *= 1.7; d = d.slice(0,-1); }
+    if(d.endsWith('.')){ mult *= 1.5; d = d.slice(0,-1); }
+    let trip = false;
+    if(d.endsWith('3') && d.length > 1){ trip = true; d = d.slice(0,-1); }
+    const base = parseInt(d);
+    if(![1,2,4,8,16,32].includes(base)) throw `bad duration in "${raw}"`;
+    let beats = 4 / base * mult;
+    if(trip) beats *= 2/3;
+    if(p === 'r' || p === 'R'){ events.push({rest:true, beats, label:raw}); }
+    else{
+      if(!/^[A-Ga-g][#b]{0,2}\d$/.test(p)) throw `bad pitch in "${raw}"`;
+      events.push({pitch:p, beats, label:p});
+    }
+  }
+  if(!events.length) throw 'no notes';
+  return events;
+}
+
+let stopFlag = {};
+async function playSeq(enc, btn, nowEl, errEl, opts){
+  if(errEl) errEl.textContent = '';
+  let events;
+  try{ events = parse(enc); }
+  catch(e){ if(errEl) errEl.textContent = String(e); return; }
+
+  // stop others
+  Object.values(stopFlag).forEach(f => f.stop = true);
+  const flag = {stop:false}; stopFlag[Math.random()] = flag;
+
+  const ac = audio();
+  if(ac.state === 'suspended') await ac.resume();
+  let bpm = +document.getElementById('tempo').value;
+  let octShift = +document.getElementById('octave').value;
+  if(opts && opts.bpm) bpm = opts.bpm;
+  if(opts && opts.oct !== null && opts.oct !== undefined && opts.oct !== '') octShift = +opts.oct;
+  const timbre = document.getElementById('timbre').value;
+  const glide = document.getElementById('slide').value === '1';
+  const spb = 60 / bpm;
+
+  btn.classList.add('playing'); btn.textContent = 'Stop';
+  const cancel = () => { flag.stop = true; };
+  btn.onclick = cancel;
+
+  const master = ac.createGain(); master.gain.value = 0.25; master.connect(ac.destination);
+
+  let t = ac.currentTime + 0.06;
+  let prevFreq = null;
+  for(const ev of events){
+    const dur = ev.beats * spb;
+    if(!ev.rest){
+      const f = freq(ev.pitch, octShift);
+      const o = ac.createOscillator();
+      o.type = timbre === 'reed' ? 'sawtooth' : timbre === 'pure' ? 'sine' : 'triangle';
+      const g = ac.createGain();
+      const filt = ac.createBiquadFilter();
+      filt.type = 'lowpass';
+      filt.frequency.value = timbre === 'whistle' ? f*3 : timbre === 'reed' ? f*4 : 12000;
+      o.connect(filt); filt.connect(g); g.connect(master);
+      if(glide && prevFreq){
+        o.frequency.setValueAtTime(prevFreq, t);
+        o.frequency.exponentialRampToValueAtTime(f, t + Math.min(0.06, dur*0.3));
+      } else o.frequency.setValueAtTime(f, t);
+      // small chirp attack for whistle
+      const a = 0.012, r = Math.min(0.08, dur*0.35);
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(1, t + a);
+      g.gain.setValueAtTime(1, t + dur - r);
+      g.gain.linearRampToValueAtTime(0.0001, t + dur);
+      o.start(t); o.stop(t + dur + 0.02);
+      prevFreq = f;
+    }
+    t += dur;
+  }
+  const total = (t - ac.currentTime) * 1000;
+
+  // progress readout
+  const start = performance.now();
+  let idx = 0, acc = 0;
+  const marks = events.map(ev => (acc += ev.beats * spb * 1000, acc));
+  (function tick(){
+    if(flag.stop){ master.disconnect(); finish(); return; }
+    const el = performance.now() - start;
+    while(idx < events.length && el > marks[idx]) idx++;
+    if(nowEl) nowEl.textContent = idx < events.length ? events[idx].label : '';
+    if(el < total) requestAnimationFrame(tick); else finish();
+  })();
+  function finish(){
+    btn.classList.remove('playing'); btn.textContent = 'Play';
+    if(nowEl) nowEl.textContent = '';
+    btn.onclick = origHandlers.get(btn);
+  }
+}
+
+const origHandlers = new Map();
+document.querySelectorAll('.fig').forEach(sec => {
+  const btn = sec.querySelector('.play');
+  const now = sec.querySelector('.note-now');
+  const h = () => {
+    const tIn = sec.querySelector('.figTempo').value;
+    const oIn = sec.querySelector('.figOct').value;
+    playSeq(sec.dataset.enc, btn, now, null,
+            {bpm: tIn ? +tIn : null, oct: oIn === '' ? null : oIn.replace('+','')});
+  };
+  origHandlers.set(btn, h); btn.onclick = h;
+});
+{
+  const btn = document.getElementById('benchPlay');
+  const h = () => playSeq(document.getElementById('benchEnc').value, btn,
+                          document.getElementById('benchNow'),
+                          document.getElementById('benchErr'));
+  origHandlers.set(btn, h); btn.onclick = h;
+}
+
+document.getElementById('tempo').oninput = e =>
+  document.getElementById('tempoOut').textContent = e.target.value + ' bpm';
+document.getElementById('octave').oninput = e =>
+  document.getElementById('octOut').textContent = (e.target.value >= 0 ? '+' : '') + e.target.value;
+
+document.getElementById('imgFile').onchange = e => {
+  const f = e.target.files[0]; if(!f) return;
+  const img = new Image();
+  img.onload = () => URL.revokeObjectURL(img.src);
+  img.src = URL.createObjectURL(f);
+  const slot = document.getElementById('imgSlot');
+  slot.innerHTML = ''; slot.appendChild(img);
+};
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@ def parse(enc):
     events = []
     for raw in enc.strip().split():
         if raw == '|':
-            continue
+            raise ValueError('bar tokens are not supported; use a newline only for source-system breaks')
         parts = raw.split(':')
         if len(parts) != 2:
             raise ValueError(f'bad token "{raw}"')

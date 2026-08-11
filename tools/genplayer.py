@@ -38,8 +38,8 @@ if errors:
     sys.exit(1)
 
 playable = sum(bool(figure.get("enc")) for figure in figures)
-active = sum(figure.get("conf") != "dup" for figure in figures)
+active = len(figures)
 print(
     f"OK: {playable} playable / {active} active catalogued; "
-    f"{len(figures) - active} retired duplicates; all crop paths present"
+    "all crop paths present"
 )

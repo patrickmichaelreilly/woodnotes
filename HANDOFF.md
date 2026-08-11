@@ -25,30 +25,29 @@
   p035 has 7 staff rows (figure pairs 7+8, 9+10 share rows).
 
 ## State
-- **108 playable encodings (44 high / 55 med / 9 low) of 284 catalogued**; 3 retired dups.
-- Wave-1 transcription COMPLETE (all 7 groups, Sonnet agents, 2026-08-11): every original
-  bird-chapter todo + low entry read from the figs_new crops via the head-detector method.
-  Nearly all old conf:low drafts proved wrong and were replaced (fsp-01/loon-5 were invented;
-  cuckoos/quail/screech/hen substantially corrected). Bundles split: rob-defiance, indigo-form.
-- Remaining todo (173): 6 white-throat variants PDF p065 (see wts-main note), warb-oth
-  remainder (8 songs), bth-01 remainder (8 crops), 38 new bird-chapter figures, 56 ess-*,
-  78 app-* — all have crops attached in corpus.json.
+- **281 active catalog entries have draft encodings, all awaiting hand correction against the source.**
+- Automated confidence labels and transcription-rationale prose were removed because spot checks
+  showed that they did not reliably predict correctness.
+- Cosmetic bar tokens were removed. Newlines now mean actual source-system breaks and must be set
+  during manual review.
+- The player engraves the editable draft with client-side Verovio beside the original crop, making
+  pitch, rhythm, accidental, and system-break corrections faster to inspect.
 - Stale-data warning: analysis/pNNN_sNN.txt head detections predate the figs_new crops —
   always rerun tools/heads.py fresh; agents discovered offsets.
 
 ## Encoding format
 `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member;
-`^` fermata ≈1.7×; `r:dur` rest; `|` cosmetic. Example: `E5:8 C#5:8 | D5:4^ r:8 A4:8`
+`^` fermata ≈1.7×; `r:dur` rest. Bar tokens are not used. A newline starts a new staff system
+and must match the original engraving. Existing encodings are drafts awaiting hand correction.
 8va figures: write sounding pitch. Bass clef only: grouse, loon, great horned owl.
 
 ## Remaining work (priority order)
-1. Transcribe the original bird-chapter todo entries (task files ready, see above)
-2. Re-verify conf:low encodings (18)
-3. Transcribe new bird-chapter figures (38), then essays (56), then appendix (78)
-4. Player: data-driven static SPA now loads `corpus.json`, renders one selected figure, and
-   lazy-loads its crop(s). Run `tools/genplayer.py` after corpus edits to validate encodings,
-   unique IDs, and crop paths; it no longer generates hundreds of HTML sections.
-5. Synthesis controls TBD: portamento (screech-owl, veery), tremolo (meadow lark),
+1. Hand-correct every draft in source order, beginning with the bird chapters.
+2. Add literal newlines wherever the original figure continues onto another engraved system.
+3. Player: the data-driven SPA loads `corpus.json`, engraves one editable draft, and lazy-loads
+   only its crop(s). Run `tools/genplayer.py` after corpus edits to validate encodings, IDs, and
+   crop paths.
+4. Synthesis controls TBD: portamento (screech-owl, veery), tremolo (meadow lark),
    accel/rit ramps (grouse drum, field sparrow, chat-rit), tempo hints in `note` fields
 
 ## Known engraving quirks

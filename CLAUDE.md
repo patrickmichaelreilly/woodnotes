@@ -4,15 +4,16 @@ Digitizing "Wood Notes Wild" (Cheney, 1892): bird songs in music notation → te
 
 ## Your job
 Work through `corpus.json`:
-1. Every entry with `"conf": "todo"` — find its crop(s) in `figs/` (files named `pNNN_sNN.png`,
-   NNN = PDF page = book page + 22) or `figs/gap_pages/`, read the notation, write the encoding.
-2. Every entry with `"conf": "low"` — re-read from the crop at full size, correct, upgrade conf.
-3. Update `corpus.json` in place. The player loads it at runtime and renders the selected
+1. Treat every existing encoding as a draft. Compare it directly with the source crop at full size.
+2. Correct pitch, duration, rests, accidentals, and source-system line breaks by hand.
+3. Set `"reviewed": true` only after the full figure has been checked against every source crop.
+4. Update `corpus.json` in place. The player loads it at runtime and renders the selected
    figure on demand; run `python3 tools/genplayer.py` to validate encodings, IDs, and crop paths.
 
 ## Encoding format
 `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member; `^` fermata;
-`r:dur` rest; `|` cosmetic barline. Example: `E5:8 C#5:8 | D5:4^ r:8 A4:8`
+`r:dur` rest. Do not add barline tokens. A literal newline starts a new staff system and must
+match a line break in the original engraving. Example: `D5:8 C#5:8 D5:4^ r:8 E5:8 D5:8 C#5:8`
 8va figures: write sounding pitch (already up an octave).
 
 ## Reading tips (see HANDOFF.md for full list)
@@ -23,7 +24,8 @@ Work through `corpus.json`:
 
 ## Verify as you go
 Parse-check each encoding with the regex/rules in woodnotes-player.html `parse()`.
-Do NOT invent notes you can't see — mark conf honestly (high/med/low).
+Do NOT infer notes from automated head detection or melodic expectations. If a glyph cannot be
+read, leave that portion incomplete for human review rather than filling it speculatively.
 
 ## Player architecture
 `woodnotes-player.html` is a static single-page catalog browser. It fetches `corpus.json`,

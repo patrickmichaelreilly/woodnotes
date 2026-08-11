@@ -49,12 +49,15 @@
   .fig-no{font-family:'IM Fell English',serif;font-size:1.3rem}
   .fig-bird{font-family:'IM Fell English SC',serif;letter-spacing:.16em;font-size:1rem}
   .fig-latin{font-style:italic;color:var(--faded);font-size:.85rem}
-  .confidence{font:.72rem var(--mono);color:var(--faded);margin-left:auto}
   .lyric{text-align:center;font-family:'IM Fell English SC',serif;letter-spacing:.16em;
          font-size:.9rem;color:var(--blue-deep);margin:.65rem 0}
-  .enc{font:0.82rem/1.5 var(--mono);background:var(--wash);border:1px solid var(--rule);
-       padding:.55rem .7rem;white-space:pre-wrap;word-break:break-word;margin-top:.7rem}
-  .fig-note{font-size:.78rem;font-style:italic;color:var(--faded);margin-top:.5rem}
+  .notation{margin-top:.7rem;min-height:150px;border:1px solid var(--rule);background:white;
+            padding:.45rem;overflow-x:auto}
+  .notation svg{display:block;max-width:none;height:auto}
+  .draft-label{display:block;margin-top:.7rem;font-family:'IM Fell English SC',serif;
+               letter-spacing:.1em;font-size:.75rem;color:var(--faded)}
+  .enc{display:block;width:100%;min-height:6rem;font:0.82rem/1.5 var(--mono);background:var(--wash);
+       border:1px solid var(--rule);padding:.55rem .7rem;resize:vertical;margin-top:.2rem}
   .row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:.7rem}
   .ov{font-size:.72rem;color:var(--faded);display:inline-flex;align-items:center;gap:.2rem}
   .ov input{width:4rem;border:1px solid var(--rule);background:var(--paper);padding:.15rem .25rem}
@@ -114,14 +117,15 @@
       <span class="fig-no" id="figureId"></span>
       <span class="fig-bird" id="figureBird"></span>
       <span class="fig-latin" id="figureMeta"></span>
-      <span class="confidence" id="figureConfidence"></span>
     </div>
     <div class="lyric" id="figureLyric" hidden></div>
-    <div class="enc" id="figureEncoding" hidden></div>
+    <div class="notation" id="notation"><div class="empty">Engraving will appear here.</div></div>
+    <label class="draft-label" for="figureEncoding">Draft transcription · newline = source system</label>
+    <textarea class="enc" id="figureEncoding" spellcheck="false"></textarea>
     <div class="todo-note" id="todoNote" hidden>Not yet transcribed. The source crop is available for the next transcription pass.</div>
-    <div class="fig-note" id="figureNote" hidden></div>
     <div class="row">
       <button class="play" id="play" type="button">Play</button>
+      <button id="render" type="button">Render draft</button>
       <label class="ov">♩=<input type="number" id="figureTempo" min="30" max="240" placeholder="—"></label>
       <label class="ov">oct<select id="figureOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
       <span class="note-now" id="noteNow"></span>
@@ -141,6 +145,7 @@
   </div>
 </div>
 
+<script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js"></script>
 <script>
 let ctx = null;
 let figures = [];
@@ -148,8 +153,16 @@ let filtered = [];
 let current = null;
 let stopCurrent = null;
 const $ = id => document.getElementById(id);
-const MARK = {high:'high confidence',med:'medium confidence',low:'low confidence',todo:'not transcribed',dup:'retired duplicate'};
 const NOTE = {C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+const FIFTHS={C:0,G:1,D:2,A:3,E:4,B:5,'F#':6,'C#':7,F:-1,Bb:-2,Eb:-3,Ab:-4,Db:-5,Gb:-6,Cb:-7,
+  Am:0,Em:1,Bm:2,'F#m':3,'C#m':4,'G#m':5,'D#m':6,'A#m':7,Dm:-1,Gm:-2,Cm:-3,Fm:-4,Bbm:-5,Ebm:-6,Abm:-7};
+
+const vrvReady=new Promise(resolve=>{
+  if(window.verovio&&verovio.module.calledRun)resolve();
+  else verovio.module.onRuntimeInitialized=resolve;
+});
+let engravingToolkit=null;
+async function toolkit(){await vrvReady;if(!engravingToolkit)engravingToolkit=new verovio.toolkit();return engravingToolkit}
 
 function audio(){ if(!ctx) ctx = new (window.AudioContext||window.webkitAudioContext)(); return ctx; }
 function freq(tok,octShift){
@@ -161,7 +174,8 @@ function freq(tok,octShift){
 function parse(enc){
   const events=[];
   for(const raw of enc.trim().split(/\s+/)){
-    if(raw==='|'||raw==='')continue;
+    if(raw==='')continue;
+    if(raw==='|')throw new Error('bar tokens are not supported; use newlines only for source-system breaks');
     const parts=raw.split(':'); if(parts.length!==2)throw new Error(`bad token "${raw}"`);
     const [p,dRaw]=parts; let d=dRaw,mult=1;
     if(d.endsWith('^')){mult*=1.7;d=d.slice(0,-1)}
@@ -174,9 +188,50 @@ function parse(enc){
   }
   if(!events.length)throw new Error('no notes');return events;
 }
+function xmlText(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]))}
+function tokenParts(raw){
+  const [pitch,dRaw]=raw.split(':');let d=dRaw,fermata=false,dotted=false,triplet=false;
+  if(d.endsWith('^')){fermata=true;d=d.slice(0,-1)}
+  if(d.endsWith('.')){dotted=true;d=d.slice(0,-1)}
+  if(d.endsWith('3')&&d.length>1){triplet=true;d=d.slice(0,-1)}
+  return {pitch,base:+d,fermata,dotted,triplet};
+}
+function noteXML(raw){
+  const ev=tokenParts(raw),types={1:'whole',2:'half',4:'quarter',8:'eighth',16:'16th',32:'32nd'};
+  let duration=384/ev.base;if(ev.dotted)duration*=1.5;if(ev.triplet)duration*=2/3;
+  let pitch='<rest/>';
+  if(!/^r$/i.test(ev.pitch)){
+    const m=ev.pitch.match(/^([A-G])([#b]{0,2})(\d)$/),alter=[...m[2]].reduce((n,a)=>n+(a==='#'?1:-1),0);
+    pitch=`<pitch><step>${m[1]}</step>${alter?`<alter>${alter}</alter>`:''}<octave>${m[3]}</octave></pitch>`;
+  }
+  return `<note>${pitch}<duration>${duration}</duration><voice>1</voice><type>${types[ev.base]}</type>`+
+    `${ev.dotted?'<dot/>':''}${ev.triplet?'<time-modification><actual-notes>3</actual-notes><normal-notes>2</normal-notes></time-modification>':''}`+
+    `${ev.fermata?'<notations><fermata/></notations>':''}</note>`;
+}
+function musicXML(encoding,key){
+  const lines=encoding.split(/\n/).map(line=>line.trim()).filter(Boolean);
+  const fifths=FIFTHS[key]??0,mode=String(key||'').endsWith('m')?'minor':'major';
+  const measures=lines.map((line,index)=>{
+    const attrs=index===0?`<attributes><divisions>96</divisions><key><fifths>${fifths}</fifths><mode>${mode}</mode></key><time><senza-misura/></time><clef><sign>G</sign><line>2</line></clef></attributes>`:'';
+    const print=index?'<print new-system="yes"/>':'';
+    return `<measure number="${index+1}" implicit="yes" non-controlling="yes">${print}${attrs}${line.split(/\s+/).map(noteXML).join('')}<barline location="right"><bar-style>none</bar-style></barline></measure>`;
+  }).join('');
+  return `<?xml version="1.0" encoding="UTF-8"?><score-partwise version="4.0"><work><work-title>${xmlText(current?.bird||'Draft')}</work-title></work><part-list><score-part id="P1"><part-name>Bird song</part-name></score-part></part-list><part id="P1">${measures}</part></score-partwise>`;
+}
+async function renderNotation(){
+  const encoding=$('figureEncoding').value.trim();$('playerError').textContent='';
+  if(!encoding){$('notation').innerHTML='<div class="empty">No draft transcription.</div>';return}
+  try{
+    parse(encoding);const tk=await toolkit();
+    tk.setOptions({breaks:'encoded',adjustPageHeight:true,adjustPageWidth:true,pageWidth:1800,scale:36,
+      footer:'none',header:'none',spacingLinear:.35,spacingNonLinear:.58});
+    tk.loadData(musicXML(encoding,current?.key));$('notation').innerHTML=tk.renderToSVG(1);
+  }catch(error){$('notation').innerHTML='<div class="empty">Could not engrave this draft.</div>';$('playerError').textContent=String(error.message||error)}
+}
 async function playSeq(){
   $('playerError').textContent='';
-  let events;try{events=parse(current.enc)}catch(e){$('playerError').textContent=e.message;return}
+  const encoding=$('figureEncoding').value.trim();
+  let events;try{events=parse(encoding)}catch(e){$('playerError').textContent=e.message;return}
   if(stopCurrent)stopCurrent();
   let stopped=false;const ac=audio();if(ac.state==='suspended')await ac.resume();
   const localTempo=+$('figureTempo').value;
@@ -218,10 +273,10 @@ async function playSeq(){
     btn.classList.remove('playing');btn.textContent='Play';btn.onclick=playSeq;$('noteNow').textContent='';stopCurrent=null;
   }
 }
-function optionLabel(f){return `${f.bird||'Unknown'} — ${f.id} — p. ${f.page??'?'} [${f.conf||'todo'}]`}
+function optionLabel(f){return `${f.bird||'Unknown'} — ${f.id} — p. ${f.page??'?'}`}
 function applyFilter(){
   const q=$('search').value.trim().toLowerCase();
-  filtered=figures.filter(f=>!q||[f.id,f.bird,f.note,f.lyric,f.conf].some(v=>String(v||'').toLowerCase().includes(q)));
+  filtered=figures.filter(f=>!q||[f.id,f.bird,f.lyric].some(v=>String(v||'').toLowerCase().includes(q)));
   $('figureSelect').replaceChildren(...filtered.map(f=>{
     const o=document.createElement('option');o.value=f.id;o.textContent=optionLabel(f);return o;
   }));
@@ -234,12 +289,12 @@ function selectFigure(id){
   if(stopCurrent)stopCurrent();current=f;$('figureSelect').value=f.id;
   $('figureId').textContent=f.id;$('figureBird').textContent=f.bird||'Unknown';
   $('figureMeta').textContent=`p. ${f.page??'?'}${f.key&&f.key!=='?'?` · ${f.key}`:''}`;
-  $('figureConfidence').textContent=MARK[f.conf]||f.conf||'unrated';
   $('figureLyric').textContent=f.lyric||'';$('figureLyric').hidden=!f.lyric;
-  $('figureEncoding').textContent=f.enc||'';$('figureEncoding').hidden=!f.enc;
-  $('todoNote').hidden=!!f.enc;$('figureNote').textContent=f.note||'';$('figureNote').hidden=!f.note;
+  $('figureEncoding').value=f.enc||'';
+  $('todoNote').hidden=!!f.enc;
   $('figureTempo').value=f.tempo||'';$('figureOct').value='';
   $('play').disabled=!f.enc;$('play').onclick=f.enc?playSeq:null;
+  renderNotation();
   const crops=Array.isArray(f.crops)?f.crops:[];
   $('sourceCount').textContent=crops.length?`${crops.length} crop${crops.length===1?'':'s'}`:'';
   if(!crops.length)$('cropList').innerHTML='<div class="empty">No crop is linked to this catalog entry.</div>';
@@ -259,9 +314,9 @@ function move(delta){
 async function init(){
   try{
     const response=await fetch('corpus.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);
-    const corpus=await response.json();figures=corpus.figures.filter(f=>f.conf!=='dup');
+    const corpus=await response.json();figures=corpus.figures;
     const playable=figures.filter(f=>f.enc).length;
-    $('credit').textContent=`Simeon Pease Cheney — ${playable} playable / ${figures.length} active catalogued · ~ = verify by ear, ?? = low confidence`;
+    $('credit').textContent=`Simeon Pease Cheney — ${playable} draft transcriptions awaiting hand correction`;
     applyFilter();
     const requested=new URL(location.href).searchParams.get('figure');
     selectFigure(figures.some(f=>f.id===requested)?requested:(figures.find(f=>f.enc)||figures[0]).id);
@@ -272,6 +327,9 @@ async function init(){
 }
 $('search').addEventListener('input',applyFilter);
 $('figureSelect').addEventListener('change',e=>selectFigure(e.target.value));
+$('render').addEventListener('click',renderNotation);
+let renderTimer=null;
+$('figureEncoding').addEventListener('input',()=>{clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250)});
 $('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));
 $('tempo').addEventListener('input',e=>$('tempoOut').textContent=e.target.value+' bpm');
 $('octave').addEventListener('input',e=>$('octOut').textContent=(e.target.value>=0?'+':'')+e.target.value);

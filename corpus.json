@@ -3346,31 +3346,37 @@
    "id": "app-hinrichs-cockchaffer",
    "bird": "Cock chaffer (insect)",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 COCK CHAFFER.",
+   "conf": "med",
+   "key": "F",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. Bass-clef drone on F2: two tied whole notes, two E2-F2 pickup gestures, and a closing F2 whole note. The tiny pickup values are approximate.",
    "crops": [
     "figs_new/p248_s00.png"
-   ]
+   ],
+   "enc": "F2:1 F2:1 E2:8 F2:4 E2:8 F2:4 F2:1"
   },
   {
    "id": "app-hinrichs-deathwatch-call-answer",
    "bird": "Death-watch (insect)",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 Death-watch Call. / Answer.",
+   "conf": "high",
+   "key": "F",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. The call is nine Bb4 taps (two four-note 16th groups plus an eighth); after the printed rests and double bar, the answer is nine slower G4 taps ending with an eighth.",
    "crops": [
     "figs_new/p248_s01.png"
-   ]
+   ],
+   "enc": "Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:8 r:8 r:4 | G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:8"
   },
   {
    "id": "app-hinrichs-cricket",
    "bird": "Cricket",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs. \u2014 CRICKET. \u2014 manually recovered detector gap at y926-1067",
+   "conf": "high",
+   "key": "C",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. Three identical G4 16th-note triplets separated by eighth rests; the final printed triplet mark is partly clipped but the repeated construction is clear.",
    "crops": [
     "figs_new/p248_s01b.png"
-   ]
+   ],
+   "enc": "G4:163 G4:163 G4:163 r:8 G4:163 G4:163 G4:163 r:8 G4:163 G4:163 G4:163"
   },
   {
    "id": "app-hinrichs-grasshopper-1",
@@ -3387,11 +3393,13 @@
    "id": "app-hinrichs-bumblebee",
    "bird": "Bumble-bee (insect)",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 BUMBLE-BEE.",
+   "conf": "high",
+   "key": "F",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. Four repeated bass-clef D3-to-C3 gestures, each a short pickup slurred into a whole note.",
    "crops": [
     "figs_new/p248_s04.png"
-   ]
+   ],
+   "enc": "D3:8 C3:1 D3:8 C3:1 D3:8 C3:1 D3:8 C3:1"
   },
   {
    "id": "app-hinrichs-housefly",

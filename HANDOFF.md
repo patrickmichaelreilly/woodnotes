@@ -45,8 +45,9 @@
 1. Transcribe the original bird-chapter todo entries (task files ready, see above)
 2. Re-verify conf:low encodings (18)
 3. Transcribe new bird-chapter figures (38), then essays (56), then appendix (78)
-4. Player: regenerate via `tools/genplayer.py` after each merge; "single page" is now
-   nominal — split by section if 282 sections get unwieldy
+4. Player: data-driven static SPA now loads `corpus.json`, renders one selected figure, and
+   lazy-loads its crop(s). Run `tools/genplayer.py` after corpus edits to validate encodings,
+   unique IDs, and crop paths; it no longer generates hundreds of HTML sections.
 5. Synthesis controls TBD: portamento (screech-owl, veery), tremolo (meadow lark),
    accel/rit ramps (grouse drum, field sparrow, chat-rit), tempo hints in `note` fields
 

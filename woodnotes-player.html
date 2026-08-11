@@ -7,1372 +7,275 @@
 <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#fdfcf8; --ink:#1b1a17; --rule:#b9b2a4;
-    --blue:#3e5f7a; --blue-deep:#2b4458; --faded:#6d675c;
-    --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+    --paper:#fdfcf8;--ink:#1b1a17;--rule:#b9b2a4;--blue:#3e5f7a;
+    --blue-deep:#2b4458;--faded:#6d675c;--wash:#f2efe7;
+    --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace
   }
-  *{box-sizing:border-box;margin:0}
+  *{box-sizing:border-box}
   body{background:var(--paper);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif;
-       max-width:680px;margin:0 auto;padding:2.5rem 1.25rem 7.5rem}
-  header{text-align:center;border-bottom:3px double var(--ink);padding-bottom:1.4rem;margin-bottom:2rem}
-  h1{font-family:'IM Fell English',serif;font-weight:400;font-size:2.4rem;letter-spacing:.02em}
+       max-width:1040px;margin:0 auto;padding:2.5rem 1.25rem 7.5rem}
+  header{text-align:center;border-bottom:3px double var(--ink);padding-bottom:1.4rem;margin-bottom:1.5rem}
+  h1{font-family:'IM Fell English',serif;font-weight:400;font-size:2.4rem;letter-spacing:.02em;margin:0}
   .sub{font-family:'IM Fell English SC',serif;font-size:.95rem;letter-spacing:.28em;color:var(--faded);margin-top:.35rem}
   .credit{font-style:italic;color:var(--faded);font-size:.85rem;margin-top:.6rem}
-
-  /* global controls */
-  .controls{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;flex-wrap:wrap;
-            gap:.6rem 1.4rem;align-items:center;justify-content:center;
-            border-top:2px solid var(--ink);padding:.55rem 1rem;background:#f7f5eeF2;
-            backdrop-filter:blur(3px);box-shadow:0 -3px 12px rgba(27,26,23,.08)}
-  .ctl{flex-direction:row!important;align-items:center;gap:.45rem!important}
-  .ov{font-size:.72rem;color:var(--faded);display:inline-flex;align-items:center;gap:.2rem}
-  .ov input{width:3.6rem;font:.8rem var(--mono);border:1px solid var(--rule);background:var(--paper);padding:.12rem .25rem}
-  .ov select{font-size:.8rem;padding:.1rem}
-  .fig-note{font-size:.78rem;font-style:italic;color:var(--faded);margin-top:.3rem}
-  .ctl{display:flex;flex-direction:column;gap:.25rem;font-size:.75rem;letter-spacing:.12em;
-       text-transform:uppercase;color:var(--faded)}
-  .ctl output{font-family:var(--mono);color:var(--ink);font-size:.85rem;letter-spacing:0;text-transform:none}
-  input[type=range]{accent-color:var(--blue);width:130px}
-  select{font:inherit;font-size:.9rem;padding:.15rem .3rem;border:1px solid var(--rule);background:var(--paper)}
-
-  /* figure cards — Cheney caption signature */
-  .fig{margin-bottom:2.4rem}
-  .fig-head{display:flex;align-items:baseline;gap:.7rem;margin-bottom:.15rem}
-  .fig-no{font-family:'IM Fell English',serif;font-size:1.3rem}
-  .fig-bird{font-family:'IM Fell English SC',serif;letter-spacing:.2em;font-size:1.05rem}
-  .fig-latin{font-style:italic;color:var(--faded);font-size:.85rem}
-  .staffline{border-top:1px solid var(--rule);margin:.4rem 0 .55rem}
-  .lyric{text-align:center;font-family:'IM Fell English SC',serif;letter-spacing:.22em;
-         font-size:.9rem;color:var(--blue-deep);margin:.3rem 0 .6rem}
-  .enc{font-family:var(--mono);font-size:.82rem;background:#f2efe7;border:1px solid var(--rule);
-       padding:.55rem .7rem;white-space:pre-wrap;word-break:break-word}
-  .row{display:flex;gap:.7rem;align-items:center;margin-top:.6rem}
-  button{font-family:'IM Fell English SC',serif;letter-spacing:.15em;font-size:.95rem;
-         padding:.4rem 1.3rem;background:var(--blue);color:var(--paper);border:none;cursor:pointer}
+  button,select,input{font:inherit}
+  button{font-family:'IM Fell English SC',serif;letter-spacing:.12em;font-size:.9rem;
+         padding:.42rem 1rem;background:var(--blue);color:var(--paper);border:0;cursor:pointer}
   button:hover{background:var(--blue-deep)}
-  button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-  button.playing{background:var(--ink)}
-  .note-now{font-family:var(--mono);font-size:.85rem;color:var(--blue-deep);min-width:4ch}
+  button:disabled{background:var(--rule);cursor:not-allowed}
+  button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
-  /* annotation workbench */
-  .bench{border:1px solid var(--ink);padding:1.2rem;margin-top:3rem}
-  .bench h2{font-family:'IM Fell English',serif;font-weight:400;font-size:1.5rem;margin-bottom:.3rem}
-  .bench p{font-size:.9rem;color:var(--faded);margin-bottom:.8rem}
-  textarea{width:100%;min-height:4.2rem;font:0.85rem/1.5 var(--mono);border:1px solid var(--rule);
-           padding:.6rem;background:var(--paper);resize:vertical}
-  #imgSlot{margin-top:.8rem}
-  #imgSlot img{max-width:100%;border:1px solid var(--rule)}
-  input[type=file]{font-size:.85rem}
-  .err{color:#8a2f1e;font-size:.85rem;font-family:var(--mono);margin-top:.4rem;min-height:1.2em}
-  .fmt{font-size:.8rem;color:var(--faded);margin-top:.6rem}
-  .fmt code{font-family:var(--mono);background:#f2efe7;padding:0 .25em}
-  @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+  .catalog{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:.65rem;
+           align-items:end;margin-bottom:1.4rem}
+  .catalog label{display:flex;flex-direction:column;gap:.2rem;font-family:'IM Fell English SC',serif;
+                 letter-spacing:.08em;font-size:.78rem;color:var(--faded)}
+  .catalog input,.catalog select{border:1px solid var(--rule);background:var(--paper);padding:.45rem .55rem}
+  .nav{display:flex;gap:.4rem}
+  .catalog-count{font:0.8rem var(--mono);color:var(--faded);padding:.45rem 0}
+
+  .layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:1.5rem;align-items:start}
+  .source{background:var(--wash);border:1px solid var(--rule);padding:.8rem;min-height:180px}
+  .source h2,.fig h2{font-family:'IM Fell English',serif;font-weight:400;margin:0}
+  .source-head{display:flex;justify-content:space-between;gap:1rem;align-items:baseline;margin-bottom:.65rem}
+  .source-count{font:.75rem var(--mono);color:var(--faded)}
+  .crop-list{display:grid;gap:.75rem}
+  .crop-list figure{margin:0}
+  .crop-list img{display:block;width:100%;height:auto;background:white;border:1px solid var(--rule)}
+  .crop-list figcaption{font:.7rem var(--mono);color:var(--faded);margin-top:.2rem;overflow-wrap:anywhere}
+  .empty{color:var(--faded);font-style:italic;padding:2rem 0;text-align:center}
+
+  .fig{border-top:3px double var(--ink);padding-top:.8rem}
+  .fig-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem .7rem}
+  .fig-no{font-family:'IM Fell English',serif;font-size:1.3rem}
+  .fig-bird{font-family:'IM Fell English SC',serif;letter-spacing:.16em;font-size:1rem}
+  .fig-latin{font-style:italic;color:var(--faded);font-size:.85rem}
+  .confidence{font:.72rem var(--mono);color:var(--faded);margin-left:auto}
+  .lyric{text-align:center;font-family:'IM Fell English SC',serif;letter-spacing:.16em;
+         font-size:.9rem;color:var(--blue-deep);margin:.65rem 0}
+  .enc{font:0.82rem/1.5 var(--mono);background:var(--wash);border:1px solid var(--rule);
+       padding:.55rem .7rem;white-space:pre-wrap;word-break:break-word;margin-top:.7rem}
+  .fig-note{font-size:.78rem;font-style:italic;color:var(--faded);margin-top:.5rem}
+  .row{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-top:.7rem}
+  .ov{font-size:.72rem;color:var(--faded);display:inline-flex;align-items:center;gap:.2rem}
+  .ov input{width:4rem;border:1px solid var(--rule);background:var(--paper);padding:.15rem .25rem}
+  .ov select{padding:.1rem}
+  .note-now{font:.85rem var(--mono);color:var(--blue-deep);min-width:4ch}
+  .todo-note{border:1px dashed var(--rule);color:var(--faded);padding:.7rem;margin-top:.7rem}
+
+  .controls{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;flex-wrap:wrap;
+            gap:.6rem 1.4rem;align-items:center;justify-content:center;border-top:2px solid var(--ink);
+            padding:.55rem 1rem;background:#f7f5eeF2;backdrop-filter:blur(3px);
+            box-shadow:0 -3px 12px rgba(27,26,23,.08)}
+  .ctl{display:flex;align-items:center;gap:.45rem;font-size:.75rem;letter-spacing:.1em;
+       text-transform:uppercase;color:var(--faded)}
+  .ctl output{font:0.85rem var(--mono);color:var(--ink);letter-spacing:0;text-transform:none}
+  input[type=range]{accent-color:var(--blue);width:120px}
+  .err{color:#8a2f1e;font:.85rem var(--mono);min-height:1.2em;margin-top:.5rem}
+
+  @media(max-width:760px){
+    body{padding-top:1.5rem}.layout{grid-template-columns:1fr}.catalog{grid-template-columns:1fr auto}
+    .catalog label{grid-column:1/-1}.source{order:2}.fig{order:1}.controls{gap:.4rem .8rem}
+  }
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
 <header>
   <h1>Wood Notes Wild</h1>
   <div class="sub">Notations of Bird Music · 1892</div>
-  <div class="credit">Simeon Pease Cheney — corpus v0 · 111 playable / 284 catalogued · ~ = verify by ear, ?? = low confidence</div>
+  <div class="credit" id="credit">Simeon Pease Cheney — loading corpus…</div>
 </header>
 
+<nav class="catalog" aria-label="Figure catalog">
+  <label>Find a bird or figure
+    <input id="search" type="search" placeholder="Robin, appendix, blue-01…" autocomplete="off">
+  </label>
+  <div class="nav">
+    <button id="prev" type="button" aria-label="Previous figure">← Prev</button>
+    <button id="next" type="button" aria-label="Next figure">Next →</button>
+  </div>
+  <div class="catalog-count" id="catalogCount" aria-live="polite"></div>
+  <label style="grid-column:1/-1">Matching figures
+    <select id="figureSelect" size="7" aria-label="Matching figures"></select>
+  </label>
+</nav>
+
+<main class="layout">
+  <section class="source" aria-labelledby="sourceTitle">
+    <div class="source-head">
+      <h2 id="sourceTitle">Original notation</h2>
+      <span class="source-count" id="sourceCount"></span>
+    </div>
+    <div class="crop-list" id="cropList"><div class="empty">Select a figure to load its source crop.</div></div>
+  </section>
+
+  <section class="fig" id="figureCard" aria-live="polite">
+    <div class="fig-head">
+      <span class="fig-no" id="figureId"></span>
+      <span class="fig-bird" id="figureBird"></span>
+      <span class="fig-latin" id="figureMeta"></span>
+      <span class="confidence" id="figureConfidence"></span>
+    </div>
+    <div class="lyric" id="figureLyric" hidden></div>
+    <div class="enc" id="figureEncoding" hidden></div>
+    <div class="todo-note" id="todoNote" hidden>Not yet transcribed. The source crop is available for the next transcription pass.</div>
+    <div class="fig-note" id="figureNote" hidden></div>
+    <div class="row">
+      <button class="play" id="play" type="button">Play</button>
+      <label class="ov">♩=<input type="number" id="figureTempo" min="30" max="240" placeholder="—"></label>
+      <label class="ov">oct<select id="figureOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
+      <span class="note-now" id="noteNow"></span>
+    </div>
+    <div class="err" id="playerError"></div>
+  </section>
+</main>
+
 <div class="controls">
-  <div class="ctl">Tempo
-    <input type="range" id="tempo" min="40" max="200" value="96">
-    <output id="tempoOut">96 bpm</output>
-  </div>
-  <div class="ctl">Octave
-    <input type="range" id="octave" min="-2" max="2" value="0" step="1">
-    <output id="octOut">+0</output>
-  </div>
+  <div class="ctl">Tempo <input type="range" id="tempo" min="40" max="200" value="96"><output id="tempoOut">96 bpm</output></div>
+  <div class="ctl">Octave <input type="range" id="octave" min="-2" max="2" value="0" step="1"><output id="octOut">+0</output></div>
   <div class="ctl">Timbre
-    <select id="timbre">
-      <option value="whistle">Whistle</option>
-      <option value="pure">Pure tone</option>
-      <option value="reed">Reed</option>
-    </select>
+    <select id="timbre"><option value="whistle">Whistle</option><option value="pure">Pure tone</option><option value="reed">Reed</option></select>
   </div>
   <div class="ctl">Slide
-    <select id="slide">
-      <option value="0">Off</option>
-      <option value="1">Bird glide</option>
-    </select>
+    <select id="slide"><option value="0">Off</option><option value="1">Bird glide</option></select>
   </div>
-</div>
-
-<section class="fig" data-enc="E5:8 C#5:8 | D5:4^ r:8 A4:8 | E5:8 C#5:8">
-  <div class="fig-head"><span class="fig-no">blue-01</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 11 · Dm</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:8 C#5:8 | D5:4^ r:8 A4:8 | E5:8 C#5:8</div><div class="lyric">Hear me, hear me.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C#5:8 D5:8 E5:8 C#5:8">
-  <div class="fig-head"><span class="fig-no">blue-03</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 12 · Dm</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C#5:8 D5:8 E5:8 C#5:8</div><div class="lyric">Che-way che-chute.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:8 F5:8 r:8 | D5:8 C#5:8 D5:8 r:8 | E5:8 D5:8 C#5:8 r:8 | E5:8 C#5:8 D5:8 r:8 | E5:8 D5:8 E5:8 r:8 | E5:8 F5:8 G5:8 r:8 | E5:8 C#5:8 r:8 | D5:8 E5:8 F5:8 D5:8 r:8 | F5:16 E5:8 D5:8 r:8 | D5:8 E5:8 D5:8 C#5:8 r:8 | D5:8 C#5:8 D5:8">
-  <div class="fig-head"><span class="fig-no">blue-02 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 11 · Dm</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:8 F5:8 r:8 | D5:8 C#5:8 D5:8 r:8 | E5:8 D5:8 C#5:8 r:8 | E5:8 C#5:8 D5:8 r:8 | E5:8 D5:8 E5:8 r:8 | E5:8 F5:8 G5:8 r:8 | E5:8 C#5:8 r:8 | D5:8 E5:8 F5:8 D5:8 r:8 | F5:16 E5:8 D5:8 r:8 | D5:8 E5:8 D5:8 C#5:8 r:8 | D5:8 C#5:8 D5:8</div><div class="fig-note">read via head-detector + zoom verification; spans 2 systems (p033_s00+s01); 16th at F5 has visible double flag</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:8 F5:8 E5:8 D#5:8 r:8 | E5:8 D#5:8 | E5:8 B4:8 A#4:8 B4:4 r:8 D#5:8 E5:8 r:8 E5:8 D#5:8 E5:8 r:8 F5:8^ r:8 | D#5:8 E5:8">
-  <div class="fig-head"><span class="fig-no">blue-04 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 12 · Em</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:8 F5:8 E5:8 D#5:8 r:8 | E5:8 D#5:8 | E5:8 B4:8 A#4:8 B4:4 r:8 D#5:8 E5:8 r:8 E5:8 D#5:8 E5:8 r:8 F5:8^ r:8 | D#5:8 E5:8</div><div class="fig-note">Sparse barlines in source (only ~3 real ones found via pixel scan; others placed cosmetically at phrase breaks). One note (F5 near end) missed by head detector due to an overlaid fermata arc above the notehead — pitch confirmed by row-density measurement against staff lines. B4-A#4 pair and B4 quarter/rest confirmed via tight zoom.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 E5:8 | E5:8 G5:8 | F5:8 D#5:8 r:8 | F5:8 E5:8 | E5:8 D#5:8 r:8 | F5:8 E5:8 D#5:8">
-  <div class="fig-head"><span class="fig-no">blue-05 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 12 · Em</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 E5:8 | E5:8 G5:8 | F5:8 D#5:8 r:8 | F5:8 E5:8 | E5:8 D#5:8 r:8 | F5:8 E5:8 D#5:8</div><div class="fig-note">No internal barlines detected (pipes are cosmetic phrase breaks). Three notes (an E5 in the first beamed pair, a flagged isolated F5, and a final D#5) were missed by the standard head detector — recovered via a lowered-threshold rerun and confirmed by row-density pitch measurement. The isolated flagged note near the end has a small hooked flag (not a fermata, unlike blue-04&#x27;s mark).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:8 F5:8 E5:8 G5:8 E5:8 r:8 G5:8 E5:8 E5:8 D#5:8 r:8 F5:8 C5:8 G5:8 A5:8 r:8 G5:8 E5:8 E5:8 F5:8 r:8 E5:8 | F5:8 E5:8 D#5:8 r:8 G5:8 F5:8 E5:8 D5:8 E5:8 F5:8 G5:8 r:8 G5:8 r:8 G5:8 r:8 E5:8 r:8 E5:8 F5:8 G5:8">
-  <div class="fig-head"><span class="fig-no">blue-06 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 13 · Em</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:8 F5:8 E5:8 G5:8 E5:8 r:8 G5:8 E5:8 E5:8 D#5:8 r:8 F5:8 C5:8 G5:8 A5:8 r:8 G5:8 E5:8 E5:8 F5:8 r:8 E5:8 | F5:8 E5:8 D#5:8 r:8 G5:8 F5:8 E5:8 D5:8 E5:8 F5:8 G5:8 r:8 G5:8 r:8 G5:8 r:8 E5:8 r:8 E5:8 F5:8 G5:8</div><div class="fig-note">Dense figure spanning two systems (p035_s00 + p035_s01); many notes have individual flags rather than beams, and several were missed by the standard detector — recovered via lowered-threshold rerun plus manual row-density pitch checks. No internal barlines found in either system (bars used only as cosmetic phrase separators). Rest/flag placements in a few spots are best-effort.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 E5:8 G5:8 F5:8 D#5:8 r:8 F5:8 A4:8 G5:8 r:8 E5:8 A4:8 G5:8 r:8 E5:8 F5:8 E5:8 D#5:2 r:8 | E5:8 G5:8 r:8 E5:8 G5:8">
-  <div class="fig-head"><span class="fig-no">blue-07 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 13 · Em</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 E5:8 G5:8 F5:8 D#5:8 r:8 F5:8 A4:8 G5:8 r:8 E5:8 A4:8 G5:8 r:8 E5:8 F5:8 E5:8 D#5:2 r:8 | E5:8 G5:8 r:8 E5:8 G5:8</div><div class="fig-note">Spans p035_s02 (full) plus the left portion of p035_s03 (before the double barline that separates it from fig. 8). Opening D5 has a natural sign of unclear purpose (D isn&#x27;t altered by the Em key sig; encoded as plain D5). One note (originally read as E5 at x=441 in p035_s02) has a sharp directly before it with no clear diatonic explanation — encoded as its enharmonic equivalent F5 rather than the unusual spelling E#5; low confidence on that single note. Final note of the first system is an open (half-note) D#5.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:8 A5:8 E5:8 r:8 G5:8 A5:8 E5:8">
-  <div class="fig-head"><span class="fig-no">blue-08</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 13 · Em</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:8 A5:8 E5:8 r:8 G5:8 A5:8 E5:8</div><div class="fig-note">Right portion of p035_s03, after the double barline and &quot;8.&quot; label. Two symmetric 3-note beamed groups (G5-A5-E5) separated by a rest; all three pitches per group confirmed via row-density measurement (middle and last notes of each group were missed by the standard detector but are unambiguous). Small dash marks beside the A5 noteheads look like tenuto marks, not encoded as they don&#x27;t affect pitch/duration.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:8 C5:8 C5:8 A#4:8 r:8 C5:83 D5:83 E5:83">
-  <div class="fig-head"><span class="fig-no">blue-09 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 13 · F#m</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:8 C5:8 C5:8 A#4:8 r:8 C5:83 D5:83 E5:83</div><div class="fig-note">Left portion of p035_s04 (&quot;9.&quot;, key sig 3 sharps matching F#m). Opening E5 carries an elaborate turn/mordent ornament above it, not encoded (noted here only). The C5-A#4 pair&#x27;s accidental was confirmed by row-density measurement (initial read as B4 was skewed by the sharp glyph). Final three notes are marked as a triplet (&quot;3&quot; over the beam) and encoded with trailing-3 triplet notation.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:8 C5:8 r:8 C5:8 B4:8 r:8 E5:16 C5:16">
-  <div class="fig-head"><span class="fig-no">blue-10 ~</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 13 · Gm</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:8 C5:8 r:8 C5:8 B4:8 r:8 E5:16 C5:16</div><div class="fig-note">Right portion of p035_s04 (&quot;10.&quot;). NOTE: engraved key signature shows only 2 flats (Bb, Eb), consistent with Gm/Bb major, not the Cm (3 flats: Bb,Eb,Ab) given in the task file — flagging this discrepancy rather than silently correcting it. Opening G5 has a turn/mordent ornament (not encoded). The B4 has an explicit natural sign cancelling the key&#x27;s Bb. Final pair (E5-C5) is drawn with a double beam (16ths) and the E5&#x27;s stem has a wavy hook mark resembling a vocal-slide indicator (see METHOD.md) — not separately encoded. | key corrected Cm-&gt;Gm: engraving shows 2 flats</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 E5:8 F5:8 E5:8 D5:8 D5:8 r:8 G5:8 F5:8 E5:8 F5:8 E5:8 D5:8 r:8 D5:8 E5:8 | F5:8 r:8 D5:8 C#5:8 r:8 D5:8 C#5:8 D5:8 r:8 E5:8 D5:8 G5:8 F5:8 D5:8 D5:8 r:8 D5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">blue-11</span>
-    <span class="fig-bird">Bluebird</span><span class="fig-latin">p. 13 · Dm</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 E5:8 F5:8 E5:8 D5:8 D5:8 r:8 G5:8 F5:8 E5:8 F5:8 E5:8 D5:8 r:8 D5:8 E5:8 | F5:8 r:8 D5:8 C#5:8 r:8 D5:8 C#5:8 D5:8 r:8 E5:8 D5:8 G5:8 F5:8 D5:8 D5:8 r:8 D5:8 F5:8</div><div class="fig-note">Spans p035_s05 (&quot;11. July 14.&quot;) + p035_s06. Clean engraving, mostly simple beamed eighth-note pairs. The second pair of the first system (F5-E5) is drawn with a wavy/zigzag beam — a vocal-slide marking per METHOD.md, encoded as plain F5:8 E5:8 with the slide noted here rather than as a trill. Second system has two C#5 chromatic passing tones confirmed via zoom.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:8 D5:8 r:8 E5:8 F5:8 E5:8 D5:8 C5:8 C5:8">
-  <div class="fig-head"><span class="fig-no">rob-salute</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 14 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:8 D5:8 r:8 E5:8 F5:8 E5:8 D5:8 C5:8 C5:8</div><div class="fig-note">First robin salute call, no lyric. All notes have staccato dots (matches rob-lit&#x27;s opening figure style). Single 8th-note rest mid-phrase, no fermata. Key inferred C (no signature shown).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 r:8 F5:8 r:8^ F5:8 F5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">rob-lit</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 14 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 r:8 F5:8 r:8^ F5:8 F5:8 F5:8</div><div class="lyric">Lit, lit, lit, lit, lit.</div><div class="fig-note">Repeated-note &#x27;Lit lit lit lit lit&#x27; call, all F5, staccato dots on every note. Fermata sits over the second (odd vertical glyph) rest, not a note.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 F5:8 F5:8 r:8 Bb5:8 Bb5:8">
-  <div class="fig-head"><span class="fig-no">rob-litleu</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 14 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 F5:8 F5:8 r:8 Bb5:8 Bb5:8</div><div class="lyric">Lit, lit, lit, leu, leu.</div><div class="fig-note">&#x27;Lit lit lit leu leu.&#x27; Flat accidental explicit before the two &#x27;leu&#x27; notes (Bb5); no key signature shown.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8">
-  <div class="fig-head"><span class="fig-no">nut-wait</span>
-    <span class="fig-bird">White-bellied Nuthatch</span><span class="fig-latin">p. 15 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8</div><div class="lyric">Wait wait wait... Ick-y ick-y ick-y.</div><div class="fig-note">CORRECTED from existing C5/A4-centered encoding (which the previous note already flagged as needing pitch-center verification). Lyrics are printed under the staff and align exactly: &#x27;Wait,&#x27;x9 (2 F5 + 3 F5 + 4 D5, with an 8th rest and a fermata-rest breaking up the wait&#x27;s) then &#x27;wait, wait, wait.&#x27; (3 more D5) then &#x27;Ick-y, ick-y, ick-y.&#x27; (6 C5). p037_s02==p051_s00 and p037_s03==p051_s01 are duplicate scans of the same two systems (gap-page copy), not additional content - the 4 crops encode only 2 unique systems, concatenated here. Verified with a pixel grid overlay: F5 notes sit exactly on the top staff line, D5 on the second line - high confidence. Key = 1 flat (F, matches existing corpus key).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 E5:16 F5:16 r:16 F5:16 G5:16 D5:16 r:16 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 D5:16 r:16 A5:16 G#5:16 A5:16 r:16^ D5:16 E5:16 F5:16 r:16 E5:16 F5:16 D5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 G#5:16 A5:16">
-  <div class="fig-head"><span class="fig-no">rob-01 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 16 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 E5:16 F5:16 r:16 F5:16 G5:16 D5:16 r:16 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 D5:16 r:16 A5:16 G#5:16 A5:16 r:16^ D5:16 E5:16 F5:16 r:16 E5:16 F5:16 D5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 G#5:16 A5:16</div><div class="fig-note">Two-system figure &#x27;1.&#x27;, key F (1 flat). Five 16th-note triplet-figures separated by 16th rests per system; system 1 ends on a fermata rest, system 2 ends at a plain barline. The opening note of several triplet-figures and the sharped middle note of the two closing figures were faint/undetected by automated head-finding and filled in by melodic-pattern inference (mirrors the clearly-detected shape) — worth a second look at full source resolution.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 F5:16 D#5:16 r:16 G5:16 D#5:16 E5:16 r:16 B5:16 A#5:16 B5:16 r:16 E5:16 G5:16 E5:16 r:16 E5:16 F5:16 E5:16 B5:16 A#5:16 B5:16 r:16 E5:16 F5:16 G5:16 r:16 F5:16 G5:16 A5:16 r:16 B5:16 A#5:16 B5:16">
-  <div class="fig-head"><span class="fig-no">rob-02 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 16 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 F5:16 D#5:16 r:16 G5:16 D#5:16 E5:16 r:16 B5:16 A#5:16 B5:16 r:16 E5:16 G5:16 E5:16 r:16 E5:16 F5:16 E5:16 B5:16 A#5:16 B5:16 r:16 E5:16 F5:16 G5:16 r:16 F5:16 G5:16 A5:16 r:16 B5:16 A#5:16 B5:16</div><div class="fig-note">&#x27;2. Another song at daybreak.&#x27; Two-system figure, key G (1 sharp). Contains explicit chromatic sharps on scale-degree turns (D#5, A#5) confirmed by visible accidental glyphs directly before those noteheads. Some notes in system 1 were reconstructed via low-threshold re-detection plus staff-line-ruled pixel measurement where the primary detector missed them.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 C#5:16 D5:16 r:16 F5:16 F5:16 F5:16 r:16 F5:8 D5:16 D#5:16 r:16 F5:8 D5:16 D#5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 B5:16 A5:16">
-  <div class="fig-head"><span class="fig-no">rob-03 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 16 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 C#5:16 D5:16 r:16 F5:16 F5:16 F5:16 r:16 F5:8 D5:16 D#5:16 r:16 F5:8 D5:16 D#5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 B5:16 A5:16</div><div class="fig-note">&#x27;3.&#x27; figure, key G (1 sharp). Two turn-figures read as F5(8th)+D5+D#5(16ths beamed) — the isolated high note that looked like an &#x27;R&#x27; glyph is simply an 8th note with a single flag/hook, not an ornament letter. Chromatic passing tones (C#5, D#5) inferred from visible sharp glyphs; exact scale step of the sharped note is a judgment call given scan resolution.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:16 G5:16. E5:8 F5:8 r:16 F5:16 G5:16. E5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">rob-04 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 17 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:16 G5:16. E5:8 F5:8 r:16 F5:16 G5:16. E5:8 F5:8</div><div class="fig-note">&#x27;4.&#x27; figure, key F (1 flat). Opens with a fast 16th-note beamed pair (F5,G5) where G5 carries an augmentation dot, then two 8th notes, repeated after a 16th rest. A stray low &#x27;B3&#x27;-ish detection near the clef is a false positive from the figure-number glyph, disregarded.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 E5:16 F5:16 r:16 G5:16 A5:16 G5:16 r:16 F5:16 G5:16 E5:16 r:16 F5:16 G5:16 F5:16 r:16^ G5:16 A5:16 F5:16">
-  <div class="fig-head"><span class="fig-no">rob-06 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 18 · A</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 E5:16 F5:16 r:16 G5:16 A5:16 G5:16 r:16 F5:16 G5:16 E5:16 r:16 F5:16 G5:16 F5:16 r:16^ G5:16 A5:16 F5:16</div><div class="fig-note">&#x27;6.&#x27; figure, key A (3 sharps). Five 16th-note triplet-figures with 16th rests; fermata over the fourth rest. Leftmost note of the first triplet-figure was undetected (obscured near the key signature) and filled in by matching the ascending D-E-F pattern seen elsewhere on this page.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:16 D5:16 E5:16 r:16 G5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 r:16 G5:16 F5:16 G5:16">
-  <div class="fig-head"><span class="fig-no">rob-07</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 18 · Bb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:16 D5:16 E5:16 r:16 G5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 r:16 G5:16 F5:16 G5:16</div><div class="fig-note">&#x27;7.&#x27; figure, key Bb (2 flats). Four clean 16th-note neighbor-tone figures separated by 16th rests, all 12 notes cleanly detected, no accidentals beyond key signature.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:32 F5:16 E5:16 r:16 A5:8 r:16 A5:8 F5:32 F5:16 E5:16">
-  <div class="fig-head"><span class="fig-no">rob-08 ??</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 18 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:32 F5:16 E5:16 r:16 A5:8 r:16 A5:8 F5:32 F5:16 E5:16</div><div class="fig-note">&#x27;8.&#x27; figure (shares crop figs_new/p040_s02.png with &#x27;9.&#x27;, split by the printed figure numbers), key Eb (3 flats). Small grace-note-like figure (tiny notehead, read as a 32nd) leads into a slanted-beam pair each time; pitch of the grace note is an estimate from a faint blob near the staff top. Needs a second look.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:16 F5:16 E5:16 r:16 A5:16 B5:16 A5:16 r:16 F5:16 G5:16 E5:16">
-  <div class="fig-head"><span class="fig-no">rob-09</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 18 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:16 F5:16 E5:16 r:16 A5:16 B5:16 A5:16 r:16 F5:16 G5:16 E5:16</div><div class="fig-note">&#x27;9.&#x27; figure (right-hand half of figs_new/p040_s02.png). Three clean 16th-note triplet-figures with 16th rests, key Eb (3 flats), all 9 notes cleanly detected.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:16 F5:16 E5:16 G5:16 A5:16 G5:16 r:16 E5:16 F5:16 E5:16 A5:16 B5:16 A5:16 r:16 E5:16 F5:16 E5:16 C6:16 D6:16 C6:16 r:16 D6:16 C6:16">
-  <div class="fig-head"><span class="fig-no">rob-10</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 18 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:16 F5:16 E5:16 G5:16 A5:16 G5:16 r:16 E5:16 F5:16 E5:16 A5:16 B5:16 A5:16 r:16 E5:16 F5:16 E5:16 C6:16 D6:16 C6:16 r:16 D6:16 C6:16</div><div class="fig-note">&#x27;10. Sunset.&#x27; Key C (no signature). Three-rest phrase pairing a low neighbor-tone figure with an ascending higher figure each time, climbing D5-space to C6/D6 by the close; final figure is only 2 notes (D6,C6) as printed, cut short at the barline. All notes cleanly detected.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16">
-  <div class="fig-head"><span class="fig-no">rob-11</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 18 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16</div><div class="fig-note">&#x27;11.&#x27; figure, key F (1 flat). Repeated-note rattle on Bb5 (courtesy flat marked on the first note, redundant with key signature), one 16th rest, then a wavy vocal-slide mark down to the closing G5 (slide, not a trill — not separately encoded per convention).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 E5:16 F5:16 D5:16 E5:16 E5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 F5:16 G5:16 A5:16 F5:16 E5:16 D5:16 r:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16 G5:16 F5:16 E5:16 r:16 E5:16 D5:16 G5:16 E5:16 D5:16 E5:16 r:16 G5:16 A5:16 r:16 G5:16 A5:16 r:16 F5:16 E5:16 D5:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16">
-  <div class="fig-head"><span class="fig-no">rob-16 ??</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 19 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 E5:16 F5:16 D5:16 E5:16 E5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 F5:16 G5:16 A5:16 F5:16 E5:16 D5:16 r:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16 G5:16 F5:16 E5:16 r:16 E5:16 D5:16 G5:16 E5:16 D5:16 E5:16 r:16 G5:16 A5:16 r:16 G5:16 A5:16 r:16 F5:16 E5:16 D5:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16</div><div class="fig-note">Two-system dense trill/turn figure, key G (1 sharp). The source clearly shows repeated chromatic upper/lower-neighbor turn ornaments (sharped passing tones) and sloped-beam fast runs, but at this scan resolution the automated head detector missed many of the ornamental notes and could not reliably localize the accidentals; the pitch skeleton given here is the plain-letter reading only (accidentals omitted). Needs re-verification from a higher-resolution source.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A5:16 G5:16 A5:16 r:16 F5:16 G5:16 r:16 A5:16 G5:16 A5:16 r:16 G5:16 F5:16 C6:16 B5:16 C6:16 B5:16 C6:16 A5:16 B5:16 A5:16 r:16 G5:16 F5:16 G5:16 r:16 G5:16 F5:16 r:16 G5:16 F5:16 r:16 C6:16 B5:16 C6:16 B5:16 C6:16">
-  <div class="fig-head"><span class="fig-no">rob-17 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 19 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A5:16 G5:16 A5:16 r:16 F5:16 G5:16 r:16 A5:16 G5:16 A5:16 r:16 G5:16 F5:16 C6:16 B5:16 C6:16 B5:16 C6:16 A5:16 B5:16 A5:16 r:16 G5:16 F5:16 G5:16 r:16 G5:16 F5:16 r:16 G5:16 F5:16 r:16 C6:16 B5:16 C6:16 B5:16 C6:16</div><div class="fig-note">&#x27;17. Just at dark.&#x27; Two-system figure, key C (no signature). Phrase length shortens across repeats (3,2 notes) suggesting the call fading toward dark, ending both systems in a fast pp run on C6/B5. No accidentals seen (unlike neighboring dense trill figures on this page).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 F5:16">
-  <div class="fig-head"><span class="fig-no">rob-18 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 19 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 F5:16</div><div class="fig-note">Two-system figure, key C (no signature). Long rattle of nine repeated G5 8th notes into D5, fermata rest, then eight repeated F5 8th notes, rest, then two short 16th-note turn figures.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="B4:8 B4:8 B4:8 C5:16 D5:16 E5:16 r:8 B4:8 B4:8 B4:8 r:8 C5:16 D5:16 E5:16">
-  <div class="fig-head"><span class="fig-no">rob-19 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · A</span></div>
-  <div class="staffline"></div>
-  <div class="enc">B4:8 B4:8 B4:8 C5:16 D5:16 E5:16 r:8 B4:8 B4:8 B4:8 r:8 C5:16 D5:16 E5:16</div><div class="fig-note">&#x27;19.&#x27; figure, key A (3 sharps). Three repeated B4 8th notes lead into a fast ascending 16th-note triplet-figure (C5,D5,E5), twice, separated by an 8th rest. The final triplet-figure&#x27;s notes were reconstructed by symmetry with the first (a note in that region was not cleanly detected).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8">
-  <div class="fig-head"><span class="fig-no">rob-21</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8</div><div class="fig-note">&#x27;21. Sept 21, cold and rainy.&#x27; Key G (1 sharp). Clean stepwise descent F5 down to C5, fermata rest, then a shorter F5-E5-D5 descent. All notes cleanly detected.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">rob-22</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8</div><div class="fig-note">&#x27;22.&#x27; figure, key G (1 sharp). All notes cleanly detected, no accidentals beyond key signature.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">rob-23 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8</div><div class="fig-note">&#x27;23.&#x27; figure, key G (1 sharp). Rest placement within the four phrase-groups (4/4/2/5 notes) is read from spacing gaps between otherwise cleanly-detected notes; worth a quick visual double-check of exact rest positions.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 E5:16 D5:16 r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 D5:16 C5:16">
-  <div class="fig-head"><span class="fig-no">rob-20</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 E5:16 D5:16 r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 D5:16 C5:16</div><div class="lyric">Chick-y ick-y chick-y eu (x2)</div><div class="fig-note">&#x27;20. Signal for flight.&#x27; Key F (1 flat). Re-verified from scratch and CORRECTED — previous encoding (C5/A4/C#5-based) did not match the crop; six repeated 16th notes (F5, then E5 after the rest) for &#x27;Chick-y ick-y chick-y&#x27; with a 2-note melisma (E5,D5 then D5,C5) on &#x27;eu&#x27;, matching the printed lyric syllable count (7 syllables, 8 notes per half).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F#5:32 D5:8 F#5:32 D5:8 F#5:32 D5:8 A4:8 A4:8 A4:8">
-  <div class="fig-head"><span class="fig-no">rob-24 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F#5:32 D5:8 F#5:32 D5:8 F#5:32 D5:8 A4:8 A4:8 A4:8</div><div class="lyric">oe, oe, oe, up, up, up.</div><div class="fig-note">&#x27;24.&#x27; figure, key D (2 sharps). Re-verified from scratch and CORRECTED — previous low-confidence encoding (rests + A4/F#5 in a different order) did not match the crop. Actual reading: three slurred grace-note-to-main-note figures (small high grace note, read as 32nd, sliding down into D5) for &#x27;oe, oe, oe,&#x27; followed by three plain A4 8th notes for &#x27;up, up, up.&#x27; Grace-note pitch (F#5, sitting on the top staff line) is a reasonable but not fully certain read of a small notehead.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8">
-  <div class="fig-head"><span class="fig-no">rob-spin ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 20 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8</div><div class="lyric">All a-long ... link-tum loo.</div><div class="fig-note">Spinning-song comparison, 2 staves, key Eb (3 flats), lyric &#x27;All a-long... link-tum loo.&#x27; Two notes in system 1 (2nd and 5th) carry a printed &#x27;3&#x27; triplet marker against their neighbors, encoded with the triplet suffix; the final note of system 1 is spaced noticeably wider than the rest (read as a quarter note, possibly holding &#x27;long&#x27;). System 2 (9 notes for 9 syllables of &#x27;all a-long, all a-long link-tum loo.&#x27;) detected cleanly and matches the lyric one-to-one.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:8 E5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8">
-  <div class="fig-head"><span class="fig-no">rob-sept21 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 21 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:8 E5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8</div><div class="fig-note">Under the text &#x27;I heard a robin exclaim,—&#x27;, key D (2 sharps). Stepwise descent from a repeated E5 opening down to C5, fermata rest, then a shorter F5-E5-D5 descent. The repeated second E5 was faint/undetected by the automated head finder and filled in visually (two same-height noteheads clearly present before the rise to G5).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8^ D5:8 F5:8 F5:8 F5:8 F5:8 r:8^ G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 r:8 G5:8 G5:8 G5:8">
-  <div class="fig-head"><span class="fig-no">rob-farewell</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 22 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8^ D5:8 F5:8 F5:8 F5:8 F5:8 r:8^ G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 r:8 G5:8 G5:8 G5:8</div><div class="fig-note">Main notes at the pond (farewell), 2 staves, key D (2 sharps). System 1 has two fermata rests; all 26 notes across both systems cleanly detected with no ambiguity.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:16 B5:16 A5:16 B5:16 A5:16">
-  <div class="fig-head"><span class="fig-no">ssp-01 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 23 · A</span></div>
-  <div class="staffline"></div>
-  <div class="enc">B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:16 B5:16 A5:16 B5:16 A5:16</div><div class="fig-note">Opening (B4 + 5x F#5) then G#5 pickup into a 5-note 16th trill (A5/B5 alternating, ending A5). Pitches re-measured fresh (precomputed analysis/*.txt was stale/out of sync with current figs_new crop - re-ran heads.py and cross-checked overlay + zoomed PIL crops directly). Repeat dots :|| at end - passage encoded once.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="B4:8. D5:8 C#5:8 E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8">
-  <div class="fig-head"><span class="fig-no">ssp-02 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 23 · A</span></div>
-  <div class="staffline"></div>
-  <div class="enc">B4:8. D5:8 C#5:8 E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8</div><div class="fig-note">Dotted-8th B4, D5, C#5, then 6-note 8th run (E5/F#5 alternating), G#5 pickup to end. Re-measured fresh (stale precomputed data had wrong pitches - D5/C#5 were misread as C#5/E5 in an earlier pass). Repeat dots :|| at end - encoded once.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:32 C6:4 F5:32 C6:4 F5:32 C6:4 F5:4 A5:16 Bb5:16 A5:16 Bb5:16 A5:16">
-  <div class="fig-head"><span class="fig-no">ssp-03 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 23 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:32 C6:4 F5:32 C6:4 F5:32 C6:4 F5:4 A5:16 Bb5:16 A5:16 Bb5:16 A5:16</div><div class="fig-note">Key = 1 flat (Bb). Three grace(F5)+accented-quarter(C6) pairs (accent &#x27;&gt;&#x27; not encoded), then quarter F5, then 5-note 16th trill A5/Bb5 (Bb per key sig). Grace notes tiny/ambiguous - encoded as 32nds per convention.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A5:32 E5:8 r:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 G5:8. F#5:8 F#5:8">
-  <div class="fig-head"><span class="fig-no">ssp-04 ??</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 23 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A5:32 E5:8 r:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 G5:8. F#5:8 F#5:8</div><div class="fig-note">Key = 2 sharps (F#,C#). Grace(A5, estimated)+E5, 16th rest, 6-note 16th run E5/F#5 alternating, dotted-8th G5, then two F#5 eighths (2nd F#5 has explicit courtesy sharp in source, 1st shown F# via key sig, both read at same staff position as first F#5). Grace-note pitch and rest duration are best estimates from a cluttered region - mark low pending a second look.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^">
-  <div class="fig-head"><span class="fig-no">ssp-05 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 24 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^</div><div class="fig-note">Key = 1 sharp (F#). D5/E5/D5 staccato-marked eighths, then 5x B5 eighths (each shows a pass-through A5 ledger, consistent with B5 in the space above), ending fermata over rest.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 D5:16 r:8^">
-  <div class="fig-head"><span class="fig-no">ssp-06 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 24 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 D5:16 r:8^</div><div class="fig-note">Key = 1 sharp (F#, drawn as a blocky glyph on the F5 line that&#x27;s easy to mistake for a repeat/box symbol at low zoom - confirmed sharp on closer crop). Three grace(A5)+G5 pairs, then 5-note 16th run E5/F#5/E5/F#5/D5, fermata over rest.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="B5:32 C6:8 B5:32 C6:8 B5:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^">
-  <div class="fig-head"><span class="fig-no">ssp-07 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 24 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">B5:32 C6:8 B5:32 C6:8 B5:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^</div><div class="fig-note">No key sig. Three grace(B5)+accented C6 pairs (two ledger lines confirm C6: pass-through A5 + through-head C6), then 5x G5 individually-flagged eighths, fermata over rest.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:32 C5:8 D5:32 C5:8 D5:32 C5:8 G5:16 A5:16 G5:16 A5:16 G5:16 r:8 C6:8 C6:8 C6:8">
-  <div class="fig-head"><span class="fig-no">ssp-08 ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 24 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:32 C5:8 D5:32 C5:8 D5:32 C5:8 G5:16 A5:16 G5:16 A5:16 G5:16 r:8 C6:8 C6:8 C6:8</div><div class="fig-note">No key sig. Three grace(D5)+C5 pairs, then 5-note 16th trill G5/A5 alternating, 8th rest, then 3x C6 individual eighths (two-ledger pattern confirms C6), ends with repeat dots.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A5:2 G5:2">
-  <div class="fig-head"><span class="fig-no">chick-01</span>
-    <span class="fig-bird">Chickadee</span><span class="fig-latin">p. 27 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A5:2 G5:2</div><div class="lyric">Ear-ly.</div><div class="fig-note">CORRECTED from existing G5:2/E5:2. Re-verified from scratch with a pixel/staff-position grid overlay: first (hollow) notehead centers on A5 (one ledger-line&#x27;s worth above the staff), second centers on G5 (space just above the staff) - a descending whole step, not a third. No key sig (C).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C6:2 A5:2 | A5:2 G5:2 | C6:2 A5:4 A5:4 | A5:2 G5:4 G5:4">
-  <div class="fig-head"><span class="fig-no">chick-02 ~</span>
-    <span class="fig-bird">Chickadee</span><span class="fig-latin">p. 28 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C6:2 A5:2 | A5:2 G5:2 | C6:2 A5:4 A5:4 | A5:2 G5:4 G5:4</div><div class="fig-note">CORRECTED from existing guess (G5:2 E5:2 | r:2 F5:2 D5:2 | G5:2 E5:2 C5:2), which does not match this crop. The crop actually shows FOUR numbered mini-figures (&#x27;1.&#x27;-&#x27;4.&#x27;), each a 2-pitch idea in one of two registers: C6-down-to-A5 (a third, figs 1&amp;3) or A5-down-to-G5 (a step, figs 2&amp;4), with the lower pitch either held as a half note (figs 1,2) or restruck as two quarters (figs 3,4). No key sig (C). Ledger-line count (pass-through vs through-head) used to disambiguate C6 vs A5 vs B5 vs G5 since notes sit right at/above the staff. Encoded all four, separated by &#x27;|&#x27;.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 ">
-  <div class="fig-head"><span class="fig-no">flick-wet</span>
-    <span class="fig-bird">Flicker</span><span class="fig-latin">p. 30 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 </div><div class="lyric">Wet, wet, wet...</div><div class="fig-note">minor-2nd alternation, cresc-dim-cresc; text-confirmed</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:8 A4:8 C5:8 A4:8 C5:8 A4:8 C5:8 A4:8">
-  <div class="fig-head"><span class="fig-no">flick-wake ~</span>
-    <span class="fig-bird">Flicker</span><span class="fig-latin">p. 31 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:8 A4:8 C5:8 A4:8 C5:8 A4:8 C5:8 A4:8</div><div class="lyric">Wake up, wake up...</div><div class="fig-note">grace-accented pairs</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A5:8 A5:8 A5:8 A5:8 A5:8 Bb5:8 Bb5:8 B5:8 B5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16">
-  <div class="fig-head"><span class="fig-no">fsp-01</span>
-    <span class="fig-bird">Field Sparrow</span><span class="fig-latin">p. 36 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A5:8 A5:8 A5:8 A5:8 A5:8 Bb5:8 Bb5:8 B5:8 B5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16</div><div class="fig-note">Re-verified from scratch; corrects prior med-conf draft (was a fabricated-looking chromatic run C5-E5 that does not match the crop at all). Actual reading, cross-checked with head-detection overlay and 5x zoom: 5 plain eighth notes on A5, 4 plain eighth notes on B-line (first two are Bb per the F-major key signature/1 flat, last two are B natural via an explicit natural sign visible before the 3rd note), then 7 sixteenth notes beamed together alternating C6/D6 (double beam confirmed at zoom). This matches the printed captions exactly: &#x27;Cres- - - - cen - - - -do.&#x27; above the staff and &#x27;Accelerando et crescendo.&#x27; below - the shift from slow discrete eighths to a fast beamed 16th run depicts the accelerando, and the rising pitch (A5-&gt;B5-&gt;C6/D6) depicts the crescendo/rise.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="100"></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:2 F6:2 F6:2 | C6:83 C6:83 C6:83 | C6:83 C6:83 C6:83 | C6:83 C6:83 C6:83">
-  <div class="fig-head"><span class="fig-no">wts-01</span>
-    <span class="fig-bird">White-throated Sparrow</span><span class="fig-latin">p. 42 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:2 F6:2 F6:2 | C6:83 C6:83 C6:83 | C6:83 C6:83 C6:83 | C6:83 C6:83 C6:83</div><div class="lyric">(Old Sam) Pea-body Pea-body Pea-body</div><div class="fig-note">Re-verified from scratch; corrects the 2nd and 3rd notes of the prior med-conf draft (were C6, should be F6 - a clear 4th higher, confirmed both by head-measurement and by direct visual comparison against the triplet notes in the same crop). Written pitches (before 8va) are G4, F5, F5, then C5 x9; encoded here as sounding pitch per the 8va marking printed at the start of the staff, per the format&#x27;s 8va convention. This matches the accompanying prose description exactly: &#x27;First come three long tones of equal length, forming together one-half of the song entire [G5, F6, F6]; then three clusters of three short tones, triplets [C6 x9]... the little twelve-toned melody&#x27; (3 + 9 = 12 tones). The first two of the three long tones carry printed accent marks (&gt;); accents are not representable in this encoding format and are only noted here, not encoded. | marks each triplet-group boundary (cosmetic, matching the printed slur+&#x27;3&#x27; groupings).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D6:8 D6:8 D6:8 C6:8 E6:8 | A4:4. B4:8 B4:4. G4:8 B4:4">
-  <div class="fig-head"><span class="fig-no">btg-01</span>
-    <span class="fig-bird">Black-throated Green Warbler</span><span class="fig-latin">p. 48 · D (analog line); open/C (bird call line)</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D6:8 D6:8 D6:8 C6:8 E6:8 | A4:4. B4:8 B4:4. G4:8 B4:4</div><div class="lyric">Larboard watch a-hoy analog</div><div class="fig-note">Two systems: first (p070_s00) is the bird&#x27;s actual call, 8va, no key signature (open/C), 5 eighth notes -&gt; sounding up an octave. Second (p070_s01) is the human &#x27;analog&#x27; mnemonic with lyric &#x27;Lar-board watch a-hoy!&#x27; underlaid, key D (2 sharps), NOT 8va (sung in normal register), dotted rhythm matches the 5 syllables.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16">
-  <div class="fig-head"><span class="fig-no">oven-01</span>
-    <span class="fig-bird">Oven-bird</span><span class="fig-latin">p. 63 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16</div><div class="lyric">tea-CHER analog</div><div class="fig-note">CORRECTED from prior &#x27;B5:16 E6:8&#x27; encoding, which measured the wrong pitches. Re-verified from scratch: key D major (2 sharps, matches corpus), 8va confirmed in crop text (&#x27;8va. Cres---cen...do.&#x27;). Printed pitches are D5/C5 alternating (C5 -&gt; C#5 per key sig), giving sounding D6/C#6 -- NOT B/E. The lower-step false detections (E4/F4/G4) next to each pair are sloped-beam artifacts, discarded. 6 accented &#x27;teacher&#x27; pairs under a printed crescendo.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb5:8. Bb4:16 Db5:4^ | Eb5:8. Bb4:16 Db5:4^ | Eb5:8. Bb4:16 Db5:4^ | Db5:4^ Bb4:2^">
-  <div class="fig-head"><span class="fig-no">pewee-01</span>
-    <span class="fig-bird">Wood-Pewee</span><span class="fig-latin">p. 64 · Ab</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb5:8. Bb4:16 Db5:4^ | Eb5:8. Bb4:16 Db5:4^ | Eb5:8. Bb4:16 Db5:4^ | Db5:4^ Bb4:2^</div><div class="lyric">Pe-wee peer...</div><div class="fig-note">CORRECTED from prior low-confidence &#x27;C5/Eb5/Ab4/Bb4&#x27; encoding. Re-verified from scratch: key Ab major (4 flats, matches corpus), &#x27;Slow.&#x27; tempo marking, no 8va. RESOLVED the flagged concern about the lyric belonging to a second figure: p086_s00 and p087_s00 are the SAME melody printed twice -- p086_s00 has no lyric, p087_s00 has the identical notation with &#x27;Pe-wee peer! Pe-wee peer! Pe-wee peer! Pe-wee!&#x27; underlaid, confirming both crops are one figure, not two. 3 statements of a 3-note slurred-and-fermata figure (Eb5-Bb4-Db5) plus a shorter 2-note closing tag (Db5-Bb4), matching the lyric&#x27;s 3x &#x27;Pe-wee peer!&#x27; + 1x &#x27;Pe-wee!&#x27;.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="56"></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G6:8. Eb6:16 G6:16 Bb6:8 r:8 | G6:8. Eb6:16 G6:16 Bb6:8 r:8">
-  <div class="fig-head"><span class="fig-no">whip-01 ~</span>
-    <span class="fig-bird">Whippoorwill</span><span class="fig-latin">p. 68 · Bb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G6:8. Eb6:16 G6:16 Bb6:8 r:8 | G6:8. Eb6:16 G6:16 Bb6:8 r:8</div><div class="lyric">Whip-poor-will x3</div><div class="fig-note">Full re-transcription from scratch; result differs substantially from the draft (A4:16 A4:16 D5:8 F#5:8^ x3, conf med), which appears to have assumed the wrong key signature (2 sharps) and wrong octave register. Actual crop shows: (1) a 2-flat key signature (Bb, Eb) -- contradicts corpus&#x27;s stated &#x27;D major&#x27;; kept the corpus&#x27;s 8va instruction since it wasn&#x27;t something visible to re-derive from this crop alone, but flagging the key mismatch for review. (2) Only TWO written groups/repetitions are printed in this crop (not three, despite the &#x27;Whip-poor-will x3&#x27; lyric) -- each group is a dotted-eighth + two 16ths (beamed) + eighth, followed by an eighth rest, ending on a final barline. (3) Notated (pre-8va) pitches per group are G5(dotted 8th) Eb5(16th) G5(16th) Bb5(8th, sits on a ledger line above the staff -- this ledger line was initially mistaken for a fermata/flag in early passes but is definitively a ledger line for the A5 line beneath the B5 space), confirmed via heads.py step data cross-checked against pixel y-positions and staff-line spacing. Sounding (8va, +1 octave) = G6/Eb6/G6/Bb6, outlining an Eb-major triad shape (G-Bb-Eb), which is musically coherent with the 2-flat key signature. No fermata is actually visible anywhere in this crop -- the draft&#x27;s &#x27;^&#x27; on the last note appears to have been invented; dropped it. Verified with tools/parsecheck.py -- OK.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="100"></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb5:8 C5:16 Eb5:16 G5:8 r:8 | Eb5:8 C5:16 Eb5:16 G5:8 r:8 | Eb5:8 C5:16 Eb5:16 G5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 F5:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 | F#5:8 D5:16 F#6:16 D6:8 r:8 | F#5:8 D5:16 F#6:16 D6:8 r:8 | F#5:8 D5:16 F#6:16 D6:8">
-  <div class="fig-head"><span class="fig-no">whip-cluck ~</span>
-    <span class="fig-bird">Whippoorwill</span><span class="fig-latin">p. 70 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb5:8 C5:16 Eb5:16 G5:8 r:8 | Eb5:8 C5:16 Eb5:16 G5:8 r:8 | Eb5:8 C5:16 Eb5:16 G5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | G5:8 G5:16 Bb5:16 Bb5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 G5:8 r:8 | Eb5:8 D5:16 Eb5:16 F5:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 | Ab5:8 Eb5:16 Ab5:16 Eb6:8 | F#5:8 D5:16 F#6:16 D6:8 r:8 | F#5:8 D5:16 F#6:16 D6:8 r:8 | F#5:8 D5:16 F#6:16 D6:8</div><div class="fig-note">Full re-transcription from scratch of all 9 crops (figs_new/p092_s00 through s08), superseding the draft (Bb4:16 Bb4:16 Eb5:8 G5:8 F5:16 r:16 x3, conf low), which does not match any of the 9 systems actually printed on the page -- treated as an unreliable guess and discarded. Each system prints a short 4-note-plus-rest cell (eighth, two beamed 16ths, accented eighth [accent &#x27;&gt;&#x27; marks not encodable in this format, omitted], eighth rest) repeated 3x, matching the &#x27;Whip-poor-will (cluck)&#x27; lyric printed under s00-s05 (lyric not repeated under s06-s08 but the musical cell is identical in form). Distinct melodic variants across systems: s00 Eb-C-Eb-G, s01/s02 G-Eb-G-Bb, s03/s04 Eb-Eb-G-Bb, s05 G-G-Bb-Bb (all in written Eb-major pitches, key sig applied). s06 is a stepwise D5-Eb5 variant ending G5 on reps 1-3 but F5(natural) on rep 4, and (like s07/s08) omits the trailing rest after its final repetition, ending straight at the barline. s07 and s08 are the only systems with an explicit &#x27;8va.&#x27; marking printed above the staff (verified visually) -- sounding pitch = written +1 octave; s07 is in Eb major (Ab-Eb-Ab-Eb pattern), s08 switches to a 2-sharp (D major) key signature for a wide-leap variant (D5-F#6 sounding, i.e. written D4-F#5) that was the hardest passage to verify: the heads.py detector threw multiple conflicting false-positive candidates (F4/A4/D5/F5 all fired near the same beam) because its elliptical matcher partially triggers on the thick sloped 16th-note beam itself, a known failure mode. I cross-checked by measuring per-row dark-pixel-density centroids against the calibrated staff-line y-positions (confirmed the method against the following note, which centered exactly on the D5 line as expected) and am reasonably confident in D4-to-F#5(written) for that beamed pair, but it remains the single lowest-confidence element in this transcription -- worth a second look against a higher-resolution source scan if available. All key-signature accidentals (Bb/Eb/Ab for Eb major; F#/C# for D major on s08) applied to the detector&#x27;s bare letter-pitches. Full concatenated string verified with tools/parsecheck.py -- OK.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G4:8 G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 | G4:8 G4:8 r:8 G4:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 | G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8">
-  <div class="fig-head"><span class="fig-no">bbc-01</span>
-    <span class="fig-bird">Black-billed Cuckoo</span><span class="fig-latin">p. 87 · G</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G4:8 G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 | G4:8 G4:8 r:8 G4:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 | G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8</div><div class="lyric">Cuck-oo, cuck-oo, cuck-oo, coo.</div><div class="fig-note">Re-verified from scratch across all 3 systems (p109_s00-s02); old enc (D5/B4, single system only) was wrong. Actual notation is a near-monotone G4 reciting tone (matching typical cuckoo call transcription) with a single dip to F4 on the final &#x27;coo&#x27; syllable of each phrase. Key G (1 sharp, confirmed) unchanged.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Bb4:8^ Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8">
-  <div class="fig-head"><span class="fig-no">ybc-01</span>
-    <span class="fig-bird">Yellow-billed Cuckoo</span><span class="fig-latin">p. 89 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Bb4:8^ Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8</div><div class="lyric">Wau-olp, olp, olp...</div><div class="fig-note">Re-verified from scratch (p111_s00). Old enc (C5/Bb4/A4 mix) was wrong -- all 12 heads sit on the same staff position (middle line, letter B), and with the 1-flat key (F major) that&#x27;s Bb4 throughout, not a descending tail. Fermata on note 1 only; &#x27;Rit. &amp; dim.&#x27; with staccato dots marks the tail (not separately encodable, noted here). Matches &#x27;Wau-olp, olp, olp...&#x27; bubbling repeated-note character.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A4:8 r:8 A4:8 r:8 B4:16 D5:16^ r:8 A4:8 B4:16 D5:16^ r:8 A4:8 r:8 A4:8 B4:16 D5:16">
-  <div class="fig-head"><span class="fig-no">quail-01</span>
-    <span class="fig-bird">Quail (Bob White)</span><span class="fig-latin">p. 90 · A</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A4:8 r:8 A4:8 r:8 B4:16 D5:16^ r:8 A4:8 B4:16 D5:16^ r:8 A4:8 r:8 A4:8 B4:16 D5:16</div><div class="lyric">Bob, Bob white, Bob white...</div><div class="fig-note">Re-verified from scratch (p112_s00) with pixel-grid overlay on the 3 fast beamed runs (each is only 2 notes -- B4 then D5, both 16ths -- not a repeated-B4-then-F#5 figure as the old enc had). 8 lyric words (Bob,Bob,white,Bob,white,Bob,Bob,white.) map exactly to 5 plain A4:8 &#x27;Bob&#x27; notes + 3 B4:16 D5:16 &#x27;white&#x27; runs; fermata+accent on the D5 of runs 1-2, accent only (no fermata) on the final run. Key A (3 sharps) unchanged, doesn&#x27;t affect A4/B4/D5.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 | A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8">
-  <div class="fig-head"><span class="fig-no">loon-5 ~</span>
-    <span class="fig-bird">Loon</span><span class="fig-latin">p. 97 · F#m</span></div>
-  <div class="staffline"></div>
-  <div class="enc">A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 | A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8</div><div class="lyric">oo,oo,oo,oo,oo</div><div class="fig-note">Re-verified from scratch (p119_s01+s02). Old enc (F#3/A3/C#4 5-note melody) was wrong -- this is a repeating unit of four quick A3 16ths + one longer/higher B3 8th (the double- vs single-hook flag style is the clearest visual discriminator, more reliable here than heads.py&#x27;s noisy letter output), separated by short rests. This 4+1 unit is exactly the page&#x27;s own caption &#x27;his characteristic five tones.&#x27; 5 complete units total across the two crops (one straddles the s01/s02 boundary). Key left as corpus&#x27;s F#m (3 sharps); doesn&#x27;t affect A/B pitches so not independently re-verified.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G#3:8 r:2 A3:4">
-  <div class="fig-head"><span class="fig-no">loon-cry ??</span>
-    <span class="fig-bird">Loon</span><span class="fig-latin">p. 97 · E</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G#3:8 r:2 A3:4</div><div class="fig-note">New transcription (was todo), p119_s00. Only 2 pitches are actually notated on the staff: G#3 (eighth, key sig is 4 sharps F#/C#/G#/D# -- confirmed by pixel count of sharp glyphs, so letter G reads as G#, not the &#x27;G3&#x27; a naive read would give) with a small curved scoop/turn mark after it, then a big gap under an &#x27;ff&#x27; marking with a small hollow oval floating ABOVE the staff (no definite pitch -- this is almost certainly Cheney&#x27;s graphic stand-in for the &#x27;2nd, long and loud&#x27; cry the corpus note describes), then A3 (quarter, large notehead = the final loud tone). Only encoded the 2 definite pitches per &#x27;don&#x27;t invent notes&#x27;; the described 3rd &#x27;tone&#x27; is the indeterminate floating symbol, not a playable pitch. Rest duration for the gap is a rough guess. Key corrected to E (4 sharps) from &#x27;?&#x27;.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F3:16 Bb3:4 r:8 Bb3:8 D3:8 Bb3:8 G2:8 F3:2">
-  <div class="fig-head"><span class="fig-no">gho-01 ??</span>
-    <span class="fig-bird">Great Horned Owl</span><span class="fig-latin">p. 99 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F3:16 Bb3:4 r:8 Bb3:8 D3:8 Bb3:8 G2:8 F3:2</div><div class="lyric">Hoo, Hoo, Hoo.</div><div class="fig-note">Re-verified from scratch (p121_s00). Old enc (Bb2/Ab2 pairs) was wrong. Key signature is actually 3 flats (Bb+Eb+Ab, pixel-verified), not 2 -- corrected key to Eb; this also means the &#x27;B&#x27; pitches read as Bb. Reading is 3 slurred pairs (&#x27;Hoo&#x27; x3): pair1 rises F3-&gt;Bb3 (16th grace up to a longer note), pair2 and 3 fall from Bb3 to a lower note (D3, then G2), ending on a sustained F3. The within-pair direction is NOT consistent (pair1 rises, pairs 2-3 fall) which is unusual and I could not fully resolve at this resolution -- flagged low confidence; a full-page PDF re-check would help.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:16 G5:16 F5:16 G5:16 F5:16 G5:16 F5:16 F#5:16 G5:8 r:4^ F#5:2 G5:16 r:4^ F#5:2 G5:16 r:4^">
-  <div class="fig-head"><span class="fig-no">screech-ahee ??</span>
-    <span class="fig-bird">Screech-Owl</span><span class="fig-latin">p. 101 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:16 G5:16 F5:16 G5:16 F5:16 G5:16 F5:16 F#5:16 G5:8 r:4^ F#5:2 G5:16 r:4^ F#5:2 G5:16 r:4^</div><div class="lyric">Ah---ee, Ah-ee, Ah-ee.</div><div class="fig-note">Re-verified p123_s00. Corrected the opening run: it&#x27;s a tremolo ALTERNATING F5/G5 (pixel-grid confirmed heads.py&#x27;s alternation), not 8 repeated F5s as old enc had. The two later &#x27;Ah-ee&#x27; phrases are a held F#5 half note (open notehead sitting on the top line, not G#5) slurred into a fast G5 16th flourish, then a fermata rest. Wavy/tremolo lines noted per instructions, not encoded as trills. Dense beaming made exact note count in the run hard to pin down with full confidence.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ | G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^">
-  <div class="fig-head"><span class="fig-no">screech-ahoo ??</span>
-    <span class="fig-bird">Screech-Owl</span><span class="fig-latin">p. 101 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ | G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^</div><div class="lyric">Ah---oo, Ah-oo...</div><div class="fig-note">Re-verified p123_s01+s02. The old enc only covered a single 9-note run + 2 held notes; actual content is much longer: a descending chromatic run (G5 down to C5, kept from prior reading -- consistent with the &#x27;descending chromatic slide&#x27; description) followed by, in total, 5 &#x27;Ah-oo&#x27; phrases (1 in s01&#x27;s tail + 4 in s02) each built from a held F5 half note slurred into an F5 note with a wavy tremolo mark underneath, then a fermata rest. s02 restates its own descending run before its 4 phrases -- kept as printed rather than assumed to be a duplicate/error. Exact run pitches and the assumption that all 5 tremolo phrases are identical are not independently pixel-verified for each instance, hence low.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Bb2:4 Bb2:4 Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32">
-  <div class="fig-head"><span class="fig-no">grouse-drum ~</span>
-    <span class="fig-bird">Ruffed Grouse</span><span class="fig-latin">p. 94 · Bb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Bb2:4 Bb2:4 Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32</div><div class="lyric">Thump thump... Whir.</div><div class="fig-note">Re-verified p116_s00+s01. heads.py mislocked on the clef both crops; pitch confirmed manually from the one clear notehead (sits on the B2/4th line -&gt; Bb2 with the 1-flat key). The source notation is NOT literal note values: it&#x27;s 7 plain unflagged accent-marked noteheads (3 &#x27;v&#x27; + 3 &#x27;&gt;&#x27; marks, spaced closer together = graphic accelerando) followed by a drawn chain of ~16 overlapping oval rings (&#x27;whir&#x27;, growing larger toward the end = the buzz fading/slowing per Cheney&#x27;s &#x27;dim&#x27;). Single pitch throughout (Bb2). Durations here are an editorial translation of the graphic accelerando into decreasing note values, not a literal reading -- inherently approximate, hence med not high.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="100"></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8. F5:16 F5:8 F5:8 r:8^ E5:8 E5:8 r:8^ G5:16 D5:8 r:8 B4:16 B4:16 B4:16 F5:8">
-  <div class="fig-head"><span class="fig-no">hen-wait ??</span>
-    <span class="fig-bird">Hen Music</span><span class="fig-latin">p. 105 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8. F5:16 F5:8 F5:8 r:8^ E5:8 E5:8 r:8^ G5:16 D5:8 r:8 B4:16 B4:16 B4:16 F5:8</div><div class="lyric">Wait, wait... ok, ik.</div><div class="fig-note">Re-verified p127_s00 (note: only this ONE crop belongs to hen-wait per corpus&#x27;s crops list; p127_s01-s03 are a different, unrelated figure on the same page and were not used). 12 lyric syllables (Wait x6, ok, ik, ok, ok, ok, ik) mapped to 12 note events. First 4 &#x27;Wait&#x27;s sit on the top line (F5); notes 5-6 look slightly lower (read as E5, not fully certain); &#x27;ok&#x27;/&#x27;ik&#x27; pattern before the fermata reads high-then-lower (G5, D5, tentative), and the closing ok-ok-ok-ik reads as three B4 16ths then a final F5. Several individual pitch calls here are genuinely uncertain at this scan resolution.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D4:4^ D4:4^ D4:4^ r:4 E4:4^ E4:4^ r:4 D4:4^ F4:4^ | F4:4^ r:4 C4:32 G4:4^ G4:4^ G4:4^ r:4 B4:4^ B4:4^ B4:4^">
-  <div class="fig-head"><span class="fig-no">hen-wauk ~</span>
-    <span class="fig-bird">Hen Music</span><span class="fig-latin">p. 106 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D4:4^ D4:4^ D4:4^ r:4 E4:4^ E4:4^ r:4 D4:4^ F4:4^ | F4:4^ r:4 C4:32 G4:4^ G4:4^ G4:4^ r:4 B4:4^ B4:4^ B4:4^</div><div class="lyric">Wauk, wauk, wauk...</div><div class="fig-note">Re-verified from scratch (p128_s00+s01). Old enc (6x identical A4 with fermata) was wrong -- every note DOES carry a fermata (&#x27;Wauk deliberate&#x27;) but the pitches clearly rise over the course of the phrase: D4 x3, E4 x2, D4, F4 (s00) then F4, a short grace note (C4), G4 x3, B4 x3 (s01), matching the printed &#x27;cres.&#x27; and &#x27;f&#x27; markings (rising + louder toward the end). Exact rhythm (some notes may be dotted) not fully nailed down, hence med not high.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="60"></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 C5:8 | G5:8 Bb5:8 | F5:16 G5:16 Ab5:16 F5:16 | Eb5:8 | G5:8 F5:8 Eb5:8 | F5:8 F5:8 Eb5:8 Ab5:8 | Eb5:8 F5:8 Eb5:8 | F5:8 Bb5:8 C6:8 | F5:8 G5:8 F5:8 | Ab5:8 Bb5:8 F5:8 Ab5:8 Bb4:8 G5:8 | Eb5:8 G5:8 G5:8 G5:8 | F5:8 F5:8 F5:8 Eb5:8 | C5:8 D5:8 C5:8 D5:8 C5:8 | F5:8 G5:8 F5:8 | Eb5:8 C5:8 Eb5:8 | F5:8 Eb5:8">
-  <div class="fig-head"><span class="fig-no">cat-01 ~</span>
-    <span class="fig-bird">Cat-bird</span><span class="fig-latin">p. 52 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 C5:8 | G5:8 Bb5:8 | F5:16 G5:16 Ab5:16 F5:16 | Eb5:8 | G5:8 F5:8 Eb5:8 | F5:8 F5:8 Eb5:8 Ab5:8 | Eb5:8 F5:8 Eb5:8 | F5:8 Bb5:8 C6:8 | F5:8 G5:8 F5:8 | Ab5:8 Bb5:8 F5:8 Ab5:8 Bb4:8 G5:8 | Eb5:8 G5:8 G5:8 G5:8 | F5:8 F5:8 F5:8 Eb5:8 | C5:8 D5:8 C5:8 D5:8 C5:8 | F5:8 G5:8 F5:8 | Eb5:8 C5:8 Eb5:8 | F5:8 Eb5:8</div><div class="fig-note">3 crops (p074_s00-s02), no 8va, key Eb (3 flats, matches corpus). Catbird&#x27;s &#x27;lively, snatchy&#x27; style: many short 2-6 note motifs separated by rests, matching the printed rest glyphs (encoded here as &#x27;|&#x27; phrase breaks rather than explicit r: tokens since exact rest DURATION per gap wasn&#x27;t individually verified). Pitches measured via heads.py with tight-cluster false positives (beam-artifact detections at implausible low steps within a few px of a real note) dropped. Durations approximated as eighth notes throughout except one clear 16th-note run -- the fast, dense engraving did not get the same beam-by-beam verification as the simpler figures.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb5:8 G5:8 Bb5:8 | F5:8 Ab5:8 G5:8 | F5:8 Ab5:8 Bb5:8 Ab5:8 F5:8 | Bb5:8 G5:8 Ab5:8 | F5:8 G5:8 F5:8 Eb5:8 | C5:8 F5:8 F5:8 Eb5:8 G5:8 F5:8 | G5:8 Bb5:8 | G5:8 Ab5:8 Bb5:8 Ab5:8 | G5:8 F5:8 Eb5:8 Bb5:8 | F5:8 F5:8 F5:8 Eb5:8 | G5:8 G5:8 Eb5:8 | Eb5:8 D5:8 | F5:8 G5:8 Ab5:8 | F5:8 G5:8 Ab5:8 | D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 | G5:8 C5:8 F5:8 Bb5:8 | Bb5:8 F5:8 Ab5:8 | G5:8 Ab5:8 G5:8 Ab5:8">
-  <div class="fig-head"><span class="fig-no">cat-02 ~</span>
-    <span class="fig-bird">Cat-bird</span><span class="fig-latin">p. 53 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb5:8 G5:8 Bb5:8 | F5:8 Ab5:8 G5:8 | F5:8 Ab5:8 Bb5:8 Ab5:8 F5:8 | Bb5:8 G5:8 Ab5:8 | F5:8 G5:8 F5:8 Eb5:8 | C5:8 F5:8 F5:8 Eb5:8 G5:8 F5:8 | G5:8 Bb5:8 | G5:8 Ab5:8 Bb5:8 Ab5:8 | G5:8 F5:8 Eb5:8 Bb5:8 | F5:8 F5:8 F5:8 Eb5:8 | G5:8 G5:8 Eb5:8 | Eb5:8 D5:8 | F5:8 G5:8 Ab5:8 | F5:8 G5:8 Ab5:8 | D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 | G5:8 C5:8 F5:8 Bb5:8 | Bb5:8 F5:8 Ab5:8 | G5:8 Ab5:8 G5:8 Ab5:8</div><div class="fig-note">Continuation of cat-01, 4 crops (p075_s00-s03), same key Eb, same approach/caveats as cat-01 (durations approximated as eighths, dense passage not beam-verified note-by-note).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 Eb5:16 D5:16 | D5:8 | F5:8 D5:8 F5:8 | G5:8 D5:8 Eb5:8 | F5:8 Eb5:8 | G5:8 Eb5:8 | F5:8 G5:8 Ab5:8 | F5:8 G5:8 Ab5:8 | G5:8 | Bb5:8 | Ab5:8 F5:8 Ab4:8 D5:8 | Ab5:8 F5:8 F4:8 D5:8">
-  <div class="fig-head"><span class="fig-no">bth-01 ~</span>
-    <span class="fig-bird">Brown Thrush</span><span class="fig-latin">p. 54 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 Eb5:16 D5:16 | D5:8 | F5:8 D5:8 F5:8 | G5:8 D5:8 Eb5:8 | F5:8 Eb5:8 | G5:8 Eb5:8 | F5:8 G5:8 Ab5:8 | F5:8 G5:8 Ab5:8 | G5:8 | Bb5:8 | Ab5:8 F5:8 Ab4:8 D5:8 | Ab5:8 F5:8 F4:8 D5:8</div><div class="fig-note">&#x27;Lively fragments, 6+ staves p54-55&#x27; spans 10 crops total (figs_new/p076_s00, p077_s00 through p077_s08). Only the first 2 crops (p076_s00, p077_s00) are transcribed here, key Eb (3 flats), same fast 16th-run-plus-rest style as the catbird figures (same durations-approximated caveat applies). The remaining 8 crops (p077_s01 through p077_s08) are NOT transcribed -- visually similar continuing lively fragments in the same key/style, needing a future pass.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8. C5:16 Ab5:4 r:8 G5:8. Eb5:16 Bb5:4">
-  <div class="fig-head"><span class="fig-no">wth-01</span>
-    <span class="fig-bird">Wood Thrush</span><span class="fig-latin">p. 56 · Ab</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8. C5:16 Ab5:4 r:8 G5:8. Eb5:16 Bb5:4</div><div class="fig-note">No 8va. Key is Ab major (4 flats: Bb,Eb,Ab,Db) -- corpus placeholder &#x27;F&#x27; was wrong. Clean single-staff figure, dotted-eighth+16th pairs plus two long notes.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Bb4:8. A4:16 F5:4 r:8 | C5:8 Bb4:8 Eb5:4 C5:4 r:4^ | Eb5:16 Db5:16 Eb5:8 r:4^ | F5:16 G5:16 F5:8">
-  <div class="fig-head"><span class="fig-no">wth-02 ~</span>
-    <span class="fig-bird">Wood Thrush</span><span class="fig-latin">p. 56 · Ab</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Bb4:8. A4:16 F5:4 r:8 | C5:8 Bb4:8 Eb5:4 C5:4 r:4^ | Eb5:16 Db5:16 Eb5:8 r:4^ | F5:16 G5:16 F5:8</div><div class="fig-note">Same key Ab major as wth-01 (4 flats) -- corpus placeholder &#x27;F&#x27; was wrong. An explicit natural sign cancels the flat on one A4 (boxed accidental clearly visible next to the note). Two fermata-marked rests break the phrase into sub-strains.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb5:8. Bb4:16 C5:8 r:4 | C5:16 Ab4:16 r:8 Eb5:4 r:4 | C5:16 Ab4:16 r:8 C5:4 r:4 | F5:2^ | Eb5:8. D5:16 Eb5:8 r:8 | G5:16 F5:16 Eb5:8 r:8 Ab5:4 r:8 | F5:8 E5:8 Bb5:4 | Eb5:16 F5:16 G5:16 r:8 | G5:16 F5:16 C5:16 r:8 F5:4 r:8 | F5:8. Ab4:16 | Eb5:4 r:8 D5:2^ | Eb5:16 D5:16 Eb5:4">
-  <div class="fig-head"><span class="fig-no">wth-03 ~</span>
-    <span class="fig-bird">Wood Thrush</span><span class="fig-latin">p. 57 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb5:8. Bb4:16 C5:8 r:4 | C5:16 Ab4:16 r:8 Eb5:4 r:4 | C5:16 Ab4:16 r:8 C5:4 r:4 | F5:2^ | Eb5:8. D5:16 Eb5:8 r:8 | G5:16 F5:16 Eb5:8 r:8 Ab5:4 r:8 | F5:8 E5:8 Bb5:4 | Eb5:16 F5:16 G5:16 r:8 | G5:16 F5:16 C5:16 r:8 F5:4 r:8 | F5:8. Ab4:16 | Eb5:4 r:8 D5:2^ | Eb5:16 D5:16 Eb5:4</div><div class="fig-note">&#x27;10 o&#x27;clock A.M.&#x27; title confirmed in crop. 3 crops (p079_s00-s02), key Eb major (3 flats, matches corpus). Sparser/slower than the other thrush figures, matching a leisurely daytime song. One note (p079_s01) prints an explicit natural sign that cancels the printed flat, encoded as plain E5.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:4 F5:4 C6:4^ A5:4 A5:4 G5:4 G5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">veery-01</span>
-    <span class="fig-bird">Tawny Thrush (Veery)</span><span class="fig-latin">p. 58 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:4 F5:4 C6:4^ A5:4 A5:4 G5:4 G5:8 F5:8</div><div class="fig-note">Key F major (1 flat, matches corpus). All 8 notes connected by slur marks (portamento/vocal-slide glide between tones, per Cheney&#x27;s description and the task&#x27;s &#x27;silver thread&#x27; note) -- NOT trills, so no ornament encoded, slurring noted here instead.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Bb4:4 D5:16 E5:16 D5:16 r:8 | F5:16 G5:16 F5:16 r:8 D5:4 r:8 Bb4:4 r:8 | E5:16 F5:16 E5:16 r:8 G5:16 A5:16 G5:16">
-  <div class="fig-head"><span class="fig-no">herm-01</span>
-    <span class="fig-bird">Hermit Thrush</span><span class="fig-latin">p. 60 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Bb4:4 D5:16 E5:16 D5:16 r:8 | F5:16 G5:16 F5:16 r:8 D5:4 r:8 Bb4:4 r:8 | E5:16 F5:16 E5:16 r:8 G5:16 A5:16 G5:16</div><div class="fig-note">Key F major (1 flat, matches corpus). Clean, well-spaced figure; leisurely fluting triplet-16th figures separated by single notes and rests.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Bb4:4 D5:16 F5:16 E5:16 C5:4 r:8 | F5:16 A5:16 G5:16 E5:4 r:4 F5:16 G5:16 F5:16 r:8 | A5:16 Bb5:16 A5:16">
-  <div class="fig-head"><span class="fig-no">herm-02</span>
-    <span class="fig-bird">Hermit Thrush</span><span class="fig-latin">p. 60 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Bb4:4 D5:16 F5:16 E5:16 C5:4 r:8 | F5:16 A5:16 G5:16 E5:4 r:4 F5:16 G5:16 F5:16 r:8 | A5:16 Bb5:16 A5:16</div><div class="fig-note">Key F major (1 flat, matches corpus). Same clean style as herm-01, one B5 prints an explicit flat (redundant with key sig, consistent).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E5:4 G5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ | C5:4 F5:16 G5:16 F5:16 A5:16 Bb5:16 A5:16 C6:16 D6:16 C6:16 | Bb4:4 D5:16 F5:16 D5:16 r:8 F5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ | C5:4 G5:16 A5:16 G5:16 E5:8 r:8 G5:16 A5:16 G5:16 E5:8">
-  <div class="fig-head"><span class="fig-no">herm-more ~</span>
-    <span class="fig-bird">Hermit Thrush</span><span class="fig-latin">p. 60 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E5:4 G5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ | C5:4 F5:16 G5:16 F5:16 A5:16 Bb5:16 A5:16 C6:16 D6:16 C6:16 | Bb4:4 D5:16 F5:16 D5:16 r:8 F5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ | C5:4 G5:16 A5:16 G5:16 E5:8 r:8 G5:16 A5:16 G5:16 E5:8</div><div class="fig-note">&#x27;4 further strains p60-61&#x27; -- 2 crops (p082_s02, p082_s03), each crop contains 2 strains (separated by double barline / fermata), giving the 4 strains total. Key F major throughout.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:8 B4:8 C5:8 B4:8 C5:8 B4:8 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | Eb5:8 Eb5:8 Eb5:8 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 r:16 Eb6:32 D6:8 Eb6:32 D6:8 | Bb5:32 Ab5:8 Bb5:32 Ab5:8 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 C6:8 Ab5:8 r:8^ | A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 B5:16 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | C6:32 B5:8 B5:8 B5:8 r:8 E6:32 D6:8 B5:8 C6:32 B5:8 B5:8 B5:8 | G5:8 D5:8 G5:8 D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 Bb5:8 Bb5:8 Bb5:8 r:8^ | Eb5:8 Eb5:8 Eb5:8 Ab5:8 Eb5:8 C6:8. Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 | C6:8 C6:8 C6:8 C6:8 C6:8 G5:8 Bb5:8 B5:8 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F5:16 E5:16 F5:16 E5:16 r:8^ | D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^ | D5:8 E5:8 E5:8 E5:8 E5:8 E6:8 E6:8 E6:8 r:8^ | D6:32 C6:8 D6:32 C6:8 D6:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^">
-  <div class="fig-head"><span class="fig-no">ssp-more ~</span>
-    <span class="fig-bird">Song-sparrow</span><span class="fig-latin">p. 24 · var</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:8 B4:8 C5:8 B4:8 C5:8 B4:8 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | Eb5:8 Eb5:8 Eb5:8 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 r:16 Eb6:32 D6:8 Eb6:32 D6:8 | Bb5:32 Ab5:8 Bb5:32 Ab5:8 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 C6:8 Ab5:8 r:8^ | A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 B5:16 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 | C6:32 B5:8 B5:8 B5:8 r:8 E6:32 D6:8 B5:8 C6:32 B5:8 B5:8 B5:8 | G5:8 D5:8 G5:8 D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 Bb5:8 Bb5:8 Bb5:8 r:8^ | Eb5:8 Eb5:8 Eb5:8 Ab5:8 Eb5:8 C6:8. Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 | C6:8 C6:8 C6:8 C6:8 C6:8 G5:8 Bb5:8 B5:8 | A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F5:16 E5:16 F5:16 E5:16 r:8^ | D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^ | D5:8 E5:8 E5:8 E5:8 E5:8 E6:8 E6:8 E6:8 r:8^ | D6:32 C6:8 D6:32 C6:8 D6:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^</div><div class="fig-note">13 crops = 13 distinct unnumbered systems (matches catalog&#x27;s note of ~17 unnumbered variants on book pp.23-24; not all necessarily captured here). Encoded each system in reading order (p046_s04..s07, p047_s00..s08), separated by &#x27;|&#x27;. Per-system key signatures vary: p046_s04 none(C), s05 3 flats(Eb), s06 3 flats(Eb), s07 1 sharp(G) -- p047_s00/s01 1 sharp(G), s02 2 flats(Bb), s03 3 flats(Eb/Cm), s04 none(C, but explicit accidental Bb/B natural at end), s05 none(C), s06/s07/s08 1 sharp(G). p046_s05 is the highest/8va-like system (beamed run reaches 3 ledger lines above staff, Eb6/F6) but shows NO printed 8va bracket, so pitches are encoded as literally engraved (not further octave-shifted). Grace notes throughout are tiny and encoded as 32nds at an estimated pitch one step above their resolution note (a pattern that held consistently across every grace+main pair checked with a pixel grid overlay). Fermata+rest endings are common across systems. Overall med confidence: main notes cross-checked with fresh heads.py + grid overlays, but grace-note pitches and a few flat/sharp fringe cases are less certain.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb6:8 Eb6:8 Eb6:8 Eb6:8 Eb6:8 D6:83 Eb6:83 Eb6:83 Bb5:8">
-  <div class="fig-head"><span class="fig-no">warb-cs ~</span>
-    <span class="fig-bird">Chestnut-sided Warbler</span><span class="fig-latin">p. 49 · Bb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb6:8 Eb6:8 Eb6:8 Eb6:8 Eb6:8 D6:83 Eb6:83 Eb6:83 Bb5:8</div><div class="fig-note">8va, key is Bb major (2 flats: Bb,Eb) -- corpus placeholder &#x27;Db&#x27; was wrong (only 2 flats printed, verified by careful pixel-level recount). A &#x27;3&#x27; triplet marker and accent(&gt;) appear over the D5-E5-E5 group near the end; exact triplet grouping is a best-effort read of a cramped, ink-heavy passage -- pitches are solid, fine rhythm less certain.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D6:8 E6:8 D6:16 B#5:16 D6:8 D6:8 D6:16 B#5:16 D6:8 F6:4">
-  <div class="fig-head"><span class="fig-no">warb-my ~</span>
-    <span class="fig-bird">Maryland Yellow-throat</span><span class="fig-latin">p. 49 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D6:8 E6:8 D6:16 B#5:16 D6:8 D6:8 D6:16 B#5:16 D6:8 F6:4</div><div class="fig-note">8va, key F major (1 flat, matches corpus). Two identical fast 16th-note turn figures each print an explicit sharp before a B-line note (canceling the printed nowhere-flatted B and actually raising it past natural -- encoded literally as B# per the visible accidental, enharmonically = C). Final note F5 (sounding F6) ends the phrase, unflagged.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F6:8 F6:8 F6:16 Bb5:16 r:8 F6:8 A6:8 r:8 F6:8 F6:8 F6:16 Bb5:16 E6:8 | B5:8 D6:16 C#6:16 D6:16 B5:16 D6:16 B5:16 B5:16 B5:16 | E6:8 D6:8 E6:8 D6:8 C#6:8 D6:8 C#6:8 B5:8 B5:8">
-  <div class="fig-head"><span class="fig-no">warb-oth ~</span>
-    <span class="fig-bird">Other Warblers</span><span class="fig-latin">p. 49 · var (F/Bb, D, A shown; rest untranscribed)</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F6:8 F6:8 F6:16 Bb5:16 r:8 F6:8 A6:8 r:8 F6:8 F6:8 F6:16 Bb5:16 E6:8 | B5:8 D6:16 C#6:16 D6:16 B5:16 D6:16 B5:16 B5:16 B5:16 | E6:8 D6:8 E6:8 D6:8 C#6:8 D6:8 C#6:8 B5:8 B5:8</div><div class="fig-note">&#x27;Songs of other Warblers&#x27; spans 6 crops (figs_new/p071_s01, p071_s02, p071_s03, p072_s00, p072_s01, p072_s02) containing 11 distinct short 8va songs (2 per crop except p072_s02 which has 1), matching the catalog&#x27;s count of 11. Only the first 3 songs are transcribed here (p071_s01 left=key F/Bb, p071_s01 right=key D, p071_s02 left=key A). The remaining 8 songs are NOT transcribed: p071_s02 right (C major), p071_s03 left+right, p072_s00 left+right, p072_s01 left+right, p072_s02 (single song) -- all similarly short 8va fragments in various keys, needing a future pass.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C#5:8 D5:8 D5:8 D5:8 D5:8 D5:8 C#5:8">
-  <div class="fig-head"><span class="fig-no">redst-01</span>
-    <span class="fig-bird">Redstart</span><span class="fig-latin">p. 51 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C#5:8 D5:8 D5:8 D5:8 D5:8 D5:8 C#5:8</div><div class="fig-note">No 8va marking. Key is D major (2 sharps: F#,C#) -- corpus placeholder &#x27;F&#x27; was wrong. 7 plain eighth notes, repeated D5 bookended by C#5, matches &#x27;brief monotone&#x27; description well.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C#6:4 D6:4 D6:4 D6:4 D6:4 | C#6:16 B5:16 r:4^ | D6:4 D6:4 C#6:16 B5:16 B5:16 A5:16 r:4^ | D6:4 D6:4 D6:4 A5:8 A5:8 A5:8 A5:8">
-  <div class="fig-head"><span class="fig-no">yw-01</span>
-    <span class="fig-bird">Yellow Warbler</span><span class="fig-latin">p. 47 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C#6:4 D6:4 D6:4 D6:4 D6:4 | C#6:16 B5:16 r:4^ | D6:4 D6:4 C#6:16 B5:16 B5:16 A5:16 r:4^ | D6:4 D6:4 D6:4 A5:8 A5:8 A5:8 A5:8</div><div class="fig-note">8va confirmed (missed in prior pass; sounding pitch up an octave from printed heads). Key sig is 2 sharps (F#,C#) = D major, not A as placeholder guessed. Printed C notes are C#. Two beamed 16th pairs (C#5-B4) resolved by discarding sloped-beam false-positive detections (D4/F4) next to them; final 4-note tail (A4 x4, individually flagged eighths) confirmed via connected-component blob analysis since heads.py only caught 2 of the 4.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 Eb5:8 r:8 F5:16 G5:16 Ab5:16 G5:16 Eb5:8 F5:8 Eb5:8">
-  <div class="fig-head"><span class="fig-no">tan-01</span>
-    <span class="fig-bird">Scarlet Tanager</span><span class="fig-latin">p. 74 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 Eb5:8 r:8 F5:16 G5:16 Ab5:16 G5:16 Eb5:8 F5:8 Eb5:8</div><div class="fig-note">p096_s00, key Eb (3 flats, applied: E-&gt;Eb, A-&gt;Ab). F5-Eb5 single-beam 8th pair, 8th rest, then a 4-note double-beamed 16th-note arch figure (F5-G5-Ab5-G5, Ab5 needs a leger line above the staff), then a 3-note single-beam eighth-note turn figure (Eb5-F5-Eb5) ending on the final barline. Resolved ambiguity at the end (single beam changes slope direction, forming one continuous 3-note group rather than two separate pairs) by overlaying detector x-coordinates directly on a 6-10x pixel crop; a detector hit at x=477 (A4) fell inside the F5 notehead&#x27;s own ink blob and was discarded as noise, not a real note.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:16 G5:16 A5:8 F5:8 G4:8 E5:8 F5:16 G5:16 A5:8 F5:8 E5:8 F5:8 A5:8 | G5:16 F#5:16 G5:8 r:8 A5:16 B5:16 G5:8 F5:8 A5:16 B5:16 G5:8 F5:8 G5:8 A5:16 B5:16 | A5:8 A5:8 F5:8 F5:8 G5:16 A5:16 A5:8 F5:8 F5:8 E5:8 F5:16 G5:16 A5:8 | A4:32 F5:8 E5:8 r:8 F5:8 A5:8 G5:8 F5:8 F5:16 G5:16 F5:8 r:8 F5:8 F5:8 A5:8 F5:16 D5:16 F5:8 A5:8 F5:8 F5:8">
-  <div class="fig-head"><span class="fig-no">tan-var ~</span>
-    <span class="fig-bird">Scarlet Tanager</span><span class="fig-latin">p. 75 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:16 G5:16 A5:8 F5:8 G4:8 E5:8 F5:16 G5:16 A5:8 F5:8 E5:8 F5:8 A5:8 | G5:16 F#5:16 G5:8 r:8 A5:16 B5:16 G5:8 F5:8 A5:16 B5:16 G5:8 F5:8 G5:8 A5:16 B5:16 | A5:8 A5:8 F5:8 F5:8 G5:16 A5:16 A5:8 F5:8 F5:8 E5:8 F5:16 G5:16 A5:8 | A4:32 F5:8 E5:8 r:8 F5:8 A5:8 G5:8 F5:8 F5:16 G5:16 F5:8 r:8 F5:8 F5:8 A5:8 F5:16 D5:16 F5:8 A5:8 F5:8 F5:8</div><div class="fig-note">Confirms catalog audit SURPRISE: page 75 actually shows 4 distinct melodic variations, not 3 as the old note said. Crop p097_s00 contains TWO variations (var 1 ends at internal double-bar ~mid-crop, var 2 begins right after with new clef/key sig and a chromatic F#5 passing tone); p097_s01 = variation 3; p097_s02 = variation 4 (opens with a grace note A4 slurred into F5, plus an accent mark, both not encodable in this format so noted here). All 4 use the same recurring 16-16-8 / 8-8 rhythmic cell (this internal consistency cross-check gave confidence in the rhythm reading). Var 1 pitches/rhythm are solidly cross-checked (near-high conf); var 2 has an unencoded staccato-looking dot near the peak note each repeat and an odd rest glyph (encoded r:8, Cheney&#x27;s hook-shaped rest); var 3 and especially var 4&#x27;s back half have some residual pitch/beam-grouping judgment calls in dense passages (detector threw spurious duplicate hits near sloped beams throughout, filtered by cross-checking zoomed crops, but a few notes in var 4 could not be triple-verified) — hence overall &#x27;med&#x27; rather than &#x27;high&#x27;. 8va not applicable (already at written pitch). Key Eb major (3 flats) confirmed from key signature in all 3 crops.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 Eb5:8 F5:16 Eb5:16 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 r:8^ Eb5:8 F5:8 r:8 Eb5:16 Eb5:16 r:8 Eb5:16 F5:16 r:8">
-  <div class="fig-head"><span class="fig-no">ori-first</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 71 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 Eb5:8 F5:16 Eb5:16 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 r:8^ Eb5:8 F5:8 r:8 Eb5:16 Eb5:16 r:8 Eb5:16 F5:16 r:8</div><div class="fig-note">1884 arrival, 3 staves (figs_new/p093_s00-s02.png). Every note is F5 or Eb5 (Eb applied per Eb-major key sig) alternating in a chattering rattle pattern with accents (not encoded) and one fermata-rest per system; verified with independent staff-line pixel calibration (dark-row detection) cross-checked against three separate systems that all reproduce the same F5/Eb5 cell, plus ledger/line-position confirmation at every note. heads.py&#x27;s own pitch labels were unreliable (systematically one step flat vs the correct treble reading) so all pitches were read manually against measured staff-line y-coordinates.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:8 r:8 G#5:8 A5:8 A5:8 G5:8. F5:8 E5:8 D5:8 r:8^">
-  <div class="fig-head"><span class="fig-no">ori-elm</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 72 · Am</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:8 r:8 G#5:8 A5:8 A5:8 G5:8. F5:8 E5:8 D5:8 r:8^</div><div class="fig-note">minor-scale strain (figs_new/p094_s00.png). No key signature at the clef (0 sharps/flats) -&gt; A minor. Scale run G5-G#5(sharp, ledger-free space above staff)-A5(ledger line, confirmed twice)-A5-G5(explicit natural sign cancelling the sharp, dotted)-F5-E5-D5(descending, stepwise, on/around the staff lines), ending on a fermata rest before the final barline. The G#5-&gt;G-natural pair is a textbook melodic-minor raised-leading-tone/natural-descent, which is strong internal confirmation of A minor and of the pitch reading.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb5:8 F5:8 Eb5:8 F5:8 r:8 F5:4 Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 Eb5:16 r:8 Eb5:8 F5:8 Eb5:8 F5:8 r:8 Eb5:8. F5:16">
-  <div class="fig-head"><span class="fig-no">ori-curly</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 72 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb5:8 F5:8 Eb5:8 F5:8 r:8 F5:4 Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 Eb5:16 r:8 Eb5:8 F5:8 Eb5:8 F5:8 r:8 Eb5:8. F5:16</div><div class="lyric">Cur-ly, cur-ly, Hey! Chick-er-way...</div><div class="fig-note">Curly curly Hey! Chickerway (figs_new/p094_s01.png + p094_s02.png). Independent re-read from scratch: differs substantially from the old low-conf draft (Bb4/G4/Eb5/D5/C5), which was checked against a mis-calibrated staff reference. Correct treble reading (verified via measured staff-line y-pixels) puts this whole figure in the Eb5-F5-C5 register: &#x27;Cur-ly cur-ly&#x27; = Eb5-F5 alternation (8ths, accented on F5); &#x27;Hey!&#x27; = F5 quarter note (forte, no flag - not an 8th); &#x27;Chick-er-way&#x27; (x2, 16ths) = Eb5-C5-F5, a 3-note figure that recurs identically in both crops, a strong cross-check. p094_s02 continues with &#x27;chew&#x27; (F5-Eb5 16th pair), rest, &#x27;cur-ly cur-ly&#x27; (Eb5-F5 x2, 8ths), rest, &#x27;cur-ly&#x27; (Eb5 dotted-8th + F5 16th) to the final barline.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb5:16 D5:16 Eb5:16 D5:16 Eb5:16 D5:16 r:8^ Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 r:8 | Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8">
-  <div class="fig-head"><span class="fig-no">ori-fly</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 73 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb5:16 D5:16 Eb5:16 D5:16 Eb5:16 D5:16 r:8^ Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 r:8 | Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8</div><div class="fig-note">p095_s00+s01, key Eb (3 flats, applied to E-&gt;Eb). Three 16th-note pairs (Eb5-D5, double beam), accent mark over 3rd pair (not encoded), then fermata over an eighth rest, then repeated Eb5 eighth notes with eighth rests interspersed, continuing into s01 as 12 unbroken Eb5 eighth notes ending on the final barline. Detector threw phantom mid-beam hits (F4/A4/D5) on the sloped 16th beams in s00/s02 groups; confirmed real noteheads via 4x-8x pixel crop of each beam (only 2 real heads per pair). Matches &#x27;pre-flight monotones&#x27; description well.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C#5:8 D5:8 r:8 F5:8 E5:8 r:8^ E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16">
-  <div class="fig-head"><span class="fig-no">ori-dorset</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 73 · A</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C#5:8 D5:8 r:8 F5:8 E5:8 r:8^ E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16</div><div class="fig-note">p095_s02. No key signature actually engraved on this line (clef only, verified by zoom) despite corpus key=&#x27;A&#x27; -- only accidental present is a sharp on the very first note (C#5). All other notes read natural as printed. Sequence: C#5-D5 (single-beam 8th pair), 8th rest, F5-E5 (single-beam 8th pair, accent on F5), 8th rest with fermata, then 5 accented double-beamed 16th-note pairs (E5-D5 x5). Accents (6 total, one per group after the first pair) noted but not encoded (no accent symbol in the format). Phantom mid-beam hits (A4/G4/F4) on the sloped 16th pairs excluded after pixel cross-check, matching the pattern in ori-fly/tan-01.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 r:8 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 E5:8 D5:8 E5:8">
-  <div class="fig-head"><span class="fig-no">ori-nh</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 73 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 r:8 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 E5:8 D5:8 E5:8</div><div class="fig-note">p095_s03, marked &#x27;f Allegro&#x27; above staff (dynamic+tempo, not encoded). Key F (1 flat, Bb) -- no B notes present so no accidentals needed. Five ascending 3-note double-beamed 16th-note figures (D5-E5-F5), with an 8th rest after the 3rd figure, ending in a 3-note single-beam eighth-note tail (E5-D5-E5). No tuplet &#x27;3&#x27; numeral visible over any group, so encoded as straight sixteenths rather than a triplet. Numerous phantom mid-beam detector hits (A4/G4/F4/E4) on the sloped triple-beams excluded after visual zoom confirmed only 3 real heads per group.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G5:8 F#5:8 G5:8 r:8^ | Bb5:8 F#5:8 G5:8 r:8^ | G5:8 F#5:8 Bb5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | A5:8 Bb5:8 C6:8 r:8^ | A5:8 G5:8 F#5:8 r:8^ | G5:8 A5:8 Bb5:8 r:8^ | Bb5:8 F#5:8 G5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | C6:8 A5:8 Bb5:8 r:8^ | D6:8 A5:8 Bb5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | G5:8 F#5:8 Bb5:8">
-  <div class="fig-head"><span class="fig-no">vireo-01</span>
-    <span class="fig-bird">Red-eyed Vireo</span><span class="fig-latin">p. 78 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G5:8 F#5:8 G5:8 r:8^ | Bb5:8 F#5:8 G5:8 r:8^ | G5:8 F#5:8 Bb5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | A5:8 Bb5:8 C6:8 r:8^ | A5:8 G5:8 F#5:8 r:8^ | G5:8 A5:8 Bb5:8 r:8^ | Bb5:8 F#5:8 G5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | C6:8 A5:8 Bb5:8 r:8^ | D6:8 A5:8 Bb5:8 r:8^ | A5:8 F#5:8 G5:8 r:8^ | G5:8 F#5:8 Bb5:8</div><div class="fig-note">2 systems (figs_new/p100_s00.png, p100_s01.png). F major, one flat (Bb) in key sig applied throughout - no natural signs seen, so every bare B is Bb5. F is consistently raised via an explicit written sharp (#) at every occurrence - a chromatic raised-4th figure, cross-checked in zoomed crops. Each phrase = 3 beamed 8th notes followed by a fermata over an 8th rest (r:8^), 13 phrases total across the 2 systems (6 in s00, 7 in s01), matching the &#x27;triplets w/ fermatas&#x27; note. No literal triplet &#x27;3&#x27; numeral is visible above any beam group despite the catalog description calling them triplets - they are plain groups of 3 beamed 8ths, so encoded without a triplet marker. All pitches and durations cross-checked against 4x/8x zoom crops.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8">
-  <div class="fig-head"><span class="fig-no">chat-rit ~</span>
-    <span class="fig-bird">Yellow-breasted Chat</span><span class="fig-latin">p. 80 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8</div><div class="fig-note">No pitch, rhythm only, rit. &amp; dim. Staffless monotone row (figs_new/p102_s00b.png): 17 note-glyphs on a single line with no staff, marked &#x27;f&#x27; at the start and &#x27;Rit. &amp; dim.&#x27; partway through. Careful pixel-level comparison of the note glyphs shows the first 11 have a double flag (16th notes, tight/even spacing ~50px) and the remaining 6 switch to a single flag (8th notes, wider spacing ~62px) with a small staccato dot added above each - i.e. the ritardando is written out as literally longer note values plus wider spacing, and the diminuendo as staccato dots, rather than any gradual/continuous ramp. Encoded on an arbitrary single pitch (C5) throughout since there is no staff or pitch information. Staccato dots on the second half are not representable in the pitch:dur format and are only noted here.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 E5:8 F5:8 E5:8 r:8^ A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 r:8 D5:8 D5:8 D5:8 r:8^ | D5:8 F5:8 D5:8 F5:8 r:8 Bb4:8 Bb4:8 Bb4:8 r:8^ B4:8 C5:8 B4:8 C5:8 r:8 A4:8 D5:8 A4:8 D5:8 A4:8 D5:8 r:8^ | E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:8 E5:8 E5:8 E5:8 E5:8 | E5:8 D5:8 F5:8 r:8 Bb4:16 A4:16 Bb4:16 A4:16 r:8 F5:8 E5:8 E5:8 F5:8 r:8 F5:8 F5:8 F5:8^ | Bb4:16 A4:16 r:8 D5:8 D5:8 D5:8 r:8 A4:4 A4:4 r:8 E5:8 E5:8 F5:8 | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 | Bb4:4 Bb4:4 Bb4:4 r:8^ F5:16 E5:16 F5:16 r:8 E5:16 F5:16 E5:16 r:8 | D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 | C5:4 C5:4 C5:4">
-  <div class="fig-head"><span class="fig-no">chat-notes ~</span>
-    <span class="fig-bird">Yellow-breasted Chat</span><span class="fig-latin">p. 80 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 E5:8 F5:8 E5:8 r:8^ A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 r:8 D5:8 D5:8 D5:8 r:8^ | D5:8 F5:8 D5:8 F5:8 r:8 Bb4:8 Bb4:8 Bb4:8 r:8^ B4:8 C5:8 B4:8 C5:8 r:8 A4:8 D5:8 A4:8 D5:8 A4:8 D5:8 r:8^ | E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:8 E5:8 E5:8 E5:8 E5:8 | E5:8 D5:8 F5:8 r:8 Bb4:16 A4:16 Bb4:16 A4:16 r:8 F5:8 E5:8 E5:8 F5:8 r:8 F5:8 F5:8 F5:8^ | Bb4:16 A4:16 r:8 D5:8 D5:8 D5:8 r:8 A4:4 A4:4 r:8 E5:8 E5:8 F5:8 | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 | Bb4:4 Bb4:4 Bb4:4 r:8^ F5:16 E5:16 F5:16 r:8 E5:16 F5:16 E5:16 r:8 | D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 | C5:4 C5:4 C5:4</div><div class="fig-note">Quirp/charr/whir series p80-81. 9 systems concatenated in crop order with &#x27;|&#x27;: [1] figs_new/p102_s00.png (mf, unlabeled quirp phrase: 2 beamed 8th pairs, fermata-rest, a 3x16th-pair run, then 3 detached D5 8ths - the last D5 sits under a low F4 chord tone on one stem which was dropped since this encoding format is monophonic); [2] p102_s01.png (further phrase ending on fermata; the first two beamed pairs likewise carry a dropped F4 chord tone under each D5; a natural sign explicitly cancels the key-signature flat on one accented B4/C5 pair, encoded as B4 - all other B&#x27;s in this figure/series default to Bb per the F-major key sig since no accidental is shown); [3] p102_s02.png (&#x27;f&#x27;...&#x27;Rit. &amp; dim.&#x27; on-staff monotone E5 decay row, 13x16th notes -&gt; 5x8th notes with staccato dots, same written-ritardando convention as the separate chat-rit figure); [4] p102_s03.png captioned &#x27;Quirp, quirp. (3)&#x27;; [5] p103_s00.png captioned &#x27;Quirp, charr, charr,&#x27; (includes an accented low A4/A4 pair read as plain quarter notes, no flags visible); [6] p103_s01.png on-staff monotone C5 decay row, 8x16th -&gt; 8x8th; [7] p103_s02.png captioned &#x27;Charr, charr, charr.&#x27; (3 accented Bb4 quarters + two 3-note 16th-beam groups F5-E5-F5 / E5-F5-E5); [8] p103_s03.png on-staff monotone D5 decay row, 6x16th -&gt; 6x8th, marked &#x27;etc.&#x27; at the end meaning the pattern continues beyond what is notated; [9] p103_s04.png captioned &#x27;Whirr, whirr, whirr.&#x27; (3 accented C5 quarter notes, final barline). Accent marks (&#x27;&gt;&#x27;) appear over many notes throughout and staccato dots appear on the decay-row tails; neither is representable in the pitch:dur format and both are omitted from the encoding (noted here instead). Several duration/voicing judgment calls (dropped chord tones, quarter-vs-eighth reads on unflagged stems, decay-row tail values) keep the overall confidence at &#x27;med&#x27; even though most pitches and beam groupings were cross-checked closely against 8-10x zoom crops and, where ambiguous, against connected-component pixel analysis of notehead positions.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="G4:8 A4:8. G4:16 r:8^ C5:16 C#5:16 D5:16">
-  <div class="fig-head"><span class="fig-no">bob-pileu ~</span>
-    <span class="fig-bird">Bobolink</span><span class="fig-latin">p. 83 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">G4:8 A4:8. G4:16 r:8^ C5:16 C#5:16 D5:16</div><div class="fig-note">Partial fragment (continuation from an earlier undigitized system, book p.82/PDF104). Crop figs_new/p105_s00.png only. Read: eighth G4 (&#x27;Pi&#x27;), dotted-eighth+sixteenth A4-G4 turn (&#x27;leu&#x27;), fermata over an eighth rest, then three 16ths C5-C#5-D5 (&#x27;pi-le-ah&#x27;, explicit sharp accidental on the middle note). All noteheads/durations cross-checked against 4-12x zoomed crops and staff-line pixel calibration; rest duration (r:8) is a reasonable-but-not-certain read of Cheney&#x27;s hook-shaped rest glyph.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 C5:8 C5:16 D5:16 F5:16 D5:16 F5:16 G5:16 F5:8 F5:8 F5:8 F5:8 G5:16 F5:16 E5:16 A5:8 F5:8 A5:8 F5:8 E5:16 F5:16 G5:16 F5:16 G5:16 B5:16">
-  <div class="fig-head"><span class="fig-no">bob-song ~</span>
-    <span class="fig-bird">Bobolink</span><span class="fig-latin">p. 83 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 C5:8 C5:16 D5:16 F5:16 D5:16 F5:16 G5:16 F5:8 F5:8 F5:8 F5:8 G5:16 F5:16 E5:16 A5:8 F5:8 A5:8 F5:8 E5:16 F5:16 G5:16 F5:16 G5:16 B5:16</div><div class="fig-note">Full transcription from figs_new/p105_s01.png (first 12 notes) + figs_new/p105_s02.png (next 13 notes), concatenated in reading order. p105_s01: D5-C5 eighth pair (single beam), then two triplet-of-16ths groups (C5-D5-F5, D5-F5-G5, double beam), then four individual flagged eighths all on F5 -- the 1st and 3rd of these four (originally auto-detected as E5) carry a triangular ornament mark (turn/mordent) printed above the staff; re-measurement confirmed the noteheads sit ON the F5 line for all four, not E5 -- ornament is noted here but not encoded as extra pitches. p105_s02: triplet-16ths G5-F5-E5, four flagged eighths A5-F5-A5-F5, then two more triplet-16th groups E5-F5-G5 and F5-G5-B5. Every notehead cross-checked with a pixel-calibrated staff-line grid overlay; some early automated (heads.py) pitch guesses were wrong and corrected by direct visual measurement.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 | Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 r:8 Eb4:8 Eb4:8 r:8 | Eb4:8 Eb4:8 r:8 Eb4:8 A4:4 Eb4:8 A4:4 r:8 A4:8 Eb4:8 r:8 A4:8 Eb4:8">
-  <div class="fig-head"><span class="fig-no">bbc-new ~</span>
-    <span class="fig-bird">Black-billed Cuckoo</span><span class="fig-latin">p. 88 · Bb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 | Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 r:8 Eb4:8 Eb4:8 r:8 | Eb4:8 Eb4:8 r:8 Eb4:8 A4:4 Eb4:8 A4:4 r:8 A4:8 Eb4:8 r:8 A4:8 Eb4:8</div><div class="fig-note">New transcription (was todo), 3 systems p110_s00-s02: 1888 new song. Key signature is actually 2 flats (Bb+Eb, pixel-verified against staff lines) = Bb major, not the 1-flat &#x27;F&#x27; guessed in corpus -- so all lettered-E noteheads read as Eb. Main figure is an alternating Eb4(8th)/A4(quarter) call; s01 and s02 shift to straight 8ths with rests near phrase ends (&#x27;resolution&#x27;). Some rest placements inferred from spacing, hence med not high.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:16 E5:16 D5:8 r:8 C5:16 D5:16 E5:8 D5:16 C5:16 r:8 C5:8 r:8 E5:16 D5:16 E5:8 F5:8 | C5:16 B4:16 C5:8 r:8 E5:16 D5:16 C5:8 r:8 D5:16 E5:16 F5:8 E5:8 C5:8 r:8 E5:16 F5:16 G5:8 F5:8 D5:8 | E5:16 D5:16 C5:8 D5:16 E5:16 F5:8 r:8 F5:16 E5:16 D5:8 E5:16 F5:16 G5:8 r:8 C5:16 E5:16 F5:8 E5:8">
-  <div class="fig-head"><span class="fig-no">rgro-01 ~</span>
-    <span class="fig-bird">Rose-breasted Grosbeak</span><span class="fig-latin">p. 76 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:16 E5:16 D5:8 r:8 C5:16 D5:16 E5:8 D5:16 C5:16 r:8 C5:8 r:8 E5:16 D5:16 E5:8 F5:8 | C5:16 B4:16 C5:8 r:8 E5:16 D5:16 C5:8 r:8 D5:16 E5:16 F5:8 E5:8 C5:8 r:8 E5:16 F5:16 G5:8 F5:8 D5:8 | E5:16 D5:16 C5:8 D5:16 E5:16 F5:8 r:8 F5:16 E5:16 D5:8 E5:16 F5:16 G5:8 r:8 C5:16 E5:16 F5:8 E5:8</div><div class="fig-note">Confirms catalog audit: page 76 &#x27;Loud and rapid&#x27; Rose-breasted Grosbeak figure spans 3 systems (p098_s00, s01, s02), concatenated here in reading order. All three systems use the same running 16-16-8 (triplet-shaped double-beam group) / single-beamed-8th-pair rhythmic motif, built from a narrow C5-G5 stepwise range with recurring Cheney hook-shaped rests (encoded r:8) and a few accent marks (&gt;) not representable in this encoding (noted, not encoded). Notably the melody stays diatonic (C/D/E/F/G/B, occasional B4) and never uses the key&#x27;s flatted degrees (Bb/Eb/Ab) in this passage — worth flagging since it&#x27;s what let me confirm rgro-draft (see that entry) is NOT a match for this content. Detector threw a number of spurious duplicate-pitch hits right next to real notes on sloped beams (classic false positive per METHOD.md); each was checked against a zoomed crop and dropped when no second notehead was visible. &#x27;Med&#x27; confidence: pitches are solidly cross-checked against zoomed crops, but exact beam-grouping (which pairs are 16th vs 8th) involved some judgment in a few spots, particularly at low contrast beam junctions.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 C5:8 r:8 A4:8 Bb4:8">
-  <div class="fig-head"><span class="fig-no">indigo-01 ~</span>
-    <span class="fig-bird">Indigo-bird</span><span class="fig-latin">p. 85 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 C5:8 r:8 A4:8 Bb4:8</div><div class="fig-note">FIRST figure only (crop figs_new/p107_s01.png, &#x27;at first the tonic was not quite distinct...I caught this&#x27; -- tonic clarification). No 8va marking on this crop (plain staff-position pitches used). No key signature was actually engraved in this crop (bare treble clef) but corpus context says F major; the final note carries an explicit written flat (Bb4), consistent with F-major tonality. Structure: two identical D5-C5 sixteenth-note pairs (double beam), an eighth rest, a C5-B4 sixteenth pair, a single C5 eighth, another eighth rest, then A4 and Bb4 eighths. All pitches confirmed via a pixel-calibrated staff-line grid (a first-pass automated read wrongly called the first note E5; corrected to D5 after re-measurement, and this D5-C5-D5-C5 shape independently matches the analogous passage in the bundled second figure below, which cross-validates the reading). Bundled 2nd figure (&#x27;the form, then, was as follows&#x27;, crop figs_new/p108_s00.png, key sig Bb visibly engraved there) -- recommend new id indigo-form when corpus is updated: enc: D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8 (note: the B4 in the third pair carries an explicit natural sign canceling the key-signature flat; four dots after the following D5 look like a repeat mark, not encoded as notes; final two notes A4/Bb4 each carry their own flag, Bb4 restates the flat explicitly).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8">
-  <div class="fig-head"><span class="fig-no">indigo-form ~</span>
-    <span class="fig-bird">Indigo-bird</span><span class="fig-latin">p. 86 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8</div><div class="fig-note">split from indigo-01 bundle; &#x27;the form, then, was as follows&#x27;; B4 carries explicit natural; four dots after D5 = repeat mark (not encoded)</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:4 Eb5:4 r:2 F5:4 D5:4">
-  <div class="fig-head"><span class="fig-no">rob-05 ~</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 17 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:4 Eb5:4 r:2 F5:4 D5:4</div><div class="fig-note">Confirmed bundle of two distinct figures sharing this task id, as flagged. This encoding is the &#x27;Pe-wee, pe-wee&#x27; pewee-call cameo (crop figs_new/p039_s01.png; no key signature, explicit flat on Eb5; rest glyph looks like a half rest). The SECOND figure in the bundle — an unrelated numbered &#x27;5.&#x27; robin figure (forte, marked with accent &#x27;&gt;&#x27; marks, crop figs_new/p039_s02.png, key D/2 sharps, &#x27;rain defiance&#x27;) should be split into a NEW id; best-effort encoding for it: E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16 (conf low — accent marks not encoded, several accidentals and a descending slanted-beam passage are uncertain; sloped-beam false-positive risk per METHOD.md; needs full re-read).</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16">
-  <div class="fig-head"><span class="fig-no">rob-defiance ??</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 17 · D</span></div>
-  <div class="staffline"></div>
-  <div class="enc">E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16</div><div class="fig-note">split from rob-05 bundle; forte, accent marks not encoded; &#x27;rain defiance&#x27;; needs re-verify</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:8 Bb4:8 Ab4:8 Eb5:8">
-  <div class="fig-head"><span class="fig-no">lark-4tone</span>
-    <span class="fig-bird">Meadow Lark</span><span class="fig-latin">p. 33 · Ab</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:8 Bb4:8 Ab4:8 Eb5:8</div><div class="fig-note">Re-read from scratch at full crop size; corrects prior low-conf draft (was C5 Ab4 Bb4 C5 - wrong order/pitches). Key sig has 4 flats (Bb Eb Ab Db = Ab major, confirmed by counting flat glyphs and cross-checked against corpus key field). Beamed pair C5-Bb4 (descending), then single Ab4, then single Eb5 (upward leap of a 6th), all plain eighth notes, no accidentals beyond the key signature. Passage ends with a repeat sign (:||) matching the text &#x27;favorite pastime...repeat four tones many times&#x27; - repeat the 4-tone unit for performance.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8">
-  <div class="fig-head"><span class="fig-no">lark-add</span>
-    <span class="fig-bird">Meadow Lark</span><span class="fig-latin">p. 34 · Ab</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8</div><div class="fig-note">Re-read from scratch; corrects prior low-conf draft (was C5 Ab4 F4 Ab4 F4:4 Eb4 F4 - those lower F4/Eb4 pitches do not appear anywhere in this crop; likely confused with a different figure). Actual content: two short phrases, first a beamed C5-Bb4 pair plus single Ab4, second a beamed C5-Bb4 pair, all plain eighth notes, no rests. One beam-partner notehead per phrase was missed by the automated detector (beamed pairs sometimes register only one head) and confirmed manually via pixel-grid overlay against the staff lines.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ | C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8 r:8^ | Eb5:8 D5:8 Db5:8 C5:8 r:8 C5:8 r:8^ C5:8 r:8^ Eb5:8 D5:8 Db5:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 r:8^ Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 r:8^ | Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ | C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8">
-  <div class="fig-head"><span class="fig-no">lark-song ~</span>
-    <span class="fig-bird">Meadow Lark</span><span class="fig-latin">p. 34 · Ab</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ | C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8 r:8^ | Eb5:8 D5:8 Db5:8 C5:8 r:8 C5:8 r:8^ C5:8 r:8^ Eb5:8 D5:8 Db5:8 C5:8 r:8^ | C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 r:8^ Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 r:8^ | Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ | C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8</div><div class="fig-note">Dedicated full re-read of all 6 systems from scratch, cross-checked with the full page scan (pages/page056.png) in addition to the figs_new crops since the crops for system 3 and 6 were slightly narrower than the true system width and clipped trailing notes. Prior low-conf draft was a rough hypothesis (used F5/Eb5-heavy pitches not seen on re-read) and is superseded. | between the 6 systems marks system boundaries (cosmetic). Key = Ab major (4 flats) throughout, confirmed via clef. System 4 is a rapid same-pitch 16th-note passage (7x C5, rest+fermata, 7x Eb5, rest+fermata) - this is the &#x27;exquisite, subtile tremor... resembles the Wilson thrush&#x27; passage described in the surrounding prose; it is notated as literal fast repeated 16ths rather than a wavy-line glyph, so it was encoded literally (not as r:8^ style ornament). System 3 uses an explicit natural sign then a (redundant) flat sign on repeated D notes (D5 nat, then Db5) - encoded literally as D5/Db5. System 5 uses slurs (curved lines) over each Eb5-F5 pair and a beam over each Eb5-C5 pair - slurs are not part of the encoding format and were omitted from the token stream (noted here only). System 6 ends with two notes (C5, Bb4) joined by a heavy slanted tremolo/measured-shake bar - this is the wavy/tremolo notation described in the task (a vocal slide between two different tones, not a same-pitch trill) - encoded as plain C5:8 Bb4:8 per the &#x27;don&#x27;t encode as trills&#x27; rule. Systems 1 and 6 both have small vertical tick marks above their first two notes (possibly accents/marcato); not encodable in this format, noted only. Several individual noteheads inside tight beam/tremolo groups were missed by the automated head-detector and were filled in by manual pixel-grid cross-check against the staff lines (particularly the second note of several beamed pairs, and 2 of 3 notes in some 3-note beam clusters in system 3). Given the length and number of manual judgment calls, marking med rather than high despite each individual passage being visually confirmed.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 | C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8">
-  <div class="fig-head"><span class="fig-no">chip-trill</span>
-    <span class="fig-bird">Chipping Sparrow</span><span class="fig-latin">p. 40 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 | C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8</div><div class="lyric">Chip-chip-chip...</div><div class="fig-note">Re-verified from scratch. Both systems are monotone on C6 (prior med-conf draft had C5 - off by an octave; also had 13 sixteenth notes, but the notes are eighth notes, not sixteenths - single flag confirmed at high zoom). No key signature (plain C, matches corpus). 10 notes in system 1 + 12 notes in system 2 = 22 total, exactly matching the &#x27;Chip-py&#x27; syllable count printed under each system (5x + 6x &#x27;chip-py&#x27;). | marks the system boundary.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value="140"></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 F5:16 Eb5:16 r:8 G5:8. Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 C5:16">
-  <div class="fig-head"><span class="fig-no">ori-curly2</span>
-    <span class="fig-bird">Baltimore Oriole</span><span class="fig-latin">p. 72 · Eb</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 F5:16 Eb5:16 r:8 G5:8. Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 C5:16</div><div class="lyric">chew, cur-ly... kah, kue. Hey!</div><div class="fig-note">kah-kue closing form (figs_new/p094_s03.png). Independent re-read from scratch: differs from the old low-conf draft (G4/Ab4/Bb4/Eb5/D5/C5), same mis-calibration issue as ori-curly&#x27;s draft. &#x27;kah&#x27; = F5 8th; &#x27;kue.&#x27; = F5-Eb5 16th beamed pair; rest; &#x27;Hey!&#x27; = G5 dotted-8th (forte, accent) directly followed by 16th Eb5 (&#x27;Chick&#x27;), completing one beat; &#x27;Chick-er-way&#x27; x2 (16ths) = Eb5-C5-F5, the identical 3-note cell found in ori-curly, a strong cross-check that the Eb-major staff calibration is correct; &#x27;chew.&#x27; = F5-C5 16th beamed pair to the final barline.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D6:16 C6:16 D6:16 C6:16 r:8 C6:16 B5:16 C6:8 r:8">
-  <div class="fig-head"><span class="fig-no">indigo-main ~</span>
-    <span class="fig-bird">Indigo-bird</span><span class="fig-latin">p. 85 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D6:16 C6:16 D6:16 C6:16 r:8 C6:16 B5:16 C6:8 r:8</div><div class="fig-note">Re-verified from scratch against crop figs_new/p107_s00.png. Confirmed &#x27;8va.&#x27; IS engraved above the staff (visible text), so sounding pitch is written (one octave above plain staff-position reading): plain reading D5-C5-D5-C5 r:8 C5-B4 C5:8 r:8, shifted up an octave. This differs substantially from the prior &#x27;low&#x27; draft (E6:16 C6:16 A5:8 E6:16 C6:16 A5:8 r:8 E6:16 C6:16 A5:8 A5:8): the draft&#x27;s E-C-A triple-note grouping was not supported by a fresh read -- the beamed groups are actually 2-note (not 3-note) double-beamed 16th pairs, matching the D5-C5 shape seen twice, then a rest, then a C5-B4 pair, then a single C5 eighth, then a second rest. This D-C-D-C-rest-C-B-C-rest shape independently matches the analogous passage in indigo-01&#x27;s bundled figures (figs_new/p107_s01.png and figs_new/p108_s00.png, same page), which cross-validates the correction. A repeat mark (dots) follows at the crop&#x27;s end, not encoded as notes. Pitches verified via pixel-calibrated staff-line grid overlays at 8-12x zoom; rest durations (r:8) are a reasonable but not fully certain read of Cheney&#x27;s rest glyph shape.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="F5:8 F5:8 F5:8 F5:8 F5:8 Db5:8^ Db5:8 Db5:8">
-  <div class="fig-head"><span class="fig-no">rob-lit-leu3</span>
-    <span class="fig-bird">Robin</span><span class="fig-latin">p. 15 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">F5:8 F5:8 F5:8 F5:8 F5:8 Db5:8^ Db5:8 Db5:8</div><div class="lyric">Lit, lit, lit, lit, lit, leu, leu, leu.</div><div class="fig-note">Five staccato F5 eighths followed by three Db5 eighths; the first Db5 carries a fermata. No key signature is shown, and the printed flat applies to the three leu notes.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="D5:8 C#5:8 D5:8 r:2 D5:8 C#5:8 D5:8">
-  <div class="fig-head"><span class="fig-no">rob-cheeoowy ~</span>
-    <span class="fig-bird">Robin (bluebird responds)</span><span class="fig-latin">p. 15 · F</span></div>
-  <div class="staffline"></div>
-  <div class="enc">D5:8 C#5:8 D5:8 r:2 D5:8 C#5:8 D5:8</div><div class="lyric">Chee-oo-wy, chee-oo-wy.</div><div class="fig-note">Two slurred D5-C#5-D5 eighth-note phrases separated by a half rest, marked piano. The source has one flat in the key signature and repeats the explicit C-sharp accidental in the second phrase; rest value read from the centered block glyph.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-<section class="fig" data-enc="B5:8 C6:8. A5:8 G5:8">
-  <div class="fig-head"><span class="fig-no">goldfinch-01</span>
-    <span class="fig-bird">Yellow-bird; American Goldfinch</span><span class="fig-latin">p. 39 · C</span></div>
-  <div class="staffline"></div>
-  <div class="enc">B5:8 C6:8. A5:8 G5:8</div><div class="fig-note">Four-note 8va flight-song; encoded at sounding pitch one octave above the printed B4-C5-A4-G4. The second eighth note is dotted.</div>
-  <div class="row"><button class="play">Play</button>
-    <label class="ov">♩=<input type="number" class="figTempo" min="30" max="240" placeholder="—" value=""></label>
-    <label class="ov">oct<select class="figOct"><option value="">—</option><option>-2</option><option>-1</option><option value="0">0</option><option>+1</option><option>+2</option></select></label>
-    <span class="note-now"></span></div>
-</section>
-
-<div class="bench">
-  <h2>Annotation workbench</h2>
-  <p>Load a cropped figure image, transcribe it in the box, and audition the result.</p>
-  <input type="file" id="imgFile" accept="image/*">
-  <div id="imgSlot"></div>
-  <textarea id="benchEnc" spellcheck="false">A4:8 D5:8 F5:8 D5:8 | A4:4</textarea>
-  <div class="row"><button id="benchPlay">Play</button><span class="note-now" id="benchNow"></span></div>
-  <div class="err" id="benchErr"></div>
-  <div class="fmt">Format: <code>pitch:duration</code> tokens, space-separated. Durations
-    <code>1 2 4 8 16</code> (add <code>.</code> for dotted, <code>3</code> suffix for triplet
-    member, <code>^</code> for fermata ≈1.7×). <code>r:8</code> = rest. Bars <code>|</code> are
-    ignored by the parser — keep them for readability.</div>
 </div>
 
 <script>
 let ctx = null;
-function audio(){ if(!ctx) ctx = new (window.AudioContext||window.webkitAudioContext)(); return ctx; }
-
+let figures = [];
+let filtered = [];
+let current = null;
+let stopCurrent = null;
+const $ = id => document.getElementById(id);
+const MARK = {high:'high confidence',med:'medium confidence',low:'low confidence',todo:'not transcribed',dup:'retired duplicate'};
 const NOTE = {C:0,D:2,E:4,F:5,G:7,A:9,B:11};
-function freq(tok, octShift){
-  const m = tok.match(/^([A-Ga-g])([#b]{0,2})(\d)$/);
-  if(!m) return null;
-  let semis = NOTE[m[1].toUpperCase()];
-  for(const a of m[2]) semis += (a === '#' ? 1 : -1);
-  const midi = (parseInt(m[3]) + 1 + octShift) * 12 + semis;
-  return 440 * Math.pow(2, (midi - 69) / 12);
-}
 
+function audio(){ if(!ctx) ctx = new (window.AudioContext||window.webkitAudioContext)(); return ctx; }
+function freq(tok,octShift){
+  const m=tok.match(/^([A-Ga-g])([#b]{0,2})(\d)$/); if(!m)return null;
+  let semis=NOTE[m[1].toUpperCase()]; for(const a of m[2])semis+=a==='#'?1:-1;
+  const midi=(parseInt(m[3])+1+octShift)*12+semis;
+  return 440*Math.pow(2,(midi-69)/12);
+}
 function parse(enc){
-  const events = [];
+  const events=[];
   for(const raw of enc.trim().split(/\s+/)){
-    if(raw === '|' || raw === '') continue;
-    const parts = raw.split(':');
-    if(parts.length !== 2) throw `bad token "${raw}"`;
-    const [p, dRaw] = parts;
-    let d = dRaw, mult = 1;
-    if(d.endsWith('^')){ mult *= 1.7; d = d.slice(0,-1); }
-    if(d.endsWith('.')){ mult *= 1.5; d = d.slice(0,-1); }
-    let trip = false;
-    if(d.endsWith('3') && d.length > 1){ trip = true; d = d.slice(0,-1); }
-    const base = parseInt(d);
-    if(![1,2,4,8,16,32].includes(base)) throw `bad duration in "${raw}"`;
-    let beats = 4 / base * mult;
-    if(trip) beats *= 2/3;
-    if(p === 'r' || p === 'R'){ events.push({rest:true, beats, label:raw}); }
-    else{
-      if(!/^[A-Ga-g][#b]{0,2}\d$/.test(p)) throw `bad pitch in "${raw}"`;
-      events.push({pitch:p, beats, label:p});
-    }
+    if(raw==='|'||raw==='')continue;
+    const parts=raw.split(':'); if(parts.length!==2)throw new Error(`bad token "${raw}"`);
+    const [p,dRaw]=parts; let d=dRaw,mult=1;
+    if(d.endsWith('^')){mult*=1.7;d=d.slice(0,-1)}
+    if(d.endsWith('.')){mult*=1.5;d=d.slice(0,-1)}
+    let trip=false;if(d.endsWith('3')&&d.length>1){trip=true;d=d.slice(0,-1)}
+    const base=parseInt(d);if(![1,2,4,8,16,32].includes(base))throw new Error(`bad duration in "${raw}"`);
+    let beats=4/base*mult;if(trip)beats*=2/3;
+    if(/^r$/i.test(p))events.push({rest:true,beats,label:raw});
+    else{if(!/^[A-Ga-g][#b]{0,2}\d$/.test(p))throw new Error(`bad pitch in "${raw}"`);events.push({pitch:p,beats,label:p})}
   }
-  if(!events.length) throw 'no notes';
-  return events;
+  if(!events.length)throw new Error('no notes');return events;
 }
-
-let stopFlag = {};
-async function playSeq(enc, btn, nowEl, errEl, opts){
-  if(errEl) errEl.textContent = '';
-  let events;
-  try{ events = parse(enc); }
-  catch(e){ if(errEl) errEl.textContent = String(e); return; }
-
-  // stop others
-  Object.values(stopFlag).forEach(f => f.stop = true);
-  const flag = {stop:false}; stopFlag[Math.random()] = flag;
-
-  const ac = audio();
-  if(ac.state === 'suspended') await ac.resume();
-  let bpm = +document.getElementById('tempo').value;
-  let octShift = +document.getElementById('octave').value;
-  if(opts && opts.bpm) bpm = opts.bpm;
-  if(opts && opts.oct !== null && opts.oct !== undefined && opts.oct !== '') octShift = +opts.oct;
-  const timbre = document.getElementById('timbre').value;
-  const glide = document.getElementById('slide').value === '1';
-  const spb = 60 / bpm;
-
-  btn.classList.add('playing'); btn.textContent = 'Stop';
-  const cancel = () => { flag.stop = true; };
-  btn.onclick = cancel;
-
-  const master = ac.createGain(); master.gain.value = 0.25; master.connect(ac.destination);
-
-  let t = ac.currentTime + 0.06;
-  let prevFreq = null;
+async function playSeq(){
+  $('playerError').textContent='';
+  let events;try{events=parse(current.enc)}catch(e){$('playerError').textContent=e.message;return}
+  if(stopCurrent)stopCurrent();
+  let stopped=false;const ac=audio();if(ac.state==='suspended')await ac.resume();
+  const localTempo=+$('figureTempo').value;
+  const bpm=localTempo||+$('tempo').value;
+  const localOct=$('figureOct').value;
+  const octShift=localOct===''?+$('octave').value:+localOct;
+  const timbre=$('timbre').value,glide=$('slide').value==='1',spb=60/bpm;
+  const master=ac.createGain();master.gain.value=.25;master.connect(ac.destination);
+  const btn=$('play');btn.classList.add('playing');btn.textContent='Stop';
+  stopCurrent=()=>{stopped=true;master.disconnect();finish()};
+  btn.onclick=stopCurrent;
+  let t=ac.currentTime+.06,prevFreq=null;
   for(const ev of events){
-    const dur = ev.beats * spb;
+    const dur=ev.beats*spb;
     if(!ev.rest){
-      const f = freq(ev.pitch, octShift);
-      const o = ac.createOscillator();
-      o.type = timbre === 'reed' ? 'sawtooth' : timbre === 'pure' ? 'sine' : 'triangle';
-      const g = ac.createGain();
-      const filt = ac.createBiquadFilter();
-      filt.type = 'lowpass';
-      filt.frequency.value = timbre === 'whistle' ? f*3 : timbre === 'reed' ? f*4 : 12000;
-      o.connect(filt); filt.connect(g); g.connect(master);
-      if(glide && prevFreq){
-        o.frequency.setValueAtTime(prevFreq, t);
-        o.frequency.exponentialRampToValueAtTime(f, t + Math.min(0.06, dur*0.3));
-      } else o.frequency.setValueAtTime(f, t);
-      // small chirp attack for whistle
-      const a = 0.012, r = Math.min(0.08, dur*0.35);
-      g.gain.setValueAtTime(0, t);
-      g.gain.linearRampToValueAtTime(1, t + a);
-      g.gain.setValueAtTime(1, t + dur - r);
-      g.gain.linearRampToValueAtTime(0.0001, t + dur);
-      o.start(t); o.stop(t + dur + 0.02);
-      prevFreq = f;
+      const f=freq(ev.pitch,octShift),o=ac.createOscillator(),g=ac.createGain(),filter=ac.createBiquadFilter();
+      o.type=timbre==='reed'?'sawtooth':timbre==='pure'?'sine':'triangle';
+      filter.type='lowpass';filter.frequency.value=timbre==='whistle'?f*3:timbre==='reed'?f*4:12000;
+      o.connect(filter);filter.connect(g);g.connect(master);
+      if(glide&&prevFreq){o.frequency.setValueAtTime(prevFreq,t);o.frequency.exponentialRampToValueAtTime(f,t+Math.min(.06,dur*.3))}
+      else o.frequency.setValueAtTime(f,t);
+      const attack=.012,release=Math.min(.08,dur*.35);
+      g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(1,t+attack);
+      g.gain.setValueAtTime(1,t+dur-release);g.gain.linearRampToValueAtTime(.0001,t+dur);
+      o.start(t);o.stop(t+dur+.02);prevFreq=f;
     }
-    t += dur;
+    t+=dur;
   }
-  const total = (t - ac.currentTime) * 1000;
-
-  // progress readout
-  const start = performance.now();
-  let idx = 0, acc = 0;
-  const marks = events.map(ev => (acc += ev.beats * spb * 1000, acc));
-  (function tick(){
-    if(flag.stop){ master.disconnect(); finish(); return; }
-    const el = performance.now() - start;
-    while(idx < events.length && el > marks[idx]) idx++;
-    if(nowEl) nowEl.textContent = idx < events.length ? events[idx].label : '';
-    if(el < total) requestAnimationFrame(tick); else finish();
-  })();
+  const total=(t-ac.currentTime)*1000,start=performance.now();let index=0,elapsed=0;
+  const marks=events.map(ev=>(elapsed+=ev.beats*spb*1000,elapsed));
+  function tick(){
+    if(stopped)return;const passed=performance.now()-start;
+    while(index<events.length&&passed>marks[index])index++;
+    $('noteNow').textContent=index<events.length?events[index].label:'';
+    if(passed<total)requestAnimationFrame(tick);else finish();
+  }
+  requestAnimationFrame(tick);
   function finish(){
-    btn.classList.remove('playing'); btn.textContent = 'Play';
-    if(nowEl) nowEl.textContent = '';
-    btn.onclick = origHandlers.get(btn);
+    btn.classList.remove('playing');btn.textContent='Play';btn.onclick=playSeq;$('noteNow').textContent='';stopCurrent=null;
   }
 }
-
-const origHandlers = new Map();
-document.querySelectorAll('.fig').forEach(sec => {
-  const btn = sec.querySelector('.play');
-  const now = sec.querySelector('.note-now');
-  const h = () => {
-    const tIn = sec.querySelector('.figTempo').value;
-    const oIn = sec.querySelector('.figOct').value;
-    playSeq(sec.dataset.enc, btn, now, null,
-            {bpm: tIn ? +tIn : null, oct: oIn === '' ? null : oIn.replace('+','')});
-  };
-  origHandlers.set(btn, h); btn.onclick = h;
-});
-{
-  const btn = document.getElementById('benchPlay');
-  const h = () => playSeq(document.getElementById('benchEnc').value, btn,
-                          document.getElementById('benchNow'),
-                          document.getElementById('benchErr'));
-  origHandlers.set(btn, h); btn.onclick = h;
+function optionLabel(f){return `${f.bird||'Unknown'} — ${f.id} — p. ${f.page??'?'} [${f.conf||'todo'}]`}
+function applyFilter(){
+  const q=$('search').value.trim().toLowerCase();
+  filtered=figures.filter(f=>!q||[f.id,f.bird,f.note,f.lyric,f.conf].some(v=>String(v||'').toLowerCase().includes(q)));
+  $('figureSelect').replaceChildren(...filtered.map(f=>{
+    const o=document.createElement('option');o.value=f.id;o.textContent=optionLabel(f);return o;
+  }));
+  $('catalogCount').textContent=`${filtered.length} of ${figures.length} figures`;
+  if(current&&filtered.some(f=>f.id===current.id))$('figureSelect').value=current.id;
+  else if(filtered.length)selectFigure(filtered[0].id);
 }
-
-document.getElementById('tempo').oninput = e =>
-  document.getElementById('tempoOut').textContent = e.target.value + ' bpm';
-document.getElementById('octave').oninput = e =>
-  document.getElementById('octOut').textContent = (e.target.value >= 0 ? '+' : '') + e.target.value;
-
-document.getElementById('imgFile').onchange = e => {
-  const f = e.target.files[0]; if(!f) return;
-  const img = new Image();
-  img.onload = () => URL.revokeObjectURL(img.src);
-  img.src = URL.createObjectURL(f);
-  const slot = document.getElementById('imgSlot');
-  slot.innerHTML = ''; slot.appendChild(img);
-};
+function selectFigure(id){
+  const f=figures.find(item=>item.id===id);if(!f)return;
+  if(stopCurrent)stopCurrent();current=f;$('figureSelect').value=f.id;
+  $('figureId').textContent=f.id;$('figureBird').textContent=f.bird||'Unknown';
+  $('figureMeta').textContent=`p. ${f.page??'?'}${f.key&&f.key!=='?'?` · ${f.key}`:''}`;
+  $('figureConfidence').textContent=MARK[f.conf]||f.conf||'unrated';
+  $('figureLyric').textContent=f.lyric||'';$('figureLyric').hidden=!f.lyric;
+  $('figureEncoding').textContent=f.enc||'';$('figureEncoding').hidden=!f.enc;
+  $('todoNote').hidden=!!f.enc;$('figureNote').textContent=f.note||'';$('figureNote').hidden=!f.note;
+  $('figureTempo').value=f.tempo||'';$('figureOct').value='';
+  $('play').disabled=!f.enc;$('play').onclick=f.enc?playSeq:null;
+  const crops=Array.isArray(f.crops)?f.crops:[];
+  $('sourceCount').textContent=crops.length?`${crops.length} crop${crops.length===1?'':'s'}`:'';
+  if(!crops.length)$('cropList').innerHTML='<div class="empty">No crop is linked to this catalog entry.</div>';
+  else{
+    $('cropList').replaceChildren(...crops.map((src,index)=>{
+      const figure=document.createElement('figure'),img=document.createElement('img'),cap=document.createElement('figcaption');
+      img.src=src;img.alt=`Original notation crop ${index+1} for ${f.bird||f.id}`;img.loading='lazy';
+      cap.textContent=src;figure.append(img,cap);return figure;
+    }));
+  }
+  const url=new URL(location.href);url.searchParams.set('figure',f.id);history.replaceState(null,'',url);
+}
+function move(delta){
+  if(!filtered.length)return;const index=Math.max(0,filtered.findIndex(f=>current&&f.id===current.id));
+  selectFigure(filtered[(index+delta+filtered.length)%filtered.length].id);
+}
+async function init(){
+  try{
+    const response=await fetch('corpus.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);
+    const corpus=await response.json();figures=corpus.figures.filter(f=>f.conf!=='dup');
+    const playable=figures.filter(f=>f.enc).length;
+    $('credit').textContent=`Simeon Pease Cheney — ${playable} playable / ${figures.length} active catalogued · ~ = verify by ear, ?? = low confidence`;
+    applyFilter();
+    const requested=new URL(location.href).searchParams.get('figure');
+    selectFigure(figures.some(f=>f.id===requested)?requested:(figures.find(f=>f.enc)||figures[0]).id);
+  }catch(error){
+    $('credit').textContent='Could not load corpus.json';
+    $('playerError').textContent=`Serve this directory over HTTP to use the player: ${error.message}`;
+  }
+}
+$('search').addEventListener('input',applyFilter);
+$('figureSelect').addEventListener('change',e=>selectFigure(e.target.value));
+$('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));
+$('tempo').addEventListener('input',e=>$('tempoOut').textContent=e.target.value+' bpm');
+$('octave').addEventListener('input',e=>$('octOut').textContent=(e.target.value>=0?'+':'')+e.target.value);
+init();
 </script>
 </body>
 </html>

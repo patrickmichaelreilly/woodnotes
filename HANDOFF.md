@@ -25,7 +25,9 @@
   crop; do not infer pitches from previous detector output.
 
 ## Encoding format
-`pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member;
+An encoding begins with editable `@key:K` (for example `@key:D` or `@key:F#m`). Unmarked
+pitches follow the signature; `n` cancels it (`Cn5`), and `#`/`b` marks an explicit accidental.
+Then use `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member;
 `^` fermata ≈1.7×; `r:dur` rest. Bar tokens are not used. A newline starts a new staff system
 and must match the original engraving. Existing encodings are drafts awaiting hand correction.
 Explicit beam groups use `[ ... ]`. Additional suffixes: `/` grace, `//` slashed grace,

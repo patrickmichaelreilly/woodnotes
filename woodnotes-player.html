@@ -135,12 +135,16 @@
     </div>
     <div class="lyric" id="figureLyric" hidden></div>
     <div class="notation" id="notation"><div class="empty">Engraving will appear here.</div></div>
-    <label class="draft-label" for="figureEncoding">Draft transcription · newline = source system</label>
+    <label class="draft-label" for="figureEncoding">Draft transcription · starts with @key: · newline = source system</label>
     <textarea class="enc" id="figureEncoding" spellcheck="false"></textarea>
     <details class="cheatsheet">
       <summary>Transcription syntax cheat sheet</summary>
       <div class="cheatsheet-grid">
+        <code>@key:D</code><span>key signature (required first token)</span>
         <code>D5:8</code><span>eighth note</span>
+        <code>C5:8</code><span>follows the key signature</span>
+        <code>Cn5:8</code><span>explicit natural</span>
+        <code>C#5:8</code><span>explicit sharp</span>
         <code>r:8</code><span>eighth rest</span>
         <code>D5:8.</code><span>dotted eighth</span>
         <code>D5:83</code><span>eighth-note triplet member</span>
@@ -200,6 +204,7 @@ const $ = id => document.getElementById(id);
 const NOTE = {C:0,D:2,E:4,F:5,G:7,A:9,B:11};
 const FIFTHS={C:0,G:1,D:2,A:3,E:4,B:5,'F#':6,'C#':7,F:-1,Bb:-2,Eb:-3,Ab:-4,Db:-5,Gb:-6,Cb:-7,
   Am:0,Em:1,Bm:2,'F#m':3,'C#m':4,'G#m':5,'D#m':6,'A#m':7,Dm:-1,Gm:-2,Cm:-3,Fm:-4,Bbm:-5,Ebm:-6,Abm:-7};
+const KEY_ORDER_SHARP=['F','C','G','D','A','E','B'],KEY_ORDER_FLAT=['B','E','A','D','G','C','F'];
 
 const vrvReady=new Promise(resolve=>{
   if(window.verovio&&verovio.module.calledRun)resolve();
@@ -222,6 +227,9 @@ function reconcileDrafts(){
   for(const [id,stored] of Object.entries(drafts)){
     const figure=byId[id];if(!figure){delete drafts[id];continue}
     const draft={...stored};
+    if(typeof draft.enc==='string'&&!draft.enc.trim().startsWith('@key:')){
+      try{draft.enc=`@key:${encodingParts(figure.enc||'').key} ${draft.enc.trim()}`}catch{}
+    }
     if(draft.enc===(figure.enc||''))delete draft.enc;
     if(draft.approved===Boolean(figure.approved))delete draft.approved;
     if(Object.keys(draft).length)drafts[id]=draft;else delete drafts[id];
@@ -241,15 +249,25 @@ function updateSaveState(){
   $('saveState').textContent=current&&Object.hasOwn(drafts,current.id)?`saved locally · ${count} changed`:(count?`${count} changed locally`:'canonical draft');
   $('footerChangeCount').textContent=count?`${count} changed figure${count===1?'':'s'}`:'No local changes';
 }
-function freq(tok,octShift){
-  const m=tok.match(/^([A-Ga-g])([#b]{0,2})(\d)$/); if(!m)return null;
-  let semis=NOTE[m[1].toUpperCase()]; for(const a of m[2])semis+=a==='#'?1:-1;
-  const midi=(parseInt(m[3])+1+octShift)*12+semis;
+function keyAlterations(key){
+  const fifths=FIFTHS[key]??0,out={};
+  (fifths>0?KEY_ORDER_SHARP.slice(0,fifths):KEY_ORDER_FLAT.slice(0,-fifths)).forEach(letter=>out[letter]=fifths>0?1:-1);
+  return out;
+}
+function encodingParts(enc){
+  const text=enc.trim(),match=text.match(/^@key:([^\s]+)(?:\s+|$)/);
+  if(!match||!Object.hasOwn(FIFTHS,match[1]))throw new Error('encoding must begin with a supported @key: signature');
+  return {key:match[1],body:text.slice(match[0].length)};
+}
+function freq(tok,octShift,alter){
+  const m=tok.match(/^([A-Ga-g])(?:n|#{1,2}|b{1,2})?(\d)$/); if(!m)return null;
+  const semis=NOTE[m[1].toUpperCase()]+alter;
+  const midi=(parseInt(m[2])+1+octShift)*12+semis;
   return 440*Math.pow(2,(midi-69)/12);
 }
 function parse(enc){
-  const events=[];let beamStart=-1;
-  for(const raw of enc.trim().split(/\s+/)){
+  const {key,body}=encodingParts(enc),keyAlters=keyAlterations(key),events=[];let beamStart=-1;
+  for(const raw of body.split(/\s+/)){
     if(raw==='')continue;
     if(raw==='|')throw new Error('bar tokens are not supported; use newlines only for source-system breaks');
     if(raw==='['){if(beamStart>=0)throw new Error('beam groups cannot be nested');beamStart=events.length;continue}
@@ -267,7 +285,12 @@ function parse(enc){
     if(grace)beats=Math.min(beats,.25);
     const event={base,dotted,triplet,grace,fermata,articulation,beats,label:p,beams:{}};
     if(/^r$/i.test(p)){if(grace)throw new Error('rests cannot be grace notes');event.rest=true;event.label=raw}
-    else{if(!/^[A-Ga-g][#b]{0,2}\d$/.test(p))throw new Error(`bad pitch in "${raw}"`);event.pitch=p}
+    else{
+      const pm=p.match(/^([A-Ga-g])((?:n|#{1,2}|b{1,2})?)(\d)$/);if(!pm)throw new Error(`bad pitch in "${raw}"`);
+      const letter=pm[1].toUpperCase(),written=pm[2];
+      event.pitch=p;event.step=letter;event.octave=pm[3];event.alter=written===''?(keyAlters[letter]||0):written==='n'?0:[...written].reduce((n,a)=>n+(a==='#'?1:-1),0);
+      event.accidental=written;
+    }
     events.push(event);
   }
   if(beamStart>=0)throw new Error('beam group is missing a closing bracket');
@@ -293,9 +316,8 @@ function noteXML(ev){
   let duration=384/ev.base;if(ev.dotted)duration*=1.5;if(ev.triplet)duration*=2/3;
   let pitch='<rest/>',grace=ev.grace?`<grace${ev.grace===2?' slash="yes"':''}/>`:'';
   if(!ev.rest){
-    const m=ev.pitch.match(/^([A-G])([#b]{0,2})(\d)$/),alter=[...m[2]].reduce((n,a)=>n+(a==='#'?1:-1),0);
-    const accidental={'#':'sharp','##':'double-sharp','b':'flat','bb':'flat-flat'}[m[2]]||'';
-    pitch=`<pitch><step>${m[1]}</step>${alter?`<alter>${alter}</alter>`:''}<octave>${m[3]}</octave></pitch>${accidental?`<accidental>${accidental}</accidental>`:''}`;
+    const accidental={'n':'natural','#':'sharp','##':'double-sharp','b':'flat','bb':'flat-flat'}[ev.accidental]||'';
+    pitch=`<pitch><step>${ev.step}</step>${ev.alter?`<alter>${ev.alter}</alter>`:''}<octave>${ev.octave}</octave></pitch>${accidental?`<accidental>${accidental}</accidental>`:''}`;
   }
   const articulation={'-.':'staccato','-!':'staccatissimo','->':'accent','-^':'strong-accent'}[ev.articulation];
   const notations=[ev.fermata?'<fermata/>':'',articulation?`<articulations><${articulation}/></articulations>`:''].join('');
@@ -305,13 +327,13 @@ function noteXML(ev){
     `${ev.dotted?'<dot/>':''}${ev.triplet?'<time-modification><actual-notes>3</actual-notes><normal-notes>2</normal-notes></time-modification>':''}`+
     `${beams}${notations?`<notations>${notations}</notations>`:''}</note>`;
 }
-function musicXML(encoding,key){
-  const lines=encoding.split(/\n/).map(line=>line.trim()).filter(Boolean);
+function musicXML(encoding){
+  const {key,body}=encodingParts(encoding),lines=body.split(/\n/).map(line=>line.trim()).filter(Boolean);
   const fifths=FIFTHS[key]??0,mode=String(key||'').endsWith('m')?'minor':'major';
   const measures=lines.map((line,index)=>{
     const attrs=index===0?`<attributes><divisions>96</divisions><key><fifths>${fifths}</fifths><mode>${mode}</mode></key><time><senza-misura/></time><clef><sign>G</sign><line>2</line></clef></attributes>`:'';
     const print=index?'<print new-system="yes"/>':'';
-    return `<measure number="${index+1}" implicit="yes">${print}${attrs}${parse(line).map(noteXML).join('')}<barline location="right"><bar-style>none</bar-style></barline></measure>`;
+    return `<measure number="${index+1}" implicit="yes">${print}${attrs}${parse(`@key:${key} ${line}`).map(noteXML).join('')}<barline location="right"><bar-style>none</bar-style></barline></measure>`;
   }).join('');
   return `<?xml version="1.0" encoding="UTF-8"?><score-partwise version="4.0"><part-list><score-part id="P1"><part-name print-object="no">Bird song</part-name></score-part></part-list><part id="P1">${measures}</part></score-partwise>`;
 }
@@ -322,7 +344,7 @@ async function renderNotation(){
     parse(encoding);const tk=await toolkit();
     tk.setOptions({breaks:'encoded',adjustPageHeight:true,adjustPageWidth:true,pageWidth:1800,scale:36,
       footer:'none',header:'none',spacingLinear:.35,spacingNonLinear:.58});
-    tk.loadData(musicXML(encoding,current?.key));$('notation').innerHTML=tk.renderToSVG(1);
+    tk.loadData(musicXML(encoding));$('notation').innerHTML=tk.renderToSVG(1);
   }catch(error){$('notation').innerHTML='<div class="empty">Could not engrave this draft.</div>';$('playerError').textContent=String(error.message||error)}
 }
 async function playSeq(){
@@ -344,7 +366,7 @@ async function playSeq(){
   for(const ev of events){
     const dur=ev.beats*spb;
     if(!ev.rest){
-      const f=freq(ev.pitch,octShift),o=ac.createOscillator(),g=ac.createGain(),filter=ac.createBiquadFilter();
+      const f=freq(ev.pitch,octShift,ev.alter),o=ac.createOscillator(),g=ac.createGain(),filter=ac.createBiquadFilter();
       o.type=timbre==='reed'?'sawtooth':timbre==='pure'?'sine':'triangle';
       filter.type='lowpass';filter.frequency.value=timbre==='whistle'?f*3:timbre==='reed'?f*4:12000;
       o.connect(filter);filter.connect(g);g.connect(master);
@@ -390,7 +412,8 @@ function selectFigure(id){
   const f=figures.find(item=>item.id===id);if(!f)return;
   if(stopCurrent)stopCurrent();current=f;$('figureSelect').value=f.id;
   $('figureId').textContent=f.id;$('figureBird').textContent=f.bird||'Unknown';
-  $('figureMeta').textContent=`p. ${f.page??'?'}${f.key&&f.key!=='?'?` · ${f.key}`:''}`;
+  let key='?';try{key=encodingParts(currentEncoding()).key}catch{}
+  $('figureMeta').textContent=`p. ${f.page??'?'} · ${key}`;
   $('figureLyric').textContent=f.lyric||'';$('figureLyric').hidden=!f.lyric;
   $('figureEncoding').value=currentEncoding();
   $('figureApproved').checked=currentApproved();
@@ -435,6 +458,7 @@ $('render').addEventListener('click',renderNotation);
 let renderTimer=null;
 $('figureEncoding').addEventListener('input',()=>{
   const value=$('figureEncoding').value;
+  try{$('figureMeta').textContent=`p. ${current.page??'?'} · ${encodingParts(value).key}`}catch{}
   updateDraftField('enc',value);clearTimeout(renderTimer);renderTimer=setTimeout(renderNotation,250);
 });
 $('figureApproved').addEventListener('change',e=>{updateDraftField('approved',e.target.checked);refreshCurrentOption()});

@@ -11,9 +11,12 @@ Work through `corpus.json`:
    figure on demand; run `python3 tools/genplayer.py` to validate encodings, IDs, and crop paths.
 
 ## Encoding format
-`pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member; `^` fermata;
+Every encoding begins with an editable `@key:K` token such as `@key:D` or `@key:F#m`.
+Unmarked pitches follow that signature; `n` explicitly cancels it (`Cn5`), while `#` or `b`
+is an explicit printed accidental. Then use `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32;
+`.` dotted; trailing `3` = triplet member; `^` fermata;
 `r:dur` rest. Do not add barline tokens. A literal newline starts a new staff system and must
-match a line break in the original engraving. Example: `D5:8 C#5:8 D5:4 r:8^ E5:8 D5:8 C#5:8`
+match a line break in the original engraving. Example: `@key:Dm D5:8 C#5:8 D5:4 r:8^ E5:8`
 Use `[ D5:8 E5:8 ]` for an explicitly beamed group. Trailing modifiers: `/` grace, `//` slashed
 grace, `^` fermata, `-.` staccato, `-!` staccatissimo, `->` accent, `-^` marcato, `-sfz` sforzando.
 8va figures: write sounding pitch (already up an octave).

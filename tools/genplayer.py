@@ -32,6 +32,9 @@ for figure in figures:
         except ValueError as error:
             errors.append(f"{figure['id']}: {error}")
 
+    if "key" in figure:
+        errors.append(f"{figure['id']}: key must live in the @key: encoding prefix")
+
     for crop in figure.get("crops") or []:
         if not os.path.isfile(crop):
             errors.append(f"{figure['id']}: missing crop {crop}")

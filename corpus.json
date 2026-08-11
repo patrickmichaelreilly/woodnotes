@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "Cheney, Wood Notes Wild (1892), IA woodnoteswildnot00chen",
-  "enc_format": "pitch:dur tokens; dur 1/2/4/8/16/32, . dotted, trailing 3 triplet, ^ fermata; r rest; newline starts a source-engraving system; no bar tokens",
+  "enc_format": "@key:K prefix; pitch:dur tokens; unmarked pitches follow K; n cancels K; explicit #/b prints an accidental; brackets beam; newline starts a source system",
   "systems_scanned": 422,
   "catalog_date": "2026-08-11",
   "review_state": "Draft transcriptions awaiting source-led manual correction"
@@ -12,8 +12,7 @@
    "bird": "Bluebird",
    "no": 1,
    "page": 11,
-   "key": "Dm",
-   "enc": "[ D5:8 C#5:8 ] D5:8 r:8^ E5:8 [ D5:8 C#5:8 ]",
+   "enc": "@key:Dm [ D5:8 C#5:8 ] D5:8 r:8^ E5:8 [ D5:8 C#5:8 ]",
    "lyric": "Hear me, hear me.",
    "crops": [
     "figs_new/p033_s00.png"
@@ -25,8 +24,7 @@
    "bird": "Bluebird",
    "no": 3,
    "page": 12,
-   "key": "Dm",
-   "enc": "C#5:16 D5:8 E5:8 C#5:8",
+   "enc": "@key:Dm C#5:16 D5:8 E5:8 C#5:8",
    "lyric": "Che-way che-chute.",
    "crops": [
     "figs_new/p034_s00.png"
@@ -38,8 +36,7 @@
    "bird": "Bluebird",
    "no": 2,
    "page": 11,
-   "key": "Dm",
-   "enc": "[ E5:8 F5:8 ] r:8 [ D5:8 C#5:8 D5:8 ] r:8 [ E5:8 D5:8 C#5:8 ] r:8 [ E5:8 C#5:8 D5:8 ] r:8 [ E5:8 D5:8 E5:8 ] r:8 [ E5:8 F5:8 G5:8 ] r:8\n[ E5:8 C#5:8 ] r:8 [ D5:8 E5:8 ] [ F5:8 D5:8 ] r:8 F5:16 [ E5:8 D5:8 ] r:8 [ D5:8 E5:8 D5:8 C#5:8 ] r:8 [ D5:8 C#5:8 D5:8 ]",
+   "enc": "@key:Dm [ E5:8 F5:8 ] r:8 [ D5:8 C#5:8 D5:8 ] r:8 [ E5:8 D5:8 C#5:8 ] r:8 [ E5:8 C#5:8 D5:8 ] r:8 [ E5:8 D5:8 E5:8 ] r:8 [ E5:8 F5:8 G5:8 ] r:8\n[ E5:8 C#5:8 ] r:8 [ D5:8 E5:8 ] [ F5:8 D5:8 ] r:8 F5:16 [ E5:8 D5:8 ] r:8 [ D5:8 E5:8 D5:8 C#5:8 ] r:8 [ D5:8 C#5:8 D5:8 ]",
    "crops": [
     "figs_new/p033_s01.png",
     "figs_new/p033_s02.png"
@@ -51,11 +48,10 @@
    "bird": "Bluebird",
    "no": 4,
    "page": 12,
-   "key": "Em",
    "crops": [
     "figs_new/p034_s01.png"
    ],
-   "enc": "[ E5:8 F5:8 E5:8 D#5:8 ] r:8 [ E5:8 D#5:8 E5:8 ] r:8 [ B4:8 A#4:8 B4:8 ] r:8 [ D#5:8 E5:8 ] r:8 [ E5:8 D#5:8 ] [ E5:8 F5:8 ] r:8 [ E5:8 D#5:8 E5:8 ]",
+   "enc": "@key:Em [ E5:8 F5:8 E5:8 D#5:8 ] r:8 [ E5:8 D#5:8 E5:8 ] r:8 [ B4:8 A#4:8 B4:8 ] r:8 [ D#5:8 E5:8 ] r:8 [ E5:8 D#5:8 ] [ E5:8 F5:8 ] r:8 [ E5:8 D#5:8 E5:8 ]",
    "approved": true
   },
   {
@@ -63,11 +59,10 @@
    "bird": "Bluebird",
    "no": 5,
    "page": 12,
-   "key": "Em",
    "crops": [
     "figs_new/p034_s02.png"
    ],
-   "enc": "[ F5:8 E5:8 ] [ E5:8 G5:8 ] [ F5:8 D#5:8 ] r:8 [ F5:8 E5:8 ] [ E5:8 D#5:8 ] r:8 F5:16/ [ E5:8 D#5:8 ]",
+   "enc": "@key:Em [ F5:8 E5:8 ] [ E5:8 G5:8 ] [ F5:8 D#5:8 ] r:8 [ F5:8 E5:8 ] [ E5:8 D#5:8 ] r:8 F5:16/ [ E5:8 D#5:8 ]",
    "approved": true
   },
   {
@@ -75,12 +70,11 @@
    "bird": "Bluebird",
    "no": 6,
    "page": 13,
-   "key": "Em",
    "crops": [
     "figs_new/p035_s00.png",
     "figs_new/p035_s01.png"
    ],
-   "enc": "E5:16 F5:8 E5:8 [ G5:8 E5:8 ] r:8 [ G5:8 E5:8 ] [ E5:8 D#5:8 ] r:8 [ F5:16 G5:16 ] A5:8 r:8 [ G5:8 E5:8 ] [ E5:8 F5:8 ] [ G5:8 E5:8 ]\nF5:16/ [ E5:8 D#5:8 ] r:8 [ G5:8 E5:8 ] [ E5:8 D#5:8 ] [ E5:16 F5:16 ] G5:8 r:8 [ G5:8 E5:8 ] r:8 [ G5:8 E5:8 ] r:8 [ E5:16 F5:16 ] G5:8",
+   "enc": "@key:Em E5:16 F5:8 E5:8 [ G5:8 E5:8 ] r:8 [ G5:8 E5:8 ] [ E5:8 D#5:8 ] r:8 [ F5:16 G5:16 ] A5:8 r:8 [ G5:8 E5:8 ] [ E5:8 F5:8 ] [ G5:8 E5:8 ]\nF5:16/ [ E5:8 D#5:8 ] r:8 [ G5:8 E5:8 ] [ E5:8 D#5:8 ] [ E5:16 F5:16 ] G5:8 r:8 [ G5:8 E5:8 ] r:8 [ G5:8 E5:8 ] r:8 [ E5:16 F5:16 ] G5:8",
    "approved": true
   },
   {
@@ -88,12 +82,11 @@
    "bird": "Bluebird",
    "no": 7,
    "page": 13,
-   "key": "Em",
    "crops": [
     "figs_new/p035_s02.png",
     "figs_new/p035_s03.png"
    ],
-   "enc": "D5:16/ E5:8 G5:8 [ F5:16 D#5:16 ] r:8 D#5:16/ [ E5:8 G5:8 ] r:8 D#5:16/ [ E5:8 G5:8 ] r:8 [ E5:8 F5:8 E5:8 D#5:8 ] r:8 [ E5:8 G5:8 ] r:8 [ E5:8 G5:8 ]",
+   "enc": "@key:Em D5:16/ E5:8 G5:8 [ F5:16 D#5:16 ] r:8 D#5:16/ [ E5:8 G5:8 ] r:8 D#5:16/ [ E5:8 G5:8 ] r:8 [ E5:8 F5:8 E5:8 D#5:8 ] r:8 [ E5:8 G5:8 ] r:8 [ E5:8 G5:8 ]",
    "approved": true
   },
   {
@@ -101,11 +94,10 @@
    "bird": "Bluebird",
    "no": 8,
    "page": 13,
-   "key": "Em",
    "crops": [
     "figs_new/p035_s03.png"
    ],
-   "enc": "[ G5:8 A5:8 E5:8 ] r:8 [ G5:8 A5:8 E5:8 ] r:8",
+   "enc": "@key:Em [ G5:8 A5:8 E5:8 ] r:8 [ G5:8 A5:8 E5:8 ] r:8",
    "approved": true
   },
   {
@@ -113,11 +105,10 @@
    "bird": "Bluebird",
    "no": 9,
    "page": 13,
-   "key": "F#m",
    "crops": [
     "figs_new/p035_s04.png"
    ],
-   "enc": "[ E5:8 C#5:8 ] [ C#5:8 B#4:8 ] r:8 [ C#5:83 D5:83 E5:83 ]",
+   "enc": "@key:F#m [ E5:8 C#5:8 ] [ C#5:8 B#4:8 ] r:8 [ C#5:83 D5:83 E5:83 ]",
    "approved": false
   },
   {
@@ -125,11 +116,10 @@
    "bird": "Bluebird",
    "no": 10,
    "page": 13,
-   "key": "Gm",
    "crops": [
     "figs_new/p035_s04.png"
    ],
-   "enc": "D5:16/ C5:8 r:8 [ C5:8 B4:8 ] r:8 [ E5:16 C5:16 ]",
+   "enc": "@key:Gm D5:16/ C5:8 r:8 [ C5:8 B4:8 ] r:8 [ E5:16 C5:16 ]",
    "approved": false
   },
   {
@@ -137,12 +127,11 @@
    "bird": "Bluebird",
    "no": 11,
    "page": 13,
-   "key": "Dm",
    "crops": [
     "figs_new/p035_s05.png",
     "figs_new/p035_s06.png"
    ],
-   "enc": "[ D5:16 E5:16 ] [ D5:16 F5:16 ] [ E5:16 D5:16 ] D5:8 r:8 [ G5:16 F5:16 ] [ E5:16 F5:16 ] [ E5:16 D5:16 ] r:8 [ D5:16 E5:16 ]\nF5:8 r:8 [ D5:8 C#5:8 ] r:8 [ D5:16 C#5:16 D5:16 ] r:8 [ E5:16 D5:16 ] [ G5:16 F5:16 ] [ E5:16 D5:16 ] r:8 [ D5:16 F5:16 ]",
+   "enc": "@key:Dm [ D5:16 E5:16 ] [ D5:16 F5:16 ] [ E5:16 D5:16 ] D5:8 r:8 [ G5:16 F5:16 ] [ E5:16 F5:16 ] [ E5:16 D5:16 ] r:8 [ D5:16 E5:16 ]\nF5:8 r:8 [ D5:8 C#5:8 ] r:8 [ D5:16 C#5:16 D5:16 ] r:8 [ E5:16 D5:16 ] [ G5:16 F5:16 ] [ E5:16 D5:16 ] r:8 [ D5:16 F5:16 ]",
    "approved": true
   },
   {
@@ -150,11 +139,10 @@
    "bird": "Robin",
    "no": 0,
    "page": 14,
-   "key": "C",
    "crops": [
     "figs_new/p036_s00b.png"
    ],
-   "enc": "C5:8-! D5:8-! r:8 E5:16-! F5:16-! E5:16-! D5:16-! C5:8-! C5:8-!",
+   "enc": "@key:C C5:8-! D5:8-! r:8 E5:16-! F5:16-! E5:16-! D5:16-! C5:8-! C5:8-!",
    "approved": true
   },
   {
@@ -162,12 +150,11 @@
    "bird": "Robin",
    "no": 0,
    "page": 14,
-   "key": "C",
    "lyric": "Lit, lit, lit, lit, lit.",
    "crops": [
     "figs_new/p036_s00.png"
    ],
-   "enc": "F5:8-! r:8 F5:8-! r:8^ F5:16-! F5:16-! F5:16-!",
+   "enc": "@key:C F5:8-! r:8 F5:8-! r:8^ F5:16-! F5:16-! F5:16-!",
    "approved": true
   },
   {
@@ -175,12 +162,11 @@
    "bird": "Robin",
    "no": 0,
    "page": 14,
-   "key": "C",
    "lyric": "Lit, lit, lit, leu, leu.",
    "crops": [
     "figs_new/p036_s01.png"
    ],
-   "enc": "F5:8-! F5:8-! F5:8-! r:8 Bb4:8 Bb4:8",
+   "enc": "@key:C F5:8-! F5:8-! F5:8-! r:8 Bb4:8 Bb4:8",
    "approved": true
   },
   {
@@ -188,8 +174,7 @@
    "bird": "White-bellied Nuthatch",
    "no": 1,
    "page": 15,
-   "key": "F",
-   "enc": "F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8",
+   "enc": "@key:F F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8",
    "lyric": "Wait wait wait... Ick-y ick-y ick-y.",
    "crops": [
     "figs_new/p037_s02.png",
@@ -208,8 +193,7 @@
     "figs_new/p038_s00.png",
     "figs_new/p038_s01.png"
    ],
-   "enc": "[ D5:16 E5:16 F5:16 ] r:16 [ F5:16 G5:16 D5:16 ] r:16 [ E5:16 F5:16 G5:16 ] r:16 [ E5:16 F5:16 D5:16 ] r:16 [ A5:16 G#5:16 A5:16 ] r:16^\n[ D5:16 E5:16 F5:16 ] r:16 [ E5:16 F5:16 D5:16 ] r:16 [ G5:16 A5:16 E5:16 ] r:16 [ A5:16 G#5:16 A5:16 ]",
-   "key": "F",
+   "enc": "@key:F [ D5:16 E5:16 F5:16 ] r:16 [ F5:16 G5:16 D5:16 ] r:16 [ E5:16 F5:16 G5:16 ] r:16 [ E5:16 F5:16 D5:16 ] r:16 [ A5:16 G#5:16 A5:16 ] r:16^\n[ D5:16 E5:16 F5:16 ] r:16 [ E5:16 F5:16 D5:16 ] r:16 [ G5:16 A5:16 E5:16 ] r:16 [ A5:16 G#5:16 A5:16 ]",
    "approved": true
   },
   {
@@ -221,8 +205,7 @@
     "figs_new/p038_s02.png",
     "figs_new/p038_s03.png"
    ],
-   "enc": "D5:16 F5:16 D#5:16 r:16 G5:16 D#5:16 E5:16 r:16 B5:16 A#5:16 B5:16 r:16 E5:16 G5:16 E5:16 r:16 E5:16 F5:16 E5:16 B5:16 A#5:16 B5:16 r:16 E5:16 F5:16 G5:16 r:16 F5:16 G5:16 A5:16 r:16 B5:16 A#5:16 B5:16",
-   "key": "G",
+   "enc": "@key:G [ D5:16 F5:16 D#5:16 ] r:16 [ G5:16 D#5:16 E5:16 ] r:16 [ B5:16 A#5:16 B5:16 ] r:16 [ E5:16 G5:16 E5:16 ] r:16 [ E5:16 F5:16 E5:16 ] [ B5:16 A#5:16 B5:16 ] r:16 [ E5:16 F5:16 G5:16 ] r:16 [ F5:16 G5:16 A5:16 ] r:16 [ B5:16 A#5:16 B5:16 ]",
    "approved": false
   },
   {
@@ -233,8 +216,7 @@
    "crops": [
     "figs_new/p038_s04.png"
    ],
-   "enc": "D5:16 C#5:16 D5:16 r:16 F5:16 F5:16 F5:16 r:16 F5:8 D5:16 D#5:16 r:16 F5:8 D5:16 D#5:16 r:16 G5:16 A5:16 E5:16 r:16 A5:16 B5:16 A5:16",
-   "key": "G",
+   "enc": "@key:G [ D5:16 C#5:16 D5:16 ] r:16 [ F5:16 F5:16 F5:16 ] r:16 F5:8/ [ D5:16 D#5:16 ] r:16 F5:8/ [ D5:16 D#5:16 ] r:16 [ G5:16 A5:16 E5:16 ] r:16 [ A5:16 B5:16 A5:16 ]",
    "approved": false
   },
   {
@@ -245,8 +227,7 @@
    "crops": [
     "figs_new/p039_s00.png"
    ],
-   "enc": "F5:16 G5:16. E5:8 F5:8 r:16 F5:16 G5:16. E5:8 F5:8",
-   "key": "F",
+   "enc": "@key:F [ F5:16 G5:16. ] E5:8 F5:8 r:16 [ F5:16 G5:16. ] E5:8 F5:8",
    "approved": false
   },
   {
@@ -257,8 +238,7 @@
    "crops": [
     "figs_new/p040_s00.png"
    ],
-   "enc": "D5:16 E5:16 F5:16 r:16 G5:16 A5:16 G5:16 r:16 F5:16 G5:16 E5:16 r:16 F5:16 G5:16 F5:16 r:16^ G5:16 A5:16 F5:16",
-   "key": "A",
+   "enc": "@key:A [ D5:16 E5:16 F5:16 ] r:16 [ G5:16 A5:16 G5:16 ] r:16 [ F5:16 G5:16 E5:16 ] r:16 [ F5:16 G5:16 F5:16 ] r:16^ [ G5:16 A5:16 F5:16 ]",
    "approved": false
   },
   {
@@ -269,8 +249,7 @@
    "crops": [
     "figs_new/p040_s01.png"
    ],
-   "enc": "E5:16 D5:16 E5:16 r:16 G5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 r:16 G5:16 F5:16 G5:16",
-   "key": "Bb",
+   "enc": "@key:Bb [ E5:16 D5:16 E5:16 ] r:16 [ G5:16 F5:16 G5:16 ] r:16 [ F5:16 E5:16 F5:16 ] r:16 [ G5:16 F5:16 G5:16 ]",
    "approved": false
   },
   {
@@ -281,8 +260,7 @@
    "crops": [
     "figs_new/p040_s02.png"
    ],
-   "enc": "F5:32 F5:16 E5:16 r:16 A5:8 r:16 A5:8 F5:32 F5:16 E5:16",
-   "key": "Eb",
+   "enc": "@key:Eb F5:32/ [ F5:16 E5:16 ] r:16 A5:8 r:16 A5:8 F5:32/ [ F5:16 E5:16 ]",
    "approved": false
   },
   {
@@ -293,8 +271,7 @@
    "crops": [
     "figs_new/p040_s02.png"
    ],
-   "enc": "E5:16 F5:16 E5:16 r:16 A5:16 B5:16 A5:16 r:16 F5:16 G5:16 E5:16",
-   "key": "Eb",
+   "enc": "@key:Eb [ E5:16 F5:16 E5:16 ] r:16 [ A5:16 B5:16 A5:16 ] r:16 [ F5:16 G5:16 E5:16 ]",
    "approved": false
   },
   {
@@ -305,8 +282,7 @@
    "crops": [
     "figs_new/p040_s03.png"
    ],
-   "enc": "E5:16 F5:16 E5:16 G5:16 A5:16 G5:16 r:16 E5:16 F5:16 E5:16 A5:16 B5:16 A5:16 r:16 E5:16 F5:16 E5:16 C6:16 D6:16 C6:16 r:16 D6:16 C6:16",
-   "key": "C",
+   "enc": "@key:C [ E5:16 F5:16 E5:16 ] [ G5:16 A5:16 G5:16 ] r:16 [ E5:16 F5:16 E5:16 ] [ A5:16 B5:16 A5:16 ] r:16 [ E5:16 F5:16 E5:16 ] [ C6:16 D6:16 C6:16 ] r:16 [ D6:16 C6:16 ]",
    "approved": false
   },
   {
@@ -317,8 +293,7 @@
    "crops": [
     "figs_new/p040_s04.png"
    ],
-   "enc": "Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16",
-   "key": "F",
+   "enc": "@key:F Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16",
    "approved": false
   },
   {
@@ -330,8 +305,7 @@
     "figs_new/p041_s04.png",
     "figs_new/p041_s05.png"
    ],
-   "enc": "D5:16 E5:16 F5:16 D5:16 E5:16 E5:16 F5:16 G5:16 r:16 F5:16 E5:16 F5:16 F5:16 G5:16 A5:16 F5:16 E5:16 D5:16 r:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16 G5:16 F5:16 E5:16 r:16 E5:16 D5:16 G5:16 E5:16 D5:16 E5:16 r:16 G5:16 A5:16 r:16 G5:16 A5:16 r:16 F5:16 E5:16 D5:16 E5:16 F5:16 G5:16 F5:16 G5:16 A5:16",
-   "key": "G",
+   "enc": "@key:G [ D5:16 E5:16 F5:16 ] [ D5:16 E5:16 E5:16 F5:16 G5:16 ] r:16 [ F5:16 E5:16 F5:16 ] [ F5:16 G5:16 A5:16 ] [ F5:16 E5:16 D5:16 ] r:16 [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 A5:16 ] [ G5:16 F5:16 E5:16 ] r:16 [ E5:16 D5:16 G5:16 ] [ E5:16 D5:16 E5:16 ] r:16 [ G5:16 A5:16 ] r:16 [ G5:16 A5:16 ] r:16 [ F5:16 E5:16 D5:16 ] [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 A5:16 ]",
    "approved": false
   },
   {
@@ -343,8 +317,7 @@
     "figs_new/p041_s06.png",
     "figs_new/p041_s07.png"
    ],
-   "enc": "A5:16 G5:16 A5:16 r:16 F5:16 G5:16 r:16 A5:16 G5:16 A5:16 r:16 G5:16 F5:16 C6:16 B5:16 C6:16 B5:16 C6:16 A5:16 B5:16 A5:16 r:16 G5:16 F5:16 G5:16 r:16 G5:16 F5:16 r:16 G5:16 F5:16 r:16 C6:16 B5:16 C6:16 B5:16 C6:16",
-   "key": "C",
+   "enc": "@key:C [ A5:16 G5:16 A5:16 ] r:16 [ F5:16 G5:16 ] r:16 [ A5:16 G5:16 A5:16 ] r:16 [ G5:16 F5:16 ] [ C6:16 B5:16 C6:16 B5:16 C6:16 ] [ A5:16 B5:16 A5:16 ] r:16 [ G5:16 F5:16 G5:16 ] r:16 [ G5:16 F5:16 ] r:16 [ G5:16 F5:16 ] r:16 [ C6:16 B5:16 C6:16 B5:16 C6:16 ]",
    "approved": false
   },
   {
@@ -356,8 +329,7 @@
     "figs_new/p041_s08.png",
     "figs_new/p041_s09.png"
    ],
-   "enc": "G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 E5:16 F5:16 G5:16 r:16 E5:16 F5:16 F5:16",
-   "key": "C",
+   "enc": "@key:C G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 [ E5:16 F5:16 G5:16 ] r:16 [ E5:16 F5:16 F5:16 ]",
    "approved": false
   },
   {
@@ -368,8 +340,7 @@
    "crops": [
     "figs_new/p042_s00.png"
    ],
-   "enc": "B4:8 B4:8 B4:8 C5:16 D5:16 E5:16 r:8 B4:8 B4:8 B4:8 r:8 C5:16 D5:16 E5:16",
-   "key": "A",
+   "enc": "@key:A B4:8 B4:8 B4:8 [ C5:16 D5:16 E5:16 ] r:8 B4:8 B4:8 B4:8 r:8 [ C5:16 D5:16 E5:16 ]",
    "approved": false
   },
   {
@@ -380,8 +351,7 @@
    "crops": [
     "figs_new/p042_s02.png"
    ],
-   "enc": "F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
-   "key": "G",
+   "enc": "@key:G F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
    "approved": false
   },
   {
@@ -392,8 +362,7 @@
    "crops": [
     "figs_new/p042_s03.png"
    ],
-   "enc": "D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8",
-   "key": "G",
+   "enc": "@key:G D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8",
    "approved": false
   },
   {
@@ -404,8 +373,7 @@
    "crops": [
     "figs_new/p042_s04.png"
    ],
-   "enc": "G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8",
-   "key": "G",
+   "enc": "@key:G G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8",
    "approved": false
   },
   {
@@ -413,8 +381,7 @@
    "bird": "Robin",
    "no": 20,
    "page": 20,
-   "key": "F",
-   "enc": "F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 E5:16 D5:16 r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 D5:16 C5:16",
+   "enc": "@key:F F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 [ E5:16 D5:16 ] r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 [ D5:16 C5:16 ]",
    "lyric": "Chick-y ick-y chick-y eu (x2)",
    "crops": [
     "figs_new/p042_s01.png"
@@ -426,8 +393,7 @@
    "bird": "Robin",
    "no": 24,
    "page": 20,
-   "key": "D",
-   "enc": "F#5:32 D5:8 F#5:32 D5:8 F#5:32 D5:8 A4:8 A4:8 A4:8",
+   "enc": "@key:D F#5:32/ D5:8 F#5:32/ D5:8 F#5:32/ D5:8 A4:8 A4:8 A4:8",
    "lyric": "oe, oe, oe, up, up, up.",
    "crops": [
     "figs_new/p042_s05.png"
@@ -439,13 +405,12 @@
    "bird": "Robin",
    "no": 0,
    "page": 20,
-   "key": "Eb",
    "lyric": "All a-long ... link-tum loo.",
    "crops": [
     "figs_new/p042_s06.png",
     "figs_new/p042_s07.png"
    ],
-   "enc": "E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8",
+   "enc": "@key:Eb E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8",
    "approved": false
   },
   {
@@ -453,11 +418,10 @@
    "bird": "Robin",
    "no": 0,
    "page": 21,
-   "key": "D",
    "crops": [
     "figs_new/p043_s00.png"
    ],
-   "enc": "E5:8 E5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
+   "enc": "@key:D E5:8-! E5:8-! G5:8-! F5:8-! E5:8-! D5:8-! C5:8-! r:8^ F5:8-! E5:8-! D5:8-!",
    "approved": false
   },
   {
@@ -465,12 +429,11 @@
    "bird": "Robin",
    "no": 0,
    "page": 22,
-   "key": "D",
    "crops": [
     "figs_new/p044_s00.png",
     "figs_new/p044_s01.png"
    ],
-   "enc": "D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8^ D5:8 F5:8 F5:8 F5:8 F5:8 r:8^ G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 r:8 G5:8 G5:8 G5:8",
+   "enc": "@key:D D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8^ D5:8 F5:8 F5:8 F5:8 F5:8 r:8^ G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 r:8 G5:8 G5:8 G5:8",
    "approved": false
   },
   {
@@ -481,8 +444,7 @@
    "crops": [
     "figs_new/p045_s00.png"
    ],
-   "enc": "B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:16 B5:16 A5:16 B5:16 A5:16",
-   "key": "A",
+   "enc": "@key:A B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 [ A5:16 B5:16 A5:16 B5:16 A5:16 ]",
    "approved": false
   },
   {
@@ -493,8 +455,7 @@
    "crops": [
     "figs_new/p045_s01.png"
    ],
-   "enc": "B4:8. D5:8 C#5:8 E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8",
-   "key": "A",
+   "enc": "@key:A B4:8. D5:8 C#5:8 [ E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8 ]",
    "approved": false
   },
   {
@@ -505,8 +466,7 @@
    "crops": [
     "figs_new/p045_s02.png"
    ],
-   "enc": "F5:32 C6:4 F5:32 C6:4 F5:32 C6:4 F5:4 A5:16 Bb5:16 A5:16 Bb5:16 A5:16",
-   "key": "F",
+   "enc": "@key:F F5:32/ C6:4-> F5:32/ C6:4-> F5:32/ C6:4-> F5:4 [ A5:16 Bb5:16 A5:16 Bb5:16 A5:16 ]",
    "approved": false
   },
   {
@@ -517,8 +477,7 @@
    "crops": [
     "figs_new/p045_s03.png"
    ],
-   "enc": "A5:32 E5:8 r:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 G5:8. F#5:8 F#5:8",
-   "key": "D",
+   "enc": "@key:D A5:32/ E5:8 r:16 [ E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 ] G5:8. F#5:8 F#5:8",
    "approved": false
   },
   {
@@ -529,8 +488,7 @@
    "crops": [
     "figs_new/p046_s00.png"
    ],
-   "enc": "D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^",
-   "key": "G",
+   "enc": "@key:G D5:8-! E5:8-! D5:8-! B5:8 B5:8 B5:8 B5:8 B5:8 r:8^",
    "approved": false
   },
   {
@@ -541,8 +499,7 @@
    "crops": [
     "figs_new/p046_s01.png"
    ],
-   "enc": "A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 D5:16 r:8^",
-   "key": "G",
+   "enc": "@key:G A5:32/ G5:8 A5:32/ G5:8 A5:32/ G5:8 [ E5:16 F#5:16 E5:16 F#5:16 D5:16 ] r:8^",
    "approved": false
   },
   {
@@ -553,8 +510,7 @@
    "crops": [
     "figs_new/p046_s02.png"
    ],
-   "enc": "B5:32 C6:8 B5:32 C6:8 B5:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
-   "key": "C",
+   "enc": "@key:C B5:32/ C6:8 B5:32/ C6:8 B5:32/ C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
    "approved": false
   },
   {
@@ -565,8 +521,7 @@
    "crops": [
     "figs_new/p046_s03.png"
    ],
-   "enc": "D5:32 C5:8 D5:32 C5:8 D5:32 C5:8 G5:16 A5:16 G5:16 A5:16 G5:16 r:8 C6:8 C6:8 C6:8",
-   "key": "C",
+   "enc": "@key:C D5:32/ C5:8 D5:32/ C5:8 D5:32/ C5:8 [ G5:16 A5:16 G5:16 A5:16 G5:16 ] r:8 C6:8 C6:8 C6:8",
    "approved": false
   },
   {
@@ -574,8 +529,7 @@
    "bird": "Chickadee",
    "no": 1,
    "page": 27,
-   "key": "C",
-   "enc": "A5:2 G5:2",
+   "enc": "@key:C A5:2 G5:2",
    "lyric": "Ear-ly.",
    "crops": [
     "figs_new/p049_s00.png"
@@ -587,8 +541,7 @@
    "bird": "Chickadee",
    "no": 2,
    "page": 28,
-   "key": "C",
-   "enc": "C6:2 A5:2 A5:2 G5:2 C6:2 A5:4 A5:4 A5:2 G5:4 G5:4",
+   "enc": "@key:C C6:2 A5:2 A5:2 G5:2 C6:2 A5:4 A5:4 A5:2 G5:4 G5:4",
    "crops": [
     "figs_new/p050_s00.png"
    ],
@@ -599,8 +552,7 @@
    "bird": "Flicker",
    "no": 1,
    "page": 30,
-   "key": "D",
-   "enc": "D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8",
+   "enc": "@key:D D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8 D5:8 C#5:8",
    "lyric": "Wet, wet, wet...",
    "crops": [
     "figs_new/p052_s00.png",
@@ -614,8 +566,7 @@
    "bird": "Flicker",
    "no": 2,
    "page": 31,
-   "key": "F",
-   "enc": "C5:8 A4:8 C5:8 A4:8 C5:8 A4:8 C5:8 A4:8",
+   "enc": "@key:F C5:8/ A4:8-> C5:8/ A4:8-> C5:8/ A4:8-> C5:8/ A4:8->",
    "lyric": "Wake up, wake up...",
    "crops": [
     "figs_new/p053_s00.png"
@@ -628,8 +579,7 @@
    "bird": "Field Sparrow",
    "no": 1,
    "page": 36,
-   "key": "F",
-   "enc": "A5:8 A5:8 A5:8 A5:8 A5:8 Bb5:8 Bb5:8 B5:8 B5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16",
+   "enc": "@key:F A5:8 A5:8 A5:8 A5:8 A5:8 Bb5:8 Bb5:8 B5:8 B5:8 [ C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 ]",
    "crops": [
     "figs_new/p058_s00.png"
    ],
@@ -640,8 +590,7 @@
    "bird": "White-throated Sparrow",
    "no": 1,
    "page": 42,
-   "key": "C",
-   "enc": "G5:2 F6:2 F6:2 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83",
+   "enc": "@key:C G5:2 F6:2 F6:2 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83 C6:83",
    "lyric": "(Old Sam) Pea-body Pea-body Pea-body",
    "crops": [
     "figs_new/p064_s00.png"
@@ -653,13 +602,12 @@
    "bird": "Black-throated Green Warbler",
    "no": 1,
    "page": 48,
-   "key": "D (analog line); open/C (bird call line)",
    "lyric": "Larboard watch a-hoy analog",
    "crops": [
     "figs_new/p070_s00.png",
     "figs_new/p070_s01.png"
    ],
-   "enc": "D6:8 D6:8 D6:8 C6:8 E6:8 A4:4. B4:8 B4:4. G4:8 B4:4",
+   "enc": "@key:D D6:8 D6:8 D6:8 C6:8 E6:8 A4:4. B4:8 B4:4. G4:8 B4:4",
    "approved": false
   },
   {
@@ -667,8 +615,7 @@
    "bird": "Oven-bird",
    "no": 1,
    "page": 63,
-   "key": "D",
-   "enc": "D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16 D6:16 C#6:16",
+   "enc": "@key:D D6:16/ [ C#6:16 D6:16 C#6:16 ] D6:16/ [ C#6:16 D6:16 C#6:16 ] D6:16/ [ C#6:16 D6:16 C#6:16 ]",
    "lyric": "tea-CHER analog",
    "crops": [
     "figs_new/p085_s00.png"
@@ -681,8 +628,7 @@
    "bird": "Wood-Pewee",
    "no": 1,
    "page": 64,
-   "key": "Ab",
-   "enc": "Eb5:8. Bb4:16 Db5:4^ Eb5:8. Bb4:16 Db5:4^ Eb5:8. Bb4:16 Db5:4^ Db5:4^ Bb4:2^",
+   "enc": "@key:Ab Eb5:8. Bb4:16 Db5:4^ Eb5:8. Bb4:16 Db5:4^ Eb5:8. Bb4:16 Db5:4^ Db5:4^ Bb4:2^",
    "lyric": "Pe-wee peer...",
    "crops": [
     "figs_new/p086_s00.png",
@@ -696,8 +642,7 @@
    "bird": "Whippoorwill",
    "no": 1,
    "page": 68,
-   "key": "Bb",
-   "enc": "G6:8. Eb6:16 G6:16 Bb6:8 r:8 G6:8. Eb6:16 G6:16 Bb6:8 r:8",
+   "enc": "@key:Bb G6:8./ [ Eb6:16 G6:16 ] Bb6:8-> r:8 G6:8./ [ Eb6:16 G6:16 ] Bb6:8-> r:8",
    "lyric": "Whip-poor-will x3",
    "crops": [
     "figs_new/p090_s00.png"
@@ -709,8 +654,7 @@
    "bird": "Whippoorwill",
    "no": 2,
    "page": 70,
-   "key": "Eb",
-   "enc": "Eb5:8 C5:16 Eb5:16 G5:8 r:8 Eb5:8 C5:16 Eb5:16 G5:8 r:8 Eb5:8 C5:16 Eb5:16 G5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 G5:16 Bb5:16 Bb5:8 r:8 G5:8 G5:16 Bb5:16 Bb5:8 r:8 G5:8 G5:16 Bb5:16 Bb5:8 r:8 Eb5:8 D5:16 Eb5:16 G5:8 r:8 Eb5:8 D5:16 Eb5:16 G5:8 r:8 Eb5:8 D5:16 Eb5:16 G5:8 r:8 Eb5:8 D5:16 Eb5:16 F5:8 Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 Ab5:8 Eb5:16 Ab5:16 Eb6:8 F#5:8 D5:16 F#6:16 D6:8 r:8 F#5:8 D5:16 F#6:16 D6:8 r:8 F#5:8 D5:16 F#6:16 D6:8",
+   "enc": "@key:Eb Eb5:8 C5:16 Eb5:16 G5:8 r:8 Eb5:8 C5:16 Eb5:16 G5:8 r:8 Eb5:8 C5:16 Eb5:16 G5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 Eb5:8 Eb5:16 G5:16 Bb5:8 r:8 G5:8 G5:16 Bb5:16 Bb5:8 r:8 G5:8 G5:16 Bb5:16 Bb5:8 r:8 G5:8 G5:16 Bb5:16 Bb5:8 r:8 Eb5:8 D5:16 Eb5:16 G5:8 r:8 Eb5:8 D5:16 Eb5:16 G5:8 r:8 Eb5:8 D5:16 Eb5:16 G5:8 r:8 Eb5:8 D5:16 Eb5:16 F5:8 Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 Ab5:8 Eb5:16 Ab5:16 Eb6:8 r:8 Ab5:8 Eb5:16 Ab5:16 Eb6:8 F#5:8 D5:16 F#6:16 D6:8 r:8 F#5:8 D5:16 F#6:16 D6:8 r:8 F#5:8 D5:16 F#6:16 D6:8",
    "crops": [
     "figs_new/p092_s00.png",
     "figs_new/p092_s01.png",
@@ -729,8 +673,7 @@
    "bird": "Black-billed Cuckoo",
    "no": 1,
    "page": 87,
-   "key": "G",
-   "enc": "G4:8 G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8",
+   "enc": "@key:G G4:8 G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:8 F4:8 r:8 G4:8 G4:8",
    "lyric": "Cuck-oo, cuck-oo, cuck-oo, coo.",
    "crops": [
     "figs_new/p109_s00.png",
@@ -744,8 +687,7 @@
    "bird": "Yellow-billed Cuckoo",
    "no": 1,
    "page": 89,
-   "key": "F",
-   "enc": "Bb4:8^ Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8",
+   "enc": "@key:F Bb4:8^ Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8 Bb4:8",
    "lyric": "Wau-olp, olp, olp...",
    "crops": [
     "figs_new/p111_s00.png"
@@ -757,8 +699,7 @@
    "bird": "Quail (Bob White)",
    "no": 1,
    "page": 90,
-   "key": "A",
-   "enc": "A4:8 r:8 A4:8 r:8 B4:16 D5:16^ r:8 A4:8 B4:16 D5:16^ r:8 A4:8 r:8 A4:8 B4:16 D5:16",
+   "enc": "@key:A A4:8 r:8 A4:8 r:8 B4:16 D5:16^ r:8 A4:8 B4:16 D5:16^ r:8 A4:8 r:8 A4:8 B4:16 D5:16",
    "lyric": "Bob, Bob white, Bob white...",
    "crops": [
     "figs_new/p112_s00.png"
@@ -770,8 +711,7 @@
    "bird": "Loon",
    "no": 2,
    "page": 97,
-   "key": "F#m",
-   "enc": "A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8",
+   "enc": "@key:F#m A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8 r:16 A3:16 A3:16 A3:16 A3:16 B3:8",
    "lyric": "oo,oo,oo,oo,oo",
    "crops": [
     "figs_new/p119_s01.png",
@@ -784,11 +724,10 @@
    "bird": "Loon",
    "no": 1,
    "page": 97,
-   "key": "E",
    "crops": [
     "figs_new/p119_s00.png"
    ],
-   "enc": "G#3:8 r:2 A3:4",
+   "enc": "@key:E G#3:8 r:2 A3:4",
    "approved": false
   },
   {
@@ -796,8 +735,7 @@
    "bird": "Great Horned Owl",
    "no": 1,
    "page": 99,
-   "key": "Eb",
-   "enc": "F3:16 Bb3:4 r:8 Bb3:8 D3:8 Bb3:8 G2:8 F3:2",
+   "enc": "@key:Eb F3:16 Bb3:4 r:8 Bb3:8 D3:8 Bb3:8 G2:8 F3:2",
    "lyric": "Hoo, Hoo, Hoo.",
    "crops": [
     "figs_new/p121_s00.png"
@@ -809,8 +747,7 @@
    "bird": "Screech-Owl",
    "no": 1,
    "page": 101,
-   "key": "F",
-   "enc": "F5:16 G5:16 F5:16 G5:16 F5:16 G5:16 F5:16 F#5:16 G5:8 r:4^ F#5:2 G5:16 r:4^ F#5:2 G5:16 r:4^",
+   "enc": "@key:F F5:16 G5:16 F5:16 G5:16 F5:16 G5:16 F5:16 F#5:16 G5:8 r:4^ F#5:2 G5:16 r:4^ F#5:2 G5:16 r:4^",
    "lyric": "Ah---ee, Ah-ee, Ah-ee.",
    "crops": [
     "figs_new/p123_s00.png"
@@ -822,8 +759,7 @@
    "bird": "Screech-Owl",
    "no": 2,
    "page": 101,
-   "key": "F",
-   "enc": "G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^",
+   "enc": "@key:F [ G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 ] r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ [ G5:16 Gb5:16 F5:16 E5:16 Eb5:16 D5:16 Db5:16 C5:16 ] r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^ F5:2 F5:8 r:4^",
    "lyric": "Ah---oo, Ah-oo...",
    "crops": [
     "figs_new/p123_s01.png",
@@ -837,8 +773,7 @@
    "bird": "Ruffed Grouse",
    "no": 1,
    "page": 94,
-   "key": "Bb",
-   "enc": "Bb2:4 Bb2:4 Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32",
+   "enc": "@key:Bb Bb2:4 Bb2:4 Bb2:4 Bb2:4 Bb2:8 Bb2:8 Bb2:8 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32 Bb2:32",
    "lyric": "Thump thump... Whir.",
    "crops": [
     "figs_new/p116_s00.png",
@@ -851,8 +786,7 @@
    "bird": "Hen Music",
    "no": 1,
    "page": 105,
-   "key": "C",
-   "enc": "F5:8. F5:16 F5:8 F5:8 r:8^ E5:8 E5:8 r:8^ G5:16 D5:8 r:8 B4:16 B4:16 B4:16 F5:8",
+   "enc": "@key:C [ F5:8. F5:16 ] F5:8 F5:8 r:8^ E5:8 E5:8 r:8^ G5:16 D5:8 r:8 [ B4:16 B4:16 B4:16 ] F5:8",
    "lyric": "Wait, wait... ok, ik.",
    "crops": [
     "figs_new/p127_s00.png"
@@ -865,8 +799,7 @@
    "bird": "Hen Music",
    "no": 2,
    "page": 106,
-   "key": "F",
-   "enc": "D4:4^ D4:4^ D4:4^ r:4 E4:4^ E4:4^ r:4 D4:4^ F4:4^ F4:4^ r:4 C4:32 G4:4^ G4:4^ G4:4^ r:4 B4:4^ B4:4^ B4:4^",
+   "enc": "@key:F D4:4^ D4:4^ D4:4^ r:4 E4:4^ E4:4^ r:4 D4:4^ F4:4^ F4:4^ r:4 C4:32/ G4:4^ G4:4^ G4:4^ r:4 B4:4^ B4:4^ B4:4^",
    "lyric": "Wauk, wauk, wauk...",
    "crops": [
     "figs_new/p128_s00.png",
@@ -879,13 +812,12 @@
    "bird": "Cat-bird",
    "no": 0,
    "page": 52,
-   "key": "Eb",
    "crops": [
     "figs_new/p074_s00.png",
     "figs_new/p074_s01.png",
     "figs_new/p074_s02.png"
    ],
-   "enc": "F5:8 C5:8 G5:8 Bb5:8 F5:16 G5:16 Ab5:16 F5:16 Eb5:8 G5:8 F5:8 Eb5:8 F5:8 F5:8 Eb5:8 Ab5:8 Eb5:8 F5:8 Eb5:8 F5:8 Bb5:8 C6:8 F5:8 G5:8 F5:8 Ab5:8 Bb5:8 F5:8 Ab5:8 Bb4:8 G5:8 Eb5:8 G5:8 G5:8 G5:8 F5:8 F5:8 F5:8 Eb5:8 C5:8 D5:8 C5:8 D5:8 C5:8 F5:8 G5:8 F5:8 Eb5:8 C5:8 Eb5:8 F5:8 Eb5:8",
+   "enc": "@key:Eb F5:8 C5:8 G5:8 Bb5:8 F5:16 G5:16 Ab5:16 F5:16 Eb5:8 G5:8 F5:8 Eb5:8 F5:8 F5:8 Eb5:8 Ab5:8 Eb5:8 F5:8 Eb5:8 F5:8 Bb5:8 C6:8 F5:8 G5:8 F5:8 Ab5:8 Bb5:8 F5:8 Ab5:8 Bb4:8 G5:8 Eb5:8 G5:8 G5:8 G5:8 F5:8 F5:8 F5:8 Eb5:8 C5:8 D5:8 C5:8 D5:8 C5:8 F5:8 G5:8 F5:8 Eb5:8 C5:8 Eb5:8 F5:8 Eb5:8",
    "approved": false
   },
   {
@@ -893,14 +825,13 @@
    "bird": "Cat-bird",
    "no": 0,
    "page": 53,
-   "key": "Eb",
    "crops": [
     "figs_new/p075_s00.png",
     "figs_new/p075_s01.png",
     "figs_new/p075_s02.png",
     "figs_new/p075_s03.png"
    ],
-   "enc": "Eb5:8 G5:8 Bb5:8 F5:8 Ab5:8 G5:8 F5:8 Ab5:8 Bb5:8 Ab5:8 F5:8 Bb5:8 G5:8 Ab5:8 F5:8 G5:8 F5:8 Eb5:8 C5:8 F5:8 F5:8 Eb5:8 G5:8 F5:8 G5:8 Bb5:8 G5:8 Ab5:8 Bb5:8 Ab5:8 G5:8 F5:8 Eb5:8 Bb5:8 F5:8 F5:8 F5:8 Eb5:8 G5:8 G5:8 Eb5:8 Eb5:8 D5:8 F5:8 G5:8 Ab5:8 F5:8 G5:8 Ab5:8 D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 G5:8 C5:8 F5:8 Bb5:8 Bb5:8 F5:8 Ab5:8 G5:8 Ab5:8 G5:8 Ab5:8",
+   "enc": "@key:Eb Eb5:8 G5:8 Bb5:8 F5:8 Ab5:8 G5:8 F5:8 Ab5:8 Bb5:8 Ab5:8 F5:8 Bb5:8 G5:8 Ab5:8 F5:8 G5:8 F5:8 Eb5:8 C5:8 F5:8 F5:8 Eb5:8 G5:8 F5:8 G5:8 Bb5:8 G5:8 Ab5:8 Bb5:8 Ab5:8 G5:8 F5:8 Eb5:8 Bb5:8 F5:8 F5:8 F5:8 Eb5:8 G5:8 G5:8 Eb5:8 Eb5:8 D5:8 F5:8 G5:8 Ab5:8 F5:8 G5:8 Ab5:8 D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 G5:8 C5:8 F5:8 Bb5:8 Bb5:8 F5:8 Ab5:8 G5:8 Ab5:8 G5:8 Ab5:8",
    "approved": false
   },
   {
@@ -908,7 +839,6 @@
    "bird": "Brown Thrush",
    "no": 0,
    "page": 54,
-   "key": "Eb",
    "crops": [
     "figs_new/p076_s00.png",
     "figs_new/p077_s00.png",
@@ -921,7 +851,7 @@
     "figs_new/p077_s07.png",
     "figs_new/p077_s08.png"
    ],
-   "enc": "D5:16 Eb5:16 D5:16 D5:8 F5:8 D5:8 F5:8 G5:8 D5:8 Eb5:8 F5:8 Eb5:8 G5:8 Eb5:8 F5:8 G5:8 Ab5:8 F5:8 G5:8 Ab5:8 G5:8 Bb5:8 Ab5:8 F5:8 Ab4:8 D5:8 Ab5:8 F5:8 F4:8 D5:8",
+   "enc": "@key:Eb D5:16 Eb5:16 D5:16 D5:8 F5:8 D5:8 F5:8 G5:8 D5:8 Eb5:8 F5:8 Eb5:8 G5:8 Eb5:8 F5:8 G5:8 Ab5:8 F5:8 G5:8 Ab5:8 G5:8 Bb5:8 Ab5:8 F5:8 Ab4:8 D5:8 Ab5:8 F5:8 F4:8 D5:8",
    "approved": false
   },
   {
@@ -929,11 +859,10 @@
    "bird": "Wood Thrush",
    "no": 0,
    "page": 56,
-   "key": "Ab",
    "crops": [
     "figs_new/p078_s00.png"
    ],
-   "enc": "F5:8. C5:16 Ab5:4 r:8 G5:8. Eb5:16 Bb5:4",
+   "enc": "@key:Ab [ F5:8. C5:16 ] Ab5:4 r:8 [ G5:8. Eb5:16 ] Bb5:4",
    "approved": false
   },
   {
@@ -941,11 +870,10 @@
    "bird": "Wood Thrush",
    "no": 0,
    "page": 56,
-   "key": "Ab",
    "crops": [
     "figs_new/p078_s01.png"
    ],
-   "enc": "Bb4:8. A4:16 F5:4 r:8 C5:8 Bb4:8 Eb5:4 C5:4 r:4^ Eb5:16 Db5:16 Eb5:8 r:4^ F5:16 G5:16 F5:8",
+   "enc": "@key:Ab [ Bb4:8. A4:16 ] F5:4 r:8 C5:8 Bb4:8 Eb5:4 C5:4 r:4^ [ Eb5:16 Db5:16 ] Eb5:8 r:4^ [ F5:16 G5:16 ] F5:8",
    "approved": false
   },
   {
@@ -953,13 +881,12 @@
    "bird": "Wood Thrush",
    "no": 0,
    "page": 57,
-   "key": "Eb",
    "crops": [
     "figs_new/p079_s00.png",
     "figs_new/p079_s01.png",
     "figs_new/p079_s02.png"
    ],
-   "enc": "Eb5:8. Bb4:16 C5:8 r:4 C5:16 Ab4:16 r:8 Eb5:4 r:4 C5:16 Ab4:16 r:8 C5:4 r:4 F5:2^ Eb5:8. D5:16 Eb5:8 r:8 G5:16 F5:16 Eb5:8 r:8 Ab5:4 r:8 F5:8 E5:8 Bb5:4 Eb5:16 F5:16 G5:16 r:8 G5:16 F5:16 C5:16 r:8 F5:4 r:8 F5:8. Ab4:16 Eb5:4 r:8 D5:2^ Eb5:16 D5:16 Eb5:4",
+   "enc": "@key:Eb [ Eb5:8. Bb4:16 ] C5:8 r:4 [ C5:16 Ab4:16 ] r:8 Eb5:4 r:4 [ C5:16 Ab4:16 ] r:8 C5:4 r:4 F5:2^ [ Eb5:8. D5:16 ] Eb5:8 r:8 [ G5:16 F5:16 ] Eb5:8 r:8 Ab5:4 r:8 F5:8 E5:8 Bb5:4 [ Eb5:16 F5:16 G5:16 ] r:8 [ G5:16 F5:16 C5:16 ] r:8 F5:4 r:8 [ F5:8. Ab4:16 ] Eb5:4 r:8 D5:2^ [ Eb5:16 D5:16 ] Eb5:4",
    "approved": false
   },
   {
@@ -967,11 +894,10 @@
    "bird": "Tawny Thrush (Veery)",
    "no": 0,
    "page": 58,
-   "key": "F",
    "crops": [
     "figs_new/p080_s00.png"
    ],
-   "enc": "G5:4 F5:4 C6:4^ A5:4 A5:4 G5:4 G5:8 F5:8",
+   "enc": "@key:F G5:4 F5:4 C6:4^ A5:4 A5:4 G5:4 [ G5:8 F5:8 ]",
    "approved": false
   },
   {
@@ -979,11 +905,10 @@
    "bird": "Hermit Thrush",
    "no": 0,
    "page": 60,
-   "key": "F",
    "crops": [
     "figs_new/p082_s00.png"
    ],
-   "enc": "Bb4:4 D5:16 E5:16 D5:16 r:8 F5:16 G5:16 F5:16 r:8 D5:4 r:8 Bb4:4 r:8 E5:16 F5:16 E5:16 r:8 G5:16 A5:16 G5:16",
+   "enc": "@key:F Bb4:4 [ D5:16 E5:16 D5:16 ] r:8 [ F5:16 G5:16 F5:16 ] r:8 D5:4 r:8 Bb4:4 r:8 [ E5:16 F5:16 E5:16 ] r:8 [ G5:16 A5:16 G5:16 ]",
    "approved": false
   },
   {
@@ -991,11 +916,10 @@
    "bird": "Hermit Thrush",
    "no": 0,
    "page": 60,
-   "key": "F",
    "crops": [
     "figs_new/p082_s01.png"
    ],
-   "enc": "Bb4:4 D5:16 F5:16 E5:16 C5:4 r:8 F5:16 A5:16 G5:16 E5:4 r:4 F5:16 G5:16 F5:16 r:8 A5:16 Bb5:16 A5:16",
+   "enc": "@key:F Bb4:4 [ D5:16 F5:16 E5:16 ] C5:4 r:8 [ F5:16 A5:16 G5:16 ] E5:4 r:4 [ F5:16 G5:16 F5:16 ] r:8 [ A5:16 Bb5:16 A5:16 ]",
    "approved": false
   },
   {
@@ -1003,12 +927,11 @@
    "bird": "Hermit Thrush",
    "no": 0,
    "page": 60,
-   "key": "F",
    "crops": [
     "figs_new/p082_s02.png",
     "figs_new/p082_s03.png"
    ],
-   "enc": "E5:4 G5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ C5:4 F5:16 G5:16 F5:16 A5:16 Bb5:16 A5:16 C6:16 D6:16 C6:16 Bb4:4 D5:16 F5:16 D5:16 r:8 F5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16^ C5:4 G5:16 A5:16 G5:16 E5:8 r:8 G5:16 A5:16 G5:16 E5:8",
+   "enc": "@key:F E5:4 [ G5:16 A5:16 G5:16 ] r:8 [ Bb5:16 C6:16 Bb5:16^ ] C5:4 [ F5:16 G5:16 F5:16 ] [ A5:16 Bb5:16 A5:16 ] [ C6:16 D6:16 C6:16 ] Bb4:4 [ D5:16 F5:16 D5:16 ] r:8 [ F5:16 A5:16 G5:16 ] r:8 [ Bb5:16 C6:16 Bb5:16^ ] C5:4 [ G5:16 A5:16 G5:16 ] E5:8 r:8 [ G5:16 A5:16 G5:16 ] E5:8",
    "approved": false
   },
   {
@@ -1016,7 +939,6 @@
    "bird": "Song-sparrow",
    "no": 0,
    "page": 24,
-   "key": "var",
    "crops": [
     "figs_new/p046_s04.png",
     "figs_new/p046_s05.png",
@@ -1032,7 +954,7 @@
     "figs_new/p047_s07.png",
     "figs_new/p047_s08.png"
    ],
-   "enc": "C5:8 B4:8 C5:8 B4:8 C5:8 B4:8 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 Eb5:8 Eb5:8 Eb5:8 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 r:16 Eb6:32 D6:8 Eb6:32 D6:8 Bb5:32 Ab5:8 Bb5:32 Ab5:8 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 C6:8 Ab5:8 r:8^ A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 B5:16 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 C6:32 B5:8 B5:8 B5:8 r:8 E6:32 D6:8 B5:8 C6:32 B5:8 B5:8 B5:8 G5:8 D5:8 G5:8 D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 Bb5:8 Bb5:8 Bb5:8 r:8^ Eb5:8 Eb5:8 Eb5:8 Ab5:8 Eb5:8 C6:8. Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 C6:8 C6:8 C6:8 C6:8 C6:8 G5:8 Bb5:8 B5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F5:16 E5:16 F5:16 E5:16 r:8^ D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^ D5:8 E5:8 E5:8 E5:8 E5:8 E6:8 E6:8 E6:8 r:8^ D6:32 C6:8 D6:32 C6:8 D6:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
+   "enc": "@key:C C5:8 B4:8 C5:8 B4:8 C5:8 B4:8 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 Eb5:8 Eb5:8 Eb5:8 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 F6:16 Eb6:16 r:16 Eb6:32 D6:8 Eb6:32 D6:8 Bb5:32 Ab5:8 Bb5:32 Ab5:8 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 C6:8 Ab5:8 r:8^ A5:32 G5:8 A5:32 G5:8 E5:16 F#5:16 E5:16 F#5:16 E5:16 F#5:16 E5:16 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 B5:16 G5:16 A5:16 G5:16 A5:16 G5:16 A5:16 G5:16 C6:32 B5:8 B5:8 B5:8 r:8 E6:32 D6:8 B5:8 C6:32 B5:8 B5:8 B5:8 G5:8 D5:8 G5:8 D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 Bb5:8 Bb5:8 Bb5:8 r:8^ Eb5:8 Eb5:8 Eb5:8 Ab5:8 Eb5:8 C6:8. Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 Bb5:16 Ab5:16 C6:8 C6:8 C6:8 C6:8 C6:8 G5:8 Bb5:8 B5:8 A5:32 G5:8 A5:32 G5:8 A5:32 G5:8 E5:16 F5:16 E5:16 F5:16 E5:16 r:8^ D5:8 E5:8 D5:8 B5:8 B5:8 B5:8 B5:8 B5:8 r:8^ D5:8 E5:8 E5:8 E5:8 E5:8 E6:8 E6:8 E6:8 r:8^ D6:32 C6:8 D6:32 C6:8 D6:32 C6:8 G5:8 G5:8 G5:8 G5:8 G5:8 r:8^",
    "approved": false
   },
   {
@@ -1040,11 +962,10 @@
    "bird": "Chestnut-sided Warbler",
    "no": 0,
    "page": 49,
-   "key": "Bb",
    "crops": [
     "figs_new/p071_s00.png"
    ],
-   "enc": "Eb6:8 Eb6:8 Eb6:8 Eb6:8 Eb6:8 D6:83 Eb6:83 Eb6:83 Bb5:8",
+   "enc": "@key:Bb Eb6:8 Eb6:8 Eb6:8 Eb6:8 Eb6:8 D6:83 Eb6:83 Eb6:83 Bb5:8",
    "approved": false
   },
   {
@@ -1052,11 +973,10 @@
    "bird": "Maryland Yellow-throat",
    "no": 0,
    "page": 49,
-   "key": "F",
    "crops": [
     "figs_new/p071_s00.png"
    ],
-   "enc": "D6:8 E6:8 D6:16 B#5:16 D6:8 D6:8 D6:16 B#5:16 D6:8 F6:4",
+   "enc": "@key:F D6:8 E6:8 D6:16 B#5:16 D6:8 D6:8 D6:16 B#5:16 D6:8 F6:4",
    "approved": false
   },
   {
@@ -1064,7 +984,6 @@
    "bird": "Other Warblers",
    "no": 0,
    "page": 49,
-   "key": "var (F/Bb, D, A shown; rest untranscribed)",
    "crops": [
     "figs_new/p071_s01.png",
     "figs_new/p071_s02.png",
@@ -1073,7 +992,7 @@
     "figs_new/p072_s01.png",
     "figs_new/p072_s02.png"
    ],
-   "enc": "F6:8 F6:8 F6:16 Bb5:16 r:8 F6:8 A6:8 r:8 F6:8 F6:8 F6:16 Bb5:16 E6:8 B5:8 D6:16 C#6:16 D6:16 B5:16 D6:16 B5:16 B5:16 B5:16 E6:8 D6:8 E6:8 D6:8 C#6:8 D6:8 C#6:8 B5:8 B5:8",
+   "enc": "@key:C F6:8 F6:8 [ F6:16 Bb5:16 ] r:8 F6:8 A6:8 r:8 F6:8 F6:8 [ F6:16 Bb5:16 ] E6:8 B5:8 [ D6:16 C#6:16 ] [ D6:16 B5:16 ] [ D6:16 B5:16 ] [ B5:16 B5:16 ] [ E6:8 D6:8 ] E6:8 D6:8 C#6:8 D6:8 C#6:8 B5:8 B5:8",
    "approved": false
   },
   {
@@ -1081,11 +1000,10 @@
    "bird": "Redstart",
    "no": 0,
    "page": 51,
-   "key": "D",
    "crops": [
     "figs_new/p073_s00.png"
    ],
-   "enc": "C#5:8 D5:8 D5:8 D5:8 D5:8 D5:8 C#5:8",
+   "enc": "@key:D C#5:8 D5:8 D5:8 D5:8 D5:8 [ D5:8 C#5:8 ]",
    "approved": false
   },
   {
@@ -1093,11 +1011,10 @@
    "bird": "Yellow Warbler",
    "no": 0,
    "page": 47,
-   "key": "D",
    "crops": [
     "figs_new/p069_s00.png"
    ],
-   "enc": "C#6:4 D6:4 D6:4 D6:4 D6:4 C#6:16 B5:16 r:4^ D6:4 D6:4 C#6:16 B5:16 B5:16 A5:16 r:4^ D6:4 D6:4 D6:4 A5:8 A5:8 A5:8 A5:8",
+   "enc": "@key:D C#6:4 D6:4 D6:4 D6:4 D6:4 C#6:16 B5:16 r:4^ D6:4 D6:4 C#6:16 B5:16 B5:16 A5:16 r:4^ D6:4 D6:4 D6:4 A5:8 A5:8 A5:8 A5:8",
    "approved": false
   },
   {
@@ -1105,11 +1022,10 @@
    "bird": "Scarlet Tanager",
    "no": 0,
    "page": 74,
-   "key": "Eb",
    "crops": [
     "figs_new/p096_s00.png"
    ],
-   "enc": "F5:8 Eb5:8 r:8 F5:16 G5:16 Ab5:16 G5:16 Eb5:8 F5:8 Eb5:8",
+   "enc": "@key:Eb [ F5:8 Eb5:8 ] r:8 [ F5:16 G5:16 Ab5:16 G5:16 ] [ Eb5:8 F5:8 ] Eb5:8",
    "approved": false
   },
   {
@@ -1117,13 +1033,12 @@
    "bird": "Scarlet Tanager",
    "no": 0,
    "page": 75,
-   "key": "Eb",
    "crops": [
     "figs_new/p097_s00.png",
     "figs_new/p097_s01.png",
     "figs_new/p097_s02.png"
    ],
-   "enc": "F5:16 G5:16 A5:8 F5:8 G4:8 E5:8 F5:16 G5:16 A5:8 F5:8 E5:8 F5:8 A5:8 G5:16 F#5:16 G5:8 r:8 A5:16 B5:16 G5:8 F5:8 A5:16 B5:16 G5:8 F5:8 G5:8 A5:16 B5:16 A5:8 A5:8 F5:8 F5:8 G5:16 A5:16 A5:8 F5:8 F5:8 E5:8 F5:16 G5:16 A5:8 A4:32 F5:8 E5:8 r:8 F5:8 A5:8 G5:8 F5:8 F5:16 G5:16 F5:8 r:8 F5:8 F5:8 A5:8 F5:16 D5:16 F5:8 A5:8 F5:8 F5:8",
+   "enc": "@key:Eb [ F5:16 G5:16 ] A5:8 F5:8 G4:8 [ E5:8 F5:16 ] G5:16 A5:8 F5:8 E5:8 F5:8 [ A5:8 G5:16 ] F#5:16 G5:8 r:8 A5:16 B5:16 G5:8 [ F5:8 A5:16 ] B5:16 G5:8 F5:8 G5:8 [ A5:16 B5:16 ] A5:8 A5:8 F5:8 F5:8 [ G5:16 A5:16 ] A5:8 F5:8 F5:8 E5:8 [ F5:16 G5:16 ] A5:8 A4:32 F5:8 E5:8 r:8 F5:8-> A5:8 [ G5:8 F5:8 ] F5:16 G5:16 F5:8 r:8 [ F5:8 F5:8 ] A5:8 F5:16 D5:16 F5:8 A5:8 F5:8 F5:8",
    "approved": false
   },
   {
@@ -1131,13 +1046,12 @@
    "bird": "Baltimore Oriole",
    "no": 0,
    "page": 71,
-   "key": "Eb",
    "crops": [
     "figs_new/p093_s00.png",
     "figs_new/p093_s01.png",
     "figs_new/p093_s02.png"
    ],
-   "enc": "F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 Eb5:8 F5:16 Eb5:16 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 F5:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 r:8^ F5:16 Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:16 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 r:8^ Eb5:8 F5:8 r:8 Eb5:16 Eb5:16 r:8 Eb5:16 F5:16 r:8",
+   "enc": "@key:Eb [ F5:16-> Eb5:16 ] r:8 [ F5:16-> Eb5:16 ] r:8 F5:8 F5:8 [ Eb5:8 F5:16 ] Eb5:16 r:8^ F5:16-> Eb5:16 r:8 F5:16 Eb5:16 r:8 F5:8 [ F5:8-> F5:16 ] Eb5:16 r:8 Eb5:8 F5:8 r:8-> F5:16 Eb5:16 r:8 Eb5:8 F5:8 r:8 r:8^ F5:16-> Eb5:16 r:8 F5:16 Eb5:16 r:8-> F5:16 Eb5:16 F5:16 Eb5:16 F5:16 Eb5:16 r:8^ Eb5:8 F5:8 r:8 Eb5:16 Eb5:16 r:8 Eb5:16 F5:16 r:8",
    "approved": false
   },
   {
@@ -1145,11 +1059,10 @@
    "bird": "Baltimore Oriole",
    "no": 0,
    "page": 72,
-   "key": "Am",
    "crops": [
     "figs_new/p094_s00.png"
    ],
-   "enc": "G5:8 r:8 G#5:8 A5:8 A5:8 G5:8. F5:8 E5:8 D5:8 r:8^",
+   "enc": "@key:Am G5:8 r:8 G#5:8 A5:8 A5:8 G5:8. F5:8 E5:8 D5:8 r:8^",
    "approved": false
   },
   {
@@ -1157,8 +1070,7 @@
    "bird": "Baltimore Oriole",
    "no": 3,
    "page": 72,
-   "key": "Eb",
-   "enc": "Eb5:8 F5:8 Eb5:8 F5:8 r:8 F5:4 Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 Eb5:16 r:8 Eb5:8 F5:8 Eb5:8 F5:8 r:8 Eb5:8. F5:16",
+   "enc": "@key:Eb Eb5:8-> F5:8 Eb5:8-> F5:8 r:8 F5:4-> [ Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 Eb5:16 ] r:8 [ Eb5:8 F5:8 ] Eb5:8 F5:8 r:8 Eb5:8. F5:16",
    "lyric": "Cur-ly, cur-ly, Hey! Chick-er-way...",
    "crops": [
     "figs_new/p094_s01.png",
@@ -1171,12 +1083,11 @@
    "bird": "Baltimore Oriole",
    "no": 0,
    "page": 73,
-   "key": "Eb",
    "crops": [
     "figs_new/p095_s00.png",
     "figs_new/p095_s01.png"
    ],
-   "enc": "Eb5:16 D5:16 Eb5:16 D5:16 Eb5:16 D5:16 r:8^ Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8",
+   "enc": "@key:Eb [ Eb5:16 D5:16 ] [ Eb5:16 D5:16 ] [ Eb5:16-> D5:16 ] r:8^ Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 r:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8 Eb5:8",
    "approved": false
   },
   {
@@ -1184,11 +1095,10 @@
    "bird": "Baltimore Oriole",
    "no": 0,
    "page": 73,
-   "key": "A",
    "crops": [
     "figs_new/p095_s02.png"
    ],
-   "enc": "C#5:8 D5:8 r:8 F5:8 E5:8 r:8^ E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16",
+   "enc": "@key:A [ C#5:8 D5:8 ] r:8 [ F5:8-> E5:8 ] r:8^ [ E5:16-> D5:16 ] [ E5:16-> D5:16 ] [ E5:16-> D5:16 ] [ E5:16-> D5:16 ] [ E5:16-> D5:16 ]",
    "approved": false
   },
   {
@@ -1196,11 +1106,10 @@
    "bird": "Baltimore Oriole",
    "no": 0,
    "page": 73,
-   "key": "F",
    "crops": [
     "figs_new/p095_s03.png"
    ],
-   "enc": "D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 r:8 D5:16 E5:16 F5:16 D5:16 E5:16 F5:16 E5:8 D5:8 E5:8",
+   "enc": "@key:F [ D5:16 E5:16 F5:16 ] [ D5:16 E5:16 F5:16 ] [ D5:16 E5:16 F5:16 ] r:8 [ D5:16 E5:16 F5:16 ] [ D5:16 E5:16 F5:16 ] [ E5:8 D5:8 E5:8 ]",
    "approved": false
   },
   {
@@ -1208,12 +1117,11 @@
    "bird": "Red-eyed Vireo",
    "no": 0,
    "page": 78,
-   "key": "F",
    "crops": [
     "figs_new/p100_s00.png",
     "figs_new/p100_s01.png"
    ],
-   "enc": "G5:8 F#5:8 G5:8 r:8^ Bb5:8 F#5:8 G5:8 r:8^ G5:8 F#5:8 Bb5:8 r:8^ A5:8 F#5:8 G5:8 r:8^ A5:8 Bb5:8 C6:8 r:8^ A5:8 G5:8 F#5:8 r:8^ G5:8 A5:8 Bb5:8 r:8^ Bb5:8 F#5:8 G5:8 r:8^ A5:8 F#5:8 G5:8 r:8^ C6:8 A5:8 Bb5:8 r:8^ D6:8 A5:8 Bb5:8 r:8^ A5:8 F#5:8 G5:8 r:8^ G5:8 F#5:8 Bb5:8",
+   "enc": "@key:F [ G5:8 F#5:8 G5:8 ] r:8^ [ Bb5:8 F#5:8 G5:8 ] r:8^ [ G5:8 F#5:8 Bb5:8 ] r:8^ [ A5:8 F#5:8 G5:8 ] r:8^ [ A5:8 Bb5:8 C6:8 ] r:8^ [ A5:8 G5:8 F#5:8 ] r:8^ [ G5:8 A5:8 Bb5:8 ] r:8^ [ Bb5:8 F#5:8 G5:8 ] r:8^ [ A5:8 F#5:8 G5:8 ] r:8^ [ C6:8 A5:8 Bb5:8 ] r:8^ [ D6:8 A5:8 Bb5:8 ] r:8^ [ A5:8 F#5:8 G5:8 ] r:8^ [ G5:8 F#5:8 Bb5:8 ]",
    "approved": false
   },
   {
@@ -1221,11 +1129,10 @@
    "bird": "Yellow-breasted Chat",
    "no": 0,
    "page": 80,
-   "key": "F",
    "crops": [
     "figs_new/p102_s00b.png"
    ],
-   "enc": "C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8",
+   "enc": "@key:F C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8",
    "approved": false
   },
   {
@@ -1233,7 +1140,6 @@
    "bird": "Yellow-breasted Chat",
    "no": 0,
    "page": 80,
-   "key": "F",
    "crops": [
     "figs_new/p102_s00.png",
     "figs_new/p102_s01.png",
@@ -1245,7 +1151,7 @@
     "figs_new/p103_s03.png",
     "figs_new/p103_s04.png"
    ],
-   "enc": "F5:8 E5:8 F5:8 E5:8 r:8^ A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 r:8 D5:8 D5:8 D5:8 r:8^ D5:8 F5:8 D5:8 F5:8 r:8 Bb4:8 Bb4:8 Bb4:8 r:8^ B4:8 C5:8 B4:8 C5:8 r:8 A4:8 D5:8 A4:8 D5:8 A4:8 D5:8 r:8^ E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:8 E5:8 E5:8 E5:8 E5:8 E5:8 D5:8 F5:8 r:8 Bb4:16 A4:16 Bb4:16 A4:16 r:8 F5:8 E5:8 E5:8 F5:8 r:8 F5:8 F5:8 F5:8^ Bb4:16 A4:16 r:8 D5:8 D5:8 D5:8 r:8 A4:4 A4:4 r:8 E5:8 E5:8 F5:8 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:4 Bb4:4 Bb4:4 r:8^ F5:16 E5:16 F5:16 r:8 E5:16 F5:16 E5:16 r:8 D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 C5:4 C5:4 C5:4",
+   "enc": "@key:F [ F5:8 E5:8 ] [ F5:8 E5:8 ] r:8^ [ A4:16 Bb4:16 ] [ A4:16 Bb4:16 ] [ A4:16 Bb4:16 ] r:8 D5:8 D5:8 D5:8 r:8^ D5:8 F5:8 [ D5:8-> F5:8 ] r:8-> Bb4:8 Bb4:8 Bb4:8 r:8^ B4:8 C5:8 [ B4:8 C5:8 ] r:8 [ A4:8 D5:8 ] A4:8 [ D5:8 A4:8 ] D5:8 r:8^ E5:16 [ E5:16 E5:16 ] E5:16 [ E5:16 E5:16 ] [ E5:16 E5:16 ] E5:16 E5:16 E5:16 E5:16 E5:16 E5:8 E5:8 E5:8 E5:8 E5:8 E5:8 D5:8 F5:8 r:8 Bb4:16 A4:16 Bb4:16 A4:16 r:8 F5:8 E5:8 E5:8-> F5:8 r:8-> F5:8 F5:8 F5:8^ Bb4:16 A4:16 r:8 D5:8 D5:8 D5:8 r:8 A4:4 A4:4 r:8 E5:8 [ E5:8 F5:8 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 ] C5:16 C5:16 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 C5:8 Bb4:4 Bb4:4 Bb4:4 r:8^ F5:16 E5:16 F5:16 r:8 E5:16 F5:16 E5:16-> r:8 D5:16 D5:16 [ D5:16-> D5:16 D5:16 ] D5:16 [ D5:8-> D5:8 D5:8 D5:8 D5:8 D5:8 ] C5:4 C5:4 C5:4",
    "approved": false
   },
   {
@@ -1253,11 +1159,10 @@
    "bird": "Bobolink",
    "no": 0,
    "page": 83,
-   "key": "F",
    "crops": [
     "figs_new/p105_s00.png"
    ],
-   "enc": "G4:8 A4:8. G4:16 r:8^ C5:16 C#5:16 D5:16",
+   "enc": "@key:F G4:8 [ A4:8. G4:16 ] r:8^ [ C5:16 C#5:16 D5:16 ]",
    "approved": false
   },
   {
@@ -1265,12 +1170,11 @@
    "bird": "Bobolink",
    "no": 0,
    "page": 83,
-   "key": "F",
    "crops": [
     "figs_new/p105_s01.png",
     "figs_new/p105_s02.png"
    ],
-   "enc": "D5:8 C5:8 C5:16 D5:16 F5:16 D5:16 F5:16 G5:16 F5:8 F5:8 F5:8 F5:8 G5:16 F5:16 E5:16 A5:8 F5:8 A5:8 F5:8 E5:16 F5:16 G5:16 F5:16 G5:16 B5:16",
+   "enc": "@key:F [ D5:8 C5:8 ] [ C5:16 D5:16 F5:16 D5:16 ] [ F5:16 G5:16 F5:8 ] F5:8 F5:8 F5:8 [ G5:16 F5:16 E5:16 ] A5:8 F5:8 A5:8 F5:8 [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 B5:16 ]",
    "approved": false
   },
   {
@@ -1278,13 +1182,12 @@
    "bird": "Black-billed Cuckoo",
    "no": 0,
    "page": 88,
-   "key": "Bb",
    "crops": [
     "figs_new/p110_s00.png",
     "figs_new/p110_s01.png",
     "figs_new/p110_s02.png"
    ],
-   "enc": "Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 r:8 Eb4:8 Eb4:8 r:8 Eb4:8 Eb4:8 r:8 Eb4:8 A4:4 Eb4:8 A4:4 r:8 A4:8 Eb4:8 r:8 A4:8 Eb4:8",
+   "enc": "@key:Bb Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 Eb4:8 A4:4 r:8 Eb4:8 Eb4:8 r:8 Eb4:8 Eb4:8 r:8 Eb4:8 A4:4 Eb4:8 A4:4 r:8 A4:8 Eb4:8 r:8 A4:8 Eb4:8",
    "approved": false
   },
   {
@@ -1292,13 +1195,12 @@
    "bird": "Rose-breasted Grosbeak",
    "no": 0,
    "page": 76,
-   "key": "Eb",
    "crops": [
     "figs_new/p098_s00.png",
     "figs_new/p098_s01.png",
     "figs_new/p098_s02.png"
    ],
-   "enc": "C5:16 E5:16 D5:8 r:8 C5:16 D5:16 E5:8 D5:16 C5:16 r:8 C5:8 r:8 E5:16 D5:16 E5:8 F5:8 C5:16 B4:16 C5:8 r:8 E5:16 D5:16 C5:8 r:8 D5:16 E5:16 F5:8 E5:8 C5:8 r:8 E5:16 F5:16 G5:8 F5:8 D5:8 E5:16 D5:16 C5:8 D5:16 E5:16 F5:8 r:8 F5:16 E5:16 D5:8 E5:16 F5:16 G5:8 r:8 C5:16 E5:16 F5:8 E5:8",
+   "enc": "@key:Eb C5:16 E5:16-> D5:8 r:8 C5:16 D5:16 E5:8 D5:16 C5:16 r:8 C5:8-> r:8 E5:16 D5:16 E5:8 F5:8 C5:16 B4:16 C5:8 r:8 E5:16 D5:16 C5:8 r:8 D5:16 E5:16 F5:8-> E5:8 C5:8 r:8 E5:16 F5:16 G5:8 F5:8 D5:8 E5:16 D5:16 C5:8 D5:16 E5:16 F5:8-> r:8 F5:16 E5:16 D5:8 E5:16 F5:16 G5:8 r:8 C5:16 E5:16 F5:8 E5:8",
    "approved": false
   },
   {
@@ -1306,19 +1208,17 @@
    "bird": "Indigo-bird",
    "no": 0,
    "page": 85,
-   "key": "F",
    "crops": [
     "figs_new/p107_s01.png"
    ],
-   "enc": "D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 C5:8 r:8 A4:8 Bb4:8",
+   "enc": "@key:F [ D5:16 C5:16 ] [ D5:16 C5:16 ] r:8 [ C5:16 B4:16 ] C5:8 r:8 A4:8 Bb4:8",
    "approved": false
   },
   {
    "id": "indigo-form",
    "bird": "Indigo-bird",
    "page": 86,
-   "key": "F",
-   "enc": "D5:16 C5:16 D5:16 C5:16 r:8 C5:16 B4:16 D5:8 r:8 A4:8 Bb4:8",
+   "enc": "@key:F [ D5:16 C5:16 ] [ D5:16 C5:16 ] r:8 [ C5:16 B4:16 ] D5:8 r:8 A4:8 Bb4:8",
    "crops": [
     "figs_new/p108_s00.png"
    ],
@@ -1329,11 +1229,10 @@
    "bird": "Robin",
    "no": 0,
    "page": 17,
-   "key": "C",
    "crops": [
     "figs_new/p039_s01.png"
    ],
-   "enc": "D5:4 Eb5:4 r:2 F5:4 D5:4",
+   "enc": "@key:C D5:4 Eb5:4 r:2 F5:4 D5:4",
    "approved": false
   },
   {
@@ -1341,8 +1240,7 @@
    "bird": "Robin",
    "no": 5,
    "page": 17,
-   "key": "D",
-   "enc": "E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16",
+   "enc": "@key:D E#5:8 D5:16 E5:16 F5:8 E5:16 D5:16 r:16 E#5:8 D5:16 E5:16",
    "crops": [
     "figs_new/p039_s02.png"
    ],
@@ -1353,8 +1251,7 @@
    "bird": "White-throated Sparrow",
    "no": 0,
    "page": 43,
-   "key": "D",
-   "enc": "B5:2 E6:2",
+   "enc": "@key:D B5:2 E6:2",
    "crops": [
     "figs_new/p065_s02.png"
    ],
@@ -1365,8 +1262,7 @@
    "bird": "Meadow Lark",
    "no": 1,
    "page": 33,
-   "key": "Ab",
-   "enc": "C5:8 Bb4:8 Ab4:8 Eb5:8",
+   "enc": "@key:Ab [ C5:8 Bb4:8 ] Ab4:8 Eb5:8",
    "crops": [
     "figs_new/p055_s00.png"
    ],
@@ -1377,8 +1273,7 @@
    "bird": "Meadow Lark",
    "no": 2,
    "page": 34,
-   "key": "Ab",
-   "enc": "C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8",
+   "enc": "@key:Ab [ C5:8 Bb4:8 ] Ab4:8 [ C5:8 Bb4:8 ]",
    "crops": [
     "figs_new/p056_s00.png"
    ],
@@ -1389,8 +1284,7 @@
    "bird": "Meadow Lark",
    "no": 3,
    "page": 34,
-   "key": "Ab",
-   "enc": "C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8 r:8^ Eb5:8 D5:8 Db5:8 C5:8 r:8 C5:8 r:8^ C5:8 r:8^ Eb5:8 D5:8 Db5:8 C5:8 r:8^ C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 r:8^ Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8",
+   "enc": "@key:Ab C5:4 Ab4:4 [ C5:8 Bb4:8 ] Ab4:8 r:8^ C5:8 [ Bb4:8 Ab4:8 ] Eb5:8 r:8^ C5:8 [ Bb4:8 Ab4:8 ] Eb5:8 r:8^ C5:8 [ Bb4:8 Ab4:8 ] C5:8 Bb4:8 r:8^ [ Eb5:8 D5:8 ] Db5:8 C5:8 r:8 C5:8 r:8^ C5:8 r:8^ [ Eb5:8 D5:8 ] Db5:8 C5:8 r:8^ C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 C5:16 r:8^ Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 Eb5:16 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ Eb5:8 F5:8 Eb5:8 C5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:8 Bb4:8 Ab4:8 Eb5:8 r:8^ C5:4 Ab4:4 C5:8 Bb4:8 Ab4:8",
    "crops": [
     "figs_new/p056_s01.png",
     "figs_new/p056_s02.png",
@@ -1407,8 +1301,7 @@
    "bird": "Chipping Sparrow",
    "no": 1,
    "page": 40,
-   "key": "C",
-   "enc": "C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8",
+   "enc": "@key:C C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8 C6:8",
    "lyric": "Chip-chip-chip...",
    "crops": [
     "figs_new/p062_s00.png",
@@ -1421,8 +1314,7 @@
    "bird": "Baltimore Oriole",
    "no": 4,
    "page": 72,
-   "key": "Eb",
-   "enc": "F5:8 F5:16 Eb5:16 r:8 G5:8. Eb5:16 C5:16 F5:16 Eb5:16 C5:16 F5:16 F5:16 C5:16",
+   "enc": "@key:Eb F5:8 [ F5:16 Eb5:16 ] r:8-> G5:8. Eb5:16 C5:16 F5:16 Eb5:16 [ C5:16 F5:16 F5:16 C5:16 ]",
    "lyric": "chew, cur-ly... kah, kue. Hey!",
    "crops": [
     "figs_new/p094_s03.png"
@@ -1434,8 +1326,7 @@
    "bird": "Indigo-bird",
    "no": 1,
    "page": 85,
-   "key": "C",
-   "enc": "D6:16 C6:16 D6:16 C6:16 r:8 C6:16 B5:16 C6:8 r:8",
+   "enc": "@key:C [ D6:16 C6:16 ] [ D6:16 C6:16 ] r:8 [ C6:16 B5:16 ] C6:8 r:8",
    "crops": [
     "figs_new/p107_s00.png"
    ],
@@ -1445,7 +1336,6 @@
    "id": "intro-drip-1",
    "bird": "Faucet drip (intro)",
    "page": 3,
-   "key": "F",
    "crops": [
     "figs_new/p025_s00.png",
     "figs_new/p025_s01.png",
@@ -1454,18 +1344,17 @@
     "figs_new/p025_s04.png",
     "figs_new/p025_s05.png"
    ],
-   "enc": "Bb4:4 C5:4 D5:4 C5:4 B4:4 Bb4:4 E5:4 D5:4 C5:4 D5:4 D5:4 E5:4 Eb5:4 C5:4 E5:4 E5:4 F5:4 C5:8 A4:8 C5:4 E5:8 F5:8 Eb5:4 D5:4 B4:4 C5:4 D5:8 C5:8 A4:4 A4:4 A4:8 B4:8 A4:4 Bb4:4 Bb4:8 A4:8 C5:4 F5:4 C5:4 B4:8 A4:8 D5:4 D5:4 B4:8 G4:8 C5:4 B4:4 B4:8 A4:8 C5:8 E5:8 D5:4 E5:8 D5:8 Bb4:8 F5:8 C5:8 A4:8 C5:8 Bb4:8 A4:8 E5:8 D5:4 G4:8 Bb4:8 Bb4:4 A4:4 Bb4:4 D5:4 B4:8 A4:8 Bb4:4 C5:4 Eb5:4 D5:4 E5:8 C5:8 Bb4:16 C5:16 D5:4 B4:4 A4:4 Bb4:4 C5:4 E5:8 B4:8 D5:4 C5:4 Bb4:4 C5:4 Eb5:4 D5:4 Bb4:4 G5:8 F5:8 C5:8 D5:8 B4:4 Bb4:4 B4:4 B4:16 C5:16 E5:8 D5:8 F5:4 C5:4 D5:4 C5:16 D5:16 G5:4 C5:4 Bb4:4",
+   "enc": "@key:F Bb4:4 C5:4 D5:4 C5:4 B4:4 Bb4:4 E5:4 D5:4 C5:4 D5:4 D5:4 E5:4 Eb5:4 C5:4 E5:4 E5:4 F5:4 C5:8 A4:8 C5:4 E5:8 F5:8 Eb5:4 D5:4 B4:4 C5:4 D5:8 C5:8 A4:4 A4:4 A4:8 B4:8 A4:4 Bb4:4 Bb4:8 A4:8 C5:4 F5:4 C5:4 B4:8 A4:8 D5:4 D5:4 B4:8 G4:8 C5:4 B4:4 B4:8 A4:8 C5:8 E5:8 D5:4 E5:8 D5:8 Bb4:8 F5:8 C5:8 A4:8 C5:8 Bb4:8 A4:8 E5:8 D5:4 G4:8 Bb4:8 Bb4:4 A4:4 Bb4:4 D5:4 B4:8 A4:8 Bb4:4 C5:4 Eb5:4 D5:4 E5:8 C5:8 Bb4:16 C5:16 D5:4 B4:4 A4:4 Bb4:4 C5:4 E5:8 B4:8 D5:4 C5:4 Bb4:4 C5:4 Eb5:4 D5:4 Bb4:4 G5:8 F5:8 C5:8 D5:8 B4:4 Bb4:4 B4:4 B4:16 C5:16 E5:8 D5:8 F5:4 C5:4 D5:4 C5:16 D5:16 G5:4 C5:4 Bb4:4",
    "approved": false
   },
   {
    "id": "intro-clothesrack-1",
    "bird": "Clothes-rack in wind (intro)",
    "page": 4,
-   "key": "A",
    "crops": [
     "figs_new/p026_s00.png"
    ],
-   "enc": "B4:1 G#4:4 B4:4 D5:2^ E5:2 D5:4 D5:2 r:2^ F5:4 A4:1 r:2^ G#4:16 D5:16 F5:16 r:2^ A5:2^",
+   "enc": "@key:A B4:1 G#4:4 B4:4 D5:2^ E5:2 D5:4 D5:2 r:2^ F5:4 A4:1 r:2^ G#4:16 D5:16 F5:16 r:2^ A5:2^",
    "approved": false
   },
   {
@@ -1476,8 +1365,7 @@
    "crops": [
     "figs_new/p037_s00.png"
    ],
-   "enc": "F5:8 F5:8 F5:8 F5:8 F5:8 Db5:8^ Db5:8 Db5:8",
-   "key": "C",
+   "enc": "@key:C F5:8 F5:8 F5:8 F5:8 F5:8 Db5:8^ Db5:8 Db5:8",
    "approved": false
   },
   {
@@ -1488,8 +1376,7 @@
    "crops": [
     "figs_new/p037_s01.png"
    ],
-   "enc": "D5:8 C#5:8 D5:8 r:2 D5:8 C#5:8 D5:8",
-   "key": "F",
+   "enc": "@key:F D5:8 C#5:8 D5:8 r:2 D5:8 C#5:8 D5:8",
    "approved": false
   },
   {
@@ -1500,8 +1387,7 @@
    "crops": [
     "figs_new/p041_s00.png"
    ],
-   "enc": "Eb5:16 F5:16 Eb5:16 Ab5:8 Ab5:8 F5:16 G5:16 Eb5:16",
-   "key": "Ab",
+   "enc": "@key:Ab [ Eb5:16 F5:16-> Eb5:16 ] Ab5:8 Ab5:8 [ F5:16 G5:16 Eb5:16 ]",
    "approved": false
   },
   {
@@ -1512,8 +1398,7 @@
    "crops": [
     "figs_new/p041_s01.png"
    ],
-   "enc": "F5:16 G5:16 F5:16 G5:16 F#5:16 G5:16 r:8 F5:16 G5:16 F5:16 Bb5:16 C6:16 Bb5:16",
-   "key": "Eb",
+   "enc": "@key:Eb [ F5:16 G5:16 F5:16 ] [ G5:16 F#5:16 G5:16 ] r:8 [ F5:16 G5:16 F5:16 ] [ Bb5:16 C6:16 Bb5:16 ]",
    "approved": false
   },
   {
@@ -1524,8 +1409,7 @@
    "crops": [
     "figs_new/p041_s02.png"
    ],
-   "enc": "E5:16 F#5:16 E5:16 r:8 E5:16 F#5:16 E5:16 r:8 G#5:8 G#5:8 F#5:16 G#5:16 E5:16",
-   "key": "E",
+   "enc": "@key:E [ E5:16 F#5:16-> E5:16 ] r:8 [ E5:16 F#5:16-> E5:16 ] r:8 G#5:8 G#5:8 [ F#5:16 G#5:16 E5:16 ]",
    "approved": false
   },
   {
@@ -1536,21 +1420,19 @@
    "crops": [
     "figs_new/p041_s03.png"
    ],
-   "enc": "E5:16 F#5:16 E5:16 F#5:16 E5:16 D#5:16 r:8 E5:16 F#5:16 E5:16",
-   "key": "G",
+   "enc": "@key:G [ E5:16 F#5:16 E5:16 ] [ F#5:16 E5:16 D#5:16 ] r:8 [ E5:16 F#5:16 E5:16 ]",
    "approved": false
   },
   {
    "id": "linnet-01",
    "bird": "Linnet; Purple Finch; Purple Grosbeak",
    "page": 37,
-   "key": "Eb",
    "crops": [
     "figs_new/p059_s00.png",
     "figs_new/p059_s01.png",
     "figs_new/p059_s02.png"
    ],
-   "enc": "Eb5:16 F5:16 A5:16 F5:16 A5:8 C6:8 A5:16 E5:16 r:8 C6:16 A5:16 F5:16 A5:16 F5:16 D5:16 r:8 F5:16 E5:16 A5:16 G5:16 F5:16 D5:16 F5:16 E5:16 r:4^ F5:8 G5:8 F5:16 E5:16 F5:16 G5:16 F5:16 E5:16 r:8 F5:8 C6:8 F5:8 C6:8 r:8 F5:8 F5:8 C6:32 A5:32 C6:32 G5:32 A5:32^ E5:8 F5:8",
+   "enc": "@key:Eb [ Eb5:16 F5:16 ] [ A5:16 F5:16 ] A5:8 C6:8 [ A5:16 E5:16 ] r:8 C6:16 [ A5:16 F5:16 A5:16 ] F5:16 D5:16 r:8 F5:16 [ E5:16-> A5:16 ] [ G5:16 F5:16 ] [ D5:16 F5:16 ] E5:16 r:4^ F5:8 G5:8 F5:16 [ E5:16 F5:16 ] [ G5:16 F5:16 E5:16 ] r:8 F5:8 C6:8 F5:8 C6:8 r:8 F5:8 F5:8 C6:32 A5:32 C6:32 G5:32 A5:32^ E5:8 F5:8",
    "approved": false
   },
   {
@@ -1560,324 +1442,295 @@
    "crops": [
     "figs_new/p061_s00.png"
    ],
-   "enc": "B5:8 C6:8. A5:8 G5:8",
-   "key": "C",
+   "enc": "@key:C B5:8 C6:8. A5:8 G5:8",
    "approved": false
   },
   {
    "id": "goldfinch-02",
    "bird": "Yellow-bird; American Goldfinch",
    "page": 39,
-   "key": "C",
    "crops": [
     "figs_new/p061_s00b.png"
    ],
-   "enc": "B4:8 C5:8 A4:8 G4:8 B4:8 C5:8 A4:8 G4:8 B4:8 C5:8 A4:8 G4:8",
+   "enc": "@key:C B4:8 C5:8 A4:8 G4:8 B4:8 C5:8 A4:8 G4:8 B4:8 C5:8 A4:8 G4:8",
    "approved": false
   },
   {
    "id": "wts-var1",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "key": "D",
    "crops": [
     "figs_new/p065_s00.png"
    ],
-   "enc": "F#6:2 D6:2 D6:2 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83",
+   "enc": "@key:D F#6:2-> D6:2-> D6:2-> D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83 D6:83",
    "approved": false
   },
   {
    "id": "wts-var2",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "key": "F",
    "crops": [
     "figs_new/p065_s01.png"
    ],
-   "enc": "F6:2 A6:2 A6:2 B6:83 B6:83 B6:83 B6:83 B6:83 B6:83",
+   "enc": "@key:F F6:2 A6:2-> A6:2-> B6:83 B6:83 B6:83 B6:83 B6:83 B6:83",
    "approved": false
   },
   {
    "id": "wts-var3",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "key": "A",
    "crops": [
     "figs_new/p065_s01.png"
    ],
-   "enc": "D6:2 B6:2 B6:2 A6:83 A6:83 A6:83",
+   "enc": "@key:A D6:2-> B6:2-> B6:2-> A6:83 A6:83 A6:83",
    "approved": false
   },
   {
    "id": "wts-var4",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "key": "B",
    "crops": [
     "figs_new/p065_s02.png"
    ],
-   "enc": "B5:2 E6:2 E6:83 E6:83 E6:83",
+   "enc": "@key:B B5:2 E6:2-> E6:83 E6:83 E6:83",
    "approved": false
   },
   {
    "id": "wts-var5",
    "bird": "White-throated Sparrow",
    "page": 43,
-   "key": "Ab",
    "crops": [
     "figs_new/p065_s02.png"
    ],
-   "enc": "Bb5:2 Eb6:2 Eb6:2",
+   "enc": "@key:Ab Bb5:2 Eb6:2-> Eb6:2->",
    "approved": false
   },
   {
    "id": "foxsp-01",
    "bird": "Fox-colored Sparrow",
    "page": 44,
-   "key": "C",
    "crops": [
     "figs_new/p066_s00.png",
     "figs_new/p066_s01.png"
    ],
-   "enc": "E5:16 F5:16 E5:16 r:8 A5:16 G5:8 A5:16 G5:8 A5:16 G5:16 E5:16 r:8 F5:16 G5:16 F5:8 F5:8 F5:8 E5:8 r:4^ F5:8 F5:8 F5:8 A5:16 F5:16 r:8 F5:8. A5:16 F5:8 E5:16 r:8 A5:8^ A5:16 F5:16 r:8 F5:16 A5:16 F5:8. E5:16 D5:8",
+   "enc": "@key:C [ E5:16 F5:16 E5:16 ] r:8 A5:16 [ G5:8 A5:16 ] G5:8 A5:16 G5:16 E5:16 r:8 F5:16 [ G5:16 F5:8 F5:8 ] F5:8 E5:8 r:4^ F5:8 F5:8 F5:8 A5:16 F5:16-> r:8 F5:8. A5:16 F5:8 E5:16 r:8 A5:8^ A5:16-> F5:16 r:8 F5:16 A5:16 F5:8. [ E5:16 D5:8 ]",
    "approved": false
   },
   {
    "id": "chewink-01",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 45,
-   "key": "C",
    "crops": [
     "figs_new/p067_s00.png"
    ],
-   "enc": "D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 r:8^ E5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 r:8^ E5:8 D6:16 D6:16 D6:16 E6:16 D6:16 E6:16 D6:16",
+   "enc": "@key:C D5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 r:8^ E5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 r:8^ E5:8 D6:16 D6:16 D6:16 E6:16 D6:16 E6:16 D6:16",
    "approved": false
   },
   {
    "id": "chewink-var1",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 46,
-   "key": "C",
    "crops": [
     "figs_new/p068_s00.png"
    ],
-   "enc": "G5:8 A5:8 G5:8 E5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16",
+   "enc": "@key:C G5:8 A5:8 G5:8 E5:8 [ C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 ]",
    "approved": false
   },
   {
    "id": "chewink-var2",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 46,
-   "key": "C",
    "crops": [
     "figs_new/p068_s01.png"
    ],
-   "enc": "C6:8 G5:8 C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16",
+   "enc": "@key:C C6:8 G5:8 [ C6:16 D6:16 C6:16 D6:16 C6:16 D6:16 C6:16 ]",
    "approved": false
   },
   {
    "id": "chewink-var3",
    "bird": "Chewink / Towhee Bunting / Ground Robin",
    "page": 46,
-   "key": "F",
    "crops": [
     "figs_new/p068_s02.png"
    ],
-   "enc": "F6:8 C6:8 C7:16 D7:16 C7:16 D7:16 C7:16 D7:16 C7:16",
+   "enc": "@key:F F6:8 C6:8 [ C7:16 D7:16 C7:16 D7:16 C7:16 D7:16 C7:16 ]",
    "approved": false
   },
   {
    "id": "herm-extra",
    "bird": "Hermit Thrush",
    "page": 61,
-   "key": "Bb",
    "crops": [
     "figs_new/p083_s00.png"
    ],
-   "enc": "C6:8 Eb6:16 F6:16 Eb6:16 r:8 G6:16 A6:16 G6:16 r:4^ E5:4 A5:16 Bb5:16 A5:16 r:8 E5:4 G#5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16",
+   "enc": "@key:Bb C6:8 Eb6:16 F6:16 Eb6:16 r:8 G6:16 A6:16 G6:16 r:4^ E5:4 A5:16 Bb5:16 A5:16 r:8 E5:4 G#5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16",
    "approved": false
   },
   {
    "id": "herm-forest",
    "bird": "Hermit Thrush",
    "page": 61,
-   "key": "Ab",
    "crops": [
     "figs_new/p083_s01.png",
     "figs_new/p083_s02.png",
     "figs_new/p083_s03.png"
    ],
-   "enc": "Eb5:4 Bb5:8 G5:8 G5:16 Bb5:16 G5:16 r:4^ C5:4 G5:8 F5:8 F5:16 G5:16 F5:16 r:4^ D5:4 F5:16 D5:16 D5:16 Eb5:16 D5:16 r:4^ Eb5:4 G5:8 Eb5:16 Bb5:16 C6:16 Bb5:16 r:4^ F5:4 A5:16 F5:16 C6:16 D6:16 C6:16 A5:16 A5:16 Bb5:16 A5:16 r:4^ D5:4 A5:8 G5:8 G5:16 A5:16 G5:16 C5:4 G5:8 E5:8 D5:16 F5:16 D5:16",
+   "enc": "@key:Ab Eb5:4 Bb5:8 G5:8 G5:16 Bb5:16 G5:16 r:4^ C5:4 G5:8 F5:8 F5:16 G5:16 F5:16 r:4^ D5:4 F5:16 D5:16 D5:16 Eb5:16 D5:16 r:4^ Eb5:4 G5:8 Eb5:16 Bb5:16 C6:16 Bb5:16 r:4^ F5:4 A5:16 F5:16 C6:16 D6:16 C6:16 A5:16 A5:16 Bb5:16 A5:16 r:4^ D5:4 A5:8 G5:8 G5:16 A5:16 G5:16 C5:4 G5:8 E5:8 D5:16 F5:16 D5:16",
    "approved": false
   },
   {
    "id": "whip-crescendo",
    "bird": "Whippoorwill",
    "page": 69,
-   "key": "D",
    "lyric": "Whip-poor-will, Whip-poor-will.",
    "crops": [
     "figs_new/p091_s00.png",
     "figs_new/p091_s01.png"
    ],
-   "enc": "G5:8 A5:8 G5:16 A5:16 C#6:4 r:8 G5:8 A5:8 G5:16 A5:16 C#6:4 r:8 G5:32 A5:32 B5:32 A5:32 B5:32 D6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32",
+   "enc": "@key:D G5:8 A5:8 [ G5:16 A5:16 ] C#6:4 r:8 G5:8 [ A5:8 G5:16 ] A5:16 C#6:4 r:8 G5:32 A5:32 B5:32 A5:32 B5:32 [ D6:32 G5:32 A5:32 B5:32 A5:32 B5:32 ] [ C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 ] [ C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 ] [ C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 ] [ C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 ] [ C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 ] C#6:32",
    "approved": false
   },
   {
    "id": "screech-tremolo",
    "bird": "Screech-Owl",
    "page": 100,
-   "key": "C",
    "lyric": "Ah . . . . . . . . . . . . . . . . .",
    "crops": [
     "figs_new/p122_s00.png"
    ],
-   "enc": "D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16",
+   "enc": "@key:C [ D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 ]",
    "approved": false
   },
   {
    "id": "screech-more1",
    "bird": "Screech-Owl",
    "page": 102,
-   "key": "F",
    "lyric": "Ah-ee, Ah-ee, Ah-ee, Ah-ee, Ah-ee.",
    "crops": [
     "figs_new/p124_s00.png"
    ],
-   "enc": "D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^",
+   "enc": "@key:F D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^",
    "approved": false
   },
   {
    "id": "screech-more2",
    "bird": "Screech-Owl",
    "page": 102,
-   "key": "F",
    "lyric": "Ah-oo, Ah-oo, Ah-oo, Ah-ee, Ah-ea.",
    "crops": [
     "figs_new/p124_s01.png"
    ],
-   "enc": "D5:2 C#5:16 r:4^ D5:2 C#5:16 r:4^ D5:2 C#5:16 r:4^ E5:2 D5:16 r:4^ E5:2 D5:16 r:4^",
+   "enc": "@key:F D5:2 C#5:16 r:4^ D5:2 C#5:16 r:4^ D5:2 C#5:16 r:4^ E5:2 D5:16 r:4^ E5:2 D5:16 r:4^",
    "approved": false
   },
   {
    "id": "screech-more3",
    "bird": "Screech-Owl",
    "page": 102,
-   "key": "F",
    "lyric": "Ah-oo, Ah-oo, Ah-oo, Ah-oo, . . . oo-oo-oo-oo-oo.",
    "crops": [
     "figs_new/p124_s02.png"
    ],
-   "enc": "D5:2 C#5:16 r:4^ D5:2 C5:16 r:4^ D5:2 C5:16 r:4^ D5:2 A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 A4:8^ A4:8^ A4:8^ A4:8^ A4:8^",
+   "enc": "@key:F D5:2 C#5:16 r:4^ D5:2 C5:16 r:4^ D5:2 C5:16 r:4^ D5:2 A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 A4:8^ A4:8^ A4:8^ A4:8^ A4:8^",
    "approved": false
   },
   {
    "id": "screech-more4",
    "bird": "Screech-Owl",
    "page": 102,
-   "key": "Bb",
    "lyric": "Ah - - - - oo, Ah-oo, Ah-oo, Ah-oo.",
    "crops": [
     "figs_new/p124_s03.png"
    ],
-   "enc": "Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 A4:8^ A4:2 G4:16 r:4^ A4:2 G4:16 r:4^ A4:2 G4:16 r:4^",
+   "enc": "@key:Bb [ Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 ] A4:8^ A4:2 G4:16 r:4^ A4:2 G4:16 r:4^ A4:2 G4:16 r:4^",
    "approved": false
   },
   {
    "id": "hen-intro",
    "bird": "Hen Music",
    "page": 104,
-   "key": "C",
    "crops": [
     "figs_new/p126_s00.png"
    ],
-   "enc": "F5:1 C5:8",
+   "enc": "@key:C F5:1 C5:8",
    "approved": false
   },
   {
    "id": "hen-piano",
    "bird": "Hen Music",
    "page": 105,
-   "key": "F",
    "crops": [
     "figs_new/p127_s01.png"
    ],
-   "enc": "Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:8 r:8",
+   "enc": "@key:F Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:8 r:8",
    "approved": false
   },
   {
    "id": "hen-oark",
    "bird": "Hen Music",
    "page": 105,
-   "key": "F",
    "lyric": "o-ark, o-ark, ark, ark, ark, ark, ark, ark, ark.",
    "crops": [
     "figs_new/p127_s02.png"
    ],
-   "enc": "C4:8 F4:8 r:8 C4:8 F4:8 r:8 A4:8 A4:8 A4:8 A4:8 A4:8 r:8 F4:8 r:8 C4:1^",
+   "enc": "@key:F C4:8 F4:8-> r:8 C4:8 F4:8-> r:8 A4:8 A4:8 A4:8 A4:8 A4:8 r:8 F4:8 r:8 C4:1^",
    "approved": false
   },
   {
    "id": "hen-unlabeled",
    "bird": "Hen Music",
    "page": 105,
-   "key": "C",
    "crops": [
     "figs_new/p127_s03.png"
    ],
-   "enc": "Eb4:8. Ab4:8 Eb4:8 Ab4:8 Eb4:8 Ab4:8 r:8 Eb4:1^",
+   "enc": "@key:C Eb4:8. Ab4:8 Eb4:8 Ab4:8 Eb4:8 Ab4:8 r:8 Eb4:1^",
    "approved": false
   },
   {
    "id": "hen-general-1",
    "bird": "Hen Music (rooster, 'the General')",
    "page": 107,
-   "key": "F",
    "crops": [
     "figs_new/p129_s00.png"
    ],
-   "enc": "F5:8. F5:8 F5:4 E5:4 C5:4",
+   "enc": "@key:F F5:8. F5:8 F5:4-> E5:4-> C5:4",
    "approved": false
   },
   {
    "id": "hen-general-2",
    "bird": "Hen Music (rooster, 'the General')",
    "page": 108,
-   "key": "A",
    "crops": [
     "figs_new/p130_s00.png"
    ],
-   "enc": "F#5:8. F#5:8 F#5:4 E5:4 C#5:4",
+   "enc": "@key:A F#5:8. F#5:8 F#5:4-> E5:4-> C#5:4",
    "approved": false
   },
   {
    "id": "hen-general-2-transposed",
    "bird": "Hen Music (rooster, 'the General')",
    "page": 108,
-   "key": "F",
    "crops": [
     "figs_new/p130_s01.png"
    ],
-   "enc": "F5:8. F5:8 F5:4 E5:4 C5:4 r:2 D5:8. D5:8 D5:4 C5:4 A4:4",
+   "enc": "@key:F F5:8. F5:8 F5:4-> E5:4-> C5:4 r:2 D5:8. D5:8 D5:4-> C5:4-> A4:4",
    "approved": false
   },
   {
    "id": "hen-seven-sleepers",
    "bird": "Hen Music",
    "page": 108,
-   "key": "C",
    "lyric": "Oh, Pro-con-sul",
    "crops": [
     "figs_new/p130_s02.png"
    ],
-   "enc": "F5:2. F5:8 E5:8 C5:8",
+   "enc": "@key:C F5:2. F5:8 E5:8 C5:8",
    "approved": false
   },
   {
    "id": "hen-dantucker",
    "bird": "Hen Music (hen, 'Old Dan Tucker')",
    "page": 108,
-   "key": "Bb",
    "lyric": "Cut, cut, cut, cut, cut, cut, cut, cut, cut, cut,",
    "crops": [
     "figs_new/p130_s03.png",
@@ -1887,1205 +1740,1098 @@
     "figs_new/p131_s02.png",
     "figs_new/p131_s03.png"
    ],
-   "enc": "B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 G4:8 B4:8 B4:8 B4:8 C5:8 G4:8. G4:16 A4:16 B4:8 D5:8. D5:8 D5:4 G4:16 F#4:16 G4:16 F4:16 G4:16 F4:16 G4:16 A4:16 B4:8. B4:8 B4:4 G4:16 F4:16 G4:16 A4:16 G4:16 A4:16 G4:16 A4:16 C5:8. B4:8 D5:8 Eb5:8 C5:8 D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 B4:8 C5:8 D5:8 r:8 B4:8 C5:8 E5:8 F5:8 D5:8 F5:8 Bb5:4^",
+   "enc": "@key:Bb B4:8-> B4:8 B4:8 B4:8 B4:8-> B4:8 B4:8 G4:8 B4:8-> B4:8 B4:8 C5:8 G4:8. G4:16 A4:16 B4:8 D5:8. D5:8-> D5:4 G4:16 F#4:16 G4:16 F4:16 G4:16 F4:16 G4:16 A4:16 B4:8. B4:8 B4:4 G4:16 F4:16 G4:16 A4:16 G4:16 A4:16 G4:16 A4:16 C5:8. B4:8 D5:8 Eb5:8 C5:8 D5:8-> C5:8 D5:8 C5:8 D5:8 C5:8 B4:8 C5:8 D5:8 r:8 B4:8 C5:8 E5:8 F5:8 D5:8 F5:8 Bb5:4^",
    "approved": false
   },
   {
    "id": "ess-loon-1",
    "bird": "Loon",
    "page": 117,
-   "key": "A",
    "crops": [
     "figs_new/p139_s00.png"
    ],
-   "enc": "E5:4^ F#5:4",
+   "enc": "@key:A E5:4^ F#5:4",
    "approved": false
   },
   {
    "id": "ess-chickadee-1",
    "bird": "Chickadee",
    "page": 117,
-   "key": "C",
    "crops": [
     "figs_new/p139_s01.png"
    ],
-   "enc": "A5:2 G5:2 r:4 G5:2 E5:2 r:4^ A5:2 A5:4 A5:4 r:4^ G5:2 G5:4 G5:4",
+   "enc": "@key:C A5:2 G5:2 r:4 G5:2 E5:2 r:4^ A5:2 A5:4 A5:4 r:4^ G5:2 G5:4 G5:4",
    "approved": false
   },
   {
    "id": "ess-warbler-btg-1",
    "bird": "Black-throated Green Warbler",
    "page": 117,
-   "key": "C",
    "crops": [
     "figs_new/p139_s02.png"
    ],
-   "enc": "E6:4 E6:4 E6:4 C6:4 E6:4",
+   "enc": "@key:C E6:4 E6:4 E6:4 C6:4 E6:4",
    "approved": false
   },
   {
    "id": "ess-warbler-btg-2",
    "bird": "Black-throated Green Warbler",
    "page": 117,
-   "key": "A",
    "crops": [
     "figs_new/p139_s03.png"
    ],
-   "enc": "E5:4. E5:8 E5:4. C#5:8 E5:4",
+   "enc": "@key:A E5:4. E5:8 E5:4. C#5:8 E5:4",
    "approved": false
   },
   {
    "id": "ess-pewee-1",
    "bird": "Wood-Pewee",
    "page": 118,
-   "key": "Ab",
    "crops": [
     "figs_new/p140_s00.png"
    ],
-   "enc": "Eb5:2.^ Bb4:4 Db5:2 r:4 Eb5:2.^ Bb4:4 Db5:2 Db5:2^ Bb4:2^",
+   "enc": "@key:Ab Eb5:2.^ Bb4:4 Db5:2 r:4 Eb5:2.^ Bb4:4 Db5:2 Db5:2^ Bb4:2^",
    "approved": false
   },
   {
    "id": "ess-lark-1",
    "bird": "Meadow Lark",
    "page": 118,
-   "key": "Ab",
    "crops": [
     "figs_new/p140_s01.png",
     "figs_new/p140_s02.png",
     "figs_new/p140_s03.png"
    ],
-   "enc": "C5:4 Ab4:4 C5:16 Bb4:16 Ab4:8 C5:8 Bb4:8 Ab4:8 Eb5:8 r:4 C5:8 Bb4:8 Ab4:8 Eb5:8 r:4 C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8 Eb5:16 F5:8. F5:16 Eb5:16 C5:8 Eb5:16 F5:8. F5:16 Eb5:16 C5:8",
+   "enc": "@key:Ab C5:4 Ab4:4 [ C5:16 Bb4:16 ] Ab4:8 C5:8 Bb4:8 [ Ab4:8 Eb5:8 ] r:4 C5:8 Bb4:8 [ Ab4:8 Eb5:8 ] r:4 C5:8 Bb4:8 [ Ab4:8 C5:8 ] Bb4:8 Eb5:16 F5:8. [ F5:16 Eb5:16 ] C5:8 [ Eb5:16 F5:8. ] F5:16 [ Eb5:16 C5:8 ]",
    "approved": false
   },
   {
    "id": "ess-chewink-1",
    "bird": "Chewink",
    "page": 118,
-   "key": "C",
    "crops": [
     "figs_new/p140_s04.png"
    ],
-   "enc": "G5:8. A5:16 G5:8 E5:8 C6:32 D6:32 C6:32 D6:32 C6:32 D6:32 C6:32",
+   "enc": "@key:C G5:8. A5:16 G5:8 E5:8 [ C6:32 D6:32 C6:32 D6:32 C6:32 D6:32 C6:32 ]",
    "approved": false
   },
   {
    "id": "ess-oriole-1",
    "bird": "Oriole",
    "page": 118,
-   "key": "Am",
    "crops": [
     "figs_new/p140_s05.png"
    ],
-   "enc": "G5:8. G#5:16 A5:8 r:4 A5:8 G5:8. E5:16 D5:8 C5:8",
+   "enc": "@key:Am G5:8. G#5:16 A5:8 r:4 A5:8 G5:8. E5:16 D5:8 C5:8",
    "approved": false
   },
   {
    "id": "ess-cock-1",
    "bird": "Domestic Cock (rooster)",
    "page": 119,
-   "key": "D",
    "crops": [
     "figs_new/p141_s00.png"
    ],
-   "enc": "F#5:4. F#5:8 E5:8 C#5:8",
+   "enc": "@key:D F#5:4.-> F#5:8 E5:8 C#5:8",
    "approved": false
   },
   {
    "id": "ess-horse-1",
    "bird": "Horse (Fanny, the Morgan mare)",
    "page": 119,
-   "key": "A",
    "crops": [
     "figs_new/p141_s01.png"
    ],
-   "enc": "A2:8 B2:8 C#3:8 D3:8 E3:8 C#3:8 B2:8 A2:8",
+   "enc": "@key:A [ A2:8 B2:8 ] [ C#3:8 D3:8 ] E3:8 [ C#3:8 B2:8 ] A2:8",
    "approved": false
   },
   {
    "id": "ess-horse-2",
    "bird": "Horse (Fanny, the Morgan mare)",
    "page": 119,
-   "key": "Bb",
    "crops": [
     "figs_new/p141_s02.png"
    ],
-   "enc": "G2:8 A2:8 Bb2:8 C3:8 D3:8 Eb3:8 D3:8 C3:8 Bb2:8 A2:8 G2:8",
+   "enc": "@key:Bb [ G2:8 A2:8 ] [ Bb2:8 C3:8 ] [ D3:8 Eb3:8 ] [ D3:8 C3:8 ] [ Bb2:8 A2:8 ] G2:8",
    "approved": false
   },
   {
    "id": "ess-colt-1",
    "bird": "Colt (yearling)",
    "page": 120,
-   "key": "C",
    "crops": [
     "figs_new/p142_s00.png"
    ],
-   "enc": "A5:8 C6:8 r:4 A5:8 A5:8 A5:8 A5:8 A5:8 E5:8",
+   "enc": "@key:C [ A5:8 C6:8 ] r:4 A5:8 A5:8 A5:8 A5:8 A5:8-> E5:8",
    "approved": false
   },
   {
    "id": "ess-bull-1",
    "bird": "Bull (young bull, No. 1)",
    "page": 120,
-   "key": "Eb",
    "crops": [
     "figs_new/p142_s01.png"
    ],
-   "enc": "D5:4 G4:8 D5:4 G4:8 C5:4 G4:8 C5:4 G4:8 C3:2^ A2:8 r:8 C3:2^ A2:8 r:8 C3:2^ A2:8 r:8 C3:2^ A2:8",
+   "enc": "@key:Eb D5:4 G4:8 D5:4 G4:8 C5:4 G4:8 C5:4 G4:8 C3:2^ A2:8 r:8 C3:2^ A2:8 r:8 C3:2^ A2:8 r:8 C3:2^ A2:8",
    "approved": false
   },
   {
    "id": "ess-bull-2",
    "bird": "Bull (young bull, No. 2)",
    "page": 120,
-   "key": "A",
    "crops": [
     "figs_new/p142_s02.png"
    ],
-   "enc": "G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4",
+   "enc": "@key:A G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4",
    "approved": false
   },
   {
    "id": "ess-bull-3",
    "bird": "Bull (young bull, No. 2)",
    "page": 120,
-   "key": "D",
    "crops": [
     "figs_new/p142_s03.png"
    ],
-   "enc": "B3:4 D4:2 B3:4 D4:2 B3:4 D4:2 B3:4 D4:2",
+   "enc": "@key:D B3:4 D4:2 B3:4 D4:2 B3:4 D4:2 B3:4 D4:2",
    "approved": false
   },
   {
    "id": "ess-chickadee-2",
    "bird": "Chickadee",
    "page": 123,
-   "key": "C",
    "crops": [
     "figs_new/p145_s00.png"
    ],
-   "enc": "A5:2 G5:2 G5:2 E5:2 A5:2 A5:4 A5:4 G5:2 G5:4 G5:4",
+   "enc": "@key:C A5:2 G5:2 G5:2 E5:2 A5:2 A5:4 A5:4 G5:2 G5:4 G5:4",
    "approved": false
   },
   {
    "id": "ess-lark-4",
    "bird": "Meadow Lark",
    "page": 124,
-   "key": "Ab",
    "crops": [
     "figs_new/p146_s00.png"
    ],
-   "enc": "F5:8 E5:4 C5:8 Bb4:16 Ab4:16 Eb5:8 C5:16 Bb4:16 Ab4:16 Eb5:8 C5:16 Bb4:16 Ab4:16 Eb5:8 C5:4^ Ab4:8 C5:16 Bb4:16 Ab4:8",
+   "enc": "@key:Ab F5:8 E5:4 C5:8 Bb4:16 Ab4:16 Eb5:8 C5:16 Bb4:16 Ab4:16 Eb5:8 C5:16 Bb4:16 Ab4:16 Eb5:8 C5:4^ Ab4:8 C5:16 Bb4:16 Ab4:8",
    "approved": false
   },
   {
    "id": "ess-hermit-thrush-1",
    "bird": "Hermit Thrush",
    "page": 124,
-   "key": "Bb",
    "crops": [
     "figs_new/p146_s01.png",
     "figs_new/p146_s02.png"
    ],
-   "enc": "Bb4:4 D5:32 F5:32 G5:32 F5:32 D5:8 Bb4:4 Eb5:32 F5:32 Eb5:32 G5:32 A5:32 G5:32 C5:4 F5:32 G5:32 F5:32 C5:8 G5:32 A5:32 G5:32 C5:4 F5:32 G5:32 F5:32 A5:32 Bb5:32 A5:32",
+   "enc": "@key:Bb Bb4:4 D5:32 F5:32 G5:32 F5:32 D5:8 Bb4:4 Eb5:32 F5:32 Eb5:32 G5:32 A5:32 G5:32 C5:4 F5:32 G5:32 F5:32 C5:8 G5:32 A5:32 G5:32 C5:4 F5:32 G5:32 F5:32 A5:32 Bb5:32 A5:32",
    "approved": false
   },
   {
    "id": "ess-wood-thrush-1",
    "bird": "Wood Thrush",
    "page": 124,
-   "key": "Ab",
    "crops": [
     "figs_new/p146_s03.png"
    ],
-   "enc": "F5:8. C5:16 Ab5:8 r:4 G5:8. Eb5:16 Bb5:8",
+   "enc": "@key:Ab [ F5:8. C5:16 Ab5:8 ] r:4 [ G5:8. Eb5:16 Bb5:8 ]",
    "approved": false
   },
   {
    "id": "ess-song-sparrow-1",
    "bird": "Song Sparrow",
    "page": 125,
-   "key": "G",
    "crops": [
     "figs_new/p147_s00.png"
    ],
-   "enc": "D5:4 D5:4 D5:4 G5:4 G5:8 G5:8 G5:8 D6:8 D6:8 D6:8 D6:8 D6:8 D6:8 G5:8",
+   "enc": "@key:G D5:4 D5:4 D5:4 G5:4 [ G5:8 G5:8 G5:8 ] [ D6:8 D6:8 D6:8 ] [ D6:8 D6:8 D6:8 ] G5:8",
    "approved": false
   },
   {
    "id": "ess-song-sparrow-2",
    "bird": "Song Sparrow",
    "page": 125,
-   "key": "G",
    "crops": [
     "figs_new/p147_s01.png"
    ],
-   "enc": "D6:4 D6:4 D6:4 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 G5:8",
+   "enc": "@key:G D6:4 D6:4 D6:4 [ G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 ] [ D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 ] G5:8",
    "approved": false
   },
   {
    "id": "ess-song-sparrow-3",
    "bird": "Song Sparrow",
    "page": 125,
-   "key": "G",
    "crops": [
     "figs_new/p147_s02.png",
     "figs_new/p147_s03.png"
    ],
-   "enc": "G4:4 G4:4 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 G5:32 D6:8. G5:32 D6:8. G5:32 D6:8. G5:4 A5:32 B5:32 A5:32 B5:32 A5:32 r:8",
+   "enc": "@key:G G4:4 G4:4 [ G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 ] [ D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 ] [ G5:32 D6:8. ] [ G5:32 D6:8. ] [ G5:32 D6:8. ] G5:4 [ A5:32 B5:32 A5:32 B5:32 A5:32 ] r:8",
    "approved": false
   },
   {
    "id": "ess-song-sparrow-5",
    "bird": "Song Sparrow",
    "page": 125,
-   "key": "A",
    "crops": [
     "figs_new/p147_s04.png"
    ],
-   "enc": "C#5:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:32 B5:32 A5:32 B5:32 A5:32 r:8 C#5:8. D5:16 C#5:8 E5:32 F#5:32 F#5:32 F#5:32 F#5:32 G#5:32",
+   "enc": "@key:A C#5:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 [ A5:32 B5:32 A5:32 B5:32 A5:32 ] r:8 C#5:8. D5:16 [ C#5:8 E5:32 F#5:32 F#5:32 F#5:32 F#5:32 ] G#5:32",
    "approved": false
   },
   {
    "id": "ess-song-sparrow-6",
    "bird": "Song Sparrow",
    "page": 125,
-   "key": "C",
    "crops": [
     "figs_new/p147_s05.png"
    ],
-   "enc": "G5:32 C6:8. G5:32 C6:8. G5:32 C6:8. F5:4 A5:32 B5:32 A5:32 B5:32 A5:32 r:8",
+   "enc": "@key:C [ G5:32 C6:8. ] [ G5:32 C6:8. ] [ G5:32 C6:8. ] F5:4 [ A5:32 B5:32 A5:32 B5:32 A5:32 ] r:8",
    "approved": false
   },
   {
    "id": "ess-niagara-1",
    "bird": "Niagara Falls (harmonic tones, non-bird)",
    "page": 130,
-   "key": "C",
    "crops": [
     "figs_new/p152_s00.png",
     "figs_new/p152_s01.png"
    ],
-   "enc": "C2:1 C3:1 G3:1 C4:1 E4:1 G4:1 C5:1 E5:4 G5:4 Bb5:4 C6:4 E4:1",
+   "enc": "@key:C C2:1 C3:1 G3:1 C4:1 E4:1 G4:1 C5:1 E5:4 G5:4 Bb5:4 C6:4 E4:1",
    "approved": false
   },
   {
    "id": "ess-waltz-1",
    "bird": "German waltz (flageolet, non-bird)",
    "page": 134,
-   "key": "Bb",
    "crops": [
     "figs_new/p156_s00.png"
    ],
-   "enc": "Bb4:32 C5:32 D5:32 F5:4. F5:4. F5:8 Bb5:16 F5:16 D5:8 F5:8 D5:16 Bb4:16 G4:8 G5:8 G5:8 A4:16 C5:16 E5:16 C5:16 A4:16 C5:16 Bb4:16 D5:16 F5:16 D5:16 Bb5:8",
+   "enc": "@key:Bb Bb4:32 C5:32 D5:32 F5:4.-> F5:4. F5:8 Bb5:16 F5:16 D5:8 F5:8 D5:16 Bb4:16 G4:8 G5:8 G5:8 A4:16 C5:16 E5:16 C5:16 A4:16 C5:16 Bb4:16 D5:16 F5:16 D5:16 Bb5:8",
    "approved": false
   },
   {
    "id": "ess-waltz-2",
    "bird": "German waltz (flageolet, non-bird)",
    "page": 134,
-   "key": "Bb",
    "crops": [
     "figs_new/p156_s01.png",
     "figs_new/p156_s02.png"
    ],
-   "enc": "F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 Bb5:2. Bb5:8 r:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 C6:2. C6:8 r:4 F5:4 D6:4 D6:4 D6:4 E6:4 C6:4 A5:4",
+   "enc": "@key:Bb F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 Bb5:2. Bb5:8 r:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 F5:4 C6:2. C6:8 r:4 F5:4 D6:4 D6:4 D6:4 E6:4 C6:4 A5:4",
    "approved": false
   },
   {
    "id": "ess-cuckoo-1",
    "bird": "Cuckoo",
    "page": 135,
-   "key": "C",
    "crops": [
     "figs_new/p157_s00.png"
    ],
-   "enc": "F5:8 D5:4. r:8 F5:8 D5:4.",
+   "enc": "@key:C F5:8 D5:4. r:8 F5:8 D5:4.",
    "approved": false
   },
   {
    "id": "ess-kamtschatkales-1",
    "bird": "Kamtschatkales chant (imitates wild duck; non-bird)",
    "page": 136,
-   "key": "C",
    "crops": [
     "figs_new/p158_s00.png"
    ],
-   "enc": "C4:4 E4:4 G4:4 C4:4 F4:4 A4:4",
+   "enc": "@key:C C4:4 E4:4 G4:4 C4:4 F4:4 A4:4",
    "approved": false
   },
   {
    "id": "ess-chickadee-3",
    "bird": "Chickadee",
    "page": 142,
-   "key": "C",
    "crops": [
     "figs_new/p164_s00.png"
    ],
-   "enc": "D5:4 A4:8 r:2 D5:4 A4:8 r:2",
+   "enc": "@key:C D5:4 A4:8 r:2 D5:4 A4:8 r:2",
    "approved": false
   },
   {
    "id": "ess-pewee-2",
    "bird": "Wood-Pewee",
    "page": 143,
-   "key": "Ab",
    "crops": [
     "figs_new/p165_s00.png"
    ],
-   "enc": "Eb5:4 Bb4:4 Db5:4 r:4 Eb5:4 Bb4:4 Db5:4 r:4 Eb5:4 Bb4:8 r:4 Db5:4^ Bb4:4",
+   "enc": "@key:Ab Eb5:4 Bb4:4 Db5:4 r:4 Eb5:4 Bb4:4 Db5:4 r:4 Eb5:4 Bb4:8 r:4 Db5:4^ Bb4:4",
    "approved": false
   },
   {
    "id": "ess-field-sparrow-1",
    "bird": "Field-Sparrow",
    "page": 148,
-   "key": "A",
    "crops": [
     "figs_new/p170_s00.png"
    ],
-   "enc": "A4:4 E5:32 F#5:32 E5:32 F#5:32 E5:32 F#5:32 E5:32 F#5:4 r:4 B4:32 C#5:32 B4:32 C#5:32 B4:32 C#5:32 B4:32",
+   "enc": "@key:A A4:4 [ E5:32 F#5:32 E5:32 F#5:32 E5:32 F#5:32 E5:32 ] F#5:4 r:4-> [ B4:32 C#5:32 B4:32 C#5:32 B4:32 C#5:32 B4:32 ]",
    "approved": false
   },
   {
    "id": "ess-whitethroat-1",
    "bird": "White-throated Sparrow",
    "page": 150,
-   "key": "C",
    "crops": [
     "figs_new/p172_s00.png"
    ],
-   "enc": "D5:2 B5:2 E5:2 E5:8 E5:8 E5:8 r:8 E5:8 E5:8 E5:8 r:8 E5:8 E5:8 E5:8 r:8",
+   "enc": "@key:C D5:2 B5:2 E5:2 E5:8 E5:8 E5:8 r:8 E5:8 E5:8 E5:8 r:8 E5:8 E5:8 E5:8 r:8",
    "approved": false
   },
   {
    "id": "ess-whitethroat-2",
    "bird": "White-throated Sparrow",
    "page": 151,
-   "key": "C",
    "crops": [
     "figs_new/p173_s00.png"
    ],
-   "enc": "D5:4 E5:4 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 r:4",
+   "enc": "@key:C D5:4 E5:4 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 D5:83 r:4",
    "approved": false
   },
   {
    "id": "ess-whitethroat-3",
    "bird": "White-throated Sparrow",
    "page": 151,
-   "key": "C",
    "crops": [
     "figs_new/p173_s01.png"
    ],
-   "enc": "E5:4 E5:4 C5:4 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83",
+   "enc": "@key:C E5:4 E5:4 C5:4 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83",
    "approved": false
   },
   {
    "id": "ess-whitethroat-4",
    "bird": "White-throated Sparrow",
    "page": 151,
-   "key": "C",
    "crops": [
     "figs_new/p173_s02.png"
    ],
-   "enc": "G4:4 G4:4 C5:4 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83",
+   "enc": "@key:C G4:4 G4:4 C5:4 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83 B4:83",
    "approved": false
   },
   {
    "id": "ess-whitethroat-5",
    "bird": "White-throated Sparrow",
    "page": 152,
-   "key": "C",
    "crops": [
     "figs_new/p174_s00.png"
    ],
-   "enc": "F5:4 F5:4 F5:4 E5:32 E5:2. E5:32 D5:4 D5:4 D5:4 D5:2.",
+   "enc": "@key:C F5:4 F5:4 F5:4 E5:32 E5:2. E5:32 D5:4 D5:4 D5:4 D5:2.",
    "approved": false
   },
   {
    "id": "ess-whitethroat-6",
    "bird": "White-throated Sparrow",
    "page": 152,
-   "key": "C",
    "crops": [
     "figs_new/p174_s01.png"
    ],
-   "enc": "E5:4 E5:4 E5:4 D5:32 C#5:2. D5:32 C#5:4 D5:4 D5:4 C#5:2.",
+   "enc": "@key:C E5:4 E5:4 E5:4 D5:32 C#5:2. D5:32 C#5:4 D5:4 D5:4 C#5:2.",
    "approved": false
   },
   {
    "id": "ess-whitethroat-7",
    "bird": "White-throated Sparrow",
    "page": 152,
-   "key": "C",
    "crops": [
     "figs_new/p174_s02.png",
     "figs_new/p174_s03.png"
    ],
-   "enc": "G4:2 C5:2 C5:2 C5:2 C5:2 G4:2 D5:2 C5:2 C5:2 C5:2 F5:2 F5:2 F5:2 F5:2 F5:2 G4:2 C5:2 C5:8 C5:8 C5:2 C5:8 C5:8 C5:2 C5:8 C5:8 C5:2",
+   "enc": "@key:C G4:2 C5:2 C5:2 C5:2 C5:2 G4:2 D5:2 C5:2 C5:2 C5:2 F5:2 F5:2 F5:2 F5:2 F5:2 G4:2 C5:2 C5:8 C5:8 C5:2 C5:8 C5:8 C5:2 C5:8 C5:8 C5:2",
    "approved": false
   },
   {
    "id": "ess-crownedsparrow-1",
    "bird": "Gambel's White-crowned Sparrow / Golden-crowned Sparrow",
    "page": 153,
-   "key": "C",
    "crops": [
     "figs_new/p175_s00.png"
    ],
-   "enc": "D7:2 Eb7:16 D7:16 C7:16 Db7:16 C7:16 D7:2 Eb7:2 C7:2",
+   "enc": "@key:C D7:2 [ Eb7:16 D7:16 C7:16 Db7:16 C7:16 ] D7:2 Eb7:2 C7:2",
    "approved": false
   },
   {
    "id": "ess-chewink-2",
    "bird": "Chewink",
    "page": 156,
-   "key": "D",
    "crops": [
     "figs_new/p178_s00.png"
    ],
-   "enc": "D5:4 B4:4 E5:8 D5:32 D5:32 D5:32 D5:32 D5:32 D5:32",
+   "enc": "@key:D D5:4 B4:4 [ E5:8 D5:32 D5:32 D5:32 D5:32 D5:32 ] D5:32",
    "approved": false
   },
   {
    "id": "ess-wood-thrush-2",
    "bird": "Wood Thrush",
    "page": 161,
-   "key": "Ab",
    "crops": [
     "figs_new/p183_s00.png"
    ],
-   "enc": "F5:8. C5:16 Ab5:8 r:4 G5:8. Eb5:16 Bb5:8",
+   "enc": "@key:Ab [ F5:8. C5:16 Ab5:8 ] r:4 [ G5:8. Eb5:16 Bb5:8 ]",
    "approved": false
   },
   {
    "id": "ess-bigtree-thrush-1",
    "bird": "Big-tree Thrush",
    "page": 162,
-   "key": "G",
    "crops": [
     "figs_new/p184_s00.png"
    ],
-   "enc": "G5:8. D5:16 B5:4 r:1 r:1 A5:8. F#5:16 D6:4 r:1 r:1 D6:8. E6:16 C6:8. B5:16",
+   "enc": "@key:G [ G5:8. D5:16 ] B5:4 r:1 r:1 A5:8. F#5:16 D6:4 r:1 r:1 [ D6:8. E6:16 ] C6:8. B5:16",
    "approved": false
   },
   {
    "id": "ess-bigtree-thrush-2",
    "bird": "Big-tree Thrush",
    "page": 162,
-   "key": "G",
    "crops": [
     "figs_new/p184_s01.png"
    ],
-   "enc": "E6:8. C6:16 D6:4 r:1 r:1 E6:8. C6:16 D6:4 r:1 r:1 E6:8. C6:16 B5:4",
+   "enc": "@key:G [ E6:8. C6:16 ] D6:4 r:1 r:1 E6:8. C6:16 D6:4 r:1 r:1 E6:8. C6:16 B5:4",
    "approved": false
   },
   {
    "id": "ess-wood-thrush-3",
    "bird": "Wood Thrush",
    "page": 162,
-   "key": "Ab",
    "crops": [
     "figs_new/p184_s02.png"
    ],
-   "enc": "F5:8. C5:16 Ab5:8 r:4 G5:8. Eb5:16 Bb5:8",
+   "enc": "@key:Ab [ F5:8. C5:16 Ab5:8 ] r:4 [ G5:8. Eb5:16 Bb5:8 ]",
    "approved": false
   },
   {
    "id": "ess-wood-thrush-4",
    "bird": "Wood Thrush",
    "page": 162,
-   "key": "Ab",
    "crops": [
     "figs_new/p184_s03.png"
    ],
-   "enc": "F5:8. C5:16 C5:8",
+   "enc": "@key:Ab [ F5:8. C5:16 C5:8 ]",
    "approved": false
   },
   {
    "id": "ess-veery-1",
    "bird": "Wilson's Thrush (Veery)",
    "page": 164,
-   "key": "F",
    "crops": [
     "figs_new/p186_s00.png"
    ],
-   "enc": "F5:8^ F5:16 C6:4. A5:32 G5:4. F5:16 F5:8^ F5:2",
+   "enc": "@key:F [ F5:8^ F5:16 ] C6:4. A5:32 G5:4. [ F5:16 F5:8^ ] F5:2",
    "approved": false
   },
   {
    "id": "ess-hermit-thrush-3",
    "bird": "Hermit Thrush",
    "page": 165,
-   "key": "C",
    "crops": [
     "figs_new/p187_s00.png",
     "figs_new/p187_s01.png"
    ],
-   "enc": "C5:2 E4:2 G4:1 C5:2 E4:2 G4:1 D4:2 F4:2 D5:1 C5:2 E4:2 G4:1 D4:2 D5:2 Bb4:1 C5:2 E4:2 G4:1",
+   "enc": "@key:C C5:2 E4:2 G4:1 C5:2 E4:2 G4:1 D4:2 F4:2 D5:1 C5:2 E4:2 G4:1 D4:2 D5:2 Bb4:1 C5:2 E4:2 G4:1",
    "approved": false
   },
   {
    "id": "ess-oriole-2",
    "bird": "Oriole",
    "page": 169,
-   "key": "F",
    "crops": [
     "figs_new/p191_s00.png"
    ],
-   "enc": "C5:32 Bb4:4 F4:4 C5:4 F5:4 C5:32 C5:4 A4:4 C5:4 r:4",
+   "enc": "@key:F C5:32/ Bb4:4 F4:4 C5:4 F5:4 C5:32/ C5:4 A4:4 C5:4 r:4",
    "approved": false
   },
   {
    "id": "ess-oriole-3",
    "bird": "Oriole",
    "page": 169,
-   "key": "C",
    "crops": [
     "figs_new/p191_s01.png"
    ],
-   "enc": "B4:32 C5:4 B4:32 C5:4 B4:32 C5:4 G5:16 E5:16 C5:4 r:4",
+   "enc": "@key:C B4:32/ C5:4 B4:32/ C5:4 B4:32/ C5:4 [ G5:16 E5:16 ] C5:4 r:4",
    "approved": false
   },
   {
    "id": "ess-tanager-1",
    "bird": "Scarlet Tanager",
    "page": 185,
-   "key": "C",
    "crops": [
     "figs_new/p207_s00.png",
     "figs_new/p207_s01.png"
    ],
-   "enc": "D5:83 D5:83 D5:83 G5:83 G5:83 G5:83 C5:4 C5:4 G4:4 C5:4 G4:4 C5:4 r:4 r:4 D5:16 D5:16 D5:16 D5:16 G5:16 G5:16 G5:16 G5:16 C5:4 C5:4 G4:4 C5:4 G4:4 C5:4 r:4 r:4",
+   "enc": "@key:C D5:83 D5:83 D5:83 G5:83 G5:83 G5:83 C5:4 C5:4 G4:4 C5:4 G4:4 C5:4 r:4 r:4 [ D5:16 D5:16 D5:16 D5:16 ] [ G5:16 G5:16 G5:16 G5:16 ] C5:4 C5:4 G4:4 C5:4 G4:4 C5:4 r:4 r:4",
    "approved": false
   },
   {
    "id": "ess-memory-1",
    "bird": "(non-bird) The Author's Power of Memory",
    "page": 189,
-   "key": "C",
    "crops": [
     "figs_new/p211_s00.png",
     "figs_new/p211_s01.png",
     "figs_new/p211_s02.png",
     "figs_new/p211_s03.png"
    ],
-   "enc": "A4:4 B4:8 A4:16 B4:16 D5:8 E5:8 D5:16 E5:16 D5:16 E5:16 D5:16 D5:16 G4:4. A4:8 G4:16 A4:16 G4:16 F4:16 E4:16 F4:16 G4:16 A4:16 B4:16 A4:16 A4:4 A4:4 B4:8 A4:16 B4:16 C5:8 D5:8 E5:16 F#5:16 E5:16 D#5:16 E5:4 F#5:16 G#5:16 A5:8 G5:16 E5:16 A4:16 A4:16 C5:16 B4:16 A4:16 G4:16 F#4:16 G4:2 E5:4 A5:4 A5:4 B5:8 A5:8 A5:8 G5:8 G5:8 E5:8 A5:2 G4:8 A4:8 G4:8 A4:8 A5:16 G#5:16 A5:16 G5:16 F5:16 E5:16 D5:16 E5:16 F#5:16 G5:2 E5:4 A5:4 A5:4 B5:8 A5:8 A5:8 G5:8 G5:8 E5:8 G5:8 E5:8 F#5:16 G5:16 F#5:16 G5:16 E5:16 E5:16 A4:16 A4:16 C5:16 B4:16 A4:16 G4:16 F#4:16 G4:2",
+   "enc": "@key:C A4:4 B4:8 [ A4:16 B4:16 ] [ D5:8 E5:8 ] [ D5:16 E5:16 ] [ D5:16 E5:16 ] [ D5:16 D5:16 ] G4:4. A4:8 [ G4:16 A4:16 ] [ G4:16 F4:16 ] [ E4:16 F4:16 ] [ G4:16 A4:16 ] [ B4:16 A4:16 ] A4:4 A4:4 B4:8 [ A4:16 B4:16 ] [ C5:8 D5:8 ] [ E5:16 F#5:16 ] [ E5:16 D#5:16 ] E5:4 [ F#5:16 G#5:16 ] [ A5:8 G5:16 E5:16 ] [ A4:16 A4:16 ] [ C5:16 B4:16 ] [ A4:16 G4:16 ] F#4:16 G4:2 E5:4 A5:4 A5:4 [ B5:8 A5:8 ] [ A5:8 G5:8 ] [ G5:8 E5:8 ] A5:2 [ G4:8 A4:8 ] [ G4:8 A4:8 ] [ A5:16 G#5:16 ] [ A5:16 G5:16 ] [ F5:16 E5:16 ] [ D5:16 E5:16 ] F#5:16 G5:2 E5:4 A5:4 A5:4 [ B5:8 A5:8 ] [ A5:8 G5:8 ] [ G5:8 E5:8 ] [ G5:8 E5:8 ] [ F#5:16 G5:16 ] [ F#5:16 G5:16 ] [ E5:16 E5:16 ] [ A4:16 A4:16 ] [ C5:16 B4:16 ] [ A4:16 G4:16 ] F#4:16 G4:2",
    "approved": false
   },
   {
    "id": "ess-bobolink-1",
    "bird": "Bobolink",
    "page": 191,
-   "key": "C",
    "crops": [
     "figs_new/p213_s00.png"
    ],
-   "enc": "G5:4 F5:4 E5:4 E5:4 D5:4 C5:4 B4:4",
+   "enc": "@key:C G5:4 F5:4 E5:4 E5:4 D5:4 C5:4 B4:4",
    "approved": false
   },
   {
    "id": "ess-cuckoo-2",
    "bird": "Cuckoo",
    "page": 194,
-   "key": "C",
    "crops": [
     "figs_new/p216_s00.png"
    ],
-   "enc": "F5:8 D5:4. r:8 F5:8 D5:4.",
+   "enc": "@key:C F5:8 D5:4. r:8 F5:8 D5:4.",
    "approved": false
   },
   {
    "id": "ess-cuckoo-3",
    "bird": "Cuckoo",
    "page": 195,
-   "key": "F",
    "lyric": "Gu-cu, gu-cu, gu-cu.",
    "crops": [
     "figs_new/p217_s00.png"
    ],
-   "enc": "C5:2 G4:2. C5:2 G4:2. C5:2 G4:2.",
+   "enc": "@key:F C5:2 G4:2. C5:2 G4:2. C5:2 G4:2.",
    "approved": false
   },
   {
    "id": "ess-cuckoo-4",
    "bird": "Cuckoo",
    "page": 195,
-   "key": "D",
    "crops": [
     "figs_new/p217_s01.png"
    ],
-   "enc": "F#5:4 D5:2 r:4 F#5:4 D5:2 r:4",
+   "enc": "@key:D F#5:4 D5:2 r:4 F#5:4 D5:2 r:4",
    "approved": false
   },
   {
    "id": "app-cheney-crow",
    "bird": "Crow",
    "page": 205,
-   "key": "C",
    "crops": [
     "figs_new/p227_s00.png"
    ],
-   "enc": "D5:4 D5:4 Eb5:8 E5:16 D5:16 E5:8 E5:8 E5:8 G5:8 G5:8 G5:8 F#5:16 E5:16 E5:8 E5:8 E5:8 F5:4 r:8 F5:8 F5:4",
+   "enc": "@key:C D5:4-> D5:4-> Eb5:8 [ E5:16-> D5:16 ] E5:8 E5:8 E5:8 G5:8 G5:8 G5:8-> [ F#5:16 E5:16 ] E5:8 E5:8 E5:8-> F5:4-> r:8 F5:8-> F5:4->",
    "approved": false
   },
   {
    "id": "app-cheney-roosters-1-2",
    "bird": "Roosters",
    "page": 205,
-   "key": "C",
    "crops": [
     "figs_new/p227_s01.png"
    ],
-   "enc": "D5:8. C#5:16 E5:4 D5:4 A4:8 Ab5:8. Ab5:16 Ab5:4 G5:4 F5:4",
+   "enc": "@key:C D5:8. C#5:16 E5:4 D5:4 A4:8 Ab5:8. Ab5:16 Ab5:4 G5:4 F5:4",
    "approved": false
   },
   {
    "id": "app-cheney-roosters-3-4",
    "bird": "Roosters",
    "page": 205,
-   "key": "C",
    "crops": [
     "figs_new/p227_s02.png"
    ],
-   "enc": "Eb5:8. F5:16 Gb5:8. F5:16 G5:4 E5:8 F5:8. F5:16 F5:4 E5:4 C5:4",
+   "enc": "@key:C Eb5:8. F5:16 Gb5:8. F5:16 G5:4 E5:8 F5:8. F5:16 F5:4 E5:4 C5:4",
    "approved": false
   },
   {
    "id": "app-cheney-roosters-5",
    "bird": "Roosters",
    "page": 205,
-   "key": "A",
    "crops": [
     "figs_new/p227_s03.png"
    ],
-   "enc": "E5:8 E5:16 E5:4 D5:4 A4:8",
+   "enc": "@key:A E5:8 E5:16 E5:4-> D5:4 A4:8",
    "approved": false
   },
   {
    "id": "app-cheney-roosters-6-7",
    "bird": "Roosters",
    "page": 205,
-   "key": "F",
    "crops": [
     "figs_new/p227_s04.png"
    ],
-   "enc": "E5:8. E5:16 F5:4 F5:4^ D5:8 F5:8 F5:8 F5:8 F5:4^ C5:8",
+   "enc": "@key:F E5:8. E5:16 F5:4 F5:4^ D5:8 F5:8 F5:8 F5:8 F5:4^ C5:8",
    "approved": false
   },
   {
    "id": "app-cheney-roosters-8-9",
    "bird": "Roosters",
    "page": 205,
-   "key": "C",
    "crops": [
     "figs_new/p227_s05.png"
    ],
-   "enc": "Ab5:8 Ab5:8 Bb5:16 Ab5:16 C6:4 Ab5:8 A5:8. A5:16 B5:16 A5:16 A5:8 A5:4 F#5:8",
+   "enc": "@key:C Ab5:8 Ab5:8 [ Bb5:16 Ab5:16 ] C6:4 Ab5:8 A5:8. A5:16 [ B5:16 A5:16 ] A5:8 A5:4 F#5:8",
    "approved": false
   },
   {
    "id": "app-cheney-colt-1-2",
    "bird": "Colt",
    "page": 205,
-   "key": "F",
    "crops": [
     "figs_new/p227_s06.png"
    ],
-   "enc": "D5:16 F5:16 r:8 D5:8 D5:8 D5:8 D5:8 D5:16 A4:16 E5:8 E5:8 E5:8 E5:8 E5:16 A3:16",
+   "enc": "@key:F [ D5:16 F5:16-> ] r:8 D5:8-! D5:8-! D5:8-! D5:8-! [ D5:16-> A4:16 ] E5:8-! E5:8-! E5:8-! E5:8-! [ E5:16 A3:16 ]",
    "approved": false
   },
   {
    "id": "app-cheney-colt-3-4",
    "bird": "Colt",
    "page": 205,
-   "key": "C",
    "crops": [
     "figs_new/p227_s07.png"
    ],
-   "enc": "B5:8 B5:8 B5:8 B5:8 B5:8 F5:8 D5:8 B4:8 D6:8 D6:8 D6:16 E5:16 r:8 F#5:16 A5:16 D6:8. C6:32 B5:32 A5:8",
+   "enc": "@key:C B5:8 B5:8 B5:8 B5:8 B5:8 F5:8 D5:8 B4:8 D6:8 D6:8 [ D6:16 E5:16 ] r:8 [ F#5:16 A5:16 ] D6:8. [ C6:32 B5:32 ] A5:8",
    "approved": false
   },
   {
    "id": "app-cheney-mare-1-2",
    "bird": "Mare",
    "page": 206,
-   "key": "Eb",
    "crops": [
     "figs_new/p228_s00.png"
    ],
-   "enc": "B2:8 E3:8 F3:8 E3:8 D3:8 C3:8 F3:8 G3:8 F3:8 E3:8 D3:8 C3:8",
+   "enc": "@key:Eb [ B2:8 E3:8-> ] F3:8 E3:8 D3:8 C3:8 F3:8 [ G3:8 F3:8 E3:8 D3:8 C3:8 ]",
    "approved": false
   },
   {
    "id": "app-cheney-mare-3",
    "bird": "Mare",
    "page": 206,
-   "key": "Ab",
    "crops": [
     "figs_new/p228_s01.png"
    ],
-   "enc": "F3:8 G3:8 A3:8 A3:8 A3:16 F3:16 r:8 F3:8 F3:8 F3:8",
+   "enc": "@key:Ab F3:8-! G3:8-! A3:8-! A3:8-! [ A3:16-> F3:16 ] r:8 F3:8-! F3:8-! F3:8-!",
    "approved": false
   },
   {
    "id": "app-cheney-two-year-old-bull",
    "bird": "Two-year-old bull",
    "page": 206,
-   "key": "Bb",
    "crops": [
     "figs_new/p228_s02.png"
    ],
-   "enc": "A2:8 B2:2^ G2:8 r:8 A2:8 B2:2^ G2:8",
+   "enc": "@key:Bb A2:8 B2:2^ G2:8 r:8 A2:8 B2:2^ G2:8",
    "approved": false
   },
   {
    "id": "app-cheney-young-cow",
    "bird": "Young cow",
    "page": 206,
-   "key": "F",
    "crops": [
     "figs_new/p228_s03.png"
    ],
-   "enc": "F3:2 B2:2 r:2 D3:2",
+   "enc": "@key:F F3:2 B2:2 r:2 D3:2",
    "approved": false
   },
   {
    "id": "app-cheney-dog-howling",
    "bird": "Dog",
    "page": 206,
-   "key": "A",
    "crops": [
     "figs_new/p228_s04.png"
    ],
-   "enc": "E3:8 E3:8 E3:2 D3:4 E3:8 C#3:2 D3:2 E3:2 F#3:2^ E3:8 E3:8 E3:8",
+   "enc": "@key:A E3:8-> E3:8-> E3:2-> D3:4 E3:8 C#3:2 D3:2 E3:2 F#3:2^ E3:8-> E3:8 E3:8->",
    "approved": false
   },
   {
    "id": "app-cheney-bull-frogs-1-4",
    "bird": "Bull-frogs",
    "page": 206,
-   "key": "C",
    "crops": [
     "figs_new/p228_s05.png",
     "figs_new/p229_s00.png"
    ],
-   "enc": "B2:2 B2:2 B2:2 C3:2 C3:2 C3:2 Db3:2 D3:2 D3:2 D3:2 D3:2 D3:2",
+   "enc": "@key:C B2:2 B2:2 B2:2 C3:2 C3:2 C3:2 Db3:2 D3:2 D3:2 D3:2 D3:2 D3:2",
    "approved": false
   },
   {
    "id": "app-cheney-cat-tim-1",
    "bird": "Cat",
    "page": 207,
-   "key": "C",
    "crops": [
     "figs_new/p229_s01.png",
     "figs_new/p229_s02.png"
    ],
-   "enc": "E4:8 F4:8 E4:8 Gb4:8 E4:8 E4:8 Bb4:8 E4:8 B4:8 E4:8 E4:8 C#5:8 E4:8 G4:8 E4:8 E4:8 A4:8 E4:8 E4:8 B4:8 E4:8 B4:8 E4:8",
+   "enc": "@key:C E4:8 F4:8 E4:8 Gb4:8 E4:8 E4:8 Bb4:8 E4:8 B4:8 E4:8 E4:8 C#5:8 E4:8 G4:8 E4:8 E4:8 A4:8 E4:8 E4:8 B4:8 E4:8 B4:8 E4:8",
    "approved": false
   },
   {
    "id": "app-beckler-darling-downs-1",
    "bird": "unnamed bird (Darling Downs, Australia)",
    "page": 208,
-   "key": "C",
    "crops": [
     "figs_new/p230_s00.png"
    ],
-   "enc": "G4:4 r:8 F#5:8 G5:8. A5:16 G5:8. A5:16 G5:8 r:8 E5:16 E5:16 D5:8 C5:4",
+   "enc": "@key:C G4:4 r:8 F#5:8 G5:8. A5:16 G5:8. A5:16 G5:8 r:8 [ E5:16 E5:16 ] D5:8 C5:4",
    "approved": false
   },
   {
    "id": "app-beckler-darling-downs-2",
    "bird": "unnamed bird (Darling Downs, Australia)",
    "page": 208,
-   "key": "C",
    "crops": [
     "figs_new/p230_s01.png",
     "figs_new/p230_s02.png"
    ],
-   "enc": "E4:16 E4:16 A4:16 A4:16 E4:16 E4:16 G4:8 r:4 C5:8 F5:4 A4:8 A4:8 A4:4 A4:8 A4:8 A4:4 r:8 G4:8 C5:4 D4:16 D4:16 D4:4 D4:16 D4:16 D4:4",
+   "enc": "@key:C [ E4:16 E4:16 ] [ A4:16 A4:16 ] [ E4:16 E4:16 ] G4:8 r:4 C5:8 F5:4 [ A4:8 A4:8 ] A4:4 [ A4:8 A4:8 ] A4:4 r:8 G4:8 C5:4 [ D4:16 D4:16 ] D4:4 [ D4:16 D4:16 ] D4:4",
    "approved": false
   },
   {
    "id": "app-beckler-hastings-river-3",
    "bird": "unnamed bird (Hastings River, New South Wales)",
    "page": 209,
-   "key": "C",
    "crops": [
     "figs_new/p231_s00.png",
     "figs_new/p231_s01.png"
    ],
-   "enc": "G4:4 E4:8. E5:32 G4:16 E4:8 E4:8 G4:8 E4:8. E5:32 A4:8 G4:8 r:4 F#4:16 F4:16 D4:8 C#4:2 r:4 B3:16 F4:16 D4:8 C#4:2 r:4 E4:8. D5:32 E5:16 A4:8 G4:8 r:4 D5:8. C5:32 E4:8",
+   "enc": "@key:C G4:4 [ E4:8. E5:32 G4:16 ] [ E4:8 E4:8 G4:8 ] [ E4:8. E5:32 A4:8 G4:8 ] r:4 [ F#4:16 F4:16 D4:8 ] C#4:2 r:4 [ B3:16 F4:16 D4:8 ] C#4:2 r:4 [ E4:8. D5:32 E5:16 ] [ A4:8 G4:8 ] r:4 [ D5:8. C5:32 E4:8 ]",
    "approved": false
   },
   {
    "id": "app-beckler-tenterfield-4",
    "bird": "unnamed bird (Tenterfield, New England, New South Wales)",
    "page": 209,
-   "key": "C",
    "crops": [
     "figs_new/p231_s02.png",
     "figs_new/p231_s03.png",
     "figs_new/p231_s04.png"
    ],
-   "enc": "F4:4 D#4:8 F4:8 E4:8 E4:8 r:8 F4:4 D#4:4 r:4 B4:8 E5:16 A3:16 F4:4 D#4:8. F4:16 E4:8 E4:8 r:4 F4:4 D#4:4 r:4 B4:8 E5:16 A3:16 r:4 D4:2 E5:16 A3:16 F4:4 D#4:8. F4:16 E4:8 E4:8 r:4 C5:8 F5:16 F4:16 D#4:16 B4:16 E5:16 A3:16",
+   "enc": "@key:C F4:4 D#4:8 F4:8 E4:8 E4:8 r:8 F4:4 D#4:4 r:4 B4:8 [ E5:16 A3:16 ] F4:4 D#4:8. F4:16 E4:8 E4:8 r:4 F4:4 D#4:4 r:4 B4:8 [ E5:16 A3:16 ] r:4 D4:2 [ E5:16 A3:16 ] F4:4 D#4:8. F4:16 E4:8 E4:8 r:4 C5:8 [ F5:16 F4:16 ] [ D#4:16 B4:16 E5:16 A3:16 ]",
    "approved": false
   },
   {
    "id": "app-beckler-various-5",
    "bird": "unnamed bird(s), various localities",
    "page": 209,
-   "key": "C",
    "crops": [
     "figs_new/p231_s05.png"
    ],
-   "enc": "D4:4 E4:4 r:4 r:4 D4:4 E4:4 r:4 r:4 D4:4 E4:4 r:4 r:4 D4:4",
+   "enc": "@key:C D4:4 E4:4 r:4 r:4 D4:4 E4:4 r:4 r:4 D4:4 E4:4 r:4 r:4 D4:4",
    "approved": false
   },
   {
    "id": "app-beckler-6-7",
    "bird": "unnamed birds",
    "page": 210,
-   "key": "C",
    "crops": [
     "figs_new/p232_s00.png"
    ],
-   "enc": "D4:16 G4:32 F4:32 F4:16 E4:16 E4:16 D4:16 D4:16 D4:16 E4:16 B3:16 B3:16 E4:16 D4:8. D4:16 D4:8 G4:8. D4:16 D4:8 D4:8 B3:16 B3:16 E4:8",
+   "enc": "@key:C [ D4:16 G4:32 F4:32 ] [ F4:16 E4:16 ] [ E4:16 D4:16 ] [ D4:16 D4:16 E4:16 ] [ B3:16 B3:16 E4:16 ] D4:8. D4:16 D4:8 G4:8. D4:16 D4:8 D4:8 [ B3:16 B3:16 ] E4:8",
    "approved": false
   },
   {
    "id": "app-beckler-8-9",
    "bird": "unnamed birds",
    "page": 210,
-   "key": "C",
    "crops": [
     "figs_new/p232_s01.png"
    ],
-   "enc": "G4:16 G4:16 G4:16 F5:16 D4:16 r:8 G4:16 G4:16 G4:16 D4:16 G4:16 G4:8 G4:8 B4:16 A4:16 G4:8 A4:16 G4:16 A4:8 G4:16 B4:16 A4:8 G4:16",
+   "enc": "@key:C [ G4:16 G4:16 G4:16 F5:16 ] D4:16 r:8 G4:16 [ G4:16 G4:16 D4:16 G4:16 ] G4:8 G4:8 [ B4:16 A4:16 ] G4:8 [ A4:16 G4:16 ] A4:8 [ G4:16 B4:16 ] A4:8 G4:16",
    "approved": false
   },
   {
    "id": "app-beckler-10",
    "bird": "unnamed bird",
    "page": 210,
-   "key": "C",
    "crops": [
     "figs_new/p232_s02.png"
    ],
-   "enc": "G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:16 A4:16 r:8 G4:8 G4:16 A4:16 G4:8 G4:16 A4:16 G4:8 G4:16 A4:16 G4:8 G4:16 A4:16 G4:8",
+   "enc": "@key:C G4:8 r:8 G4:8 G4:8 r:8 G4:8 [ G4:16 A4:16 ] r:8 G4:8 [ G4:16 A4:16 ] G4:8 [ G4:16 A4:16 ] G4:8 [ G4:16 A4:16 ] G4:8 [ G4:16 A4:16 ] G4:8",
    "approved": false
   },
   {
    "id": "app-beckler-11",
    "bird": "unnamed bird",
    "page": 210,
-   "key": "C",
    "crops": [
     "figs_new/p232_s03.png"
    ],
-   "enc": "G4:8 E5:4 E5:8 r:8 G4:16 D5:16 G4:16 G4:16 r:8 G4:8 C5:4 C5:4",
+   "enc": "@key:C G4:8 E5:4 E5:8 r:8 [ G4:16 D5:16 G4:16 G4:16 ] r:8 G4:8 C5:4 C5:4",
    "approved": false
   },
   {
    "id": "app-beckler-12-soldier",
    "bird": "'soldier' or 'leather-head' (bird, colonists' name)",
    "page": 210,
-   "key": "C",
    "crops": [
     "figs_new/p232_s04.png",
     "figs_new/p232_s05.png"
    ],
-   "enc": "B4:8 r:8 B4:8 A4:8 r:8 A4:8 E5:8 r:8 B4:4 r:8 B4:8 A4:8 r:8 B4:8 A4:8 r:8 A4:8 E5:4 r:8 C5:8 r:8 C5:8 B4:8 r:8 B4:8 A4:8 r:8 B4:8 E5:4",
+   "enc": "@key:C B4:8-> r:8 B4:8-> A4:8-> r:8 A4:8-> E5:8-> r:8 B4:4-> r:8 B4:8-> A4:8-> r:8 B4:8-> A4:8-> r:8 A4:8-> E5:4-> r:8 C5:8-> r:8 C5:8-> B4:8-> r:8 B4:8-> A4:8-> r:8 B4:8-> E5:4->",
    "approved": false
   },
   {
    "id": "app-gardiner-nightingale-1-2",
    "bird": "Nightingale",
    "page": 211,
-   "key": "D",
    "crops": [
     "figs_new/p233_s00.png"
    ],
-   "enc": "D4:8 D5:4 r:8 r:8 D4:8 D5:4 r:8 r:8 D4:8 D5:4 F#4:16 A4:16 D4:16 F#4:16 A4:16 E4:16 F#4:16 A4:16 E4:16 D4:2",
+   "enc": "@key:D D4:8 D5:4 r:8 r:8 D4:8 D5:4 r:8 r:8 D4:8 D5:4 [ F#4:16 A4:16 D4:16 F#4:16 A4:16 E4:16 F#4:16 A4:16 E4:16 ] D4:2",
    "approved": false
   },
   {
    "id": "app-gardiner-nightingale-3",
    "bird": "Nightingale",
    "page": 211,
-   "key": "D",
    "crops": [
     "figs_new/p233_s01.png"
    ],
-   "enc": "D4:16 E4:16 D4:16 E4:16 D4:16 E4:16 D4:16 D4:16 D4:16 D4:4 D4:4 D4:16 F#4:16 A4:16 D4:16 F#4:16 A4:16 D4:16 F#4:16 A4:16 D4:4",
+   "enc": "@key:D [ D4:16 E4:16 D4:16 E4:16 D4:16 E4:16 D4:16 ] [ D4:16 D4:16 ] D4:4 D4:4 [ D4:16 F#4:16 A4:16 ] [ D4:16 F#4:16 A4:16 ] [ D4:16 F#4:16 A4:16 ] D4:4",
    "approved": false
   },
   {
    "id": "app-gardiner-throstle",
    "bird": "Throstle",
    "page": 211,
-   "key": "C",
    "crops": [
     "figs_new/p233_s02.png"
    ],
-   "enc": "B4:8 C5:8 D5:8 C5:8 B4:8 C5:8 D5:8 C5:8 B4:8 C5:8 D5:8 C5:8 B4:8 C5:8 D5:8 C5:8",
+   "enc": "@key:C [ B4:8 C5:8 D5:8 ] C5:8 [ B4:8 C5:8 D5:8 ] C5:8 [ B4:8 C5:8 D5:8 ] C5:8 [ B4:8 C5:8 D5:8 ] C5:8",
    "approved": false
   },
   {
    "id": "app-gardiner-blackbird-1",
    "bird": "Blackbird",
    "page": 211,
-   "key": "G",
    "crops": [
     "figs_new/p233_s03.png"
    ],
-   "enc": "D5:8 D5:8 G5:8 G5:8 D5:8 D5:8 G5:8 G5:8 D5:8 D5:8 G5:8 D5:8 D5:8 G5:8 G5:8",
+   "enc": "@key:G [ D5:8-. D5:8-. G5:8-. G5:8-. ] [ D5:8-. D5:8-. G5:8-. G5:8-. ] [ D5:8 D5:8 G5:8 ] [ D5:8 D5:8 G5:8 G5:8 ]",
    "approved": false
   },
   {
    "id": "app-gardiner-blackbird-2",
    "bird": "Blackbird",
    "page": 211,
-   "key": "C",
    "crops": [
     "figs_new/p233_s04.png"
    ],
-   "enc": "F5:8. E5:16 C5:16 r:4 F5:8. E5:16 C5:16 r:4 F5:8. E5:16 C5:16 r:4 F5:8. E5:16 C5:16",
+   "enc": "@key:C F5:8. [ E5:16 C5:16 ] r:4 F5:8. [ E5:16 C5:16 ] r:4 F5:8. [ E5:16 C5:16 ] r:4 F5:8. [ E5:16 C5:16 ]",
    "approved": false
   },
   {
    "id": "app-gardiner-hen",
    "bird": "Hen",
    "page": 211,
-   "key": "C",
    "crops": [
     "figs_new/p233_s05.png"
    ],
-   "enc": "D5:8 D5:8 D5:8 D5:8 D5:8. D5:16 F5:8 A5:4 r:4 D5:8 D5:8 D5:8 D5:8 D5:8. D5:16 F5:8 A5:4",
+   "enc": "@key:C [ D5:8-. D5:8-. D5:8-. D5:8-. ] [ D5:8. D5:16 ] F5:8 A5:4 r:4 [ D5:8-. D5:8-. D5:8-. D5:8-. ] [ D5:8. D5:16 ] F5:8 A5:4",
    "approved": false
   },
   {
    "id": "app-gardiner-dog",
    "bird": "Dog",
    "page": 212,
-   "key": "G",
    "crops": [
     "figs_new/p234_s00.png"
    ],
-   "enc": "E5:2 G5:8 r:8 E5:2 G5:8 r:8 E5:2 G5:8",
+   "enc": "@key:G E5:2 G5:8 r:8 E5:2 G5:8 r:8 E5:2 G5:8",
    "approved": false
   },
   {
    "id": "app-gardiner-ox-1",
    "bird": "Ox",
    "page": 212,
-   "key": "F",
    "crops": [
     "figs_new/p234_s01.png"
    ],
-   "enc": "F3:2 F3:4 F2:8 r:8 F3:2 F3:4 F2:8 r:8 F3:2 F3:4 F2:8 r:8",
+   "enc": "@key:F F3:2 F3:4 F2:8 r:8 F3:2 F3:4 F2:8 r:8 F3:2 F3:4 F2:8 r:8",
    "approved": false
   },
   {
    "id": "app-gardiner-ox-2",
    "bird": "Ox",
    "page": 212,
-   "key": "F",
    "crops": [
     "figs_new/p234_s02.png"
    ],
-   "enc": "Eb3:4 E3:4 E3:4 F3:4 F3:4 D3:2 C3:4 r:4",
+   "enc": "@key:F Eb3:4 E3:4 E3:4 F3:4 F3:4 D3:2 C3:4 r:4",
    "approved": false
   },
   {
    "id": "app-gardiner-horse",
    "bird": "Horse",
    "page": 212,
-   "key": "C",
    "crops": [
     "figs_new/p234_s03.png"
    ],
-   "enc": "B4:8 G5:8 F5:16 E5:16 Eb5:16 D5:16 C#5:8",
+   "enc": "@key:C B4:8 G5:8 [ F5:16-. E5:16-. Eb5:16-. D5:16-. ] C#5:8",
    "approved": false
   },
   {
    "id": "app-gardiner-fowls-1-morning",
    "bird": "Fowls",
    "page": 212,
-   "key": "C",
    "crops": [
     "figs_new/p234_s04.png"
    ],
-   "enc": "B4:8 D#5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:16 D5:8 D5:8 r:8 A#4:8 B4:4 r:8 A4:8 B4:4 r:4",
+   "enc": "@key:C B4:8 [ D#5:16 D5:16 ] [ D5:16-. D5:16-. D5:16-. D5:16-. D5:16-. D5:16-. D5:16 ] D5:8 D5:8 r:8 A#4:8 B4:4 r:8 A4:8 B4:4 r:4",
    "approved": false
   },
   {
    "id": "app-gardiner-fowls-2-evening",
    "bird": "Fowls",
    "page": 212,
-   "key": "C",
    "crops": [
     "figs_new/p234_s05.png"
    ],
-   "enc": "A#4:4 B4:8 r:4 A4:8 B4:4 r:4 B4:8 B4:4 r:4 A#4:8 B4:4",
+   "enc": "@key:C A#4:4 B4:8 r:4 A4:8 B4:4 r:4 B4:8 B4:4 r:4 A#4:8 B4:4",
    "approved": false
   },
   {
    "id": "app-gardiner-fowls-3-4-cock",
    "bird": "Fowls (Cock / Bantam Cock)",
    "page": 212,
-   "key": "C",
    "crops": [
     "figs_new/p234_s06.png"
    ],
-   "enc": "F#4:16 B4:16 B4:16 F#4:16 B4:4 B4:16 B4:16 E5:8. E5:8 D#5:4",
+   "enc": "@key:C [ F#4:16 B4:16 ] [ B4:16 F#4:16 ] B4:4 [ B4:16 B4:16 ] E5:8. E5:8 D#5:4",
    "approved": false
   },
   {
    "id": "app-gardiner-cuckoo",
    "bird": "Cuckoo",
    "page": 213,
-   "key": "A",
    "crops": [
     "figs_new/p235_s00.png"
    ],
-   "enc": "F#5:4 D5:2 r:4 F#5:4 D5:2 r:4",
+   "enc": "@key:A F#5:4-> D5:2 r:4 F#5:4-> D5:2 r:4",
    "approved": false
   },
   {
    "id": "app-gardiner-lark-1",
    "bird": "Lark",
    "page": 213,
-   "key": "C",
    "crops": [
     "figs_new/p235_s01.png",
     "figs_new/p235_s02.png"
    ],
-   "enc": "A5:32 A5:32 A5:32 A5:32 r:8 A5:32 A5:32 A5:32 A5:32 r:8 A5:32 A5:32 A5:32 A5:32 D5:8 B4:8 G4:8 D5:8 E5:4 D5:8 B4:8 G4:8 D5:8 E5:4 G5:32 D5:16 r:8 G5:32 D5:16 r:8 G5:32 D5:16 F#5:32 E5:16 A5:8 F#5:32 E5:16 A5:8 F#5:32 E5:16 A5:8",
+   "enc": "@key:C [ A5:32 A5:32 A5:32 A5:32 ] r:8 [ A5:32 A5:32 A5:32 A5:32 ] r:8 [ A5:32 A5:32 A5:32 A5:32 ] [ D5:8 B4:8 G4:8 ] D5:8 E5:4 [ D5:8 B4:8 G4:8 ] D5:8 E5:4 [ G5:32 D5:16 ] r:8 [ G5:32 D5:16 ] r:8 [ G5:32 D5:16 ] [ F#5:32 E5:16 ] A5:8 [ F#5:32 E5:16 ] A5:8 [ F#5:32 E5:16 ] A5:8",
    "approved": false
   },
   {
    "id": "app-gardiner-ass",
    "bird": "Ass",
    "page": 213,
-   "key": "D",
    "crops": [
     "figs_new/p235_s03.png"
    ],
-   "enc": "D5:2 D5:8 G5:8 B4:8 D5:8 G4:8 B4:8 D4:8 G4:8 B3:8 D4:8 B3:2^",
+   "enc": "@key:D D5:2 D5:8 [ G5:8 B4:8 D5:8 G4:8 B4:8 D4:8 G4:8 ] [ B3:8 D4:8 ] B3:2^",
    "approved": false
   },
   {
    "id": "app-johnston-solitaire-1",
    "bird": "Solitaire",
    "page": 214,
-   "key": "G",
    "crops": [
     "figs_new/p236_s00.png"
    ],
-   "enc": "A4:1 D5:16 B4:16 D5:16 B4:16 D5:16 B4:16 D5:16 B4:16 r:4 r:4 D5:8. B4:8 r:4^ D5:8. B4:8 r:4^ A4:1 A5:1 r:4 r:4",
+   "enc": "@key:G A4:1 [ D5:16 B4:16 D5:16 B4:16 ] [ D5:16 B4:16 D5:16 B4:16 ] r:4 r:4 D5:8. B4:8 r:4^ D5:8. B4:8 r:4^ A4:1 A5:1-. r:4 r:4",
    "approved": false
   },
   {
    "id": "app-johnston-solitaire-2",
    "bird": "Solitaire",
    "page": 214,
-   "key": "C",
    "crops": [
     "figs_new/p236_s01.png"
    ],
-   "enc": "B4:8. G4:8 B4:8 G4:4",
+   "enc": "@key:C B4:8. G4:8 B4:8 G4:4",
    "approved": false
   },
   {
    "id": "app-harting-blackcap",
    "bird": "Blackcap (Sylvia atricapilla)",
    "page": 215,
-   "key": "C",
    "crops": [
     "figs_new/p237_s00.png"
    ],
-   "enc": "C6:8 C6:16 D6:16 E6:16 E6:16 C6:8 D6:8 D6:16 E6:16 F6:16 F6:16 D6:8 C6:8 C6:16 D6:16 E6:16 E6:16 C6:8 D6:8 D6:16 E6:16 F6:16 F6:16 D6:8",
+   "enc": "@key:C [ C6:8 C6:16 D6:16 ] [ E6:16-. E6:16-. ] C6:8 [ D6:8 D6:16 E6:16 ] [ F6:16-. F6:16-. ] D6:8 [ C6:8 C6:16 D6:16 ] [ E6:16-. E6:16-. ] C6:8 [ D6:8 D6:16 E6:16 ] [ F6:16-. F6:16-. ] D6:8",
    "approved": false
   },
   {
    "id": "app-harting-willow-warbler",
    "bird": "Willow Warbler (Sylvia trochilus)",
    "page": 215,
-   "key": "C",
    "crops": [
     "figs_new/p237_s01.png"
    ],
-   "enc": "E6:8 D6:8 C6:8 B5:8 A5:8 G5:8 F5:8 D5:8 C5:8",
+   "enc": "@key:C E6:8 D6:8 C6:8 B5:8 A5:8 G5:8 F5:8 D5:8 C5:8",
    "approved": false
   },
   {
    "id": "app-harting-swan-1",
    "bird": "Swan",
    "page": 216,
-   "key": "C",
    "crops": [
     "figs_new/p238_s00.png",
     "figs_new/p238_s01.png",
     "figs_new/p238_s02.png"
    ],
-   "enc": "C5:8 C5:8 C5:8 C5:8 Eb5:4 r:4 r:2 r:2 C5:8 C5:8 Eb5:8 F5:8 C5:4 r:4 r:2 r:2 C5:8 C5:8 C5:8 C5:8 r:2 C5:8 C5:8 C5:8 r:8 r:2 C5:8 C5:8 C5:8 C5:8 Eb5:4 r:4 r:2 r:2 C5:8 C5:8 Eb5:8 F5:8 C5:4 r:4 r:2 C5:4 r:4",
+   "enc": "@key:C [ C5:8 C5:8 C5:8 C5:8 ] Eb5:4 r:4 r:2 r:2 [ C5:8 C5:8 Eb5:8 F5:8 ] C5:4 r:4 r:2 r:2 [ C5:8 C5:8 C5:8 C5:8 ] r:2 [ C5:8 C5:8 C5:8 ] r:8 r:2 [ C5:8 C5:8 C5:8 C5:8 ] Eb5:4 r:4 r:2 r:2 [ C5:8 C5:8 Eb5:8 F5:8 ] C5:4 r:4 r:2 C5:4 r:4",
    "approved": false
   },
   {
    "id": "app-hawkins-blackbird",
    "bird": "Blackbird",
    "page": 217,
-   "key": "F",
    "crops": [
     "figs_new/p239_s00.png"
    ],
-   "enc": "F4:8. A4:8 C5:16 A4:16 F5:4 F4:8. A4:8 B4:16 G4:16 r:4",
+   "enc": "@key:F F4:8. A4:8 [ C5:16 A4:16 ] F5:4 F4:8. A4:8 [ B4:16 G4:16 ] r:4",
    "approved": false
   },
   {
    "id": "app-hawkins-cuckoo",
    "bird": "Cuckoo",
    "page": 217,
-   "key": "F",
    "lyric": "Cu-cu, cu-cu, cu-cu",
    "crops": [
     "figs_new/p239_s01.png"
    ],
-   "enc": "E5:2 C5:2 E5:2 C5:2 E5:2 C5:2",
+   "enc": "@key:F E5:2 C5:2 E5:2 C5:2 E5:2 C5:2",
    "approved": false
   },
   {
    "id": "app-hawkins-kircher-sloth",
    "bird": "Pigritia, or Sloth",
    "page": 217,
-   "key": "C",
    "lyric": "Ha, ha, ha, ha, ha, ha, ha, ha, ha, ha, ha",
    "crops": [
     "figs_new/p239_s02.png"
    ],
-   "enc": "G4:2 r:4 G4:2 r:4 A4:2 r:4 A4:2 r:4 B4:2 r:4 C5:2 r:4 B4:2 r:4 A4:2 r:4 G4:2 r:4 F4:2 r:4 E4:2",
+   "enc": "@key:C G4:2 r:4 G4:2 r:4 A4:2 r:4 A4:2 r:4 B4:2 r:4 C5:2 r:4 B4:2 r:4 A4:2 r:4 G4:2 r:4 F4:2 r:4 E4:2",
    "approved": false
   },
   {
    "id": "app-hawkins-kircher-hen",
    "bird": "Hen",
    "page": 217,
-   "key": "C",
    "crops": [
     "figs_new/p239_s03.png"
    ],
-   "enc": "G4:4 G4:4 G4:4 G4:4 C5:2 G4:4 G4:4 G4:4 C5:2 G4:4 G4:4 G4:4 G4:4 C5:2 G4:4 G4:4 G4:4 G4:4 C5:2",
+   "enc": "@key:C G4:4 G4:4 G4:4 G4:4 C5:2 G4:4 G4:4 G4:4 C5:2 G4:4 G4:4 G4:4 G4:4 C5:2 G4:4 G4:4 G4:4 G4:4 C5:2",
    "approved": false
   },
   {
    "id": "app-kircher-nightingale-1",
    "bird": "Nightingale",
    "page": 218,
-   "key": "C",
    "crops": [
     "figs_new/p240_s00.png",
     "figs_new/p240_s01.png",
@@ -3099,124 +2845,113 @@
     "figs_new/p241_s05.png",
     "figs_new/p241_s06.png"
    ],
-   "enc": "D5:4 D5:4 D5:4 D5:4 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:4 E4:32 G4:32 B4:32 G4:32 B4:32 D5:32 F5:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:4 E4:2 B4:4 B4:4 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:32 A4:32 G4:32 A4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 A4:4 G4:4 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 C5:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 G4:32 B4:32 C5:32 B4:4 G4:4 E4:32 D4:32 E4:32 F4:32 E4:32 F4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:4 B4:4 B4:4 B4:4 B4:4 B4:4 B4:4 A#4:32 B4:32 A4:32 B4:32 A4:32 B4:32 A4:32 B4:32 A4:32 B4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G4:2 E4:4 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 F4:32 A4:32 F4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 F4:4 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 B4:4 G4:4 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 F4:4 D4:4",
+   "enc": "@key:C D5:4 D5:4 D5:4 D5:4 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:4 E4:32 G4:32 B4:32 G4:32 B4:32 D5:32 F5:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:4 E4:2 B4:4 B4:4 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:32 A4:32 G4:32 A4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 A4:4 G4:4 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 C5:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 G4:32 B4:32 C5:32 B4:4 G4:4 E4:32 D4:32 E4:32 F4:32 E4:32 F4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:4 B4:4 B4:4 B4:4 B4:4 B4:4 B4:4 A#4:32 B4:32 A4:32 B4:32 A4:32 B4:32 A4:32 B4:32 A4:32 B4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G4:2 E4:4 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 F4:32 A4:32 F4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 F4:4 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 B4:4 G4:4 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 F4:4 D4:4",
    "approved": false
   },
   {
    "id": "app-lescuyer-rossignol-1",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "key": "C",
    "crops": [
     "figs_new/p242_s00.png"
    ],
-   "enc": "G7:8 G7:8 G7:8 G7:8 D7:16 D7:16 D7:16 D7:16 D7:16 G7:8",
+   "enc": "@key:C G7:8 G7:8 G7:8 G7:8 [ D7:16 D7:16 D7:16 D7:16 D7:16 ] G7:8",
    "approved": false
   },
   {
    "id": "app-lescuyer-rossignol-2",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "key": "C",
    "crops": [
     "figs_new/p242_s01.png"
    ],
-   "enc": "G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 G4:8 G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 F4:8 G4:16 D4:16 G4:16 D4:16 G4:16 D4:16 G4:8",
+   "enc": "@key:C [ G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 G4:8 ] [ G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 F4:8 ] [ G4:16 D4:16 G4:16 D4:16 G4:16 D4:16 G4:8 ]",
    "approved": false
   },
   {
    "id": "app-lescuyer-rossignol-3-4",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "key": "C",
    "crops": [
     "figs_new/p242_s02.png"
    ],
-   "enc": "G4:8 G4:8 G4:8 G4:8 D4:16 D4:16 D4:16 D4:16 D4:16 D4:16 G4:8 G4:8 G4:8 D4:16 D4:16 D4:16 D4:16",
+   "enc": "@key:C G4:8 G4:8 G4:8 G4:8 [ D4:16 D4:16 D4:16 D4:16 D4:16 D4:16 G4:8 ] G4:8 G4:8 [ D4:16 D4:16 D4:16 D4:16 ]",
    "approved": false
   },
   {
    "id": "app-lescuyer-rossignol-5-6",
    "bird": "Rossignol (Nightingale)",
    "page": 220,
-   "key": "C",
    "crops": [
     "figs_new/p242_s03.png"
    ],
-   "enc": "G4:8 G4:16 D4:16 G4:16 D4:16 G4:16 D4:16 G4:8 D4:8 G4:8 D4:8 D4:16 D4:16 D4:16 D4:16 G4:8",
+   "enc": "@key:C G4:8 [ G4:16 D4:16 G4:16 D4:16 G4:16 D4:16 G4:8 ] D4:8 G4:8 D4:8 [ D4:16 D4:16 D4:16 D4:16 ] G4:8",
    "approved": false
   },
   {
    "id": "app-lescuyer-grive-1-2",
    "bird": "Grive chanteuse (Song Thrush)",
    "page": 220,
-   "key": "C",
    "crops": [
     "figs_new/p242_s04.png"
    ],
-   "enc": "G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G6:16 G6:16 G6:8 G6:16 G6:16 G6:8 G6:16 G6:16 G6:8 G6:16 G6:16 G6:8",
+   "enc": "@key:C G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 [ G6:16 G6:16 ] G6:8 [ G6:16 G6:16 ] G6:8 [ G6:16 G6:16 ] G6:8 [ G6:16 G6:16 ] G6:8",
    "approved": false
   },
   {
    "id": "app-lescuyer-grive-3-4",
    "bird": "Grive chanteuse (Song Thrush)",
    "page": 220,
-   "key": "C",
    "crops": [
     "figs_new/p242_s05.png"
    ],
-   "enc": "B4:8 C5:16 B4:16 B4:8 C5:16 B4:16 B4:8 C5:16 B4:16 B4:8 F5:8 B4:8 F5:8 F5:16 B4:16 F5:16 B4:16 F5:16 B4:16",
+   "enc": "@key:C B4:8 [ C5:16 B4:16 ] B4:8 [ C5:16 B4:16 ] B4:8 [ C5:16 B4:16 ] B4:8 F5:8 B4:8 F5:8 [ F5:16 B4:16 F5:16 B4:16 F5:16 B4:16 ]",
    "approved": false
   },
   {
    "id": "app-lescuyer-alouette-1",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "key": "C",
    "crops": [
     "figs_new/p243_s00.png"
    ],
-   "enc": "E8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 E8:16 E8:16 E8:16 E8:16 C8:16 E8:8",
+   "enc": "@key:C [ E8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 E8:16 E8:16 E8:16 E8:16 C8:16 E8:8 ]",
    "approved": false
   },
   {
    "id": "app-lescuyer-alouette-2-3-4",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "key": "C",
    "crops": [
     "figs_new/p243_s01.png"
    ],
-   "enc": "E4:16 E4:16 E4:8 G7:16 G7:16 G7:16 G7:16 G7:8 E8:32 E8:16 E8:32 E8:16 E8:32 E8:16",
+   "enc": "@key:C [ E4:16 E4:16 E4:8 ] [ G7:16 G7:16 G7:16 G7:16 G7:8 ] [ E8:32 E8:16 E8:32 E8:16 E8:32 E8:16 ]",
    "approved": false
   },
   {
    "id": "app-lescuyer-alouette-5",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "key": "C",
    "crops": [
     "figs_new/p243_s02.png"
    ],
-   "enc": "B7:16 G7:16 E8:16 A7:16 A7:16 A7:16 A7:16 E8:8 E8:8 E8:8 E8:16 E8:16 E8:16 E8:16 G7:8",
+   "enc": "@key:C [ B7:16 G7:16 E8:16 ] [ A7:16 A7:16 A7:16 A7:16 ] E8:8 E8:8 E8:8 [ E8:16 E8:16 E8:16 E8:16 ] G7:8",
    "approved": false
   },
   {
    "id": "app-lescuyer-alouette-6",
    "bird": "Alouette des champs (Skylark)",
    "page": 221,
-   "key": "C",
    "crops": [
     "figs_new/p243_s03.png"
    ],
-   "enc": "E8:16 C8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 C8:16 E8:16 E8:16 E8:16 E8:16 E8:16 E8:16 C8:16 E8:16 E8:16 D8:16 F8:16 F8:16 D8:16",
+   "enc": "@key:C [ E8:16 C8:16 C8:16 E8:16 ] [ E8:16 C8:16 E8:16 ] [ E8:16 C8:16 E8:16 ] [ E8:16 E8:16 E8:16 E8:16 ] [ E8:16 C8:16 E8:16 ] [ E8:16 D8:16 F8:16 ] F8:16 D8:16",
    "approved": false
   },
   {
    "id": "app-smee-thrush-1",
    "bird": "Thrush (Turdus musicus)",
    "page": 222,
-   "key": "Bb",
    "crops": [
     "figs_new/p244_s00.png",
     "figs_new/p244_s01.png",
@@ -3224,188 +2959,172 @@
     "figs_new/p244_s03.png",
     "figs_new/p244_s04.png"
    ],
-   "enc": "B4:8 C5:16 D5:16 B4:4 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 D5:4 F5:43 F5:43 F5:43 D5:4 F5:83 F5:83 F5:83 D5:4 D5:8. E5:16 D5:4 E5:8. E5:16 D5:4 F5:4 D5:4 r:8 F5:4 D5:4 D5:4 F5:4 r:8 D5:4 F5:4 E5:8. F5:16 E5:4 F5:8. F5:16 D5:4 E5:8 D5:8 B4:4 E5:8 D5:8 B4:4 B4:8 E5:8. D5:16 B4:8 F5:8. F5:16 F5:4 G5:8. G5:16 F5:4 C5:4 F5:43 G5:43 F5:43 D5:4 E5:8. F5:16 E5:4 F5:8. F5:16 F5:4 F5:8. F5:16 E5:4",
+   "enc": "@key:Bb B4:8 C5:16 D5:16 B4:4 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 D5:4 F5:43 F5:43 F5:43 D5:4 F5:83 F5:83 F5:83 D5:4 D5:8. E5:16 D5:4 E5:8. E5:16 D5:4 F5:4 D5:4 r:8 F5:4 D5:4 D5:4 F5:4 r:8 D5:4 F5:4 E5:8. F5:16 E5:4 F5:8. F5:16 D5:4 E5:8 D5:8 B4:4 E5:8 D5:8 B4:4 B4:8 E5:8. D5:16 B4:8 F5:8. F5:16 F5:4 G5:8. G5:16 F5:4 C5:4 F5:43 G5:43 F5:43 D5:4 E5:8. F5:16 E5:4 F5:8. F5:16 F5:4 F5:8. F5:16 E5:4",
    "approved": false
   },
   {
    "id": "app-smee-blackbird-1",
    "bird": "Blackbird (Turdus merula)",
    "page": 222,
-   "key": "Eb",
    "crops": [
     "figs_new/p244_s05.png",
     "figs_new/p244_s06.png",
     "figs_new/p244_s07.png"
    ],
-   "enc": "B4:8 D5:8 F5:4 B4:8 D5:8 F5:4 E5:4 D5:8 B4:8 r:8 D5:4 C5:8 A4:8 D5:4 D5:8 E5:8 F5:4 E5:8 C5:8 A4:4 E5:8 C5:8 A4:8 E5:8 B4:4 A4:8 A4:8 C5:8 E5:8 A4:4 B4:8 D5:8 F5:8 A4:4 D5:8 F5:8 D5:8 F5:8 F5:8 A5:8 F5:8 D5:8 F5:8. A5:16 D5:4 F5:8. A5:16 D5:4",
+   "enc": "@key:Eb B4:8 D5:8 F5:4 B4:8 D5:8 F5:4 E5:4 D5:8 B4:8 r:8 D5:4 C5:8 A4:8 D5:4 D5:8 E5:8 F5:4 E5:8 C5:8 A4:4 E5:8 C5:8 A4:8 E5:8 B4:4 A4:8 A4:8 C5:8 E5:8 A4:4 B4:8 D5:8 F5:8 A4:4 D5:8 F5:8 D5:8 F5:8 F5:8 A5:8 F5:8 D5:8 F5:8. A5:16 D5:4 F5:8. A5:16 D5:4",
    "approved": false
   },
   {
    "id": "app-weber-wind-1",
    "bird": "Wind",
    "page": 224,
-   "key": "C",
    "crops": [
     "figs_new/p246_s00.png",
     "figs_new/p246_s01.png"
    ],
-   "enc": "A4:4 B4:4 C5:4 D5:4 C5:4 A4:4 E5:2 D5:4 C5:4 E5:4 C5:8 A4:8 D5:4 C5:4 A4:2 A4:4 F#4:4 A4:4 C5:2 B4:4 B4:4 A4:4",
+   "enc": "@key:C A4:4 B4:4 C5:4 D5:4 C5:4 A4:4 E5:2 D5:4 C5:4 E5:4 [ C5:8 A4:8 ] D5:4 C5:4 A4:2 A4:4 F#4:4 A4:4 C5:2 B4:4 B4:4 A4:4",
    "approved": false
   },
   {
    "id": "app-weber-wind-2-wailing",
    "bird": "Wind",
    "page": 224,
-   "key": "C",
    "crops": [
     "figs_new/p246_s02.png"
    ],
-   "enc": "G4:4 B4:4 D5:2 C5:4 D5:4 C5:4 B4:4 B4:4 A4:4",
+   "enc": "@key:C G4:4 B4:4 D5:2 C5:4 D5:4 C5:4 B4:4 B4:4 A4:4",
    "approved": false
   },
   {
    "id": "app-weber-cow",
    "bird": "Cow",
    "page": 224,
-   "key": "C",
    "lyric": "M-o-o, m-o-o",
    "crops": [
     "figs_new/p246_s03.png"
    ],
-   "enc": "A2:2 G3:4 C4:8 A2:2 G3:4 E4:8",
+   "enc": "@key:C A2:2 G3:4 C4:8 A2:2 G3:4 E4:8",
    "approved": false
   },
   {
    "id": "app-weber-dog-barking",
    "bird": "Dog",
    "page": 224,
-   "key": "C",
    "crops": [
     "figs_new/p246_s04.png"
    ],
-   "enc": "G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8 G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8 r:8 G4:8 C4:8",
+   "enc": "@key:C [ G4:8 C4:8 ] r:8 [ G4:8 C4:8 ] r:8 [ G4:8 C4:8 ] r:8 [ G4:8 C4:8 G4:8 C4:8 ] r:8 [ G4:8 C4:8 ] r:8 [ G4:8 C4:8 ] r:8 [ G4:8 C4:8 ]",
    "approved": false
   },
   {
    "id": "app-weber-donkey",
    "bird": "Donkey",
    "page": 224,
-   "key": "C",
    "crops": [
     "figs_new/p246_s05.png"
    ],
-   "enc": "E4:8 E3:8. E4:8 E3:8. E4:8 E3:8. D4:8 D3:8. D4:8 D3:8. D4:8 D3:8. D4:8 D3:8. D4:8 D3:8.",
+   "enc": "@key:C [ E4:8 E3:8. ] [ E4:8 E3:8. ] [ E4:8 E3:8. ] [ D4:8 D3:8. ] [ D4:8 D3:8. ] [ D4:8 D3:8. ] [ D4:8 D3:8. ] [ D4:8 D3:8. ]",
    "approved": false
   },
   {
    "id": "app-weber-horse",
    "bird": "Horse",
    "page": 225,
-   "key": "C",
    "crops": [
     "figs_new/p247_s00.png"
    ],
-   "enc": "D4:8 C#4:16 C4:16 B3:16 Bb3:16 A3:16 G#3:16 G3:16 F#3:16 F3:16 E3:16 Eb3:16 D3:8",
+   "enc": "@key:C D4:8 [ C#4:16 C4:16 B3:16 Bb3:16 A3:16 ] [ G#3:16 G3:16 F#3:16 F3:16 E3:16 ] [ Eb3:16 D3:8 ]",
    "approved": false
   },
   {
    "id": "app-weber-cat-1-2",
    "bird": "Cat",
    "page": 225,
-   "key": "C",
    "crops": [
     "figs_new/p247_s01.png"
    ],
-   "enc": "B4:8 E4:4 B4:8 E4:4 B4:8 G4:4 B4:8 G4:4",
+   "enc": "@key:C B4:8 E4:4 B4:8 E4:4 B4:8 G4:4-> B4:8 G4:4->",
    "approved": false
   },
   {
    "id": "app-weber-cock",
    "bird": "Cock",
    "page": 225,
-   "key": "C",
    "crops": [
     "figs_new/p247_s02.png"
    ],
-   "enc": "G#4:8 B4:8 D5:4 C5:2. G#4:8 B4:8 D5:4 C5:2 E4:4",
+   "enc": "@key:C G#4:8 B4:8 D5:4 C5:2. G#4:8 B4:8 D5:4 C5:2 E4:4",
    "approved": false
   },
   {
    "id": "app-hinrichs-cockchaffer",
    "bird": "Cock chaffer (insect)",
    "page": 226,
-   "key": "F",
    "crops": [
     "figs_new/p248_s00.png"
    ],
-   "enc": "F2:1 F2:1 E2:8 F2:4 E2:8 F2:4 F2:1",
+   "enc": "@key:F F2:1 F2:1 E2:8 F2:4 E2:8 F2:4 F2:1",
    "approved": false
   },
   {
    "id": "app-hinrichs-deathwatch-call-answer",
    "bird": "Death-watch (insect)",
    "page": 226,
-   "key": "F",
    "crops": [
     "figs_new/p248_s01.png"
    ],
-   "enc": "Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:8 r:8 r:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:8",
+   "enc": "@key:F [ Bb4:16 Bb4:16 Bb4:16 Bb4:16 ] [ Bb4:16 Bb4:16 Bb4:16 Bb4:16 ] Bb4:8 r:8 r:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:4 G4:8",
    "approved": false
   },
   {
    "id": "app-hinrichs-cricket",
    "bird": "Cricket",
    "page": 226,
-   "key": "C",
    "crops": [
     "figs_new/p248_s01b.png"
    ],
-   "enc": "G4:163 G4:163 G4:163 r:8 G4:163 G4:163 G4:163 r:8 G4:163 G4:163 G4:163",
+   "enc": "@key:C [ G4:163 G4:163 G4:163 ] r:8 [ G4:163 G4:163 G4:163 ] r:8 [ G4:163 G4:163 G4:163 ]",
    "approved": false
   },
   {
    "id": "app-hinrichs-grasshopper-1",
    "bird": "Grasshopper (insect)",
    "page": 226,
-   "key": "C",
    "crops": [
     "figs_new/p248_s02.png",
     "figs_new/p248_s03.png"
    ],
-   "enc": "G4:32 A4:32 Bb4:32 B4:32 C5:32 C#5:32 D5:32",
+   "enc": "@key:C [ G4:32 A4:32 Bb4:32 B4:32 C5:32 C#5:32 D5:32 ]",
    "approved": false
   },
   {
    "id": "app-hinrichs-bumblebee",
    "bird": "Bumble-bee (insect)",
    "page": 226,
-   "key": "F",
    "crops": [
     "figs_new/p248_s04.png"
    ],
-   "enc": "D3:8 C3:1 D3:8 C3:1 D3:8 C3:1 D3:8 C3:1",
+   "enc": "@key:F D3:8 C3:1 D3:8 C3:1 D3:8 C3:1 D3:8 C3:1",
    "approved": false
   },
   {
    "id": "app-hinrichs-housefly",
    "bird": "House-fly (insect)",
    "page": 226,
-   "key": "F",
    "crops": [
     "figs_new/p248_s05.png"
    ],
-   "enc": "F4:8 G4:2 G4:16 F4:16 G4:16 F4:16 G4:16 G4:2 G4:16 F4:16 G4:16 F4:16 G4:16 G4:2",
+   "enc": "@key:F F4:8 G4:2 [ G4:16 F4:16 G4:16 F4:16 G4:16 ] G4:2 [ G4:16 F4:16 G4:16 F4:16 G4:16 ] G4:2",
    "approved": false
   },
   {
    "id": "app-hinrichs-gnat",
    "bird": "Gnat (insect)",
    "page": 226,
-   "key": "C",
    "crops": [
     "figs_new/p248_s06.png"
    ],
-   "enc": "G#4:8 A4:2 A4:1 G#4:8 A4:2 A4:1",
+   "enc": "@key:C G#4:8 A4:2 A4:1 G#4:8 A4:2 A4:1",
    "approved": false
   }
  ]

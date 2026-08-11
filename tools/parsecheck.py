@@ -4,10 +4,17 @@ Usage: parsecheck.py "<enc>"   or   parsecheck.py --corpus corpus.json
 """
 import sys, re, json
 
+KEYS = {"C", "G", "D", "A", "E", "B", "F#", "C#", "F", "Bb", "Eb", "Ab", "Db", "Gb", "Cb",
+        "Am", "Em", "Bm", "F#m", "C#m", "G#m", "D#m", "A#m", "Dm", "Gm", "Cm", "Fm", "Bbm", "Ebm", "Abm"}
+
 def parse(enc):
+    header = re.match(r'^@key:([^\s]+)(?:\s+|$)', enc.strip())
+    if not header or header.group(1) not in KEYS:
+        raise ValueError('encoding must begin with a supported @key: signature')
+    body = enc.strip()[header.end():]
     events = []
     beam_start = None
-    for raw in enc.strip().split():
+    for raw in body.split():
         if raw == '|':
             raise ValueError('bar tokens are not supported; use a newline only for source-system breaks')
         if raw == '[':
@@ -32,7 +39,7 @@ def parse(enc):
         if not mark:
             raise ValueError(f'bad duration or modifier in "{raw}"')
         base, _, _, grace, _, _ = mark.groups()
-        if p not in ('r', 'R') and not re.match(r'^[A-Ga-g][#b]{0,2}\d$', p):
+        if p not in ('r', 'R') and not re.match(r'^[A-Ga-g](?:n|#{1,2}|b{1,2})?\d$', p):
             raise ValueError(f'bad pitch in "{raw}"')
         if p in ('r', 'R') and grace:
             raise ValueError('rests cannot be grace notes')

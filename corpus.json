@@ -1626,44 +1626,52 @@
    "bird": "Robin",
    "no": 12,
    "page": 19,
-   "conf": "todo",
-   "note": "June 5, 4 P.M. (caption) \u2014 NEW: numbered fig 12 not present in corpus at all",
+   "conf": "high",
+   "note": "June 5, 4 P.M. Key A-flat (4 flats). Two three-note 16th groups frame two isolated A-flat eighths; the first F5 and both A-flat notes carry printed accents.",
    "crops": [
     "figs_new/p041_s00.png"
-   ]
+   ],
+   "enc": "Eb5:16 F5:16 Eb5:16 Ab5:8 Ab5:8 F5:16 G5:16 Eb5:16",
+   "key": "Ab"
   },
   {
    "id": "rob-13",
    "bird": "Robin",
    "no": 13,
    "page": 19,
-   "conf": "todo",
-   "note": "At evening (caption) \u2014 NEW: not in corpus",
+   "conf": "med",
+   "note": "At evening. Key E-flat (3 flats). Four three-note 16th groups separated midway by an eighth rest. The second group has an explicit F-sharp; a natural-like mark before the third group's first F is visually unusual but does not change its pitch in this key.",
    "crops": [
     "figs_new/p041_s01.png"
-   ]
+   ],
+   "enc": "F5:16 G5:16 F5:16 G5:16 F#5:16 G5:16 r:8 F5:16 G5:16 F5:16 Bb5:16 C6:16 Bb5:16",
+   "key": "Eb"
   },
   {
    "id": "rob-14",
    "bird": "Robin",
    "no": 14,
    "page": 19,
-   "conf": "todo",
-   "note": "June 19, A.M. Before rain (caption) \u2014 NEW: not in corpus",
+   "conf": "high",
+   "note": "June 19, A.M., before rain. Key E (4 sharps). Two repeated E5-F#5-E5 16th groups, each followed by an eighth rest, lead to two G#5 eighths and a final F#5-G#5-E5 16th group.",
    "crops": [
     "figs_new/p041_s02.png"
-   ]
+   ],
+   "enc": "E5:16 F#5:16 E5:16 r:8 E5:16 F#5:16 E5:16 r:8 G#5:8 G#5:8 F#5:16 G#5:16 E5:16",
+   "key": "E"
   },
   {
    "id": "rob-15",
    "bird": "Robin",
    "no": 15,
    "page": 19,
-   "conf": "todo",
-   "note": "P.M. After rain (caption) \u2014 NEW: not in corpus",
+   "conf": "high",
+   "note": "P.M., after rain. Key G (1 sharp). Three compact 16th-note groups: E5-F#5-E5, F#5-E5-D#5, then E5-F#5-E5 after an eighth rest. The middle D-sharp is explicit.",
    "crops": [
     "figs_new/p041_s03.png"
-   ]
+   ],
+   "enc": "E5:16 F#5:16 E5:16 F#5:16 E5:16 D#5:16 r:8 E5:16 F#5:16 E5:16",
+   "key": "G"
   },
   {
    "id": "linnet-01",

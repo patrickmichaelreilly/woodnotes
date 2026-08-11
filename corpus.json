@@ -1923,83 +1923,99 @@
    "id": "hen-intro",
    "bird": "Hen Music",
    "page": 104,
-   "conf": "todo",
-   "note": "NEW: opening example, wavy trill descent of a sixth, no lyric ('exceeding fine' ventriloquous tone); precedes hen-wait (book105)",
+   "conf": "med",
+   "key": "C",
+   "note": "Opening example: a sustained F5 connected by Cheney's wavy vocal-slide mark to a short C5, a descending sixth. The slide is documented but represented by its endpoint pitches.",
    "crops": [
     "figs_new/p126_s00.png"
-   ]
+   ],
+   "enc": "F5:1 C5:8"
   },
   {
    "id": "hen-piano",
    "bird": "Hen Music",
    "page": 105,
-   "conf": "todo",
-   "note": "(notes of one hen, all the same, piano) \u2014 NEW: 'the notes of one hen were all the same, and piano'",
+   "conf": "high",
+   "key": "F",
+   "note": "Five equal-pitch Bb4 notes marked piano: four 16ths and a closing eighth, followed by an eighth rest. The repeat sign is not expanded.",
    "crops": [
     "figs_new/p127_s01.png"
-   ]
+   ],
+   "enc": "Bb4:16 Bb4:16 Bb4:16 Bb4:16 Bb4:8 r:8"
   },
   {
    "id": "hen-oark",
    "bird": "Hen Music",
    "page": 105,
-   "conf": "todo",
+   "conf": "med",
+   "key": "F",
    "lyric": "o-ark, o-ark, ark, ark, ark, ark, ark, ark, ark.",
-   "note": "NEW: not in corpus",
+   "note": "Extended low hen call in F: two accented C4-F4 pairs, five repeated A4 eighths, a lower F4, and a final sustained C4 with fermata and wavy continuation. Cheney's unusual rest glyphs separate the groups.",
    "crops": [
     "figs_new/p127_s02.png"
-   ]
+   ],
+   "enc": "C4:8 F4:8 r:8 C4:8 F4:8 r:8 A4:8 A4:8 A4:8 A4:8 A4:8 r:8 F4:8 r:8 C4:1^"
   },
   {
    "id": "hen-unlabeled",
    "bird": "Hen Music",
    "page": 105,
-   "conf": "todo",
-   "note": "NEW: unlabeled descending flat figure ending with fermata, no lyric",
+   "conf": "med",
+   "key": "C",
+   "note": "Unlabeled alternating flat figure: three Eb4-Ab4 pairs descend to a sustained Eb4 fermata. The first Eb4 is dotted; flats are explicitly printed rather than supplied by a key signature.",
    "crops": [
     "figs_new/p127_s03.png"
-   ]
+   ],
+   "enc": "Eb4:8. Ab4:8 Eb4:8 Ab4:8 Eb4:8 Ab4:8 r:8 Eb4:1^"
   },
   {
    "id": "hen-general-1",
    "bird": "Hen Music (rooster, 'the General')",
    "page": 107,
-   "conf": "todo",
-   "note": "NEW CHAPTER content not in corpus at all (book107 has no entries). 'His morning call, recorded' -- first form",
+   "conf": "high",
+   "key": "F",
+   "note": "The General's first morning-call form in F: two F5 pickups, an accented F5 quarter, then accented E5 slurred down to C5.",
    "crops": [
     "figs_new/p129_s00.png"
-   ]
+   ],
+   "enc": "F5:8. F5:8 F5:4 E5:4 C5:4"
   },
   {
    "id": "hen-general-2",
    "bird": "Hen Music (rooster, 'the General')",
    "page": 108,
-   "conf": "todo",
-   "note": "NEW: 'the second [form]...very different intervals'",
+   "conf": "high",
+   "key": "A",
+   "note": "The General's second morning-call form, in A major but retaining the first form's contour: two F#5 pickups, accented F#5, then accented E5 slurred to C#5.",
    "crops": [
     "figs_new/p130_s00.png"
-   ]
+   ],
+   "enc": "F#5:8. F#5:8 F#5:4 E5:4 C#5:4"
   },
   {
    "id": "hen-general-2-transposed",
    "bird": "Hen Music (rooster, 'the General')",
    "page": 108,
-   "conf": "todo",
-   "note": "NEW: 'had the second form been given in the key of the first' -- 1st/2d comparison",
+   "conf": "high",
+   "key": "F",
+   "note": "Printed comparison of the first form with the second transposed into the first form's key. The two five-note calls are separated by the engraved central rest.",
    "crops": [
     "figs_new/p130_s01.png"
-   ]
+   ],
+   "enc": "F5:8. F5:8 F5:4 E5:4 C5:4 r:2 D5:8. D5:8 D5:4 C5:4 A4:4"
   },
   {
    "id": "hen-seven-sleepers",
    "bird": "Hen Music",
    "page": 108,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "lyric": "Oh, Pro-con-sul",
-   "note": "NEW: quoted strain from 'The Seven Sleepers' song, comparison only (not a hen/rooster recording)",
+   "note": "Quoted four-syllable strain from The Seven Sleepers, included as a comparison rather than a bird recording. The opening dotted open note is read as a dotted half.",
    "crops": [
     "figs_new/p130_s02.png"
-   ]
+   ],
+   "enc": "F5:2. F5:8 E5:8 C5:8"
   },
   {
    "id": "hen-dantucker",

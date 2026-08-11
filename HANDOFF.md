@@ -1,40 +1,52 @@
-# Wood Notes Wild — digitization handoff (session 1 + 1b)
+# Wood Notes Wild — digitization handoff
 
-## Session 1b additions
-- Player v3: sticky bottom control bar; per-figure ♩= and octave overrides (blank = inherit global);
-  tempo seeds auto-filled from Cheney's markings
-- Gap-page drafts added (33 playable now): meadow lark ×3 (incl. 6-staff song draft — needs
-  dedicated pass), chipping sparrow trill, white-throat main 12-tone (resolved), oriole
-  "Curly/Chick-er-way" ×2, rose-breasted grosbeak draft, indigo-bird main
-- All new drafts marked conf:low except where noted — ear-verification is the next filter
+## Session 2 (2026-08-11): full-book audit — corpus now covers the ENTIRE book
+- Repo initialized: https://github.com/patrickmichaelreilly/woodnotes; source PDF committed
+  (`woodnoteswildnot00chen_bw.pdf`; book page = PDF page − 22; rasterize with PyMuPDF —
+  poppler not installed; `pages/` is gitignored, regenerate at dpi=300, csGRAY).
+- **corpus.json: 111 → 282 entries** (38 new bird-chapter figures incl. Linnet + Goldfinch
+  chapters, 56 `ess-*` essay figures incl. non-bird notations, 78 `app-*` appendix figures
+  from 11 sources incl. Cheney's barnyard diary). Every entry now has a `crops` list
+  pointing into `figs_new/` (422 system crops, complete coverage, audited).
+- Tools (all in `tools/`, method in `tools/METHOD.md`):
+  - `scanpages.py` — high-recall staff scanner (THRESH=200 binarize — grey staff lines
+    die at 128; sliding-window comb at 4 scales; fill_gaps interpolation)
+  - `heads.py` — note-head detector: prints measured letter pitches per crop; precomputed
+    for old crops in `analysis/pNNN_sNN.txt` + overlay PNGs (treble assumed; rerun with
+    `bass` for grouse/loon/great-horned-owl)
+  - `zoom.py`, `parsecheck.py`, `genplayer.py` (regenerates player sections, keeps tempo
+    seeds), `merge_catalogs.py`, `mksheets.py` (audit contact sheets)
+- Catalogs: `analysis/catalog_*.json` (439 records), `analysis/systems.json` (422),
+  `analysis/audit_report.json` (clean). Four systems the scanner can't see were hand-cropped:
+  cricket p248, rob-salute p036, goldfinch wave-staves p061 (staves drawn as waves!),
+  chat-rit p102 (staffless monotone row).
+- Fixes: 20 page corrections on old entries; ori-curly duplicate merged; loon-cry mapped
+  to its real notation (book 97 top, `p119_s00`); old `figs/p104_s00.png` was prose (not music);
+  p035 has 7 staff rows (figure pairs 7+8, 9+10 share rows).
 
 ## State
-- Source: IA `woodnoteswildnot00chen` B/W PDF (290 pp; **book page = PDF page − 22**)
-- Pipeline: pdftoppm 300 DPI → projection-profile staff detection (thin-line filter:
-  median dark-run ≤6 px, 4–14 runs, cluster 35–110 px) → per-system crops → 6-up contact sheets
-- `corpus.json`: 103 entries, 25 with encodings (conf high/med/low), rest `todo` with page + notes
-- `woodnotes-figures.zip`: all 185 system crops + `gap_pages/` (19 full pages the detector missed)
-- `woodnotes-player.html`: single-page app; all playable figures + annotation workbench
+- 34 playable encodings (3 high / 13 med / 18 low) of 282 catalogued; blue-02 newly
+  transcribed via the head-detector method (validated end-to-end).
+- Transcription backlog: ~248 todo/low entries. A 7-agent fan-out was drafted (task files in
+  `analysis/tasks/*.json`, agent prompts reusable) but PAUSED — user wants Sonnet/Opus
+  subagents, not Fable, and economical usage. Results contract: agents write
+  `analysis/results_<group>.json`, merge with `tools/merge_results.py`.
 
 ## Encoding format
 `pitch:dur` tokens. dur ∈ 1/2/4/8/16/32; `.` dotted; trailing `3` = triplet member;
 `^` fermata ≈1.7×; `r:dur` rest; `|` cosmetic. Example: `E5:8 C#5:8 | D5:4^ r:8 A4:8`
+8va figures: write sounding pitch. Bass clef only: grouse, loon, great horned owl.
 
 ## Remaining work (priority order)
-1. **Zoom-verify** all `conf: med/low` encodings (crop at 400 DPI, read, audition)
-2. **Transcribe `todo` entries** from crops in zip (thrushes, oriole, hermit, song-sparrow 5-8, etc.)
-3. **Detector misses** — transcribe from `gap_pages/`: meadow lark (p55-56), chipping sparrow (62),
-   white-throat main 12-tone (64), oriole "Curly/Chickerway" (94), rose-breasted grosbeak (98-99),
-   bobolink pi-leu (104), indigo-bird (107-108), robin no.5 (39), hen music pp (126,131,132)
-4. **Appendix** "Various Notations of the Music of Nature" (book pp. 205-228, PDF 227-250) —
-   not yet rasterized; includes faucet-drip and clothes-rack figures from the Introduction (pp. 3-4)
-5. Synthesis controls TBD from listening: portamento depth (screech-owl slides, veery),
-   tremolo (meadow lark, screech-owl wavy-line notation), accel/rit ramps (grouse drum,
-   field sparrow, whippoorwill contests), per-figure tempo hints from Cheney's markings
-   (Lively / Slow / Allegro / Rapid and spirited — captured in `note` fields)
+1. Transcribe the original bird-chapter todo entries (task files ready, see above)
+2. Re-verify conf:low encodings (18)
+3. Transcribe new bird-chapter figures (38), then essays (56), then appendix (78)
+4. Player: regenerate via `tools/genplayer.py` after each merge; "single page" is now
+   nominal — split by section if 282 sections get unwieldy
+5. Synthesis controls TBD: portamento (screech-owl, veery), tremolo (meadow lark),
+   accel/rit ramps (grouse drum, field sparrow, chat-rit), tempo hints in `note` fields
 
 ## Known engraving quirks
-- Cheney's rests render as odd vertical glyphs; 8va markings frequent (warblers, sparrows)
-- Bass clef only for grouse drum, loon, great horned owl
-- Wavy lines (screech-owl) = vocal slides, not trills
-- Repeat dots `:||` on song-sparrow/chickadee figures
+- Cheney's rests are odd vertical glyphs; wavy lines = vocal slides, not trills
+- Repeat dots `:||` on song-sparrow/chickadee figures; grace notes = tiny heads (encode 32nds)
+- Appendix attributions can be nested (Hawkins quoting Kircher; Harting quoting Bertini)

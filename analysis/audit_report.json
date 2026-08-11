@@ -1,0 +1,7 @@
+{
+  "misses": [],
+  "false_positives": [],
+  "uncertain": [],
+  "sheets_clean": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+  "notes": "Full visual audit of all 19 contact sheets (pages p023-p250, 226 thumbnails). Cross-checked several dense/ambiguous pages (p205/p207/p211/p213, p230, p235, p244, p074) against analysis/systems.json box coordinates to confirm apparent thumbnail box counts matched actual detections (visually adjacent/overlapping boxes on tightly-spaced systems can look merged at thumbnail scale but are correctly separate detections). No missed staffs found: all ruled musical staff regions, including small inline examples on the appendix comparison pages (p227-p248, e.g. Beckler, Gardiner, Weber, Smee, Hinrichs, Lescuyer), were enclosed in red boxes. No false positives found: 0-sys pages were consistently pure prose/blank/title pages, and the one page with a genuine tabular grid that could be mistaken for a staff (p202, Barrington's Table of Comparative Merit) was correctly left unboxed. No thumbnails were ambiguous enough to require a full-page check beyond the spot-checks already covered by the systems.json cross-reference."
+}

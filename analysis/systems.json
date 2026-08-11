@@ -4178,5 +4178,49 @@
   "x1": 1070,
   "n_staves": 1,
   "width_frac": 0.494
+ },
+ {
+  "page": 248,
+  "sys": "01b",
+  "y0": 910,
+  "y1": 1085,
+  "x0": 0,
+  "x1": 1359,
+  "n_staves": 1,
+  "width_frac": 1.0,
+  "note": "manual: cricket notation missed between sys1/sys2"
+ },
+ {
+  "page": 36,
+  "sys": "00b",
+  "y0": 1020,
+  "y1": 1220,
+  "x0": 0,
+  "x1": 1359,
+  "n_staves": 1,
+  "width_frac": 1.0,
+  "note": "manual: rob-salute: missed by scanner"
+ },
+ {
+  "page": 61,
+  "sys": "00b",
+  "y0": 1690,
+  "y1": 1880,
+  "x0": 0,
+  "x1": 1359,
+  "n_staves": 1,
+  "width_frac": 1.0,
+  "note": "manual: goldfinch wavy-staff figure: curved staves, undetectable by line scanner"
+ },
+ {
+  "page": 102,
+  "sys": "00b",
+  "y0": 730,
+  "y1": 890,
+  "x0": 0,
+  "x1": 1359,
+  "n_staves": 1,
+  "width_frac": 1.0,
+  "note": "manual: chat-rit: staffless monotone row, no 5-line staff exists"
  }
 ]

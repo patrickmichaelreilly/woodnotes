@@ -1593,23 +1593,27 @@
    "id": "rob-lit-leu3",
    "bird": "Robin",
    "page": 15,
-   "conf": "todo",
+   "conf": "high",
    "lyric": "Lit, lit, lit, lit, lit, leu, leu, leu.",
-   "note": "NEW: distinct 3rd variant of the Lit/leu call (5 lits + 3 leus), not in corpus (corpus only has 5-lits-alone and 5-lits-2-leus versions)",
+   "note": "Five staccato F5 eighths followed by three Db5 eighths; the first Db5 carries a fermata. No key signature is shown, and the printed flat applies to the three leu notes.",
    "crops": [
     "figs_new/p037_s00.png"
-   ]
+   ],
+   "enc": "F5:8 F5:8 F5:8 F5:8 F5:8 Db5:8^ Db5:8 Db5:8",
+   "key": "C"
   },
   {
    "id": "rob-cheeoowy",
    "bird": "Robin (bluebird responds)",
    "page": 15,
-   "conf": "todo",
+   "conf": "med",
    "lyric": "Chee-oo-wy, chee-oo-wy.",
-   "note": "NEW: text says a bluebird responded to the robin's call with this figure; not in corpus",
+   "note": "Two slurred D5-C#5-D5 eighth-note phrases separated by a half rest, marked piano. The source has one flat in the key signature and repeats the explicit C-sharp accidental in the second phrase; rest value read from the centered block glyph.",
    "crops": [
     "figs_new/p037_s01.png"
-   ]
+   ],
+   "enc": "D5:8 C#5:8 D5:8 r:2 D5:8 C#5:8 D5:8",
+   "key": "F"
   },
   {
    "id": "rob-12",
@@ -1671,11 +1675,13 @@
    "id": "goldfinch-01",
    "bird": "Yellow-bird; American Goldfinch",
    "page": 39,
-   "conf": "todo",
-   "note": "8va flight-song, four notes \u2014 CORRECTED: goldfinch chapter opener, 8va marking \u2014 sounding pitch an octave up",
+   "conf": "high",
+   "note": "Four-note 8va flight-song; encoded at sounding pitch one octave above the printed B4-C5-A4-G4. The second eighth note is dotted.",
    "crops": [
     "figs_new/p061_s00.png"
-   ]
+   ],
+   "enc": "B5:8 C6:8. A5:8 G5:8",
+   "key": "C"
   },
   {
    "id": "goldfinch-02",

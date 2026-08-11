@@ -108,8 +108,8 @@
    "crops": [
     "figs_new/p035_s04.png"
    ],
-   "enc": "@key:F#m [ E5:8 C#5:8 ] [ C#5:8 B#4:8 ] r:8 [ C#5:83 D5:83 E5:83 ]",
-   "approved": false
+   "enc": "@key:E [ E5:8 C5:8 ] [ C5:8 B#4:8 ] r:8 [ C5:83 D5:83 E5:83 ]",
+   "approved": true
   },
   {
    "id": "blue-10",
@@ -119,8 +119,8 @@
    "crops": [
     "figs_new/p035_s04.png"
    ],
-   "enc": "@key:Gm D5:16/ C5:8 r:8 [ C5:8 B4:8 ] r:8 [ E5:16 C5:16 ]",
-   "approved": false
+   "enc": "@key:Eb D5:16/ C5:8 r:8 [ C5:8 Bn4:8 ] r:8 [ E5:16 C5:16 ]",
+   "approved": true
   },
   {
    "id": "blue-11",
@@ -174,7 +174,7 @@
    "bird": "White-bellied Nuthatch",
    "no": 1,
    "page": 15,
-   "enc": "@key:F F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 D5:8 r:8^ C5:8 C5:8 r:8 C5:8 C5:8 C5:8 C5:8",
+   "enc": "@key:F F5:8 F5:8 r:8 F5:8 F5:8 F5:8 r:8^ D5:16-! D5:16-! D5:16-! D5:16-! D5:16-! D5:16-! D5:16-! r:8^ C5:16 C5:8 r:8 C5:16 C5:16 C5:16 C5:16",
    "lyric": "Wait wait wait... Ick-y ick-y ick-y.",
    "crops": [
     "figs_new/p037_s02.png",
@@ -182,7 +182,7 @@
     "figs_new/p051_s00.png",
     "figs_new/p051_s01.png"
    ],
-   "approved": false
+   "approved": true
   },
   {
    "id": "rob-01",
@@ -205,8 +205,8 @@
     "figs_new/p038_s02.png",
     "figs_new/p038_s03.png"
    ],
-   "enc": "@key:G [ D5:16 F5:16 D#5:16 ] r:16 [ G5:16 D#5:16 E5:16 ] r:16 [ B5:16 A#5:16 B5:16 ] r:16 [ E5:16 G5:16 E5:16 ] r:16 [ E5:16 F5:16 E5:16 ] [ B5:16 A#5:16 B5:16 ] r:16 [ E5:16 F5:16 G5:16 ] r:16 [ F5:16 G5:16 A5:16 ] r:16 [ B5:16 A#5:16 B5:16 ]",
-   "approved": false
+   "enc": "@key:G [ D5:16 F5:16 D#5:16 ] r:16 [ G5:16 D#5:16 E5:16 ] r:16 [ B5:16 A#5:16 B5:16 ] r:16 [ E5:16 G5:16 E5:16 ] r:16 [ E5:16 F5:16 E5:16 ] r:16\n[ B5:16 A#5:16 B5:16 ] r:16 [ E5:16 F5:16 G5:16 ] r:16 [ F5:16 G5:16 A5:16 ] r:16 [ B5:16 A#5:16 B5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-03",
@@ -216,8 +216,8 @@
    "crops": [
     "figs_new/p038_s04.png"
    ],
-   "enc": "@key:G [ D5:16 C#5:16 D5:16 ] r:16 [ F5:16 F5:16 F5:16 ] r:16 F5:8/ [ D5:16 D#5:16 ] r:16 F5:8/ [ D5:16 D#5:16 ] r:16 [ G5:16 A5:16 E5:16 ] r:16 [ A5:16 B5:16 A5:16 ]",
-   "approved": false
+   "enc": "@key:G [ E5:16 D#5:16 E5:16 ] r:16 [ G5:16 F5:16 G5:16 ] r:16 F5:32/ [ E5:16 D#5:16 ] r:16 F5:32/ [ E5:16 D#5:16 ] r:16 [ G5:16 A5:16 E5:16 ] r:16 [ A5:16 B5:16 A5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-04",
@@ -227,8 +227,8 @@
    "crops": [
     "figs_new/p039_s00.png"
    ],
-   "enc": "@key:F [ F5:16 G5:16. ] E5:8 F5:8 r:16 [ F5:16 G5:16. ] E5:8 F5:8",
-   "approved": false
+   "enc": "@key:F [ F5:16 G5:16. ] E5:32 F5:8 r:16 [ F5:16 G5:16. ] E5:32 F5:8",
+   "approved": true
   },
   {
    "id": "rob-06",
@@ -238,8 +238,8 @@
    "crops": [
     "figs_new/p040_s00.png"
    ],
-   "enc": "@key:A [ D5:16 E5:16 F5:16 ] r:16 [ G5:16 A5:16 G5:16 ] r:16 [ F5:16 G5:16 E5:16 ] r:16 [ F5:16 G5:16 F5:16 ] r:16^ [ G5:16 A5:16 F5:16 ]",
-   "approved": false
+   "enc": "@key:E [ E5:16 F5:16 E5:16 ] r:16 [ G5:16 A5:16 G5:16 ] r:16 [ F5:16 G5:16 E5:16 ] r:16^ [ F5:16 G5:16 F5:16 ] r:16 [ G5:16 A5:16 G5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-07",
@@ -249,8 +249,8 @@
    "crops": [
     "figs_new/p040_s01.png"
    ],
-   "enc": "@key:Bb [ E5:16 D5:16 E5:16 ] r:16 [ G5:16 F5:16 G5:16 ] r:16 [ F5:16 E5:16 F5:16 ] r:16 [ G5:16 F5:16 G5:16 ]",
-   "approved": false
+   "enc": "@key:Eb [ E5:16 D5:16 E5:16 ] r:16 [ G5:16 F5:16 G5:16 ] r:16 [ F5:16 E5:16 F5:16 ] r:16 [ G5:16 F5:16 G5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-08",
@@ -260,8 +260,8 @@
    "crops": [
     "figs_new/p040_s02.png"
    ],
-   "enc": "@key:Eb F5:32/ [ F5:16 E5:16 ] r:16 A5:8 r:16 A5:8 F5:32/ [ F5:16 E5:16 ]",
-   "approved": false
+   "enc": "@key:Ab A5:16/ [ F5:8 E5:8 ] r:8 A5:8 A5:8 r:8 G5:16/ [ F5:8 E5:8 ]",
+   "approved": true
   },
   {
    "id": "rob-09",

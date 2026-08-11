@@ -1578,8 +1578,9 @@
    "id": "intro-drip-1",
    "bird": "Faucet drip (intro)",
    "page": 3,
-   "conf": "todo",
-   "note": "6-system continuous melody illustrating water dropping from faucet into partly-filled bucket; not a bird figure",
+   "conf": "low",
+   "key": "F",
+   "note": "Six-system continuous faucet-drip melody. Isolated drops are normalized to quarters and visibly beamed pairs to eighths; chromatic accidentals are retained where legible, but the free unbarred spacing is not treated as metrical.",
    "crops": [
     "figs_new/p025_s00.png",
     "figs_new/p025_s01.png",
@@ -1587,17 +1588,20 @@
     "figs_new/p025_s03.png",
     "figs_new/p025_s04.png",
     "figs_new/p025_s05.png"
-   ]
+   ],
+   "enc": "Bb4:4 C5:4 D5:4 C5:4 B4:4 Bb4:4 E5:4 D5:4 C5:4 D5:4 D5:4 E5:4 Eb5:4 C5:4 E5:4 | E5:4 F5:4 C5:8 A4:8 C5:4 E5:8 F5:8 Eb5:4 D5:4 B4:4 C5:4 D5:8 C5:8 A4:4 A4:4 A4:8 B4:8 A4:4 | Bb4:4 Bb4:8 A4:8 C5:4 F5:4 C5:4 B4:8 A4:8 D5:4 D5:4 B4:8 G4:8 C5:4 B4:4 B4:8 A4:8 C5:8 E5:8 D5:4 E5:8 D5:8 | Bb4:8 F5:8 C5:8 A4:8 C5:8 Bb4:8 A4:8 E5:8 D5:4 G4:8 Bb4:8 Bb4:4 A4:4 Bb4:4 D5:4 B4:8 A4:8 Bb4:4 C5:4 Eb5:4 | D5:4 E5:8 C5:8 Bb4:16 C5:16 D5:4 B4:4 A4:4 Bb4:4 C5:4 E5:8 B4:8 D5:4 C5:4 Bb4:4 C5:4 Eb5:4 D5:4 | Bb4:4 G5:8 F5:8 C5:8 D5:8 B4:4 Bb4:4 B4:4 B4:16 C5:16 E5:8 D5:8 F5:4 C5:4 D5:4 C5:16 D5:16 G5:4 C5:4 Bb4:4"
   },
   {
    "id": "intro-clothesrack-1",
    "bird": "Clothes-rack in wind (intro)",
    "page": 4,
-   "conf": "todo",
-   "note": "single system illustrating wild melody of a clothes-rack whirling in winter wind",
+   "conf": "low",
+   "key": "A",
+   "note": "Playable monophonic reduction of the freely spaced clothes-rack melody; fermatas are retained, long pauses represented as rests, and decorative or tied open notes flattened.",
    "crops": [
     "figs_new/p026_s00.png"
-   ]
+   ],
+   "enc": "B4:1 G#4:4 B4:4 D5:2^ E5:2 D5:4 D5:2 r:2^ F5:4 A4:1 r:2^ G#4:16 D5:16 F5:16 r:2^ A5:2^"
   },
   {
    "id": "rob-lit-leu3",
@@ -1681,13 +1685,15 @@
    "id": "linnet-01",
    "bird": "Linnet; Purple Finch; Purple Grosbeak",
    "page": 37,
-   "conf": "todo",
-   "note": "Rapid and spirited. \u2014 CORRECTED: Linnet chapter 3-row figure, all 3 systems detected; key sig 3 flats",
+   "conf": "low",
+   "key": "Eb",
+   "note": "Complete three-system rapid song. This reading-order reduction retains chromatic E-natural figures, fermata, and rapid final run; exact beaming in dense passages is provisional.",
    "crops": [
     "figs_new/p059_s00.png",
     "figs_new/p059_s01.png",
     "figs_new/p059_s02.png"
-   ]
+   ],
+   "enc": "Eb5:16 F5:16 A5:16 F5:16 A5:8 C6:8 A5:16 E5:16 r:8 C6:16 A5:16 F5:16 A5:16 F5:16 D5:16 r:8 | F5:16 E5:16 A5:16 G5:16 F5:16 D5:16 F5:16 E5:16 r:4^ F5:8 G5:8 F5:16 E5:16 F5:16 G5:16 F5:16 E5:16 | r:8 F5:8 C6:8 F5:8 C6:8 r:8 F5:8 F5:8 C6:32 A5:32 C6:32 G5:32 A5:32^ E5:8 F5:8"
   },
   {
    "id": "goldfinch-01",
@@ -1705,11 +1711,13 @@
    "id": "goldfinch-02",
    "bird": "Yellow-bird; American Goldfinch",
    "page": 39,
-   "conf": "todo",
-   "note": "So here we go (sung on undulating wave-staves) \u2014 manually recovered; staves drawn as waves \u2014 transcribe from repeated motif",
+   "conf": "med",
+   "key": "C",
+   "note": "Three repetitions of the same four-syllable B4-C5-A4-G4 motif on decorative undulating staves. Regular eighths provide a playable reduction because the curved staff prevents literal rhythmic measurement.",
    "crops": [
     "figs_new/p061_s00b.png"
-   ]
+   ],
+   "enc": "B4:8 C5:8 A4:8 G4:8 | B4:8 C5:8 A4:8 G4:8 | B4:8 C5:8 A4:8 G4:8"
   },
   {
    "id": "wts-var1",
@@ -1775,12 +1783,14 @@
    "id": "foxsp-01",
    "bird": "Fox-colored Sparrow",
    "page": 44,
-   "conf": "todo",
-   "note": "NEW CHAPTER entirely absent from corpus. 'Song of the fox-colored sparrow'; fig start, spans sys0-1",
+   "conf": "low",
+   "key": "C",
+   "note": "Two-system Fox-colored Sparrow song. Small grace notes and accented flourishes are linearized, ornamental slurs omitted, and grace values normalized to 16ths.",
    "crops": [
     "figs_new/p066_s00.png",
     "figs_new/p066_s01.png"
-   ]
+   ],
+   "enc": "E5:16 F5:16 E5:16 r:8 A5:16 G5:8 A5:16 G5:8 A5:16 G5:16 E5:16 r:8 F5:16 G5:16 F5:8 F5:8 F5:8 E5:8 r:4^ F5:8 F5:8 | F5:8 A5:16 F5:16 r:8 F5:8. A5:16 F5:8 E5:16 r:8 A5:8^ A5:16 F5:16 r:8 F5:16 A5:16 F5:8. E5:16 D5:8"
   },
   {
    "id": "chewink-01",
@@ -1834,90 +1844,106 @@
    "id": "herm-extra",
    "bird": "Hermit Thrush",
    "page": 61,
-   "conf": "todo",
-   "note": "NEW: unlabeled fragment at top of book61, not accounted for by herm-more's '4 further strains' (all 4 of those found already on book60/PDF82). Possibly a 5th strain uncatalogued in corpus.",
+   "conf": "med",
+   "key": "Bb",
+   "note": "Unlabeled Hermit Thrush fragment at the top of page 61, apparently an additional strain. Four high three-note 16th flourishes are separated by rests and two isolated E5 tones; the printed fermata is retained.",
    "crops": [
     "figs_new/p083_s00.png"
-   ]
+   ],
+   "enc": "C6:8 Eb6:16 F6:16 Eb6:16 r:8 G6:16 A6:16 G6:16 r:4^ E5:4 A5:16 Bb5:16 A5:16 r:8 E5:4 G#5:16 A5:16 G5:16 r:8 Bb5:16 C6:16 Bb5:16"
   },
   {
    "id": "herm-forest",
    "bird": "Hermit Thrush",
    "page": 61,
-   "conf": "todo",
-   "note": "In a deep still forest. Slow. (caption) \u2014 NEW: distinctly captioned song not in corpus; fig start, spans sys1-3",
+   "conf": "med",
+   "key": "Ab",
+   "note": "Three-system passage headed 'In a deep still forest. Slow.' The systems are encoded continuously, retaining phrase rests and fermatas; printed naturals in the later flourishes override the four-flat key signature.",
    "crops": [
     "figs_new/p083_s01.png",
     "figs_new/p083_s02.png",
     "figs_new/p083_s03.png"
-   ]
+   ],
+   "enc": "Eb5:4 Bb5:8 G5:8 G5:16 Bb5:16 G5:16 r:4^ C5:4 G5:8 F5:8 F5:16 G5:16 F5:16 r:4^ D5:4 F5:16 D5:16 | D5:16 Eb5:16 D5:16 r:4^ Eb5:4 G5:8 Eb5:16 Bb5:16 C6:16 Bb5:16 r:4^ F5:4 A5:16 F5:16 C6:16 D6:16 C6:16 A5:16 | A5:16 Bb5:16 A5:16 r:4^ D5:4 A5:8 G5:8 G5:16 A5:16 G5:16 C5:4 G5:8 E5:8 D5:16 F5:16 D5:16"
   },
   {
    "id": "whip-crescendo",
    "bird": "Whippoorwill",
    "page": 69,
-   "conf": "todo",
+   "conf": "low",
+   "key": "D",
    "lyric": "Whip-poor-will, Whip-poor-will.",
-   "note": "NEW: not in corpus. Crescendo et accelerando -- male altercation duet, 1st/2d voice",
+   "note": "Crescendo/accelerando altercation with alternating first and second voices. Printed 8va is represented at sounding pitch; voice labels are flattened into reading order and accelerating small-note groups normalized to 32nds.",
    "crops": [
     "figs_new/p091_s00.png",
     "figs_new/p091_s01.png"
-   ]
+   ],
+   "enc": "G5:8 A5:8 G5:16 A5:16 C#6:4 r:8 | G5:8 A5:8 G5:16 A5:16 C#6:4 r:8 | G5:32 A5:32 B5:32 A5:32 B5:32 D6:32 | G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32 G5:32 A5:32 B5:32 A5:32 B5:32 C#6:32"
   },
   {
    "id": "screech-tremolo",
    "bird": "Screech-Owl",
    "page": 100,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "lyric": "Ah . . . . . . . . . . . . . . . . .",
-   "note": "NEW: opening pianissimo tremolo (Crescendo/Diminuendo), precedes screech-ahee/screech-ahoo; not in corpus",
+   "note": "Opening pianissimo tremolo, crescendo then diminuendo. The engraving alternates D5 and E5 in continuous 16ths; dynamics are documented but not encoded.",
    "crops": [
     "figs_new/p122_s00.png"
-   ]
+   ],
+   "enc": "D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16 D5:16 E5:16"
   },
   {
    "id": "screech-more1",
    "bird": "Screech-Owl",
    "page": 102,
-   "conf": "todo",
+   "conf": "low",
+   "key": "F",
    "lyric": "Ah-ee, Ah-ee, Ah-ee, Ah-ee, Ah-ee.",
-   "note": "NEW: 'strains before had not secured' -- extended Ah-ee series; book102 has no corpus entries at all; related to screech-ahee",
+   "note": "Five related Ah-ee gestures. Each held D5 is slurred to a short F#5 and followed by a fermata rest; exact values of the small flourish and rests are approximate in the dense engraving.",
    "crops": [
     "figs_new/p124_s00.png"
-   ]
+   ],
+   "enc": "D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^ D5:2 F#5:16 r:4^"
   },
   {
    "id": "screech-more2",
    "bird": "Screech-Owl",
    "page": 102,
-   "conf": "todo",
+   "conf": "low",
+   "key": "F",
    "lyric": "Ah-oo, Ah-oo, Ah-oo, Ah-ee, Ah-ea.",
-   "note": "NEW: mixed Ah-oo/Ah-ee series",
+   "note": "Five slurred two-part calls: three D5-C#5 Ah-oo gestures followed by E5-D5 and E5-D5 variants. Wavy vocal tremolo marks are represented by their endpoints.",
    "crops": [
     "figs_new/p124_s01.png"
-   ]
+   ],
+   "enc": "D5:2 C#5:16 r:4^ D5:2 C#5:16 r:4^ D5:2 C#5:16 r:4^ E5:2 D5:16 r:4^ E5:2 D5:16 r:4^"
   },
   {
    "id": "screech-more3",
    "bird": "Screech-Owl",
    "page": 102,
-   "conf": "todo",
+   "conf": "low",
+   "key": "F",
    "lyric": "Ah-oo, Ah-oo, Ah-oo, Ah-oo, . . . oo-oo-oo-oo-oo.",
-   "note": "NEW: transitioning into tremolo trill",
+   "note": "Four Ah-oo gestures lead into an alternating A4-Bb4 16th tremolo and five repeated A4 oo syllables. Wavy slides are reduced to endpoint pitches.",
    "crops": [
     "figs_new/p124_s02.png"
-   ]
+   ],
+   "enc": "D5:2 C#5:16 r:4^ D5:2 C5:16 r:4^ D5:2 C5:16 r:4^ D5:2 A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 A4:16 Bb4:16 A4:8^ A4:8^ A4:8^ A4:8^ A4:8^"
   },
   {
    "id": "screech-more4",
    "bird": "Screech-Owl",
    "page": 102,
-   "conf": "todo",
+   "conf": "low",
+   "key": "Bb",
    "lyric": "Ah - - - - oo, Ah-oo, Ah-oo, Ah-oo.",
-   "note": "NEW: continued elaboration",
+   "note": "An alternating Bb4-C5 16th tremolo resolves to A4, followed by three wavy A4-G4 Ah-oo slides and fermata rests. Slides are represented by their endpoints.",
    "crops": [
     "figs_new/p124_s03.png"
-   ]
+   ],
+   "enc": "Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 C5:16 Bb4:16 A4:8^ A4:2 G4:16 r:4^ A4:2 G4:16 r:4^ A4:2 G4:16 r:4^"
   },
   {
    "id": "hen-intro",
@@ -2021,9 +2047,10 @@
    "id": "hen-dantucker",
    "bird": "Hen Music (hen, 'Old Dan Tucker')",
    "page": 108,
-   "conf": "todo",
+   "conf": "med",
+   "key": "Bb",
    "lyric": "Cut, cut, cut, cut, cut, cut, cut, cut, cut, cut,",
-   "note": "NEW: hen's jubilant cackle after laying, set to 'Old Dan Tucker'; fig start, spans sys3-4 (continues onto book109)",
+   "note": "Six-system hen cackle set to Old Dan Tucker. Grace-like flagged 'waggle' notes are normalized to 16ths, dynamics omitted, and the continuous engraving retained in reading order.",
    "crops": [
     "figs_new/p130_s03.png",
     "figs_new/p130_s04.png",
@@ -2031,836 +2058,1000 @@
     "figs_new/p131_s01.png",
     "figs_new/p131_s02.png",
     "figs_new/p131_s03.png"
-   ]
+   ],
+   "enc": "B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 G4:8 B4:8 B4:8 | B4:8 C5:8 G4:8. G4:16 A4:16 B4:8 | D5:8. D5:8 D5:4 | G4:16 F#4:16 G4:16 F4:16 G4:16 F4:16 G4:16 A4:16 B4:8. B4:8 | B4:4 G4:16 F4:16 G4:16 A4:16 G4:16 A4:16 G4:16 A4:16 C5:8. | B4:8 D5:8 Eb5:8 C5:8 D5:8 C5:8 D5:8 C5:8 D5:8 C5:8 | B4:8 C5:8 D5:8 r:8 B4:8 C5:8 E5:8 F5:8 D5:8 F5:8 Bb5:4^"
   },
   {
    "id": "ess-loon-1",
    "bird": "Loon",
    "page": 117,
-   "conf": "todo",
+   "conf": "med",
+   "key": "A",
    "note": "Loon's loud, long call to young in peril (\"a fourth and a true third\") \u2014 Bass-ish notation but written in treble w/ key sig; illustrates a wide interval, not a literal transcription of a specific song.",
    "crops": [
     "figs_new/p139_s00.png"
-   ]
+   ],
+   "enc": "E5:4^ F#5:4"
   },
   {
    "id": "ess-chickadee-1",
    "bird": "Chickadee",
    "page": 117,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Titmouse/chickadee song, sustained notes (\"true third\" and \"true second\") \u2014 Text calls the bird 'titmouse,' Cheney's era name for the chickadee (same species discussed again at p145, p164).",
    "crops": [
     "figs_new/p139_s01.png"
-   ]
+   ],
+   "enc": "A5:2 G5:2 r:4 | G5:2 E5:2 r:4^ | A5:2 A5:4 A5:4 r:4^ | G5:2 G5:4 G5:4"
   },
   {
    "id": "ess-warbler-btg-1",
    "bird": "Black-throated Green Warbler",
    "page": 117,
-   "conf": "todo",
-   "note": "Warbler's song, 8va, \"true major third\"",
+   "conf": "high",
+   "key": "C",
+   "note": "Warbler song illustrating a true major third. The printed 8va is represented at sounding pitch.",
    "crops": [
     "figs_new/p139_s02.png"
-   ]
+   ],
+   "enc": "E6:4 E6:4 E6:4 C6:4 E6:4"
   },
   {
    "id": "ess-warbler-btg-2",
    "bird": "Black-throated Green Warbler",
    "page": 117,
-   "conf": "todo",
+   "conf": "high",
+   "key": "A",
    "note": "Second illustration, said to match 'Larboard Watch Ahoy' melody \u2014 Not a literal continuation of the previous staff \u2014 a separate illustrative phrase for the same bird/paragraph.",
    "crops": [
     "figs_new/p139_s03.png"
-   ]
+   ],
+   "enc": "E5:4. E5:8 E5:4. C#5:8 E5:4"
   },
   {
    "id": "ess-pewee-1",
    "bird": "Wood-Pewee",
    "page": 118,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Ab",
    "note": "\"The wood-pewee sings long and well-sustained tones\"",
    "crops": [
     "figs_new/p140_s00.png"
-   ]
+   ],
+   "enc": "Eb5:2.^ Bb4:4 Db5:2 r:4 | Eb5:2.^ Bb4:4 Db5:2 | Db5:2^ Bb4:2^"
   },
   {
    "id": "ess-lark-1",
    "bird": "Meadow Lark",
    "page": 118,
-   "conf": "todo",
-   "note": "Meadow lark song opening phrase (\"often beginning with\")",
+   "conf": "low",
+   "key": "Ab",
+   "note": "Best-effort monophonic reading across three crops. Crop boundaries and degraded beams make the final two subphrases provisional.",
    "crops": [
     "figs_new/p140_s01.png",
     "figs_new/p140_s02.png",
     "figs_new/p140_s03.png"
-   ]
+   ],
+   "enc": "C5:4 Ab4:4 C5:16 Bb4:16 Ab4:8 | C5:8 Bb4:8 Ab4:8 Eb5:8 r:4 C5:8 Bb4:8 Ab4:8 Eb5:8 r:4 C5:8 Bb4:8 Ab4:8 C5:8 Bb4:8 | Eb5:16 F5:8. F5:16 Eb5:16 C5:8 Eb5:16 F5:8. F5:16 Eb5:16 C5:8"
   },
   {
    "id": "ess-chewink-1",
    "bird": "Chewink",
    "page": 118,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Chewink singing first strain of 'Rock of Ages' with a trill",
    "crops": [
     "figs_new/p140_s04.png"
-   ]
+   ],
+   "enc": "G5:8. A5:16 G5:8 E5:8 C6:32 D6:32 C6:32 D6:32 C6:32 D6:32 C6:32"
   },
   {
    "id": "ess-oriole-1",
    "bird": "Oriole",
    "page": 118,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Am",
    "note": "Oriole song illustrating old minor scale (7th sharp ascending, natural descending)",
    "crops": [
     "figs_new/p140_s05.png"
-   ]
+   ],
+   "enc": "G5:8. G#5:16 A5:8 r:4 A5:8 G5:8. E5:16 D5:8 C5:8"
   },
   {
    "id": "ess-cock-1",
    "bird": "Domestic Cock (rooster)",
    "page": 119,
-   "conf": "todo",
+   "conf": "high",
+   "key": "D",
    "note": "Cock crow, \"an exclamatory phrase\" likened to oratorio 'Seven Sleepers' (\"O Proconsul\") \u2014 Not a bird per se \u2014 farmyard-animal comparison in the same 'Music in Nature' essay.",
    "crops": [
     "figs_new/p141_s00.png"
-   ]
+   ],
+   "enc": "F#5:4. F#5:8 E5:8 C#5:8"
   },
   {
    "id": "ess-horse-1",
    "bird": "Horse (Fanny, the Morgan mare)",
    "page": 119,
-   "conf": "todo",
+   "conf": "high",
+   "key": "A",
    "note": "Frozen-morning scale-exercise, \"worthy of a skilful artist on the trombone\" \u2014 Non-bird; bass clef.",
    "crops": [
     "figs_new/p141_s01.png"
-   ]
+   ],
+   "enc": "A2:8 B2:8 C#3:8 D3:8 E3:8 C#3:8 B2:8 A2:8"
   },
   {
    "id": "ess-horse-2",
    "bird": "Horse (Fanny, the Morgan mare)",
    "page": 119,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Bb",
    "note": "Thawing-morning subdued call \u2014 Non-bird; bass clef; same horse as previous system, different morning/mood, not a literal continuation.",
    "crops": [
     "figs_new/p141_s02.png"
-   ]
+   ],
+   "enc": "G2:8 A2:8 Bb2:8 C3:8 D3:8 Eb3:8 D3:8 C3:8 Bb2:8 A2:8 G2:8"
   },
   {
    "id": "ess-colt-1",
    "bird": "Colt (yearling)",
    "page": 120,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Yearling colt's \"challenge\" to a strange horse at the hitching-post \u2014 Non-bird; bass clef.",
    "crops": [
     "figs_new/p142_s00.png"
-   ]
+   ],
+   "enc": "A5:8 C6:8 r:4 A5:8 A5:8 A5:8 A5:8 A5:8 E5:8"
   },
   {
    "id": "ess-bull-1",
    "bird": "Bull (young bull, No. 1)",
    "page": 120,
-   "conf": "todo",
-   "note": "\"Two young bulls gave me a musical entertainment\" \u2014 No. 1, \"Moo-uh\"/\"Boo-uh\" \u2014 Non-bird; bass clef; two mini-staves (treble-ish then lower) captioned with lyrics.",
+   "conf": "low",
+   "key": "Eb",
+   "note": "Monophonic reduction of a figure that switches from treble with three flats to bass with two flats. Accents and slurs on the short lower syllables are reduced, and the degraded bass hollow-note pitch remains provisional.",
    "crops": [
     "figs_new/p142_s01.png"
-   ]
+   ],
+   "enc": "D5:4 G4:8 D5:4 G4:8 C5:4 G4:8 C5:4 G4:8 | C3:2^ A2:8 r:8 C3:2^ A2:8 r:8 C3:2^ A2:8 r:8 C3:2^ A2:8"
   },
   {
    "id": "ess-bull-2",
    "bird": "Bull (young bull, No. 2)",
    "page": 120,
-   "conf": "todo",
+   "conf": "high",
+   "key": "A",
    "note": "No. 2, order reversed, while pawing ground \u2014 Non-bird; bass clef.",
    "crops": [
     "figs_new/p142_s02.png"
-   ]
+   ],
+   "enc": "G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4 G#2:2^ A2:8 r:4"
   },
   {
    "id": "ess-bull-3",
    "bird": "Bull (young bull, No. 2)",
    "page": 120,
-   "conf": "todo",
+   "conf": "high",
+   "key": "D",
    "note": "Same bull \"thrust up his nose and trumpeted\" \u2014 \"Moo-uh\" x4, interval of a tenth \u2014 Non-bird; bass clef; follows ess-bull-2 narratively (same animal, next action) but is a distinct notated figure, not a literal staff continuation.",
    "crops": [
     "figs_new/p142_s03.png"
-   ]
+   ],
+   "enc": "B3:4 D4:2 B3:4 D4:2 B3:4 D4:2 B3:4 D4:2"
   },
   {
    "id": "ess-chickadee-2",
    "bird": "Chickadee",
    "page": 123,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "\"Chickadees, singing responses\" \u2014 four numbered call-and-response phrases in one staff \u2014 Single wide crop containing phrases labeled 1./2./3./4.",
    "crops": [
     "figs_new/p145_s00.png"
-   ]
+   ],
+   "enc": "A5:2 G5:2 | G5:2 E5:2 | A5:2 A5:4 A5:4 | G5:2 G5:4 G5:4"
   },
   {
    "id": "ess-lark-4",
    "bird": "Meadow Lark",
    "page": 124,
-   "conf": "todo",
+   "conf": "low",
+   "key": "Ab",
    "note": "Meadow Lark song (untitled bar, labeled \"Meadow Lark.\")",
    "crops": [
     "figs_new/p146_s00.png"
-   ]
+   ],
+   "enc": "F5:8 E5:4 C5:8 Bb4:16 Ab4:16 Eb5:8 C5:16 Bb4:16 Ab4:16 Eb5:8 C5:16 Bb4:16 Ab4:16 Eb5:8 C5:4^ Ab4:8 C5:16 Bb4:16 Ab4:8"
   },
   {
    "id": "ess-hermit-thrush-1",
    "bird": "Hermit Thrush",
    "page": 124,
-   "conf": "todo",
+   "conf": "low",
+   "key": "Bb",
    "note": "Hermit Thrush song, first staff line",
    "crops": [
     "figs_new/p146_s01.png",
     "figs_new/p146_s02.png"
-   ]
+   ],
+   "enc": "Bb4:4 D5:32 F5:32 G5:32 F5:32 D5:8 Bb4:4 Eb5:32 F5:32 Eb5:32 G5:32 A5:32 G5:32 | C5:4 F5:32 G5:32 F5:32 C5:8 G5:32 A5:32 G5:32 | C5:4 F5:32 G5:32 F5:32 A5:32 Bb5:32 A5:32"
   },
   {
    "id": "ess-wood-thrush-1",
    "bird": "Wood Thrush",
    "page": 124,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Ab",
    "note": "Wood Thrush song, labeled \"Wood Thrush.\" \u2014 Caption cites 'See Index, Sully, J.'",
    "crops": [
     "figs_new/p146_s03.png"
-   ]
+   ],
+   "enc": "F5:8. C5:16 Ab5:8 r:4 G5:8. Eb5:16 Bb5:8"
   },
   {
    "id": "ess-song-sparrow-1",
    "bird": "Song Sparrow",
    "page": 125,
-   "conf": "todo",
+   "conf": "low",
+   "key": "G",
    "note": "Flagg's Song Sparrow, \"No. 1. Theme.\" (A Year with the Birds, p.15)",
    "crops": [
     "figs_new/p147_s00.png"
-   ]
+   ],
+   "enc": "D5:4 D5:4 D5:4 | G5:4 G5:8 G5:8 G5:8 | D6:8 D6:8 D6:8 D6:8 D6:8 D6:8 | G5:8"
   },
   {
    "id": "ess-song-sparrow-2",
    "bird": "Song Sparrow",
    "page": 125,
-   "conf": "todo",
+   "conf": "high",
+   "key": "G",
    "note": "Flagg's Song Sparrow, \"No. 2. Brisk\" (guttural, trill)",
    "crops": [
     "figs_new/p147_s01.png"
-   ]
+   ],
+   "enc": "D6:4 D6:4 D6:4 | G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 G4:32 | D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 G5:8"
   },
   {
    "id": "ess-song-sparrow-3",
    "bird": "Song Sparrow",
    "page": 125,
-   "conf": "todo",
+   "conf": "med",
+   "key": "G",
    "note": "Flagg's Song Sparrow, \"No. 3. Joyful\" (part 1, trill)",
    "crops": [
     "figs_new/p147_s02.png",
     "figs_new/p147_s03.png"
-   ]
+   ],
+   "enc": "G4:4 G4:4 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 G4:8 | D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 D6:32 | G5:32 D6:8. G5:32 D6:8. G5:32 D6:8. G5:4 A5:32 B5:32 A5:32 B5:32 A5:32 r:8"
   },
   {
    "id": "ess-song-sparrow-5",
    "bird": "Song Sparrow",
    "page": 125,
-   "conf": "todo",
+   "conf": "med",
+   "key": "A",
    "note": "Cheney's own Song-Sparrow transcription, variants \"1.\" and \"2.\" side by side \u2014 Captioned \"Song-Sparrow. \u2014 Cheney. (See Index, Song-Sparrow.)\"; compares against Flagg's version above.",
    "crops": [
     "figs_new/p147_s04.png"
-   ]
+   ],
+   "enc": "C#5:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 A5:32 B5:32 A5:32 B5:32 A5:32 r:8 | C#5:8. D5:16 C#5:8 E5:32 F#5:32 F#5:32 F#5:32 F#5:32 G#5:32"
   },
   {
    "id": "ess-song-sparrow-6",
    "bird": "Song Sparrow",
    "page": 125,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Cheney's own Song-Sparrow transcription, variant \"3.\"",
    "crops": [
     "figs_new/p147_s05.png"
-   ]
+   ],
+   "enc": "G5:32 C6:8. G5:32 C6:8. G5:32 C6:8. F5:4 A5:32 B5:32 A5:32 B5:32 A5:32 r:8"
   },
   {
    "id": "ess-niagara-1",
    "bird": "Niagara Falls (harmonic tones, non-bird)",
    "page": 130,
-   "conf": "todo",
-   "note": "Principal tone and harmonics claimed for the sound of Niagara (per Dr. Weber letter, 1891) \u2014 Non-bird; bass clef into treble; illustrates acoustic harmonics, not a bird song.",
+   "conf": "low",
+   "key": "C",
+   "note": "Sequential harmonic-series diagram rather than simultaneous harmony. Clefs switch bass to treble, with the detached second crop supplying the final bass tone; stemless pitches are normalized to whole notes.",
    "crops": [
     "figs_new/p152_s00.png",
     "figs_new/p152_s01.png"
-   ]
+   ],
+   "enc": "C2:1 C3:1 G3:1 C4:1 E4:1 | G4:1 C5:1 E5:4 G5:4 Bb5:4 C6:4 | E4:1"
   },
   {
    "id": "ess-waltz-1",
    "bird": "German waltz (flageolet, non-bird)",
    "page": 134,
-   "conf": "todo",
-   "note": "\"Let the following bars of a favorite waltz, of German composition, be played on the flageolet\" (3/8) \u2014 Non-bird; quoted as a possible source of imitation hints for bird-song mimicry theory.",
+   "conf": "low",
+   "key": "Bb",
+   "note": "Playable 3/8 reduction; degraded beams make the ornamental subdivisions provisional.",
    "crops": [
     "figs_new/p156_s00.png"
-   ]
+   ],
+   "enc": "Bb4:32 C5:32 D5:32 F5:4. | F5:4. | F5:8 Bb5:16 F5:16 D5:8 | F5:8 D5:16 Bb4:16 G4:8 | G5:8 G5:8 A4:16 C5:16 E5:16 C5:16 A4:16 C5:16 | Bb4:16 D5:16 F5:16 D5:16 Bb5:8"
   },
   {
    "id": "ess-waltz-2",
    "bird": "German waltz (flageolet, non-bird)",
    "page": 134,
-   "conf": "todo",
-   "note": "\"And again the following\" (3/4), first staff line",
+   "conf": "low",
+   "key": "Bb",
+   "note": "Reduction across both crops. Dots over repeated F notes are staccato articulation, not dotted durations, and are not represented by the player.",
    "crops": [
     "figs_new/p156_s01.png",
     "figs_new/p156_s02.png"
-   ]
+   ],
+   "enc": "F5:4 F5:4 F5:4 | F5:4 F5:4 F5:4 | F5:4 F5:4 F5:4 | Bb5:2. Bb5:8 r:4 | F5:4 F5:4 F5:4 | F5:4 F5:4 F5:4 | F5:4 F5:4 F5:4 | C6:2. C6:8 r:4 | F5:4 | D6:4 D6:4 D6:4 | E6:4 C6:4 A5:4"
   },
   {
    "id": "ess-cuckoo-1",
    "bird": "Cuckoo",
    "page": 135,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "\"The cuckoo has but two notes... their interval is invariably that of the minor third, sung downwards\"",
    "crops": [
     "figs_new/p157_s00.png"
-   ]
+   ],
+   "enc": "F5:8 | D5:4. r:8 | F5:8 | D5:4."
   },
   {
    "id": "ess-kamtschatkales-1",
    "bird": "Kamtschatkales chant (imitates wild duck; non-bird)",
    "page": 136,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "\"Succession of tones... by imitating the cry of the wild duck\" (Crowest, Musical Groundwork) \u2014 Non-bird human chant said to imitate a duck's cry; included in the 'Genesis of Bird Song' essay as evidence of imitation.",
    "crops": [
     "figs_new/p158_s00.png"
-   ]
+   ],
+   "enc": "C4:4 E4:4 G4:4 | C4:4 F4:4 A4:4"
   },
   {
    "id": "ess-chickadee-3",
    "bird": "Chickadee",
    "page": 142,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Flagg's \"two very plaintive notes\" of the chickadee",
    "crops": [
     "figs_new/p164_s00.png"
-   ]
+   ],
+   "enc": "D5:4 A4:8 r:2 | D5:4 A4:8 r:2"
   },
   {
    "id": "ess-pewee-2",
    "bird": "Wood-Pewee",
    "page": 143,
-   "conf": "todo",
+   "conf": "med",
+   "key": "Ab",
    "note": "\"Hear, O Lord! Hear, I pray! A-men, A-men.\" \u2014 Cheney's words for the pewee's song",
    "crops": [
     "figs_new/p165_s00.png"
-   ]
+   ],
+   "enc": "Eb5:4 Bb4:4 Db5:4 r:4 | Eb5:4 Bb4:4 Db5:4 r:4 | Eb5:4 Bb4:8 r:4 | Db5:4^ Bb4:4"
   },
   {
    "id": "ess-field-sparrow-1",
    "bird": "Field-Sparrow",
    "page": 148,
-   "conf": "todo",
+   "conf": "high",
+   "key": "A",
    "note": "\"Nobody can tell me what 'feller' sings\" \u2014 unidentified singer's phrase quoted alongside field-sparrow discussion \u2014 Letter quote arguably about an unknown ('feller') bird rather than the field-sparrow itself, but placed within the Field-Sparrow entry.",
    "crops": [
     "figs_new/p170_s00.png"
-   ]
+   ],
+   "enc": "A4:4 E5:32 F#5:32 E5:32 F#5:32 E5:32 F#5:32 E5:32 F#5:4 r:4 B4:32 C#5:32 B4:32 C#5:32 B4:32 C#5:32 B4:32"
   },
   {
    "id": "ess-whitethroat-1",
    "bird": "White-throated Sparrow",
    "page": 150,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "\"Oh hear me, Theresa, Theresa, Theresa!\" \u2014 flute-stop transcription (C, G, E half notes + eighth-note triplets)",
    "crops": [
     "figs_new/p172_s00.png"
-   ]
+   ],
+   "enc": "D5:2 B5:2 E5:2 | E5:8 E5:8 E5:8 r:8 | E5:8 E5:8 E5:8 r:8 | E5:8 E5:8 E5:8 r:8"
   },
   {
    "id": "ess-whitethroat-2",
    "bird": "White-throated Sparrow",
    "page": 151,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Leach's notation, \"Common form.\"",
    "crops": [
     "figs_new/p173_s00.png"
-   ]
+   ],
+   "enc": "D5:4 E5:4 | D5:83 D5:83 D5:83 | D5:83 D5:83 D5:83 | D5:83 D5:83 D5:83 r:4"
   },
   {
    "id": "ess-whitethroat-3",
    "bird": "White-throated Sparrow",
    "page": 151,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Leach's notation, \"A second form.\"",
    "crops": [
     "figs_new/p173_s01.png"
-   ]
+   ],
+   "enc": "E5:4 E5:4 C5:4 | B4:83 B4:83 B4:83 | B4:83 B4:83 B4:83 | B4:83 B4:83 B4:83"
   },
   {
    "id": "ess-whitethroat-4",
    "bird": "White-throated Sparrow",
    "page": 151,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Leach's notation, \"A rarer form.\"",
    "crops": [
     "figs_new/p173_s02.png"
-   ]
+   ],
+   "enc": "G4:4 G4:4 C5:4 | B4:83 B4:83 B4:83 | B4:83 B4:83 B4:83 | B4:83 B4:83 B4:83"
   },
   {
    "id": "ess-whitethroat-5",
    "bird": "White-throated Sparrow",
    "page": 152,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Wilkinson, Dartmouth River, Andante \u2014 \"Nos. 1 and 2, different songs of one bird\"",
    "crops": [
     "figs_new/p174_s00.png"
-   ]
+   ],
+   "enc": "F5:4 F5:4 F5:4 | E5:32 E5:2. | E5:32 D5:4 D5:4 D5:4 | D5:2."
   },
   {
    "id": "ess-whitethroat-6",
    "bird": "White-throated Sparrow",
    "page": 152,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Wilkinson, Dartmouth River \u2014 \"Nos. 3 and 4, songs of another bird\"",
    "crops": [
     "figs_new/p174_s01.png"
-   ]
+   ],
+   "enc": "E5:4 E5:4 E5:4 | D5:32 C#5:2. | D5:32 C#5:4 D5:4 D5:4 | C#5:2."
   },
   {
    "id": "ess-whitethroat-7",
    "bird": "White-throated Sparrow",
    "page": 152,
-   "conf": "todo",
+   "conf": "low",
+   "key": "C",
    "note": "Horsford's morning-concert transcription, first staff line (\"all common chords of the human scale\")",
    "crops": [
     "figs_new/p174_s02.png",
     "figs_new/p174_s03.png"
-   ]
+   ],
+   "enc": "G4:2 C5:2 C5:2 C5:2 C5:2 | G4:2 D5:2 C5:2 C5:2 C5:2 | F5:2 F5:2 | F5:2 F5:2 F5:2 | G4:2 C5:2 C5:8 C5:8 C5:2 C5:8 C5:8 C5:2 C5:8 C5:8 C5:2"
   },
   {
    "id": "ess-crownedsparrow-1",
    "bird": "Gambel's White-crowned Sparrow / Golden-crowned Sparrow",
    "page": 153,
-   "conf": "todo",
+   "conf": "low",
+   "key": "C",
    "note": "Two Pacific-coast cousins of the white-throat, side by side (Keeler, Zoe vol. i, 1891) \u2014 Single crop contains BOTH birds' figures side by side: left = Gambel's White-crowned Sparrow (Z. leucophrys gambeli), right = Golden-crowned Sparrow (Z. Coronata). Both 8va.",
    "crops": [
     "figs_new/p175_s00.png"
-   ]
+   ],
+   "enc": "D7:2 Eb7:16 D7:16 C7:16 Db7:16 C7:16 | D7:2 Eb7:2 C7:2"
   },
   {
    "id": "ess-chewink-2",
    "bird": "Chewink",
    "page": 156,
-   "conf": "todo",
+   "conf": "high",
+   "key": "D",
    "note": "Flagg's chewink song: \"two long notes... last part made up of several rapidly uttered liquid notes\" \u2014 Caption: In his A Year with the Birds, p.96.",
    "crops": [
     "figs_new/p178_s00.png"
-   ]
+   ],
+   "enc": "D5:4 B4:4 | E5:8 D5:32 D5:32 D5:32 D5:32 D5:32 D5:32"
   },
   {
    "id": "ess-wood-thrush-2",
    "bird": "Wood Thrush",
    "page": 161,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Ab",
    "note": "Cheney's own transcription: \"The other evening I heard these notes\" (letter dated June 17, 1885)",
    "crops": [
     "figs_new/p183_s00.png"
-   ]
+   ],
+   "enc": "F5:8. C5:16 Ab5:8 r:4 G5:8. Eb5:16 Bb5:8"
   },
   {
    "id": "ess-bigtree-thrush-1",
    "bird": "Big-tree Thrush",
    "page": 162,
-   "conf": "todo",
+   "conf": "high",
+   "key": "G",
    "note": "Belding's Big-tree Thrush (Turdus sequoiensis) song, \"1.\", Andante/Slow",
    "crops": [
     "figs_new/p184_s00.png"
-   ]
+   ],
+   "enc": "G5:8. D5:16 B5:4 r:1 r:1 | A5:8. F#5:16 D6:4 r:1 r:1 | D6:8. E6:16 C6:8. B5:16"
   },
   {
    "id": "ess-bigtree-thrush-2",
    "bird": "Big-tree Thrush",
    "page": 162,
-   "conf": "todo",
+   "conf": "high",
+   "key": "G",
    "note": "Belding's Big-tree Thrush song, \"2.\", Slow",
    "crops": [
     "figs_new/p184_s01.png"
-   ]
+   ],
+   "enc": "E6:8. C6:16 D6:4 r:1 r:1 | E6:8. C6:16 D6:4 r:1 r:1 | E6:8. C6:16 B5:4"
   },
   {
    "id": "ess-wood-thrush-3",
    "bird": "Wood Thrush",
    "page": 162,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Ab",
    "note": "\"Compare first two measures of No. 1 with this\" \u2014 Wood Thrush comparison figure \u2014 Small comparison figure set against Big-tree Thrush No.1 (ess-bigtree-thrush-1).",
    "crops": [
     "figs_new/p184_s02.png"
-   ]
+   ],
+   "enc": "F5:8. C5:16 Ab5:8 r:4 G5:8. Eb5:16 Bb5:8"
   },
   {
    "id": "ess-wood-thrush-4",
    "bird": "Wood Thrush",
    "page": 162,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Ab",
    "note": "\"And first measure of No. 2 with this\" \u2014 Wood Thrush comparison figure \u2014 Small comparison figure set against Big-tree Thrush No.2 (ess-bigtree-thrush-2).",
    "crops": [
     "figs_new/p184_s03.png"
-   ]
+   ],
+   "enc": "F5:8. C5:16 C5:8"
   },
   {
    "id": "ess-veery-1",
    "bird": "Wilson's Thrush (Veery)",
    "page": 164,
-   "conf": "todo",
+   "conf": "low",
+   "key": "F",
    "note": "\"It is all on the swing and jingle\" \u2014 letter from S.P.C. to Franklin Fairbanks, Jan. 3, 1886 \u2014 Page heading reads 'Tawny Thrush' (= Wilson's thrush / veery).",
    "crops": [
     "figs_new/p186_s00.png"
-   ]
+   ],
+   "enc": "F5:8^ F5:16 C6:4. A5:32 G5:4. F5:16 F5:8^ F5:2"
   },
   {
    "id": "ess-hermit-thrush-3",
    "bird": "Hermit Thrush",
    "page": 165,
-   "conf": "todo",
+   "conf": "low",
+   "key": "C",
    "note": "Horsford's corrected \"Song No. 2,\" first staff line, lyric \"Ple-o-la, ple-o-la (wut,wut,wut,wut) so la si\"",
    "crops": [
     "figs_new/p187_s00.png",
     "figs_new/p187_s01.png"
-   ]
+   ],
+   "enc": "C5:2 E4:2 G4:1 | C5:2 E4:2 G4:1 | D4:2 F4:2 D5:1 | C5:2 E4:2 G4:1 | D4:2 D5:2 Bb4:1 | C5:2 E4:2 G4:1"
   },
   {
    "id": "ess-oriole-2",
    "bird": "Oriole",
    "page": 169,
-   "conf": "todo",
+   "conf": "med",
+   "key": "F",
    "note": "\"Chief musician of the orchard\" song (Munger, Four American Birds)",
    "crops": [
     "figs_new/p191_s00.png"
-   ]
+   ],
+   "enc": "C5:32 Bb4:4 F4:4 C5:4 F5:4 | C5:32 C5:4 A4:4 C5:4 r:4"
   },
   {
    "id": "ess-oriole-3",
    "bird": "Oriole",
    "page": 169,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "\"Chorister of the park\" responding, same key \u2014 Call-and-response with previous system (ess-oriole-2), a different individual oriole, not a literal staff continuation.",
    "crops": [
     "figs_new/p191_s01.png"
-   ]
+   ],
+   "enc": "B4:32 C5:4 B4:32 C5:4 B4:32 C5:4 G5:16 E5:16 C5:4 r:4"
   },
   {
    "id": "ess-tanager-1",
    "bird": "Scarlet Tanager",
    "page": 185,
-   "conf": "todo",
-   "note": "Coleman's transcription, Thousand Islands, summer 1886, first staff line",
+   "conf": "med",
+   "key": "C",
+   "note": "The two crops give alternate rhythmic realizations of the same phrase, first in triplets and then in even 16ths; both are retained sequentially.",
    "crops": [
     "figs_new/p207_s00.png",
     "figs_new/p207_s01.png"
-   ]
+   ],
+   "enc": "D5:83 D5:83 D5:83 G5:83 G5:83 G5:83 | C5:4 C5:4 G4:4 C5:4 | G4:4 C5:4 r:4 r:4 | D5:16 D5:16 D5:16 D5:16 G5:16 G5:16 G5:16 G5:16 | C5:4 C5:4 G4:4 C5:4 | G4:4 C5:4 r:4 r:4"
   },
   {
    "id": "ess-memory-1",
    "bird": "(non-bird) The Author's Power of Memory",
    "page": 189,
-   "conf": "todo",
-   "note": "Dated \"Dec. 15, 1889\" \u2014 tune notated from memory, staff line 1 of 4 \u2014 Not a bird song. Section demonstrates Cheney's own musical memory (context: horses Old Pink, Dresser Mare, Lightfoot, Flying Jennie discussed just below). Likely a fiddle/vocal air recalled from memory.",
+   "conf": "low",
+   "key": "C",
+   "note": "Long non-bird memory tune. This practical reduction concatenates all four attached staff crops; ledger and beam degradation warrant low confidence, though pitches were detector-assisted and visually checked.",
    "crops": [
     "figs_new/p211_s00.png",
     "figs_new/p211_s01.png",
     "figs_new/p211_s02.png",
     "figs_new/p211_s03.png"
-   ]
+   ],
+   "enc": "A4:4 B4:8 A4:16 B4:16 D5:8 E5:8 D5:16 E5:16 D5:16 E5:16 D5:16 D5:16 | G4:4. A4:8 G4:16 A4:16 G4:16 F4:16 E4:16 F4:16 G4:16 A4:16 B4:16 A4:16 A4:4 | A4:4 B4:8 A4:16 B4:16 C5:8 D5:8 E5:16 F#5:16 E5:16 D#5:16 E5:4 F#5:16 G#5:16 A5:8 G5:16 E5:16 A4:16 A4:16 C5:16 B4:16 A4:16 G4:16 F#4:16 G4:2 | E5:4 A5:4 A5:4 B5:8 A5:8 A5:8 G5:8 G5:8 E5:8 A5:2 | G4:8 A4:8 G4:8 A4:8 A5:16 G#5:16 A5:16 G5:16 F5:16 E5:16 D5:16 E5:16 F#5:16 G5:2 | E5:4 A5:4 A5:4 B5:8 A5:8 A5:8 G5:8 G5:8 E5:8 G5:8 E5:8 F#5:16 G5:16 F#5:16 G5:16 E5:16 E5:16 A4:16 A4:16 C5:16 B4:16 A4:16 G4:16 F#4:16 G4:2"
   },
   {
    "id": "ess-bobolink-1",
    "bird": "Bobolink",
    "page": 191,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Pitch-reference tones from Cheney's reed instrument (\"about five inches long and two inches wide\"), used before transcribing the bobolink's song \u2014 Not the bobolink's song itself \u2014 a calibration/pitch reference; the actual bobolink transcription is presumably elsewhere (See p.82, outside this range).",
    "crops": [
     "figs_new/p213_s00.png"
-   ]
+   ],
+   "enc": "G5:4 F5:4 E5:4 E5:4 D5:4 C5:4 B4:4"
   },
   {
    "id": "ess-cuckoo-2",
    "bird": "Cuckoo",
    "page": 194,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "\"The usual note of the cuckoo is the minor third, sung downwards\"",
    "crops": [
     "figs_new/p216_s00.png"
-   ]
+   ],
+   "enc": "F5:8 | D5:4. r:8 | F5:8 | D5:4."
   },
   {
    "id": "ess-cuckoo-3",
    "bird": "Cuckoo",
    "page": 195,
-   "conf": "todo",
+   "conf": "high",
+   "key": "F",
+   "lyric": "Gu-cu, gu-cu, gu-cu.",
    "note": "Father Kircher's version (Musurgia, bk.i, p.30), lyric \"Gu-cu, gu-cu, gu-cu.\"",
    "crops": [
     "figs_new/p217_s00.png"
-   ]
+   ],
+   "enc": "C5:2 G4:2. | C5:2 G4:2. | C5:2 G4:2."
   },
   {
    "id": "ess-cuckoo-4",
    "bird": "Cuckoo",
    "page": 195,
-   "conf": "todo",
+   "conf": "high",
+   "key": "D",
    "note": "Gardiner's version, \"puts it in the major\"",
    "crops": [
     "figs_new/p217_s01.png"
-   ]
+   ],
+   "enc": "F#5:4 D5:2 r:4 | F#5:4 D5:2 r:4"
   },
   {
    "id": "app-cheney-crow",
    "bird": "Crow",
    "page": 205,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 CROW.",
    "crops": [
     "figs_new/p227_s00.png"
-   ]
+   ],
+   "enc": "D5:4 D5:4 Eb5:8 E5:16 D5:16 E5:8 E5:8 E5:8 G5:8 G5:8 G5:8 F#5:16 E5:16 E5:8 E5:8 E5:8 F5:4 r:8 F5:8 F5:4"
   },
   {
    "id": "app-cheney-roosters-1-2",
    "bird": "Roosters",
    "page": 205,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 1-2.",
    "crops": [
     "figs_new/p227_s01.png"
-   ]
+   ],
+   "enc": "D5:8. C#5:16 E5:4 D5:4 A4:8 | Ab5:8. Ab5:16 Ab5:4 G5:4 F5:4"
   },
   {
    "id": "app-cheney-roosters-3-4",
    "bird": "Roosters",
    "page": 205,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 3-4 (no. 4 'On the perch').",
    "crops": [
     "figs_new/p227_s02.png"
-   ]
+   ],
+   "enc": "Eb5:8. F5:16 Gb5:8. F5:16 G5:4 E5:8 | F5:8. F5:16 F5:4 E5:4 C5:4"
   },
   {
    "id": "app-cheney-roosters-5",
    "bird": "Roosters",
    "page": 205,
-   "conf": "todo",
+   "conf": "high",
+   "key": "A",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. No. 5 'Out of doors'.",
    "crops": [
     "figs_new/p227_s03.png"
-   ]
+   ],
+   "enc": "E5:8 E5:16 E5:4 D5:4 A4:8"
   },
   {
    "id": "app-cheney-roosters-6-7",
    "bird": "Roosters",
    "page": 205,
-   "conf": "todo",
+   "conf": "high",
+   "key": "F",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 6-7 (no. 6 'Lynn, Feb., 1886', no. 7 'Again').",
    "crops": [
     "figs_new/p227_s04.png"
-   ]
+   ],
+   "enc": "E5:8. E5:16 F5:4 F5:4^ D5:8 | F5:8 F5:8 F5:8 F5:4^ C5:8"
   },
   {
    "id": "app-cheney-roosters-8-9",
    "bird": "Roosters",
    "page": 205,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 ROOSTERS. Nos. 8-9 (no. 8 'Small').",
    "crops": [
     "figs_new/p227_s05.png"
-   ]
+   ],
+   "enc": "Ab5:8 Ab5:8 Bb5:16 Ab5:16 C6:4 Ab5:8 | A5:8. A5:16 B5:16 A5:16 A5:8 A5:4 F#5:8"
   },
   {
    "id": "app-cheney-colt-1-2",
    "bird": "Colt",
    "page": 205,
-   "conf": "todo",
+   "conf": "high",
+   "key": "F",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 COLT. Nos. 1-2 ('To a strange horse' / 'To his mother').",
    "crops": [
     "figs_new/p227_s06.png"
-   ]
+   ],
+   "enc": "D5:16 F5:16 r:8 D5:8 D5:8 D5:8 D5:8 D5:16 A4:16 | E5:8 E5:8 E5:8 E5:8 E5:16 A3:16"
   },
   {
    "id": "app-cheney-colt-3-4",
    "bird": "Colt",
    "page": 205,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 COLT. Nos. 3-4 ('To me' / 'Out of doors, alone, uneasy').",
    "crops": [
     "figs_new/p227_s07.png"
-   ]
+   ],
+   "enc": "B5:8 B5:8 B5:8 B5:8 B5:8 F5:8 D5:8 B4:8 | D6:8 D6:8 D6:16 E5:16 r:8 F#5:16 A5:16 D6:8. C6:32 B5:32 A5:8"
   },
   {
    "id": "app-cheney-mare-1-2",
    "bird": "Mare",
    "page": 206,
-   "conf": "todo",
+   "conf": "med",
+   "key": "Eb",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 MARE. Nos. 1-2 ('For hay, Dec. 23' / 'Louder, Dec. 24').",
    "crops": [
     "figs_new/p228_s00.png"
-   ]
+   ],
+   "enc": "B2:8 E3:8 F3:8 E3:8 D3:8 C3:8 | F3:8 G3:8 F3:8 E3:8 D3:8 C3:8"
   },
   {
    "id": "app-cheney-mare-3",
    "bird": "Mare",
    "page": 206,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Ab",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 MARE. No. 3 'For oats'.",
    "crops": [
     "figs_new/p228_s01.png"
-   ]
+   ],
+   "enc": "F3:8 G3:8 A3:8 A3:8 A3:16 F3:16 r:8 F3:8 F3:8 F3:8"
   },
   {
    "id": "app-cheney-two-year-old-bull",
    "bird": "Two-year-old bull",
    "page": 206,
-   "conf": "todo",
+   "conf": "high",
+   "key": "Bb",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 TWO-YEAR-OLD BULL. 'Boh-oo wah, boh-oo wah.'",
    "crops": [
     "figs_new/p228_s02.png"
-   ]
+   ],
+   "enc": "A2:8 B2:2^ G2:8 r:8 A2:8 B2:2^ G2:8"
   },
   {
    "id": "app-cheney-young-cow",
    "bird": "Young cow",
    "page": 206,
-   "conf": "todo",
+   "conf": "high",
+   "key": "F",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 YOUNG COW. 'Calling to go out to grass.' 'Bwa, bwa, bwa.'",
    "crops": [
     "figs_new/p228_s03.png"
-   ]
+   ],
+   "enc": "F3:2 B2:2 r:2 D3:2"
   },
   {
    "id": "app-cheney-dog-howling",
    "bird": "Dog",
    "page": 206,
-   "conf": "todo",
+   "conf": "med",
+   "key": "A",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 DOG. 'Howling at the blowing of whistles.' Lynn, January, 1888.",
    "crops": [
     "figs_new/p228_s04.png"
-   ]
+   ],
+   "enc": "E3:8 E3:8 E3:2 D3:4 E3:8 C#3:2 D3:2 E3:2 F#3:2^ E3:8 E3:8 E3:8"
   },
   {
    "id": "app-cheney-bull-frogs-1-4",
    "bird": "Bull-frogs",
    "page": 206,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 BULL-FROGS. 'Near a floating bridge.' Nos. 1-4.",
    "crops": [
     "figs_new/p228_s05.png",
     "figs_new/p229_s00.png"
-   ]
+   ],
+   "enc": "B2:2 B2:2 B2:2 | C3:2 C3:2 C3:2 | Db3:2 D3:2 D3:2 | D3:2 D3:2 D3:2"
   },
   {
    "id": "app-cheney-cat-tim-1",
    "bird": "Cat",
    "page": 207,
-   "conf": "todo",
+   "conf": "low",
+   "key": "C",
    "note": "Source: Simeon Pease Cheney (the author). \u2014 Cat ('Tim') purring, row 1. 'Made close observations this morning on Tim's purring...'",
    "crops": [
     "figs_new/p229_s01.png",
     "figs_new/p229_s02.png"
-   ]
+   ],
+   "enc": "E4:8 F4:8 E4:8 Gb4:8 E4:8 | E4:8 Bb4:8 E4:8 B4:8 E4:8 | E4:8 C#5:8 E4:8 | G4:8 E4:8 E4:8 A4:8 E4:8 E4:8 B4:8 E4:8 B4:8 E4:8"
   },
   {
    "id": "app-beckler-darling-downs-1",
    "bird": "unnamed bird (Darling Downs, Australia)",
    "page": 208,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 DARLING DOWNS. 'Heard frequently.' No. 1.",
    "crops": [
     "figs_new/p230_s00.png"
-   ]
+   ],
+   "enc": "G4:4 r:8 F#5:8 G5:8. A5:16 G5:8. A5:16 G5:8 r:8 E5:16 E5:16 D5:8 C5:4"
   },
   {
    "id": "app-beckler-darling-downs-2",
    "bird": "unnamed bird (Darling Downs, Australia)",
    "page": 208,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 2. DARLING DOWNS, row 1 (ends 'ad lib pause').",
    "crops": [
     "figs_new/p230_s01.png",
     "figs_new/p230_s02.png"
-   ]
+   ],
+   "enc": "E4:16 E4:16 A4:16 A4:16 E4:16 E4:16 G4:8 r:4 C5:8 F5:4 A4:8 A4:8 | A4:4 A4:8 A4:8 A4:4 r:8 G4:8 C5:4 D4:16 D4:16 D4:4 D4:16 D4:16 D4:4"
   },
   {
    "id": "app-beckler-hastings-river-3",
    "bird": "unnamed bird (Hastings River, New South Wales)",
    "page": 209,
-   "conf": "todo",
+   "conf": "low",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 3. HASTINGS RIVER, New South Wales, row 1 (ends 'ad lib pause').",
    "crops": [
     "figs_new/p231_s00.png",
     "figs_new/p231_s01.png"
-   ]
+   ],
+   "enc": "G4:4 E4:8. E5:32 G4:16 E4:8 E4:8 G4:8 E4:8. E5:32 A4:8 G4:8 r:4 F#4:16 F4:16 D4:8 C#4:2 r:4 B3:16 F4:16 D4:8 C#4:2 r:4 E4:8. D5:32 E5:16 A4:8 G4:8 r:4 D5:8. C5:32 E4:8"
   },
   {
    "id": "app-beckler-tenterfield-4",
    "bird": "unnamed bird (Tenterfield, New England, New South Wales)",
    "page": 209,
-   "conf": "todo",
-   "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 4. Tenterfield, New England, in New South Wales, row 1 (ends 'or ad lib pause').",
+   "conf": "low",
+   "key": "C",
+   "note": "Low-confidence editorial linearization. The source contains 'or ad lib pause' and alternate branches rather than one continuous melody; playback concatenates every printed fragment and alternative in crop order. Extreme beamed leaps and fine values are provisional.",
    "crops": [
     "figs_new/p231_s02.png",
     "figs_new/p231_s03.png",
     "figs_new/p231_s04.png"
-   ]
+   ],
+   "enc": "F4:4 D#4:8 F4:8 E4:8 E4:8 r:8 F4:4 D#4:4 r:4 | B4:8 E5:16 A3:16 F4:4 D#4:8. F4:16 | E4:8 E4:8 r:4 F4:4 D#4:4 r:4 B4:8 E5:16 A3:16 r:4 D4:2 E5:16 A3:16 | F4:4 D#4:8. F4:16 E4:8 E4:8 r:4 C5:8 F5:16 F4:16 D#4:16 B4:16 E5:16 A3:16"
   },
   {
    "id": "app-beckler-various-5",
    "bird": "unnamed bird(s), various localities",
    "page": 209,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 5. Various localities.",
    "crops": [
     "figs_new/p231_s05.png"
-   ]
+   ],
+   "enc": "D4:4 E4:4 r:4 r:4 | D4:4 E4:4 r:4 r:4 | D4:4 E4:4 r:4 r:4 | D4:4"
   },
   {
    "id": "app-beckler-6-7",
    "bird": "unnamed birds",
    "page": 210,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 Nos. 6-7 (no. 7 marked 'e e i e e e').",
    "crops": [
     "figs_new/p232_s00.png"
-   ]
+   ],
+   "enc": "D4:16 G4:32 F4:32 F4:16 E4:16 E4:16 D4:16 D4:16 D4:16 E4:16 B3:16 B3:16 E4:16 | D4:8. D4:16 D4:8 G4:8. D4:16 D4:8 D4:8 B3:16 B3:16 E4:8"
   },
   {
    "id": "app-beckler-8-9",
    "bird": "unnamed birds",
    "page": 210,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 Nos. 8-9 (no. 9 marked with trills 'tr').",
    "crops": [
     "figs_new/p232_s01.png"
-   ]
+   ],
+   "enc": "G4:16 G4:16 G4:16 F5:16 D4:16 r:8 G4:16 G4:16 G4:16 D4:16 G4:16 | G4:8 G4:8 B4:16 A4:16 G4:8 A4:16 G4:16 A4:8 G4:16 B4:16 A4:8 G4:16"
   },
   {
    "id": "app-beckler-10",
    "bird": "unnamed bird",
    "page": 210,
-   "conf": "todo",
+   "conf": "med",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 No. 10, marked 'e i i i'.",
    "crops": [
     "figs_new/p232_s02.png"
-   ]
+   ],
+   "enc": "G4:8 r:8 G4:8 G4:8 r:8 G4:8 G4:16 A4:16 r:8 G4:8 G4:16 A4:16 G4:8 G4:16 A4:16 G4:8 G4:16 A4:16 G4:8 G4:16 A4:16 G4:8"
   },
   {
    "id": "app-beckler-11",
    "bird": "unnamed bird",
    "page": 210,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 No. 11, marked with trills 'tr'.",
    "crops": [
     "figs_new/p232_s03.png"
-   ]
+   ],
+   "enc": "G4:8 E5:4 E5:8 r:8 G4:16 D5:16 G4:16 G4:16 r:8 G4:8 C5:4 C5:4"
   },
   {
    "id": "app-beckler-12-soldier",
    "bird": "'soldier' or 'leather-head' (bird, colonists' name)",
    "page": 210,
-   "conf": "todo",
+   "conf": "high",
+   "key": "C",
    "note": "Source: D. H. Beckler (Music of the Birds, in Die Gartenlaube, 1867, pp. 558-559). \u2014 No. 12, 'Marcato' -- the 'soldier' or 'leather-head', row 1.",
    "crops": [
     "figs_new/p232_s04.png",
     "figs_new/p232_s05.png"
-   ]
+   ],
+   "enc": "B4:8 r:8 B4:8 A4:8 r:8 A4:8 E5:8 r:8 B4:4 r:8 B4:8 A4:8 r:8 | B4:8 A4:8 r:8 A4:8 E5:4 r:8 C5:8 r:8 C5:8 B4:8 r:8 B4:8 A4:8 r:8 B4:8 E5:4"
   },
   {
    "id": "app-gardiner-nightingale-1-2",
@@ -3034,12 +3225,14 @@
    "id": "app-gardiner-lark-1",
    "bird": "Lark",
    "page": 213,
-   "conf": "todo",
-   "note": "Source: William Gardiner (In 'The Music of Nature'). \u2014 LARK, row 1.",
+   "conf": "low",
+   "key": "C",
+   "note": "William Gardiner, The Music of Nature. Because the engraving includes vertical dyads unsupported by the monophonic grammar, only the upper voice is encoded; the source crops preserve the omitted simultaneous tones.",
    "crops": [
     "figs_new/p235_s01.png",
     "figs_new/p235_s02.png"
-   ]
+   ],
+   "enc": "A5:32 A5:32 A5:32 A5:32 r:8 A5:32 A5:32 A5:32 A5:32 r:8 A5:32 A5:32 A5:32 A5:32 | D5:8 B4:8 G4:8 D5:8 E5:4 D5:8 B4:8 G4:8 D5:8 E5:4 | G5:32 D5:16 r:8 G5:32 D5:16 r:8 G5:32 D5:16 | F#5:32 E5:16 A5:8 F#5:32 E5:16 A5:8 F#5:32 E5:16 A5:8"
   },
   {
    "id": "app-gardiner-ass",
@@ -3105,13 +3298,15 @@
    "id": "app-harting-swan-1",
    "bird": "Swan",
    "page": 216,
-   "conf": "todo",
-   "note": "Source: J. E. Harting, quoting a transcription by Auguste Bertini. \u2014 SWAN. 'Singing on the water in Regent's Park. (Auguste Bertini.)' Allegro, row 1. \u2014 Quoted in Harting, Ornithology of Shakespeare, pp. 201-202; melody taken down by Auguste Bertini.",
+   "conf": "high",
+   "key": "C",
+   "note": "J. E. Harting quoting Auguste Bertini's Regent's Park transcription. Allegro in 2/4; repeated C5 calls with Eb5/F5 inflections. Full-bar rests are retained.",
    "crops": [
     "figs_new/p238_s00.png",
     "figs_new/p238_s01.png",
     "figs_new/p238_s02.png"
-   ]
+   ],
+   "enc": "C5:8 C5:8 C5:8 C5:8 | Eb5:4 r:4 | r:2 | r:2 | C5:8 C5:8 Eb5:8 F5:8 | C5:4 r:4 | r:2 | r:2 | C5:8 C5:8 C5:8 C5:8 | r:2 | C5:8 C5:8 C5:8 r:8 | r:2 | C5:8 C5:8 C5:8 C5:8 | Eb5:4 r:4 | r:2 | r:2 | C5:8 C5:8 Eb5:8 F5:8 | C5:4 r:4 | r:2 | C5:4 r:4"
   },
   {
    "id": "app-hawkins-blackbird",
@@ -3167,8 +3362,9 @@
    "id": "app-kircher-nightingale-1",
    "bird": "Nightingale",
    "page": 218,
-   "conf": "todo",
-   "note": "Source: Athanasius Kircher (In 'Musurgia'). \u2014 NIGHTINGALE. 'Glottismi modulationum sibilo exprimendi in Luscinia observati' (vocal techniques: Pigolismus, Glazismus, Teretismus).",
+   "conf": "low",
+   "key": "C",
+   "note": "Athanasius Kircher, Musurgia. Playable monophonic reduction of the Pigolismus, Glazismus, and Teretismus examples. Printed 64ths are normalized to 32nds because the corpus grammar cannot express them; ties are flattened and barless examples separated cosmetically.",
    "crops": [
     "figs_new/p240_s00.png",
     "figs_new/p240_s01.png",
@@ -3181,7 +3377,8 @@
     "figs_new/p241_s04.png",
     "figs_new/p241_s05.png",
     "figs_new/p241_s06.png"
-   ]
+   ],
+   "enc": "D5:4 D5:4 D5:4 D5:4 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:32 B4:32 D5:4 | E4:32 G4:32 B4:32 G4:32 B4:32 D5:32 F5:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:4 E4:2 B4:4 B4:4 | B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 B4:32 A4:32 G4:32 A4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 B4:32 G4:32 A4:4 G4:4 | A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 C5:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 | G4:32 B4:32 C5:32 B4:4 G4:4 E4:32 D4:32 E4:32 F4:32 E4:32 F4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 | B4:32 C5:32 B4:32 C5:32 B4:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:32 C5:32 D5:4 B4:4 | B4:4 B4:4 B4:4 B4:4 B4:4 A#4:32 B4:32 A4:32 B4:32 A4:32 B4:32 A4:32 B4:32 A4:32 B4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 | A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 A4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G#4:32 F4:32 G4:2 E4:4 G4:32 A4:32 G4:32 A4:32 G4:32 | A4:32 F4:32 A4:32 F4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 E4:32 G4:32 F4:4 | A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 A4:32 G4:32 B4:4 G4:4 B4:8 B4:8 | B4:8 B4:8 B4:8 B4:8 B4:8 B4:8 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 E4:32 D4:32 F4:4 D4:4"
   },
   {
    "id": "app-lescuyer-rossignol-1",
@@ -3307,27 +3504,31 @@
    "id": "app-smee-thrush-1",
    "bird": "Thrush (Turdus musicus)",
    "page": 222,
-   "conf": "todo",
-   "note": "Source: Alfred Smee (In 'My Garden'). \u2014 THRUSH, row 1.",
+   "conf": "low",
+   "key": "Bb",
+   "note": "Alfred Smee, My Garden. All five rows are represented; triplets are retained, but clipped system joins and ambiguous short values make several rhythms provisional.",
    "crops": [
     "figs_new/p244_s00.png",
     "figs_new/p244_s01.png",
     "figs_new/p244_s02.png",
     "figs_new/p244_s03.png",
     "figs_new/p244_s04.png"
-   ]
+   ],
+   "enc": "B4:8 C5:16 D5:16 B4:4 | F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 F5:83 D5:4 | F5:43 F5:43 F5:43 | D5:4 F5:83 F5:83 F5:83 D5:4 | D5:8. E5:16 | D5:4 E5:8. E5:16 D5:4 | F5:4 | D5:4 r:8 F5:4 D5:4 | D5:4 | F5:4 r:8 D5:4 F5:4 | E5:8. F5:16 | E5:4 F5:8. F5:16 D5:4 | E5:8 D5:8 | B4:4 E5:8 D5:8 B4:4 | B4:8 E5:8. D5:16 B4:8 | F5:8. F5:16 | F5:4 G5:8. G5:16 F5:4 | C5:4 F5:43 G5:43 F5:43 D5:4 | E5:8. F5:16 | E5:4 F5:8. F5:16 F5:4 F5:8. F5:16 E5:4"
   },
   {
    "id": "app-smee-blackbird-1",
    "bird": "Blackbird (Turdus merula)",
    "page": 222,
-   "conf": "todo",
-   "note": "Source: Alfred Smee (In 'My Garden'). \u2014 BLACKBIRD, row 1.",
+   "conf": "med",
+   "key": "Eb",
+   "note": "Alfred Smee, My Garden. Three engraved rows are retained as successive bar groups; a few short-note values remain provisional.",
    "crops": [
     "figs_new/p244_s05.png",
     "figs_new/p244_s06.png",
     "figs_new/p244_s07.png"
-   ]
+   ],
+   "enc": "B4:8 D5:8 | F5:4 B4:8 D5:8 F5:4 | E5:4 | D5:8 B4:8 r:8 D5:4 C5:8 A4:8 | D5:4 D5:8 E5:8 F5:4 | E5:8 C5:8 | A4:4 E5:8 C5:8 A4:8 E5:8 B4:4 | A4:8 A4:8 C5:8 E5:8 A4:4 | B4:8 D5:8 F5:8 A4:4 | D5:8 F5:8 D5:8 F5:8 | F5:8 A5:8 F5:8 D5:8 | F5:8. A5:16 | D5:4 F5:8. A5:16 D5:4"
   },
   {
    "id": "app-weber-wind-1",
@@ -3467,12 +3668,14 @@
    "id": "app-hinrichs-grasshopper-1",
    "bird": "Grasshopper (insect)",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 GRASSHOPPER, row 1. \u2014 Detected system bounding box only captures the dense beamed run near the end of the row; the row also includes the 'Grasshopper.' label and initial notes not separately boxed. Also: the 'CRICKET.' notation (labeled between Death-watch/Answer and Grasshopper in the source) has NO corresponding entry in systems.json for this page -- it appears to have been missed by the system detector (falls in the y-gap between sys1 and sys2, roughly y=926-1067). No catalog record created for it since there is no system id, but flagging the gap.",
+   "conf": "low",
+   "key": "C",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. Only the safely readable visible fragment is encoded: an ascending chromatic seven-note 32nd run. The crop begins mid-figure, so no unseen opening notes are reconstructed; the source-page Cricket system is also absent from the detector output.",
    "crops": [
     "figs_new/p248_s02.png",
     "figs_new/p248_s03.png"
-   ]
+   ],
+   "enc": "G4:32 A4:32 Bb4:32 B4:32 C5:32 C#5:32 D5:32"
   },
   {
    "id": "app-hinrichs-bumblebee",
@@ -3490,21 +3693,25 @@
    "id": "app-hinrichs-housefly",
    "bird": "House-fly (insect)",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 HOUSE-FLY.",
+   "conf": "med",
+   "key": "F",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. Two near-identical F4/G4 buzzing gestures; engraved ties are flattened and fine alternating values normalized to 16ths.",
    "crops": [
     "figs_new/p248_s05.png"
-   ]
+   ],
+   "enc": "F4:8 G4:2 G4:16 F4:16 G4:16 F4:16 G4:16 G4:2 | G4:16 F4:16 G4:16 F4:16 G4:16 G4:2"
   },
   {
    "id": "app-hinrichs-gnat",
    "bird": "Gnat (insect)",
    "page": 226,
-   "conf": "todo",
-   "note": "Source: Anna Hinrichs (Summer's Natural Orchestra, in 'The Popular Science News,' vol. xxv, no. ix, September 1891). \u2014 GNAT.",
+   "conf": "high",
+   "key": "C",
+   "note": "Anna Hinrichs, Summer's Natural Orchestra. Two G#4 pickups resolve to sustained A4; engraved ties are flattened into the sustained values.",
    "crops": [
     "figs_new/p248_s06.png"
-   ]
+   ],
+   "enc": "G#4:8 A4:2 A4:1 | G#4:8 A4:2 A4:1"
   }
  ]
 }

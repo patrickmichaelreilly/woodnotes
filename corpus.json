@@ -272,7 +272,7 @@
     "figs_new/p040_s02.png"
    ],
    "enc": "@key:Eb [ E5:16 F5:16 E5:16 ] r:16 [ A5:16 B5:16 A5:16 ] r:16 [ F5:16 G5:16 E5:16 ]",
-   "approved": false
+   "approved": true
   },
   {
    "id": "rob-10",
@@ -282,8 +282,8 @@
    "crops": [
     "figs_new/p040_s03.png"
    ],
-   "enc": "@key:C [ E5:16 F5:16 E5:16 ] [ G5:16 A5:16 G5:16 ] r:16 [ E5:16 F5:16 E5:16 ] [ A5:16 B5:16 A5:16 ] r:16 [ E5:16 F5:16 E5:16 ] [ C6:16 D6:16 C6:16 ] r:16 [ D6:16 C6:16 ]",
-   "approved": false
+   "enc": "@key:C [ E5:16 F5:16 E5:16 ] [ G5:16 A5:16 G5:16 ] r:8 [ E5:16 F5:16 E5:16 ] [ A5:16 B5:16 A5:16 ] r:8 [ E5:16 F5:16 E5:16 ] [ C6:16 D6:16 C6:16 ] r:8 [ D6:16 C6:16 ]",
+   "approved": true
   },
   {
    "id": "rob-11",
@@ -293,8 +293,8 @@
    "crops": [
     "figs_new/p040_s04.png"
    ],
-   "enc": "@key:F Bb5:16 Bb5:16 r:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 Bb5:16 G5:16",
-   "approved": false
+   "enc": "@key:F Bb5:8 B5:8 r:8 B5:16 B5:16 B5:16 B5:16 B5:16 G5:8",
+   "approved": true
   },
   {
    "id": "rob-16",
@@ -305,8 +305,8 @@
     "figs_new/p041_s04.png",
     "figs_new/p041_s05.png"
    ],
-   "enc": "@key:G [ D5:16 E5:16 F5:16 ] [ D5:16 E5:16 E5:16 F5:16 G5:16 ] r:16 [ F5:16 E5:16 F5:16 ] [ F5:16 G5:16 A5:16 ] [ F5:16 E5:16 D5:16 ] r:16 [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 A5:16 ] [ G5:16 F5:16 E5:16 ] r:16 [ E5:16 D5:16 G5:16 ] [ E5:16 D5:16 E5:16 ] r:16 [ G5:16 A5:16 ] r:16 [ G5:16 A5:16 ] r:16 [ F5:16 E5:16 D5:16 ] [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 A5:16 ]",
-   "approved": false
+   "enc": "@key:G [ E5:16 D#5:16 E5:16 ] [ F5:16 D#5:16 E5:16 ] [ E5:16 F5:16 G5:16 ] r:8 [ F5:16 E5:16 F5:16 ] [ F5:16 G5:16 A5:16 ] [ F5:16 E5:16 D#5:16 ] r:8 [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 A5:16 ]\n[ G5:16 F5:16 E5:16 ] r:8 [ E5:16. D#5:32 G5:16 ] [ E5:16. D#5:32 E5:16 ] r:8 [ G#5:16 A5:16 ] r:8 [ G#5:16 A5:16 ] r:8 [ F5:16 E5:16 D#5:16 ] [ E5:16 F5:16 G5:16 ] [ F5:16 G5:16 A5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-17",
@@ -317,8 +317,8 @@
     "figs_new/p041_s06.png",
     "figs_new/p041_s07.png"
    ],
-   "enc": "@key:C [ A5:16 G5:16 A5:16 ] r:16 [ F5:16 G5:16 ] r:16 [ A5:16 G5:16 A5:16 ] r:16 [ G5:16 F5:16 ] [ C6:16 B5:16 C6:16 B5:16 C6:16 ] [ A5:16 B5:16 A5:16 ] r:16 [ G5:16 F5:16 G5:16 ] r:16 [ G5:16 F5:16 ] r:16 [ G5:16 F5:16 ] r:16 [ C6:16 B5:16 C6:16 B5:16 C6:16 ]",
-   "approved": false
+   "enc": "@key:C [ A5:16 G#5:16 A5:16 ] r:16 [ F#5:16 G5:16 ] r:8 [ A5:16 G#5:16 A5:16 ] r:8 [ G5:16 F#5:16 ] [ C6:32 B5:32 C6:32 B5:32 C6:32 ] r:8\n[ A5:16 B5:16 A5:16 ] [ G5:16 F#5:16 G5:16 ] r:16 [ G5:16 F#5:16 ] r:16 [ G5:16 F#5:16 ] r:16 [ C6:32 B5:32 C6:32 B5:32 C6:32 ]",
+   "approved": true
   },
   {
    "id": "rob-18",
@@ -329,8 +329,8 @@
     "figs_new/p041_s08.png",
     "figs_new/p041_s09.png"
    ],
-   "enc": "@key:C G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 G5:8 D5:8 r:8^ F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 F5:8 r:8 [ E5:16 F5:16 G5:16 ] r:16 [ E5:16 F5:16 F5:16 ]",
-   "approved": false
+   "enc": "@key:C G5:16 G5:16 G5:16 G5:16 G5:16 G5:16 G5:16 G5:16 G5:16 D5:16 r:8^ F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 r:8 [ E5:16 F5:16 G5:16 ] r:8 [ E5:16 F5:16 G5:16 ]",
+   "approved": true
   },
   {
    "id": "rob-19",
@@ -340,8 +340,8 @@
    "crops": [
     "figs_new/p042_s00.png"
    ],
-   "enc": "@key:A B4:8 B4:8 B4:8 [ C5:16 D5:16 E5:16 ] r:8 B4:8 B4:8 B4:8 r:8 [ C5:16 D5:16 E5:16 ]",
-   "approved": false
+   "enc": "@key:E B4:8-! B4:8-! B4:8-! [ C5:16 D5:16 ] E5:8 r:8 B4:8-! B4:8-! B4:8-! r:8 [ C5:16 D5:16 ] E5:8",
+   "approved": true
   },
   {
    "id": "rob-21",
@@ -351,8 +351,8 @@
    "crops": [
     "figs_new/p042_s02.png"
    ],
-   "enc": "@key:G F5:8 G5:8 F5:8 E5:8 D5:8 C5:8 r:8^ F5:8 E5:8 D5:8",
-   "approved": false
+   "enc": "@key:D E5:16 F5:16 G5:16 F5:16 E5:16 D5:16 C5:16 r:8^ F5:16 E5:16 D5:16",
+   "approved": true
   },
   {
    "id": "rob-22",
@@ -362,8 +362,8 @@
    "crops": [
     "figs_new/p042_s03.png"
    ],
-   "enc": "@key:G D5:8 G5:8 F5:8 E5:8 D5:8 F5:8 r:8 D5:8 F5:8 r:8 F5:8 F5:8 F5:8",
-   "approved": false
+   "enc": "@key:G D5:16 G5:16 F5:16 E5:16 D5:16 F5:16 r:8 D5:16 F5:16 r:8 F5:16 F5:16 F5:16",
+   "approved": true
   },
   {
    "id": "rob-23",
@@ -373,32 +373,32 @@
    "crops": [
     "figs_new/p042_s04.png"
    ],
-   "enc": "@key:G G5:8 F5:8 E5:8 D5:8 r:8 E5:8 G5:8 F5:8 E5:8 r:8 F5:8 G5:8 r:8 F5:8 G5:8 F5:8 F5:8 F5:8",
-   "approved": false
+   "enc": "@key:D G5:16 F5:16 E5:16 D5:16 r:8 E5:16 G5:16 F5:16 E5:16 r:8 F5:16 G5:16 r:16 F5:16 G5:16 r:16 F5:16 F5:16 F5:16",
+   "approved": true
   },
   {
    "id": "rob-20",
    "bird": "Robin",
    "no": 20,
    "page": 20,
-   "enc": "@key:F F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 [ E5:16 D5:16 ] r:16 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 [ D5:16 C5:16 ]",
+   "enc": "@key:F F5:16 F5:16 F5:16 F5:16 F5:16 F5:16 [ E5:16 D5:16 ] r:8 E5:16 E5:16 E5:16 E5:16 E5:16 E5:16 [ D5:16 C#5:16 ]",
    "lyric": "Chick-y ick-y chick-y eu (x2)",
    "crops": [
     "figs_new/p042_s01.png"
    ],
-   "approved": false
+   "approved": true
   },
   {
    "id": "rob-24",
    "bird": "Robin",
    "no": 24,
    "page": 20,
-   "enc": "@key:D F#5:32/ D5:8 F#5:32/ D5:8 F#5:32/ D5:8 A4:8 A4:8 A4:8",
+   "enc": "@key:D C5:16/ D5:8 C5:16/ D5:8 C5:16/ D5:8 A4:8-! A4:8-! A4:8-!",
    "lyric": "oe, oe, oe, up, up, up.",
    "crops": [
     "figs_new/p042_s05.png"
    ],
-   "approved": false
+   "approved": true
   },
   {
    "id": "rob-spin",
@@ -410,7 +410,7 @@
     "figs_new/p042_s06.png",
     "figs_new/p042_s07.png"
    ],
-   "enc": "@key:Eb E4:8 E4:83 E4:8 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8",
+   "enc": "@key:Eb E4:83 D4:83 E4:83 F4:8 G4:83 G4:8 F4:8 G4:8 F4:8 G4:8 G4:4 E4:8 D4:8 E4:8 F4:8 G4:8 G4:8 F4:8 F4:8 E4:8",
    "approved": false
   },
   {
@@ -444,8 +444,8 @@
    "crops": [
     "figs_new/p045_s00.png"
    ],
-   "enc": "@key:A B4:8 F#5:8 F#5:8 F#5:8 F#5:8 F#5:8 G#5:8 [ A5:16 B5:16 A5:16 B5:16 A5:16 ]",
-   "approved": false
+   "enc": "@key:A C5:8 F5:16 F5:16 F5:16 F5:16 F5:16 G5:16 [ A5:16 B5:16 A5:16 B5:16 A5:16 ] r:16",
+   "approved": true
   },
   {
    "id": "ssp-02",
@@ -455,8 +455,8 @@
    "crops": [
     "figs_new/p045_s01.png"
    ],
-   "enc": "@key:A B4:8. D5:8 C#5:8 [ E5:8 F#5:8 E5:8 F#5:8 E5:8 F#5:8 G#5:8 ]",
-   "approved": false
+   "enc": "@key:A C5:8. D5:16 C5:8 [ E5:16 F5:16 E5:16 F5:16 E5:16 F5:16 ] G5:8",
+   "approved": true
   },
   {
    "id": "ssp-03",
@@ -466,8 +466,8 @@
    "crops": [
     "figs_new/p045_s02.png"
    ],
-   "enc": "@key:F F5:32/ C6:4-> F5:32/ C6:4-> F5:32/ C6:4-> F5:4 [ A5:16 Bb5:16 A5:16 Bb5:16 A5:16 ]",
-   "approved": false
+   "enc": "@key:F F5:16/ C6:4-> F5:32/ C6:4-> F5:32/ C6:4-> F5:4 [ A5:16 B5:16 A5:16 B5:16 A5:16 ] r:16",
+   "approved": true
   },
   {
    "id": "ssp-04",
